@@ -1,0 +1,1 @@
+ringmenu_abort();

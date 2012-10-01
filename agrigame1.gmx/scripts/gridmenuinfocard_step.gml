@@ -1,0 +1,1 @@
+gridmenuinfocard_position(parentmenu);

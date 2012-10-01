@@ -1,0 +1,11 @@
+outvalue =  global.bugarray[B_REDBUG] |
+           (global.bugarray[B_GREENMANTIS] << 4) |
+           (global.bugarray[B_BLUESPIDER] << 8) |
+           (global.bugarray[B_ORANGEBEETLE] << 12) |
+           (global.bugarray[B_YELLOWFLY] << 16) |
+           (global.bugarray[B_CYANWASP] << 20) |
+           (global.bugarray[B_GRAYMOTH] << 24) |
+           (global.bugarray[B_BEE] << 28);
+return outvalue;
+
+

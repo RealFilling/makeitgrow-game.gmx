@@ -1,0 +1,1 @@
+destroymultitile(boardx,boardy);

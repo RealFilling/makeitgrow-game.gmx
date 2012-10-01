@@ -1,0 +1,1 @@
+global.menutip2 = "";
