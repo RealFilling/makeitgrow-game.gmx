@@ -2,12 +2,12 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>C:\Dev\GameMaker\agrigame1-116.gmx\\sound\audio\snd_grow1.wav</origname>
+  <origname>audio\snd_fruit1.wav</origname>
   <effects>8</effects>
-  <volume>0.72</volume>
+  <volume>0.76</volume>
   <pan>0</pan>
   <mp3BitRate>192</mp3BitRate>
   <oggQuality>6</oggQuality>
   <preload>-1</preload>
-  <data>snd_grow1.wav</data>
+  <data>snd_fruit1.wav</data>
 </sound>

@@ -2,7 +2,7 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>C:\Dev\GameMaker\agrigame1-116.gmx\\sound\audio\snd_hoe1.wav</origname>
+  <origname>audio\snd_hoe1.wav</origname>
   <effects>8</effects>
   <volume>0.78</volume>
   <pan>0</pan>

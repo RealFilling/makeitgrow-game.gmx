@@ -1235,9 +1235,6 @@
     <constant name="GSPEED_FAST">1</constant>
     <constant name="GSPEED_VFAST">2</constant>
   </constants>
-  <help>
-    <rtf>help.rtf</rtf>
-  </help>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

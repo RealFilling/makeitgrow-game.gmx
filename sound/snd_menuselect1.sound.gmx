@@ -2,12 +2,12 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>C:\Dev\GameMaker\agrigame1-116.gmx\\sound\audio\snd_plop1.wav</origname>
-  <effects>8</effects>
-  <volume>0.84</volume>
+  <origname>audio\snd_menuselect1.wav</origname>
+  <effects>2</effects>
+  <volume>1</volume>
   <pan>0</pan>
   <mp3BitRate>192</mp3BitRate>
   <oggQuality>6</oggQuality>
   <preload>-1</preload>
-  <data>snd_plop1.wav</data>
+  <data>snd_menuselect1.wav</data>
 </sound>

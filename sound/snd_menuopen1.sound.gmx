@@ -2,12 +2,12 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>C:\Dev\GameMaker\agrigame1-116.gmx\\sound\audio\snd_menuopen1_OLD.wav</origname>
+  <origname>audio\snd_menuopen1.wav</origname>
   <effects>0</effects>
   <volume>1</volume>
   <pan>0</pan>
   <mp3BitRate>192</mp3BitRate>
   <oggQuality>6</oggQuality>
   <preload>-1</preload>
-  <data>snd_menuopen1_OLD.wav</data>
+  <data>snd_menuopen1.wav</data>
 </sound>
