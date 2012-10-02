@@ -3,7 +3,8 @@ if (global.savedebug == true) {
     //var remainder;
     //remainder = field_deserialize();
     //show_message("Save string remainder:"+remainder);
-    returnstring = gd_load();
+    //returnstring = gd_load();
+    loadgame(gd_load());
     //show_message("returnstring:"+returnstring);
     return 0;
     }

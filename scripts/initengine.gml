@@ -5,7 +5,7 @@ var cx1, cy1;
 //gd_init();
 
 // Debugging support
-global.demomode = true;
+global.demomode = false;
 global.debug = false;
 global.savedebug = true;
 global.shadowdebug = false;

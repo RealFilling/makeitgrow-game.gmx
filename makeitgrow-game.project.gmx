@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\GreenDreamPersistence</extension>
-    <extension index="1">extensions\InitJS</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_plant1</sound>
@@ -763,14 +762,6 @@
       <script>scripts\status_step.gml</script>
       <script>scripts\status_draw.gml</script>
     </scripts>
-    <scripts name="login">
-      <script>scripts\login_create.gml</script>
-      <script>scripts\login_anykey.gml</script>
-      <script>scripts\login_destroy.gml</script>
-      <script>scripts\login_step.gml</script>
-      <script>scripts\login_draw.gml</script>
-      <script>scripts\login_textentry.gml</script>
-    </scripts>
     <scripts name="items">
       <script>scripts\itemdefs.gml</script>
       <script>scripts\itemuse.gml</script>
@@ -883,7 +874,6 @@
       <object>objects\obj_whitefield</object>
       <object>objects\obj_splash_OBS</object>
     </objects>
-    <object>objects\obj_loginform</object>
     <objects name="Animals">
       <object>objects\obj_animalbase</object>
       <object>objects\obj_cow</object>
@@ -1235,6 +1225,9 @@
     <constant name="GSPEED_FAST">1</constant>
     <constant name="GSPEED_VFAST">2</constant>
   </constants>
+  <help>
+    <rtf>help.rtf</rtf>
+  </help>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>
