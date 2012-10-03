@@ -11,7 +11,7 @@
 
 gd_log("Serialization beginning....");
 
-var hx, hy, astrplants, astrsoil, astrharvest, astrwater, astrheight
+var hx, hy, astrplants, astrsoil, astrharvest, astrwater, astrheight;
 var astrbugs, astrsoilext, charspernum, outstring, miscstring, checksum;
 charspernum = global.charspernum;
 
