@@ -1,9 +1,6 @@
 var cx1, cy1;
 // Game initialization
 
-// Initialize Javascript saving and loading facility
-//gd_init();
-
 // Debugging support
 global.demomode = false;
 global.debug = false;
