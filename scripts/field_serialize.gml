@@ -47,13 +47,9 @@ outstring = astrplants+"|"+astrsoil+"|"+astrharvest+"|"+astrwater+"|"+astrheight
 
 checksum = reportchecksum();
 
-if (global.savedebug == true) {
-  show_message("Serialized string length:"+string(string_length(outstring)));
-  show_message("First ten characters of outstring:"+string_copy(outstring,1,10));
-  show_message("Checksum:" + string(checksum));
-  show_message("Serialization done!");
-  }
-  
-//gd_save(outstring,true);
+gd_log("Serialized string length:"+string(string_length(outstring)));
+gd_log("First ten characters of outstring:"+string_copy(outstring,1,10));
+gd_log("Checksum:" + string(checksum));
+gd_log("Serialization done!");
 
 return outstring;
