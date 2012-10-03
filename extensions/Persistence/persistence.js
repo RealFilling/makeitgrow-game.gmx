@@ -5,10 +5,16 @@ function gd_load()
 
 function gd_save(data)
 {
-	save(data);
+	return save(data);
 }
 
 function gd_get_user_status()
 {
 	return isLoggedIn();
+}
+
+function gd_log(msg)
+{
+  console.log(msg);
+  return 1;
 }
