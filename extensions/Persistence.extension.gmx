@@ -54,8 +54,8 @@
           <args/>
         </function>
         <function>
-          <name>gd)log</name>
-          <externalName>gd)log</externalName>
+          <name>gd_log</name>
+          <externalName>gd_log</externalName>
           <kind>11</kind>
           <id>7</id>
           <help></help>
