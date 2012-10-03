@@ -120,7 +120,7 @@ if (moveaction = true) {
         placeplant(ox,oy,makeplant(0,0,0),true);
         //global.plants[ox,oy] = makeplant(0,0,0);
         }
-      else if (global.harvest[ox,oy] != 0 and doharvest and (nonspread[hspecies] == PNONSPREAD_NO)) { // Harvesting
+      else if (global.harvest[ox,oy] != 0 and doharvest and (!nonspread[hspecies])) { // Auto harvesting
         if (!farmer_energycheck(ENERGY_HARVESTCOST)) {
           continue;
           }

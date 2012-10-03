@@ -7,7 +7,7 @@ var cx1, cy1;
 // Debugging support
 global.demomode = false;
 global.debug = false;
-global.savedebug = true;
+global.savedebug = false;
 global.shadowdebug = false;
 global.miscdebug = false;
 

@@ -68,6 +68,7 @@ if (global.currentseed == TOOL_QUERY) {
   outputtext3 += " Height:" + string(global.height[bx,by]);
   outputtext3 += " Soilext:" + string(global.soilext[bx,by]);
   outputtext3 += " Buildext:" + string(global.buildext[bx,by]);
+  outputtext3 += " Harvest:" + string(global.harvest[bx,by]);
   }
 else {
   outputtext3 = "";

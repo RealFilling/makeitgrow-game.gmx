@@ -446,14 +446,14 @@ germinationbase[T_GREEN_BOTTOM] = -1000;
 //   this array.
 globalvar nonspread;
 for (a=0; a<NUMPLANTTYPES; a+=1) {
-  nonspread[a] = PNONSPREAD_NO;
+  nonspread[a] = false;
   }
-nonspread[P_REDMELON] = PNONSPREAD_YES;
-nonspread[P_REDLEAFY] = PNONSPREAD_YES;
-nonspread[P_GREENMELON] = PNONSPREAD_YES;
-nonspread[P_GREENLEAFY] = PNONSPREAD_YES;
-nonspread[P_BLUEMELON] = PNONSPREAD_YES;
-nonspread[P_BLUELEAFY] = PNONSPREAD_YES;
+nonspread[P_ONION] = true;
+nonspread[P_CLIANTRO] = true;
+nonspread[P_WATERMELON] = true;
+nonspread[P_LETTUCE] = true;
+nonspread[P_MUSHROOM] = true;
+nonspread[P_BLUELETTUCE] = true;
 
 // harvestconsume
 // Some plants are removed from the board once harvested.  These plants.

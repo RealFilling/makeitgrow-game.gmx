@@ -1,6 +1,7 @@
 function gd_load()
 {
-	load();
+	// Changed Landro & John 10/2 2012
+	return load();
 }
 
 function gd_save(data)

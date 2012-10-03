@@ -40,7 +40,7 @@ if (bugs != 0) {
         bugcount = min(bugcount+irandom_range(1,3),15);
         }
       else {
-        bugarray[bugnum] = 0;
+        global.bugarray[bugnum] = 0;
         bugdata = global.bugs[plantx,planty];
         destbugs = getarbbugs(bugdata,bugnum);
         global.bugs[plantx,planty]=setarbbugs(bugdata,bugnum,min(destbugs+bugcount,15));
@@ -59,11 +59,11 @@ if (bugs != 0) {
         if ((bugx == myx) and (bugy == myy)) {
           bnomflag = true;
           //eatenflag = true;
-          bugarray[foundbug] = max(0,bugarray[foundbug]-bugcount);
+          global.bugarray[foundbug] = max(0,global.bugarray[foundbug]-bugcount);
           bugcount = min(bugcount+irandom_range(1,4),15);
           }
         else {
-          bugarray[bugnum] = 0;
+          global.bugarray[bugnum] = 0;
           bugdata = global.bugs[bugx,bugy];
           destbugs = getarbbugs(bugdata,bugnum);
           global.bugs[bugx,bugy]=setarbbugs(bugdata,bugnum,min(destbugs+bugcount,15));

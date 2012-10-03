@@ -39,6 +39,10 @@ for (tindex=0; tindex<numtries; tindex +=1) {
       global.hexx = checkx;
       global.hexy = checky;
       global.foundbug = checkbug;
+      if ((global.foundbug < 0) or (global.foundbug > B_BEE)) {
+        show_message("lookforediblebug(): wrong prey bug "+string(global.foundbug)+" found for bug "+string(thisbug)+"!");
+        return false;
+        }
       return true;
       }
     }  

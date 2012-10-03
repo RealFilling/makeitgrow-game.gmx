@@ -5,7 +5,7 @@ sgrowth = argument2 // Needed for Blue Waves
 sx = argument3
 sy = argument4
 
-if (nonspread[species] == PNONSPREAD_YES) {
+if (nonspread[species]) {
   spread_nonspreading();
   return 0;
   }
