@@ -130,19 +130,24 @@ gd_log("serializing animals");
   
 // Animals
 buildstring += numtostring(global.animalcount);
+gd_log("added animal count to buildstring");
 //for (a=0; a<NUMANIMALTYPES; a+=1) {
 //  buildstring += numtostring(global.animalcounts[a]);
 //  buildstring += numtostring(global.animalcapacities[a]);
 //  }
 for (a=0; a<MAXANIMALS; a+=1) {
+
   // We're using MAXANIMALS to bound this loop, instead of global.animalcount,
   //   so the save file will have a consistant size, useful for error checking.
   thisanimal = global.animalinstances[a];
+  gd_log("saved global animal to local variable");
   if ((a>=global.animalcount) or (thisanimal == noone)) {
     buildstring += dumpnullanimal();
+    gd_log("added null animal to buildstring");
     }
   else {
     buildstring += dumpanimal(thisanimal);
+    gd_log("added animal to buildstring");
     }
   }
   
@@ -153,6 +158,7 @@ for (a=0; a<100; a+=1) {
   buildstring += numtostring(0);
   }
 
+gd_log("finished serializing non-field related objects");
 return buildstring;
 
 
