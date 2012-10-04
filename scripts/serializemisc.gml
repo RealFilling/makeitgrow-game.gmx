@@ -139,16 +139,7 @@ for (a=0; a<MAXANIMALS; a+=1) {
 
   // We're using MAXANIMALS to bound this loop, instead of global.animalcount,
   //   so the save file will have a consistant size, useful for error checking.
-  thisanimal = global.animalinstances[a];
-  gd_log("saved global animal to local variable");
-  if ((a>=global.animalcount) or (thisanimal == noone)) {
-    buildstring += dumpnullanimal();
-    gd_log("added null animal to buildstring");
-    }
-  else {
-    buildstring += dumpanimal(thisanimal);
-    gd_log("added animal to buildstring");
-    }
+  buildstring += numtostring(0);
   }
   
 gd_log("serializing future expansion");
