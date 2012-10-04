@@ -1,6 +1,6 @@
 depth = -1;
 sprite_index = spr_nothing;
-global.parameter1 = 7; global.parameter2 = 90;
+global.parameter1 = 7; global.parameter2 = 90; //parameter1: x on screen, parameter2: y on screen
 instance_create(x,y,obj_seedbutton);
 global.parameter1 = 7; global.parameter2 = 131;
 instance_create(x,y,obj_compostbutton);

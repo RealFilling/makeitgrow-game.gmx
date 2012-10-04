@@ -134,6 +134,29 @@
         <sprite>sprites\spr_pipeconnections</sprite>
       </sprites>
       <sprite>sprites\spr_harvesteffect</sprite>
+      <sprites name="plants">
+        <sprite>sprites\spr_p_itchgrass</sprite>
+        <sprite>sprites\spr_p_strawberries</sprite>
+        <sprite>sprites\spr_p_clover</sprite>
+        <sprite>sprites\spr_p_blueberries</sprite>
+        <sprite>sprites\spr_p_bluelettuce</sprite>
+        <sprite>sprites\spr_p_bluehedge</sprite>
+        <sprite>sprites\spr_p_onion</sprite>
+        <sprite>sprites\spr_p_lettuce</sprite>
+        <sprite>sprites\spr_p_dandelion</sprite>
+        <sprite>sprites\spr_p_tomatoes</sprite>
+        <sprite>sprites\spr_p_greentomatoes</sprite>
+        <sprite>sprites\spr_p_grass</sprite>
+        <sprite>sprites\spr_p_watermelon</sprite>
+        <sprite>sprites\spr_p_cornflower</sprite>
+        <sprite>sprites\spr_p_cliantro</sprite>
+        <sprite>sprites\spr_p_peppers</sprite>
+        <sprite>sprites\spr_p_mushrooms</sprite>
+        <sprite>sprites\spr_p_eggplants</sprite>
+        <sprite>sprites\spr_p_hedge</sprite>
+        <sprite>sprites\spr_p_sunflowers</sprite>
+        <sprite>sprites\spr_p_empty</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
     <sprite>sprites\spr_farmer</sprite>
@@ -977,7 +1000,7 @@
     <constant name="P_BLUEVERTICAL">10</constant>
     <constant name="P_BLUEHEDGE">10</constant>
     <constant name="P_GREENDELICATE">11</constant>
-    <constant name="P_CLOVER">11</constant>
+    <constant name="P_GREENTOMATO">11</constant>
     <constant name="P_GREENHORIZONTAL">12</constant>
     <constant name="P_HEDGE">12</constant>
     <constant name="P_GRASS">13</constant>
