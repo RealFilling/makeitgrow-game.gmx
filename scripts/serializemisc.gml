@@ -139,14 +139,14 @@ for (a=0; a<MAXANIMALS; a+=1) {
 
   // We're using MAXANIMALS to bound this loop, instead of global.animalcount,
   //   so the save file will have a consistant size, useful for error checking.
-  buildstring += numtostring(0);
+  buildstring += dumpnullanimal();
   }
   
 gd_log("serializing future expansion");
   
 // Room for future expansion without invalidating save format
 for (a=0; a<100; a+=1) {
-  buildstring += dumpnullanimal();
+  buildstring += numtostring(0);
   }
 
 gd_log("finished serializing non-field related objects");
