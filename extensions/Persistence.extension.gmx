@@ -60,7 +60,7 @@
           <id>7</id>
           <help></help>
           <returnType>2</returnType>
-          <argCount>0</argCount>
+          <argCount>1</argCount>
           <args/>
         </function>
       </functions>
