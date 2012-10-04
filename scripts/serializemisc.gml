@@ -146,7 +146,7 @@ gd_log("serializing future expansion");
   
 // Room for future expansion without invalidating save format
 for (a=0; a<100; a+=1) {
-  buildstring += numtostring(0);
+  buildstring += dumpnullanimal();
   }
 
 gd_log("finished serializing non-field related objects");
