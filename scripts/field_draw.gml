@@ -51,10 +51,7 @@ for (by=by1; by<by2; by+=1) {
     thissubtype = getsubtype(thisplant);
     thisgrowth = getgrowth(thisplant);
     thisharvest = global.harvest[bx,by];
-    if (isempty(thisspecies)) { // or isshadow(thisspecies)) { // debug
-      // That is to say, draw nothing.
-      }
-    else if (isplant(thisspecies)) {
+    if (isplant(thisspecies)) {
       plantdisp = figureplanttile(thisspecies,thissubtype,thisgrowth,thisharvest);
       decodeplanttile(plantdisp);
       tx = global.tx; // return values from decodeplanttile()
@@ -66,14 +63,7 @@ for (by=by1; by<by2; by+=1) {
                         c_white,
                         (thisharvest-4)/27); // halo transparency
         }
-      draw_sprite_ext(spr_planttiles,tx+(ty*8),pixx,pixy,1.0,1.0,0,c_white,1);
-      // Fruit
-      //if (thisgrowth != GROWTH_DEAD) {
-      //  if (global.harvest[bx,by] != 0) {
-      //    fruitdisp = (plantmineral[thisspecies]*8) + min(4,(thisharvest div 8) + 1);
-      //    draw_sprite_ext(spr_fruittiles,fruitdisp,pixx,pixy,1.0,1.0,0,c_white,1);
-      //    }
-      //  }
+      draw_sprite_ext(plantsprites[thisspecies],tx,pixx,pixy,1.0,1.0,0,c_white,1);
       }
     else if (iscompost(thisspecies)) { // Compost
       compostimg = ((thisspecies-P_COMPOST_START)*4)+(thisgrowth-1);

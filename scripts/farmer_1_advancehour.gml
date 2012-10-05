@@ -1,1 +1,1 @@
-advancetime(TICKSPERHOUR);
+advancetime(global.ticksperhour);

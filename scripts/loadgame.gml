@@ -1,4 +1,9 @@
 var loadstring;
 loadstring = argument0;
-field_deserialize(loadstring);
 
+if (global.nosave) {
+  return "";
+  }
+
+field_deserialize(loadstring);
+return "";

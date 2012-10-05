@@ -1,35 +1,27 @@
 var a;
 // Remember: plant 0 means no plant here
-
-// plantimgindex: Index, in spr_planttiles, of the youngest plant
-// This may be boring and capable of being done with a for loop, but it's useful to do
-//   it this way in case we put in special cases later.
-globalvar plantimgindex;
-plantimgindex[P_EMPTY] = -1;
-plantimgindex[P_REDX] = 8;
-plantimgindex[P_REDPLUS] = 16;
-plantimgindex[P_BLUEROUND] = 24;
-plantimgindex[P_BLUECLUSTER] = 32;
-plantimgindex[P_GREENCLUSTER] = 48;
-plantimgindex[P_GREENMEANDER] = 64;
-plantimgindex[P_REDSCATTER] = 72;
-plantimgindex[P_REDHARDY] = 80;
-plantimgindex[P_BLUEWAVE] = 88;
-plantimgindex[P_BLUEVERTICAL] = 96;
-plantimgindex[P_GREENDELICATE] = 104;
-plantimgindex[P_GREENHORIZONTAL] = 112;
-plantimgindex[P_GRASS] = 128;
-plantimgindex[P_WEED] = 136;
-plantimgindex[P_REDMELON] = 144;
-plantimgindex[P_GREENMELON] = 152;
-plantimgindex[P_BLUEMELON] = 160;
-plantimgindex[P_REDLEAFY] = 168;
-plantimgindex[P_GREENLEAFY] = 176;
-plantimgindex[P_BLUELEAFY] = 184;
-plantimgindex[T_RED_TOP] = 0; // Trees use their own sprite collection
-plantimgindex[T_RED_BOTTOM] = 4;
-plantimgindex[T_GREEN_TOP] = 8;
-plantimgindex[T_GREEN_BOTTOM] = 12; 
+globalvar plantsprites;
+plantsprites[P_EMPTY] = spr_p_empty;
+plantsprites[P_ITCHGRASS] = spr_p_itchgrass;
+plantsprites[P_STRAWBERRY] = spr_p_strawberries;
+plantsprites[P_BLUEBERRY] = spr_p_blueberries;
+plantsprites[P_CORNFLOWER] = spr_p_cornflower;
+plantsprites[P_CLIANTRO] = spr_p_cliantro;
+plantsprites[P_CLOVER] = spr_p_clover;
+plantsprites[P_DANDELION] = spr_p_dandelion;
+plantsprites[P_ONION] = spr_p_onion;
+plantsprites[P_MUSHROOM] = spr_p_mushrooms;
+plantsprites[P_BLUEHEDGE] = spr_p_bluehedge;
+plantsprites[P_GREENTOMATO] = spr_p_greentomatoes;
+plantsprites[P_HEDGE] = spr_p_hedge;
+plantsprites[P_GRASS] = spr_p_grass;
+plantsprites[P_WEED] = spr_p_sunflowers;
+plantsprites[P_TOMATO] = spr_p_empty;
+plantsprites[P_WATERMELON] = spr_p_empty;
+plantsprites[P_EGGPLANT] = spr_p_empty;
+plantsprites[P_PEPPER] = spr_p_peppers;
+plantsprites[P_LETTUCE] = spr_p_lettuce;
+plantsprites[P_BLUELETTUCE] = spr_p_bluelettuce;
 
 
 // plantmineral: the type of mineral the plant prefers.
@@ -482,17 +474,36 @@ noharvest[P_BLUEHEDGE] = true;
 noharvest[P_GRASS] = true;
 noharvest[P_WEED] = true;
     
-  
-// planthardiness: maximum megative value of plant before it dies
-// OBSOLETE -- handled with stateless random checks
-//globalvar planthardiness;
-//planthardiness[P_EMPTY] = 0
-//planthardiness[P_REDX] = -3;
-//planthardiness[P_REDPLUS] = -3;
-//planthardiness[P_BLUEROUND] = -3;
-//planthardiness[P_BLUECLUSTER] = -3;
-//planthardiness[P_GREENCLUSTER] = -3;
-//planthardiness[P_GREENMEANDER] = -3;
+
+// plantniche
+// Different plants get growth bonuses (counteracting out-of-season penalties) for
+//   different reasons.
+// Reasons:
+//   * More valuable plants should not have niches.
+//   * Plants the produce no harvests should have niches (except grass and weeds)
+globalvar plantniche;
+plantniche[P_EMPTY] = NICHE_NONE;
+plantniche[P_ITCHGRASS] = NICHE_HEIGHTNEG;
+plantniche[P_STRAWBERRY] = NICHE_MINERALSUM;
+plantniche[P_BLUEBERRY] = NICHE_HEIGHTNEG;
+plantniche[P_CORNFLOWER] = NICHE_HEIGHT;
+plantniche[P_CLIANTRO] = NICHE_MINERALSUMNEG;
+plantniche[P_CLOVER] = NICHE_MOISTURENEG;
+plantniche[P_DANDELION] = NICHE_MOISTURE;
+plantniche[P_ONION] = NICHE_MOISTURENEG;
+plantniche[P_MUSHROOM] = NICHE_MOISTURENEG;
+plantniche[P_BLUEHEDGE] = NICHE_MINERALSUM;
+plantniche[P_GREENTOMATO] = NICHE_HEIGHT;
+plantniche[P_HEDGE] = NICHE_MINERALSUMNEG;
+plantniche[P_GRASS] = NICHE_NONE;
+plantniche[P_WEED] = NICHE_NONE;
+plantniche[P_TOMATO] = NICHE_NONE;
+plantniche[P_WATERMELON] = NICHE_NONE;
+plantniche[P_EGGPLANT] = NICHE_NONE;
+plantniche[P_PEPPER] = NICHE_NONE;
+plantniche[P_LETTUCE] = NICHE_NONE;
+plantniche[P_BLUELETTUCE] = NICHE_NONE;
+
 
 // plantseason
 // The year is divided into twelve months, divided into four seasons.  January is month 0,

@@ -1,1 +1,1 @@
-advancetime(TICKSPERDAY);
+advancetime(global.ticksperday);

@@ -5,6 +5,7 @@ var cx1, cy1;
 global.demomode = false;
 global.debug = false;
 global.savedebug = false;
+global.nosave = false;
 global.shadowdebug = false;
 global.miscdebug = false;
 

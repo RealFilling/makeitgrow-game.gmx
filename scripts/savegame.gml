@@ -3,6 +3,10 @@ var gamestring, loginstatus;
 //loginstatus = gd_get_user_status();
 gd_log("savegame() called....");
 
+if (global.nosave) {
+  return "";
+  }
+
 if (global.loggedin == 0) {
   gd_log("savegame(): Not logged in!");
   return ""; // Nowhere to save

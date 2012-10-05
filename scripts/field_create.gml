@@ -16,19 +16,23 @@ initengine();              // Overall initialization
 // If we're not, we should check if we're logged in, and load
 //   a game if we are.
 
-if (global.demomode == false) {
-  // DEBUGGING (comment out for production):
-  //gd_set_logged_in(LOGINSTATUS_IN); // Possible: LOGINSTATUS_IN, LOGINSTATUS_NOT
-  
-  
-  loadstring = gd_load();
-  global.loggedin = gd_get_user_status();
-  if (string_length(loadstring) != 0) {
-  
-    loadgame(loadstring);
+if (global.nosave == false) {
+  if (global.demomode == false) {
+    // DEBUGGING (comment out for production):
+    //gd_set_logged_in(LOGINSTATUS_IN); // Possible: LOGINSTATUS_IN, LOGINSTATUS_NOT
+    loadstring = gd_load();
+    global.loggedin = gd_get_user_status();
+    if (string_length(loadstring) != 0) {
+      
+      loadgame(loadstring);
+      }
+    else {
+      initgame()
+      }
     }
   else {
-    initgame()
+    global.loggedin = 0;
+    initgame();
     }
   }
 else {
