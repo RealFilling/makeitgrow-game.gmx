@@ -1,1 +1,1 @@
-advancetime(TICKSPERDAY * DAYSPERMONTH);
+advancetime(global.ticksperday * DAYSPERMONTH);
