@@ -2,10 +2,10 @@ var cx1, cy1;
 // Game initialization
 
 // Debugging support
-global.demomode = true;
+global.demomode = false;
 global.debug = false;
 global.savedebug = false;
-global.nosave = true;
+global.nosave = false;
 global.shadowdebug = false;
 global.miscdebug = false;
 

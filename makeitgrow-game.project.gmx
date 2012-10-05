@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Persistence</extension>
-    <extension index="1">extensions\FakeInitJS</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_plant1</sound>
@@ -662,6 +661,7 @@
       <script>scripts\ismature.gml</script>
       <script>scripts\isadult.gml</script>
       <script>scripts\monthaffinity.gml</script>
+      <script>scripts\nicheeffect.gml</script>
     </scripts>
     <scripts name="events">
       <script>scripts\eventdefs.gml</script>
@@ -911,7 +911,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="334">
+  <constants number="341">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">6</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1246,6 +1246,13 @@
     <constant name="GSPEED_SLOW">0</constant>
     <constant name="GSPEED_FAST">1</constant>
     <constant name="GSPEED_VFAST">2</constant>
+    <constant name="NICHE_NONE">0</constant>
+    <constant name="NICHE_HEIGHT">1</constant>
+    <constant name="NICHE_HEIGHTNEG">2</constant>
+    <constant name="NICHE_MOISTURE">3</constant>
+    <constant name="NICHE_MOISTURENEG">4</constant>
+    <constant name="NICHE_MINERALSUM">5</constant>
+    <constant name="NICHE_MINERALSUMNEG">6</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

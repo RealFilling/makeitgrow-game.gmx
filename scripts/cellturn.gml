@@ -253,7 +253,7 @@ if (isplant(species) or istree(species)) {
       climatemod = 80;
       }
     else {
-      climatemod = global.mgpc[monthaffinity(species)];
+      climatemod = 100-(max(global.mgpc[monthaffinity(species)] - nicheeffect(myx,myy,plantniche[species]),1));
       }
     growtarget = climatemod + (heightaffinity[species] * thisheight);
     growchance = irandom_range(0,100);

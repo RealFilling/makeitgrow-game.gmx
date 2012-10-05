@@ -285,11 +285,11 @@ global.mgq[2] = "Fair";
 global.mgq[3] = "Good";
 global.mgq[4] = "Great";
 //Quality percentage changes
-global.mgpc[0] = 10;
-global.mgpc[1] = 40;
-global.mgpc[2] = 60;
-global.mgpc[3] = 90;
-global.mgpc[4] = 99;
+global.mgpc[0] = 90;
+global.mgpc[1] = 60;
+global.mgpc[2] = 40;
+global.mgpc[3] = 10;
+global.mgpc[4] =  1;
 
 //Red Scattered spread locations
 //         *

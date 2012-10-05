@@ -474,17 +474,36 @@ noharvest[P_BLUEHEDGE] = true;
 noharvest[P_GRASS] = true;
 noharvest[P_WEED] = true;
     
-  
-// planthardiness: maximum megative value of plant before it dies
-// OBSOLETE -- handled with stateless random checks
-//globalvar planthardiness;
-//planthardiness[P_EMPTY] = 0
-//planthardiness[P_REDX] = -3;
-//planthardiness[P_REDPLUS] = -3;
-//planthardiness[P_BLUEROUND] = -3;
-//planthardiness[P_BLUECLUSTER] = -3;
-//planthardiness[P_GREENCLUSTER] = -3;
-//planthardiness[P_GREENMEANDER] = -3;
+
+// plantniche
+// Different plants get growth bonuses (counteracting out-of-season penalties) for
+//   different reasons.
+// Reasons:
+//   * More valuable plants should not have niches.
+//   * Plants the produce no harvests should have niches (except grass and weeds)
+globalvar plantniche;
+plantniche[P_EMPTY] = NICHE_NONE;
+plantniche[P_ITCHGRASS] = NICHE_HEIGHTNEG;
+plantniche[P_STRAWBERRY] = NICHE_MINERALSUM;
+plantniche[P_BLUEBERRY] = NICHE_HEIGHTNEG;
+plantniche[P_CORNFLOWER] = NICHE_HEIGHT;
+plantniche[P_CLIANTRO] = NICHE_MINERALSUMNEG;
+plantniche[P_CLOVER] = NICHE_MOISTURENEG;
+plantniche[P_DANDELION] = NICHE_MOISTURE;
+plantniche[P_ONION] = NICHE_MOISTURENEG;
+plantniche[P_MUSHROOM] = NICHE_MOISTURENEG;
+plantniche[P_BLUEHEDGE] = NICHE_MINERALSUM;
+plantniche[P_GREENTOMATO] = NICHE_HEIGHT;
+plantniche[P_HEDGE] = NICHE_MINERALSUMNEG;
+plantniche[P_GRASS] = NICHE_NONE;
+plantniche[P_WEED] = NICHE_NONE;
+plantniche[P_TOMATO] = NICHE_NONE;
+plantniche[P_WATERMELON] = NICHE_NONE;
+plantniche[P_EGGPLANT] = NICHE_NONE;
+plantniche[P_PEPPER] = NICHE_NONE;
+plantniche[P_LETTUCE] = NICHE_NONE;
+plantniche[P_BLUELETTUCE] = NICHE_NONE;
+
 
 // plantseason
 // The year is divided into twelve months, divided into four seasons.  January is month 0,
