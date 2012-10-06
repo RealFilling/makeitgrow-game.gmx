@@ -5,7 +5,7 @@ if (global.energyflasheffect > 0) {
   global.energyflasheffect -= 1;
   }
 else {
-  energycolor = make_color_rgb(1,93,242);
+  energycolor = make_color_rgb(0,193,244);
   }
 // Process ticker
 draw_set_valign(fa_top);
@@ -14,8 +14,8 @@ processticker();
 
 draw_set_halign(fa_center);
 // Draw money bar
-draw_sprite(spr_moneybar,0,scrx+72,scry);
-drawshadowedtext(font_hud,c_white,string_commas(global.money),156,0,true);
+draw_sprite(spr_moneybar,0,scrx+70,scry);
+drawshadowedtext(font_hud,c_white,string_commas(global.money),154,4,true);
 // Draw energy bar background
 draw_sprite(spr_energybkgd,0,scrx+10,scry+4);
 // Draw energy bar
@@ -26,26 +26,26 @@ draw_sprite_ext(spr_energybar,0,scrx+30,scry+32,1.0,1.0,
 // Draw top-left
 draw_sprite(spr_hudtopleft,0,scrx,scry);
 // Draw weather icon
-draw_sprite(spr_weathericons,global.currentweather,scrx+view_wview[0]-58,scry+4);
+draw_sprite(spr_weathericons,global.currentweather,scrx+view_wview[0]-57,scry+3);
 // Draw season icon
-draw_sprite(spr_seasonicons,pickseasonicon(global.month),scrx+view_wview[0]-30,scry+58);
+draw_sprite(spr_seasonicons,pickseasonicon(global.month),scrx+view_wview[0]-30,scry+57);
 // Draw speed buttons
 draw_sprite(obj_speedbutton1.sprite_index,obj_speedbutton1.image_index,
-            obj_speedbutton1.savedx + scrx, obj_speedbutton1.savedy + scry);  
+            obj_speedbutton1.savedx + scrx+1, obj_speedbutton1.savedy + scry);  
 draw_sprite(obj_speedbutton2.sprite_index,obj_speedbutton2.image_index,
-            obj_speedbutton2.savedx + scrx, obj_speedbutton2.savedy + scry);  
+            obj_speedbutton2.savedx + scrx+1, obj_speedbutton2.savedy + scry);  
 draw_sprite(obj_speedbutton3.sprite_index,obj_speedbutton3.image_index,
-            obj_speedbutton3.savedx + scrx, obj_speedbutton3.savedy + scry);  
+            obj_speedbutton3.savedx + scrx+1, obj_speedbutton3.savedy + scry);  
 // Draw top-right
 draw_sprite(spr_hudtopright,0,scrx+view_wview[0],scry);
 // Draw iconbar background
 draw_sprite(spr_hudiconbar,0,scrx,scry+86);
 // Draw time of day
-drawshadowedtext(font_hud,c_white,timeofday(),view_wview[0]-221,0,true);
+drawshadowedtext(font_hud,c_white,timeofday(),view_wview[0]-221,4,true);
 // Draw time of year
 drawshadowedtext(font_hud,c_white,global.months[global.month]+" "+
                                   string(global.day+1)+", "+
-                                  string(global.year+2012),view_wview[0]-128,0,true);
+                                  string(global.year+2012),view_wview[0]-127,4,true);
 
 //outputtext1 = "Year "+string(global.year);
 //outputtext1 += ", "+global.months[global.month]+" "+string(global.day+1);
