@@ -107,19 +107,12 @@
     </sprites>
     <sprites name="Tilemap">
       <sprite>sprites\spr_composttiles</sprite>
-      <sprite>sprites\spr_soiltiles</sprite>
-      <sprite>sprites\spr_soiltiles2</sprite>
       <sprite>sprites\spr_soilmonotiles</sprite>
-      <sprite>sprites\spr_tilledtiles</sprite>
       <sprite>sprites\spr_tilledtiles2</sprite>
       <sprite>sprites\spr_tilledmonotiles</sprite>
       <sprite>sprites\spr_debugplaceholder</sprite>
       <sprite>sprites\spr_fruittiles</sprite>
-      <sprite>sprites\spr_watertiles</sprite>
-      <sprite>sprites\spr_watertiles2</sprite>
       <sprite>sprites\spr_soil_OBS</sprite>
-      <sprite>sprites\spr_soiltiles_OLD</sprite>
-      <sprite>sprites\spr_soiltiles_OLD2</sprite>
       <sprite>sprites\spr_treetilesup</sprite>
       <sprite>sprites\spr_treetilesdown</sprite>
       <sprite>sprites\spr_buildings</sprite>
@@ -166,16 +159,13 @@
     <sprite>sprites\spr_pixtitle</sprite>
     <sprite>sprites\spr_splash</sprite>
     <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_title_OLD</sprite>
     <sprite>sprites\spr_white</sprite>
     <sprites name="Farmer">
-      <sprite>sprites\spr_farmerwalk1_OLD</sprite>
       <sprite>sprites\spr_farmerwater1</sprite>
       <sprite>sprites\spr_farmerplant1</sprite>
       <sprite>sprites\spr_farmerwalk1</sprite>
       <sprite>sprites\spr_farmerneutral1</sprite>
     </sprites>
-    <sprite>sprites\sprite105</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

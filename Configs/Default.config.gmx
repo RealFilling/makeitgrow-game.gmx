@@ -43,6 +43,7 @@
   <option_changeresolution>false</option_changeresolution>
   <option_closeesc>true</option_closeesc>
   <option_colordepth>0</option_colordepth>
+  <option_display_name>makeitgrow-game</option_display_name>
   <option_displayerrors>true</option_displayerrors>
   <option_facebook_appid></option_facebook_appid>
   <option_facebook_enable>false</option_facebook_enable>
@@ -63,6 +64,7 @@
   <option_html5_alwaysreload>false</option_html5_alwaysreload>
   <option_html5_centergame>false</option_html5_centergame>
   <option_html5_foldername>html5game</option_html5_foldername>
+  <option_html5_generate_spotify_app>false</option_html5_generate_spotify_app>
   <option_html5_icon>Configs\Default\html5\fav.ico</option_html5_icon>
   <option_html5_index>-1</option_html5_index>
   <option_html5_interpolate>true</option_html5_interpolate>
@@ -159,6 +161,7 @@
   <option_version_product></option_version_product>
   <option_version_release>0</option_version_release>
   <option_win8_build_version>0</option_win8_build_version>
+  <option_win8_certificate_location>C:\Users\John Harris\AppData\Roaming\GameMaker-Studio\Windows8\Windows8_TemporaryKey.pfx</option_win8_certificate_location>
   <option_win8_display_name></option_win8_display_name>
   <option_win8_internet_capable>false</option_win8_internet_capable>
   <option_win8_landscape_allowed>true</option_win8_landscape_allowed>
@@ -175,6 +178,7 @@
   <option_win8_publisher_display_name></option_win8_publisher_display_name>
   <option_win8_revision_version>0</option_win8_revision_version>
   <option_win8_scaling_stretch>false</option_win8_scaling_stretch>
+  <option_win8_search_capable>false</option_win8_search_capable>
   <option_win8_small_logo>logo30.png</option_win8_small_logo>
   <option_win8_splash_background_colour>#000000</option_win8_splash_background_colour>
   <option_win8_splash_png>splashscreen.png</option_win8_splash_png>
