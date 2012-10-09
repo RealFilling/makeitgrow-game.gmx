@@ -43,10 +43,10 @@ switch (global.gamestate) {
           time_advsubticks(2);
           break;
         case GSPEED_VFAST:
-          time_advsubticks(SUBTICKSPERTICK * 5);
+          time_advsubticks(SUBTICKSPERTICK * 2);
           if (global.money > 0) {
             if (global.hyperspeedchargecount <= 0) {
-              global.hyperspeedchargecount = 2;
+              global.hyperspeedchargecount = 1;
               global.money -= 1;
               }
             else {
