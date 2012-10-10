@@ -158,11 +158,18 @@ if (coordsinbounds(hx,hy)) {
   }
 
 // Draw the farmer
-farmerobj = instance_find(obj_farmer,0);
-with (farmerobj) {
-  farmer_draw();
+if (global.gamestate == GSTATE_NORMAL) {
+  farmerobj = instance_find(obj_farmer,0);
+  with (farmerobj) {
+    farmer_draw();
+    }
   }
-
+else {
+  draw_set_halign(fa_center);
+  draw_set_valign(fa_middle);
+  drawshadowedtext(font_bigtext,c_white,"PLEASE WAIT",cx(),cy(),false);
+  }
+  
 // Draw the weather
 for (wy=0;wy<(view_hview[0] div 256)+1;wy+=1) {
   for (wx=0;wx<(view_wview[0] div 256)+1;wx+=1) {
@@ -170,15 +177,5 @@ for (wy=0;wy<(view_hview[0] div 256)+1;wy+=1) {
                 ax(wx*256),ay(wy*256));
     }
   }  
-  
-// Draw the selection bar -- Old system
-//drawselectbar();
-  
-// DEBUG
-//farmerxobj = instance_find(obj_farmerx,0);
-//with (farmerxobj) {
-//  farmer_draw();
-//  }
-
 
 

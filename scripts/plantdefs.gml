@@ -437,7 +437,7 @@ germinationbase[T_GREEN_BOTTOM] = -1000;
 // Plants that behave in this later manner are marked with a nonspread flag in
 //   this array.
 globalvar nonspread;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   nonspread[a] = false;
   }
 nonspread[P_ONION] = true;
@@ -450,7 +450,7 @@ nonspread[P_BLUELETTUCE] = true;
 // harvestconsume
 // Some plants are removed from the board once harvested.  These plants.
 globalvar harvestconsume;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   harvestconsume[a] = false;
   }
 harvestconsume[P_ONION] = true;
@@ -463,7 +463,7 @@ harvestconsume[P_BLUELETTUCE] = true;
 // noharvest
 // These plants don't produce any useful harvest at all.
 globalvar noharvest;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   noharvest[a] = false;
   }
 noharvest[P_ITCHGRASS] = true;

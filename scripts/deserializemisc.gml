@@ -158,7 +158,12 @@ if (global.animalcount != global.checkanimalcount) {
   
     
 // At this point, we should only have the "future expansion" variables left.
-for (a=0; a<100; a+=1) {
+// Used
+processstring = biteoffsubstring(processstring,global.charspernum);
+global.hstime = stringtonum(global.bittenchars);
+
+// Remaining dummy space
+for (a=0; a<99; a+=1) {
   processstring = biteoffsubstring(processstring,global.charspernum);
   // Note: we do nothing with the values right now.  The above is
   //         only for form's sake.

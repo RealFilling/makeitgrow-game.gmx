@@ -20,7 +20,26 @@ else if (global.framecount < 10) {
 // Per frame stuff, by state
 switch (global.gamestate) {
   case GSTATE_INIT:
-    global.gamestate = GSTATE_NORMAL;
+    if (global.hstime > 0) {
+      global.gamestate = GSTATE_PRECALC;
+      }
+    else {
+      global.gamestate = GSTATE_NORMAL;
+      }
+    break;
+  case GSTATE_PRECALC:
+    if (global.hstime >= 30) {
+      time_advsubticks(SUBTICKSPERTICK * 30);
+      global.hstime -= 30;
+      }
+    else if (global.hstime > 0) {
+      time_advsubticks(SUBTICKSPERTICK * global.hstime);
+      global.hstime = 0;
+      global.gamestate = GSTATE_NORMAL;
+      }
+    else {
+      global.gamestate = GSTATE_NORMAL;
+      }
     break;
   case GSTATE_NORMAL:
     processsoundframe();
