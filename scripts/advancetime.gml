@@ -3,5 +3,6 @@ turnstodo = argument0;
 
 for (a=0;a<turnstodo;a+=1) {
   time_advtick();
+  addbugcheck();
   field_cellularframe();
   }

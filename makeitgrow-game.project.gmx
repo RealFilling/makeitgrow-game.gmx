@@ -254,6 +254,7 @@
         <script>scripts\ctoh.gml</script>
       </scripts>
       <script>scripts\field_drawinfocard.gml</script>
+      <script>scripts\addbugcheck.gml</script>
     </scripts>
     <scripts name="farmer">
       <script>scripts\farmer_create.gml</script>
