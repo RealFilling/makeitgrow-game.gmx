@@ -27,9 +27,9 @@ switch (global.gamestate) {
       }
     break;
   case GSTATE_PRECALC:
-    if (global.hstime >= 30) {
-      time_advsubticks(SUBTICKSPERTICK * 30);
-      global.hstime -= 30;
+    if (global.hstime >= PREGAMESIMTIME) {
+      time_advsubticks(SUBTICKSPERTICK * PREGAMESIMTIME);
+      global.hstime -= PREGAMESIMTIME;
       }
     else if (global.hstime > 0) {
       time_advsubticks(SUBTICKSPERTICK * global.hstime);

@@ -908,7 +908,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="342">
+  <constants number="343">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">6</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1251,6 +1251,7 @@
     <constant name="NICHE_MOISTURENEG">4</constant>
     <constant name="NICHE_MINERALSUM">5</constant>
     <constant name="NICHE_MINERALSUMNEG">6</constant>
+    <constant name="PREGAMESIMTIME">30</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
