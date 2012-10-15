@@ -159,8 +159,13 @@ if (global.animalcount != global.checkanimalcount) {
     
 // At this point, we should only have the "future expansion" variables left.
 // Used
+// global.hstime is +-, instead of =, because we've already initialized
+//   this value back in field_deserializer (where it was originally set
+//   by the code that parsed out the digits added by the server that
+//   indicated how much hypertime, due to being offline, should be
+//   awarded)
 processstring = biteoffsubstring(processstring,global.charspernum);
-global.hstime = stringtonum(global.bittenchars);
+global.hstime += stringtonum(global.bittenchars);
 
 // Remaining dummy space
 for (a=0; a<99; a+=1) {
