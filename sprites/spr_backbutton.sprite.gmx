@@ -15,7 +15,7 @@
   <TextureGroup>0</TextureGroup>
   <For3D>0</For3D>
   <frames>
-    <frame index="0">images\spr_cancelbutton_0.png</frame>
-    <frame index="1">images\spr_cancelbutton_1.png</frame>
+    <frame index="0">images\spr_backbutton_0.png</frame>
+    <frame index="1">images\spr_backbutton_1.png</frame>
   </frames>
 </sprite>
