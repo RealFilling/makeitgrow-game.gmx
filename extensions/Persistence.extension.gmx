@@ -28,7 +28,7 @@
           <id>1</id>
           <help></help>
           <returnType>1</returnType>
-          <argCount>1</argCount>
+          <argCount>2</argCount>
           <args>
             <arg>1</arg>
           </args>

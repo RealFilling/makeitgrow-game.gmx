@@ -3,9 +3,9 @@ function gd_load()
 	return load();
 }
 
-function gd_save(data)
+function gd_save(data,hypertime)
 {
-	return save(data);
+	return save(data,hypertime);
 }
 
 function gd_get_user_status()
