@@ -89,6 +89,7 @@
         <sprite>sprites\spr_treebutton</sprite>
         <sprite>sprites\spr_buildingbutton</sprite>
         <sprite>sprites\spr_cancelbutton</sprite>
+        <sprite>sprites\spr_backbutton</sprite>
         <sprite>sprites\spr_speedbutton1</sprite>
         <sprite>sprites\spr_speedbutton2</sprite>
         <sprite>sprites\spr_speedbutton3</sprite>
