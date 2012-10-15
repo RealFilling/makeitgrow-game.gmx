@@ -39,5 +39,17 @@ resetbuildingtotals();
 // Initialize animals & capacities
 initanimals();
 
+// Pre-seed the game world
+if (!global.skippreseed) {
+  field_preseed();
+  }
+// Run world generations somewhat at start
+if (global.skipprecalc) {
+  global.hstime = 0;
+  }
+else {
+  global.hstime = (global.tickspermonth * 2)+537;
+  }
+
 
 

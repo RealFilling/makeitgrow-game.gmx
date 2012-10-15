@@ -11,10 +11,12 @@ longrange = argument4; // 0:one tile range, 1: tree pointing up, 2: tree pointin
 // rangetolook = 3;
 //
 tries = global.rangetries[longrange];
+trycount = 0; // DEBUG
 redo = false;
 eaten = 0;
 
 for (try=0;try<tries;try+=1) {
+  trycount += 1;
   if ((try == 0) and (longrange == 0)) { //Only normal plants begin search on current location.
     checkx = myx;
     checky = myy;
@@ -22,22 +24,22 @@ for (try=0;try<tries;try+=1) {
   else {
     if (longrange == 0) {
       //dir = irandom_range(6);
-      hexadj(myx,myy,irandom_range(0,5));
+      hexadj(myx,myy,irandom_range(0,5)); // Nearby tiles
       checkx = global.hexx;
       checky = global.hexy;
       }
     else if (longrange == 1) {
-      hextreeup(myx,myy,irandom_range(0,10)+1);
+      hextreeup(myx,myy,irandom_range(0,10)+1); // Tree up pattern
       checkx = global.hexx;
       checky = global.hexy;
       } 
     else if (longrange == 2) {
-      hextreedown(myx,myy,irandom_range(0,10)+1);
+      hextreedown(myx,myy,irandom_range(0,10)+1); // Tree down pattern
       checkx = global.hexx;
       checky = global.hexy;
       }
     else {
-      hextwoadj(myx,myy,irandom_range(0,16)+1);
+      hextwoadj(myx,myy,irandom_range(0,16)+1); // Up to two tiles away
       checkx = global.hexx;
       checky = global.hexy;
       }
@@ -49,7 +51,7 @@ for (try=0;try<tries;try+=1) {
       continue;
       }
   thissoil = global.soil[checkx,checky];
-  if (mineral == 0) {
+  if (mineral == RED) {
     red = getred(thissoil);
     if (irandom_range(1,RANDOMMINERALEAT)<=red) {
       thissoil -= 1;
@@ -57,11 +59,11 @@ for (try=0;try<tries;try+=1) {
       if (fiftyfifty() and (getgreen(thissoil) < 255)) {
         thissoil += 256;        
         }
-      }
-      global.soil[checkx,checky] = thissoil;
       try -= 1;
+      }
+    global.soil[checkx,checky] = thissoil;
     }
-  else if (mineral == 1) {
+  else if (mineral == GREEN) {
     green = getgreen(thissoil);
     if (irandom_range(1,RANDOMMINERALEAT)<=green) {
       thissoil -= 256;
@@ -69,11 +71,11 @@ for (try=0;try<tries;try+=1) {
       if (fiftyfifty() and (getblue(thissoil) < 255)) {
         thissoil += 65536;        
         }
-      }
-      global.soil[checkx,checky] = thissoil;
       try -= 1;
+      }
+    global.soil[checkx,checky] = thissoil;
     }
-  else if (mineral == 2) {
+  else if (mineral == BLUE) {
     blue = getblue(thissoil);
     if (irandom_range(1,RANDOMMINERALEAT)<=blue) {
       thissoil -= 65536;
@@ -81,9 +83,9 @@ for (try=0;try<tries;try+=1) {
       if (fiftyfifty() and (getred(thissoil) < 255)) {
         thissoil += 1;        
         }
-      }
-      global.soil[checkx,checky] = thissoil;
       try -= 1;
+      }
+    global.soil[checkx,checky] = thissoil;
     }
   if (eaten >= amttoeat) {
     return true;

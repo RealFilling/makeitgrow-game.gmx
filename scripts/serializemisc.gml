@@ -144,8 +144,11 @@ for (a=0; a<MAXANIMALS; a+=1) {
   
 gd_log("serializing future expansion");
   
+// Used future expansion
+buildstring += numtostring(global.hstime);
+
 // Room for future expansion without invalidating save format
-for (a=0; a<100; a+=1) {
+for (a=0; a<99; a+=1) {
   buildstring += numtostring(0);
   }
 

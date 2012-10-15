@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Persistence</extension>
+    <extension index="1">extensions\FakeInitJS</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_plant1</sound>
@@ -20,6 +21,7 @@
     <sound>sound\snd_plop1</sound>
     <sound>sound\snd_water1</sound>
     <sound>sound\snd_spread1</sound>
+    <sound>sound\snd_spread2</sound>
     <sound>sound\snd_menuopen1</sound>
     <sound>sound\snd_menuopen1_OLD</sound>
     <sound>sound\snd_menuclose1</sound>
@@ -245,12 +247,15 @@
         <script>scripts\field_heightgen.gml</script>
         <script>scripts\field_watergen.gml</script>
         <script>scripts\field_moistgen.gml</script>
+        <script>scripts\field_preseed.gml</script>
+        <script>scripts\makerandomplant.gml</script>
       </scripts>
       <scripts name="coordinates">
         <script>scripts\htoc.gml</script>
         <script>scripts\ctoh.gml</script>
       </scripts>
       <script>scripts\field_drawinfocard.gml</script>
+      <script>scripts\addbugcheck.gml</script>
     </scripts>
     <scripts name="farmer">
       <script>scripts\farmer_create.gml</script>
@@ -349,6 +354,7 @@
       <script>scripts\stringtestsuite.gml</script>
       <script>scripts\farmer_debug_m.gml</script>
       <script>scripts\nan_check.gml</script>
+      <script>scripts\debug_lowestredcount.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\time_advtick.gml</script>
@@ -836,6 +842,7 @@
     <font>fonts\font_hud</font>
     <font>fonts\font_menuone</font>
     <font>fonts\font_menutwo</font>
+    <font>fonts\font_bigtext</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_field</object>
@@ -902,7 +909,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="341">
+  <constants number="343">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">6</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -967,6 +974,7 @@
     <constant name="GSTATE_MARKETCHART">8</constant>
     <constant name="GSTATE_INITLOAD">9</constant>
     <constant name="GSTATE_LOGINCHECK">10</constant>
+    <constant name="GSTATE_PRECALC">11</constant>
     <constant name="P_EMPTY">0</constant>
     <constant name="P_REDX">1</constant>
     <constant name="P_ITCHGRASS">1</constant>
@@ -1244,6 +1252,7 @@
     <constant name="NICHE_MOISTURENEG">4</constant>
     <constant name="NICHE_MINERALSUM">5</constant>
     <constant name="NICHE_MINERALSUMNEG">6</constant>
+    <constant name="PREGAMESIMTIME">30</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

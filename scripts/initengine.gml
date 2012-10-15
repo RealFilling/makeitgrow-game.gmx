@@ -2,12 +2,14 @@ var cx1, cy1;
 // Game initialization
 
 // Debugging support
-global.demomode = false;
+global.demomode = true;
 global.debug = false;
 global.savedebug = false;
-global.nosave = false;
+global.nosave = true;
 global.shadowdebug = false;
 global.miscdebug = false;
+global.skippreseed = false;
+global.skipprecalc = false;
 
 //init();
 script_utility();
@@ -54,14 +56,8 @@ global.cornerbuttonmenutitle[3] = "Trees";
 global.cornerbuttonmenutitle[4] = "Buildings";
 global.cornerbuttonmenutitle[5] = "Items";
 
-// Utility variables
-//script_utility()
-
 // Initial seed selection
 global.currentseed = TOOL_MOVE;
-
-// Game state (now handled in field_create()
-//global.gamestate = GSTATE_INIT;
 
 // Debugging
 global.plantgrowthdebug = false;
