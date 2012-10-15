@@ -1,4 +1,4 @@
 var returnstring;
-returnstring = argument0; // Caller performs gd_load for us
+returnstring = argument0;
 loadgame(returnstring);
 return returnstring;

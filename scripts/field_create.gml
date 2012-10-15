@@ -23,7 +23,6 @@ if (global.nosave == false) {
     loadstring = gd_load();
     global.loggedin = gd_get_user_status();
     if (string_length(loadstring) != 0) {
-      
       loadgame(loadstring);
       }
     else {

@@ -1,4 +1,4 @@
-var lookx, looky, bugx, bugy, species,newbug;
+var lookx, looky, bugx, bugy, species, newbug;
 lookx = irandom_range(1,BOARDWIDTH-1);
 looky = irandom_range(1,BOARDHEIGHT-1);
 species = getspecies(global.plants[lookx,looky]);
@@ -10,6 +10,9 @@ switch (species) {
     // Most of these will probably die, but once in a while....
     if (irandom_range(0,499)==0) {
       newbug = irandom_range(0,6);
+      if (newbug == B_BLUESPIDER) {
+        return false; // art isn't ready yet
+        }
       }
     else {
       return false;

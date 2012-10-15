@@ -11,6 +11,9 @@ global.miscdebug = false;
 global.skippreseed = false;
 global.skipprecalc = false;
 
+// Placeholder for server-provided hypertime (decoded in field_deserialize).
+global.loadedhypertime = 0;
+
 //init();
 script_utility();
 plantdefs();

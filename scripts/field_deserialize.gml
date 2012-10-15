@@ -9,6 +9,9 @@ if (global.savedebug == true) {
   //show_message("instring checksum:" + string(stringchecksum(instring)));
   }
 
+instring = biteoffsubstring(instring,1);
+global.hstime = global.ticksperday * string_digits(global.bittenchars);
+    
 initchecksum();
 
 //instring = gd_load(true);
