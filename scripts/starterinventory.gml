@@ -59,9 +59,6 @@ if (global.demomode == false) {
   global.pmulch[COMPOST_GREEN] = 1000;
   global.pmulch[COMPOST_BLUE] = 1000;
 
-  // Starting tools
-  addtoinvent(INVENTTYPE_TOOL,TOOL_MOVE,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_HOE,1);
   }
 else {
   // Starting seeds
