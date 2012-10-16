@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Persistence</extension>
-    <extension index="1">extensions\FakeInitJS</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_plant1</sound>
