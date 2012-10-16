@@ -1,6 +1,9 @@
 var cx1, cy1;
 // Game initialization
 
+// Program version
+global.version = "0.10";
+
 // Debugging support
 global.demomode = false;
 global.debug = false;
