@@ -837,6 +837,9 @@
       </scripts>
       <script>scripts\clearanimals.gml</script>
     </scripts>
+    <scripts name="tutorial">
+      <script>scripts\inittutorial.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_hud</font>
