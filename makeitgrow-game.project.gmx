@@ -772,6 +772,7 @@
     <scripts name="text">
       <script>scripts\drawshadowedtext.gml</script>
       <script>scripts\wordwrap.gml</script>
+      <script>scripts\dezeroify.gml</script>
     </scripts>
     <scripts name="difficulty">
       <script>scripts\advancedifficulty.gml</script>
