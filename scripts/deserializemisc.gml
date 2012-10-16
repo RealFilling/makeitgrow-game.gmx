@@ -1,6 +1,8 @@
 var processstring,majver,minver,animalstring;
 processstring = argument0;
 
+inittime(); // Needed to set 
+
 processstring = biteoffsubstring(processstring,global.charspernum);
 majver = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);
@@ -28,11 +30,8 @@ processstring = biteoffsubstring(processstring,global.charspernum);
 global.framecount = stringtonum(global.bittenchars);
   
 // Restore timekeeping variables
-//show_message("old global.rawtime:"+string(global.rawtime));
-inittime();
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.rawtime = stringtonum(global.bittenchars);
-//show_message("new global.rawtime:"+string(global.rawtime));
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.year = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);

@@ -1,6 +1,9 @@
 var loadstring;
 loadstring = argument0;
 
+inittime(); // If not done here, then global.ticksperhour won't 
+            //   be ready for field_deserialize(). 
+
 if (global.nosave) {
   return "";
   }
