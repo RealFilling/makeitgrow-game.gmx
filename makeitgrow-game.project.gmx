@@ -354,6 +354,7 @@
       <script>scripts\farmer_debug_m.gml</script>
       <script>scripts\nan_check.gml</script>
       <script>scripts\debug_lowestredcount.gml</script>
+      <script>scripts\debug_grantsomehypertime.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\inittime.gml</script>
