@@ -12,6 +12,9 @@ if (global.loggedin == 0) {
   return ""; // Nowhere to save
   }
 else {
+  if ((global.year <= 0) and (global.month < 2)) {
+    return ""; // Still in pregen period.
+    }
   gd_log("savegame(): Are logged in....");
   gamestring = field_serialize();
   gd_log("savegame(): Logged in, after serialization, before gd_save()....");
