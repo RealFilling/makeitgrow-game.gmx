@@ -22,7 +22,7 @@ if (global.nosave == false) {
     //gd_set_logged_in(LOGINSTATUS_IN); // Possible: LOGINSTATUS_IN, LOGINSTATUS_NOT
     loadstring = gd_load();
     global.loggedin = gd_get_user_status();
-    if (string_length(loadstring) > 4) {
+    if (string_length(loadstring) != 0) {
       loadgame(loadstring);
       }
     else {
