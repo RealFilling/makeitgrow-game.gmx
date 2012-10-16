@@ -12,8 +12,6 @@ if (global.savedebug == true) {
 instring = biteoffsubstring(instring,4);
 hsvar = real(string_digits(global.bittenchars));
 global.hstime = global.ticksperhour * hsvar;
-gd_log("A. Detected hypertime string: '"+global.bittenchars+"', real() returns "+string(hsvar));
-gd_log("B. Hypertime set to "+string(global.hstime));
     
 initchecksum();
 
