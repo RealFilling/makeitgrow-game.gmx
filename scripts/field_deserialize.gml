@@ -1,4 +1,4 @@
-var hx, hy, pos, charspernum, instring;
+var hx, hy, pos, charspernum, instring, hsvar;
 var astrplants,astrsoil,astrharvest,astrwater,astrheight,astrbugs,astrext,checksum;
 instring = argument0;
 
@@ -10,8 +10,10 @@ if (global.savedebug == true) {
   }
 
 instring = biteoffsubstring(instring,4);
-global.hstime = global.ticksperhour * real(string_digits(global.bittenchars));
-gd_log("Detected hypertime string: '"+global.bittenchars+"', real() returns "+string(real(global.bittenchars)));
+hsvar = real(string_digits(global.bittenchars));
+global.hstime = global.ticksperhour * hsvar;
+gd_log("A. Detected hypertime string: '"+global.bittenchars+"', real() returns "+string(hsvar));
+gd_log("B. Hypertime set to "+string(global.hstime));
     
 initchecksum();
 

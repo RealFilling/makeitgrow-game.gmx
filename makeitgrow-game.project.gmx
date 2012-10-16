@@ -176,7 +176,7 @@
       <script>scripts\field_create.gml</script>
       <script>scripts\initengine.gml</script>
       <script>scripts\initgame.gml</script>
-      <script>scripts\initload.gml</script>
+      <script>scripts\initload_OBS.gml</script>
     </scripts>
     <scripts name="field">
       <script>scripts\field_beginstep.gml</script>

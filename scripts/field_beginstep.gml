@@ -30,6 +30,7 @@ switch (global.gamestate) {
     if (global.hstime >= PREGAMESIMTIME) {
       time_advsubticks(SUBTICKSPERTICK * PREGAMESIMTIME);
       global.hstime -= PREGAMESIMTIME;
+      gd_log("D. Ran a frame of hypertime");
       }
     else if (global.hstime > 0) {
       time_advsubticks(SUBTICKSPERTICK * global.hstime);
