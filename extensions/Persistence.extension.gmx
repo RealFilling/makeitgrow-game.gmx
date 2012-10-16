@@ -25,7 +25,7 @@
           <name>gd_save</name>
           <externalName>gd_save</externalName>
           <kind>11</kind>
-          <id>1</id>
+          <id>73</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>2</argCount>
@@ -38,7 +38,7 @@
           <name>gd_load</name>
           <externalName>gd_load</externalName>
           <kind>11</kind>
-          <id>3</id>
+          <id>75</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>0</argCount>
@@ -48,7 +48,7 @@
           <name>gd_get_user_status</name>
           <externalName>gd_get_user_status</externalName>
           <kind>11</kind>
-          <id>5</id>
+          <id>77</id>
           <help></help>
           <returnType>2</returnType>
           <argCount>0</argCount>
@@ -58,7 +58,7 @@
           <name>gd_log</name>
           <externalName>gd_log</externalName>
           <kind>11</kind>
-          <id>7</id>
+          <id>79</id>
           <help></help>
           <returnType>2</returnType>
           <argCount>1</argCount>
