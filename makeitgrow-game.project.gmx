@@ -172,6 +172,50 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="plants">
+      <script>scripts\plantdefs.gml</script>
+      <script>scripts\plantdefs_OLDSEASONS.gml</script>
+      <script>scripts\eatmineral.gml</script>
+      <script>scripts\addmineral.gml</script>
+      <script>scripts\trytoplaceplant.gml</script>
+      <script>scripts\trytoplaceplantnocrowd.gml</script>
+      <script>scripts\getamtmulch.gml</script>
+      <script>scripts\soiltiletodisp.gml</script>
+      <script>scripts\figureplanttile.gml</script>
+      <script>scripts\getstufffromplant.gml</script>
+      <script>scripts\encodeplanttile.gml</script>
+      <script>scripts\decodeplanttile.gml</script>
+      <script>scripts\figureplantdrawdepth.gml</script>
+      <script>scripts\plantadjacency.gml</script>
+      <script>scripts\planthasmineral.gml</script>
+      <script>scripts\placeplant.gml</script>
+      <scripts name="spreadlogic">
+        <script>scripts\spreadplant.gml</script>
+        <script>scripts\spread_redx.gml</script>
+        <script>scripts\spread_redplus.gml</script>
+        <script>scripts\spread_blueround.gml</script>
+        <script>scripts\spread_blueclusters.gml</script>
+        <script>scripts\spread_greenclusters.gml</script>
+        <script>scripts\spread_greenmeandering.gml</script>
+        <script>scripts\spread_redscattered.gml</script>
+        <script>scripts\spread_redhardy.gml</script>
+        <script>scripts\spread_bluewaves.gml</script>
+        <script>scripts\spread_bluevertical.gml</script>
+        <script>scripts\spread_greendelicate.gml</script>
+        <script>scripts\spread_greenhorizontal.gml</script>
+        <script>scripts\spread_grass.gml</script>
+        <script>scripts\spread_weeds.gml</script>
+        <script>scripts\spread_nonspreading.gml</script>
+      </scripts>
+      <script>scripts\isalive.gml</script>
+      <script>scripts\isdead.gml</script>
+      <script>scripts\isdying.gml</script>
+      <script>scripts\isimmature.gml</script>
+      <script>scripts\ismature.gml</script>
+      <script>scripts\isadult.gml</script>
+      <script>scripts\monthaffinity.gml</script>
+      <script>scripts\nicheeffect.gml</script>
+    </scripts>
     <scripts name="initgame">
       <script>scripts\field_create.gml</script>
       <script>scripts\initengine.gml</script>
@@ -614,50 +658,6 @@
       <script>scripts\timeeffects_step.gml</script>
       <script>scripts\timeeffects_destroy.gml</script>
       <script>scripts\timeeffects_draw.gml</script>
-    </scripts>
-    <scripts name="plants">
-      <script>scripts\plantdefs.gml</script>
-      <script>scripts\plantdefs_OLDSEASONS.gml</script>
-      <script>scripts\eatmineral.gml</script>
-      <script>scripts\addmineral.gml</script>
-      <script>scripts\trytoplaceplant.gml</script>
-      <script>scripts\trytoplaceplantnocrowd.gml</script>
-      <script>scripts\getamtmulch.gml</script>
-      <script>scripts\soiltiletodisp.gml</script>
-      <script>scripts\figureplanttile.gml</script>
-      <script>scripts\getstufffromplant.gml</script>
-      <script>scripts\encodeplanttile.gml</script>
-      <script>scripts\decodeplanttile.gml</script>
-      <script>scripts\figureplantdrawdepth.gml</script>
-      <script>scripts\plantadjacency.gml</script>
-      <script>scripts\planthasmineral.gml</script>
-      <script>scripts\placeplant.gml</script>
-      <scripts name="spreadlogic">
-        <script>scripts\spreadplant.gml</script>
-        <script>scripts\spread_redx.gml</script>
-        <script>scripts\spread_redplus.gml</script>
-        <script>scripts\spread_blueround.gml</script>
-        <script>scripts\spread_blueclusters.gml</script>
-        <script>scripts\spread_greenclusters.gml</script>
-        <script>scripts\spread_greenmeandering.gml</script>
-        <script>scripts\spread_redscattered.gml</script>
-        <script>scripts\spread_redhardy.gml</script>
-        <script>scripts\spread_bluewaves.gml</script>
-        <script>scripts\spread_bluevertical.gml</script>
-        <script>scripts\spread_greendelicate.gml</script>
-        <script>scripts\spread_greenhorizontal.gml</script>
-        <script>scripts\spread_grass.gml</script>
-        <script>scripts\spread_weeds.gml</script>
-        <script>scripts\spread_nonspreading.gml</script>
-      </scripts>
-      <script>scripts\isalive.gml</script>
-      <script>scripts\isdead.gml</script>
-      <script>scripts\isdying.gml</script>
-      <script>scripts\isimmature.gml</script>
-      <script>scripts\ismature.gml</script>
-      <script>scripts\isadult.gml</script>
-      <script>scripts\monthaffinity.gml</script>
-      <script>scripts\nicheeffect.gml</script>
     </scripts>
     <scripts name="events">
       <script>scripts\eventdefs.gml</script>
