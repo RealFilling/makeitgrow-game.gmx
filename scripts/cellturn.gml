@@ -37,7 +37,7 @@ if (bugs != 0) {
       if ((plantx == myx) and (planty == myy)) {
         pnomflag = true;
         bugeatenflag = true;
-        bugcount = min(bugcount+irandom_range(1,3),15);
+        bugcount = min(bugcount+irandom_range(1,4),15);
         }
       else {
         global.bugarray[bugnum] = 0;
