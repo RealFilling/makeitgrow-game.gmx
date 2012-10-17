@@ -45,6 +45,22 @@ for (by=by1; by<by2; by+=1) {
     else {
       draw_sprite_ext(spr_tilledtiles2,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
       }
+    // Bugs
+    bugset = global.bugs[bx,by];
+    if (bugset != 0) {
+      getallbugs(bugset);
+      mostbugs = -1;
+      mostbugcount = -1;
+      for (a=0;a<NUMBUGS;a+=1) {
+        if global.bugarray[a] > mostbugcount {
+          mostbugs = a;
+          mostbugcount = global.bugarray[a];
+          }
+        }       
+      draw_sprite_ext(bugsprites[mostbugs],0,pixx,pixy-16,
+                      1.0,1.0,0,c_white,1.0);
+      draw_text(pixx,pixy-16,string(mostbugcount));
+      }
     // Plant
     thisplant = global.plants[bx,by];
     thisspecies = getspecies(thisplant);
@@ -120,22 +136,6 @@ for (by=by1; by<by2; by+=1) {
       }
     if (getgreenh(bx,by)) {
       draw_sprite(spr_greenhouse,0,pixx,pixy);
-      }
-    // Bugs
-    bugset = global.bugs[bx,by];
-    if (bugset != 0) {
-      getallbugs(bugset);
-      mostbugs = -1;
-      mostbugcount = -1;
-      for (a=0;a<NUMBUGS;a+=1) {
-        if global.bugarray[a] > mostbugcount {
-          mostbugs = a;
-          mostbugcount = global.bugarray[a];
-          }
-        }       
-      draw_sprite_ext(bugsprites[mostbugs],0,pixx,pixy-16,
-                      1.0,1.0,0,c_white,1.0);
-      draw_text(pixx,pixy-16,string(mostbugcount));
       }
     // Water
     if global.water[bx,by] != 0 {
