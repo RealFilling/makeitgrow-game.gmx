@@ -146,9 +146,14 @@ gd_log("serializing future expansion");
   
 // Used future expansion
 buildstring += numtostring(global.hstime);
+// Compost amounts - I can't believe it went so long with this.
+for (a=0; a<3; a+=1) {
+  buildstring += numtostring(global.pmulch[a]);
+  }
+
 
 // Room for future expansion without invalidating save format
-for (a=0; a<99; a+=1) {
+for (a=0; a<96; a+=1) {
   buildstring += numtostring(0);
   }
 

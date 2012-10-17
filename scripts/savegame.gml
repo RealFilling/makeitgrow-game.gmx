@@ -7,7 +7,7 @@ if (global.nosave) {
   return "";
   }
 
-if (global.loggedin == 0) {
+if ((global.loggedin == 0) and (global.demomode == false)){
   gd_log("savegame(): Not logged in!");
   return ""; // Nowhere to save
   }
@@ -18,8 +18,14 @@ else {
   gd_log("savegame(): Are logged in....");
   gamestring = field_serialize();
   gd_log("savegame(): Logged in, after serialization, before gd_save()....");
-  returnstring = gd_save(gamestring,global.hstime div global.ticksperhour);
-  gd_log("savegame(): Logged in, after gd_save(), done.");
+  if (global.demomode == true) {
+    global.savestring = "0000"+field_serialize();
+    }
+  else {
+    returnstring = gd_save(gamestring,global.hstime div global.ticksperhour);
+    gd_log("savegame(): Logged in, after gd_save(), done.");
+    }
+  enqueueticker("Saved.");  
   return gamestring;
   }
 

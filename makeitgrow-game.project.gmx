@@ -914,7 +914,7 @@
   </rooms>
   <constants number="343">
     <constant name="MAJORVERSION">0</constant>
-    <constant name="MINORVERSION">6</constant>
+    <constant name="MINORVERSION">7</constant>
     <constant name="TILEWIDTH">48</constant>
     <constant name="TILEHEIGHT">48</constant>
     <constant name="ETILEHEIGHT">36</constant>

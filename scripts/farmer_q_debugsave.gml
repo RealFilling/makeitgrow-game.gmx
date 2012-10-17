@@ -6,6 +6,7 @@ if (global.savedebug == true) {
     // The "0" below is due to Leandro's solution to server-provided hypertime.
     // We have to account for that now so loading doesn't break.
     global.savestring = "0000"+field_serialize();
+    enqueueticker("Saved [debug].");
     return 0;
     }
   else {

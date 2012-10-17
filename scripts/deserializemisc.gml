@@ -16,7 +16,7 @@ if ((majver != MAJORVERSION) or (minver != MINORVERSION)) {
   }
 
 if (global.savedebug == true) {
-  show_message("Load progress: version check passed.");
+  gd_log("Load progress: version check passed.");
   }
   
 // Restore progress of cellular engine
@@ -76,7 +76,7 @@ for (a=0;a<4;a+=1) {
   }
   
 if (global.savedebug == true) {
-  show_message("Before inventory: item count is "+string(global.checksumcount));
+  gd_log("Before inventory: item count is "+string(global.checksumcount));
   }
 
 initinventory(); // Reset inventories before loading.
@@ -135,8 +135,8 @@ for (a=0;a<MAXINVENT;a+=1) {
   }
 
 if (global.savedebug == true) {
-  show_message("After inventory: item count is "+string(global.checksumcount));
-  show_message("deserializemisc(): before animals, string length is "+string(string_length(processstring)));
+  gd_log("After inventory: item count is "+string(global.checksumcount));
+  gd_log("deserializemisc(): before animals, string length is "+string(string_length(processstring)));
   }
   
 // Animals
@@ -149,7 +149,7 @@ for (a=0;a<MAXANIMALS;a+=1) {
   restoreanimal(animalstring);
   }
 if (global.savedebug == true) {
-  show_message("Load progress: Animals found: "+string(global.animalcount));
+  gd_log("Load progress: Animals found: "+string(global.animalcount));
   }
 if (global.animalcount != global.checkanimalcount) {
   show_error("ERROR: Animals loaded doesn't match record!",false);
@@ -166,16 +166,21 @@ if (global.animalcount != global.checkanimalcount) {
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.hstime += stringtonum(global.bittenchars);
 
+for (a=0; a<3; a+=1) {
+  processstring = biteoffsubstring(processstring,global.charspernum);
+  global.pmulch[a] += stringtonum(global.bittenchars);
+  }
+
 // Remaining dummy space
-for (a=0; a<99; a+=1) {
+for (a=0; a<96; a+=1) {
   processstring = biteoffsubstring(processstring,global.charspernum);
   // Note: we do nothing with the values right now.  The above is
   //         only for form's sake.
   }
 
 if (global.savedebug == true) {
-  show_message("Load done!");
-  show_message("Remaining length of processstring:" + string(string_length(processstring)));
+  gd_log("Load done!");
+  gd_log("Remaining length of processstring:" + string(string_length(processstring)));
   }
     
 // We'll recalculate building totals soon

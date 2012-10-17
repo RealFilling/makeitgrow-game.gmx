@@ -2,12 +2,10 @@ var hx, hy, pos, charspernum, instring, hsvar;
 var astrplants,astrsoil,astrharvest,astrwater,astrheight,astrbugs,astrext,checksum;
 instring = argument0;
 
-if (global.savedebug == true) {
-  show_message("Deserializer received string....");
-  show_message("Serialized string length:"+string(string_length(instring)));
-  show_message("First ten characters of instring:"+string_copy(instring,1,10));
-  //show_message("instring checksum:" + string(stringchecksum(instring)));
-  }
+gd_log("Deserializer received string....");
+gd_log("Serialized string length:"+string(string_length(instring)));
+gd_log("First ten characters of instring:"+string_copy(instring,1,10));
+//show_message("instring checksum:" + string(stringchecksum(instring)));
 
 instring = biteoffsubstring(instring,4);
 hsvar = real(string_digits(global.bittenchars));
@@ -37,7 +35,7 @@ astrbuildext = string_copy(instring, 1, BOARDWIDTH*BOARDHEIGHT*global.charspernu
 instring = string_delete(instring, 1, (BOARDWIDTH*BOARDHEIGHT*global.charspernum)+1);
 
 if (global.savedebug == true) {
-  show_message("Load progress: separated out field strings.");
+  gd_log("Load progress: separated out field strings.");
   }
 
 global.sbitmask = (1<<NUMBITSSAVE) - 1;
@@ -61,7 +59,7 @@ for (hy=0;hy<BOARDHEIGHT;hy+=1) {
   }
   
 if (global.savedebug == true) {
-  show_message("Load progress: done with field.");
+  gd_log("Load progress: done with field.");
   }
   
 //show_message("field_deserialize: length of instring after fields is "+string(string_length(instring)));
@@ -69,10 +67,8 @@ instring = deserializemisc(instring);
 
 checksum = reportchecksum();
 
-if (global.savedebug == true) {
-  show_message("Load progress: done with field.");
-  show_message("Load checksum is "+string(checksum));
-  }
+gd_log("Load is done");
+gd_log("Load checksum is "+string(checksum));
   
 // Initialize building totals
 resetbuildingtotals();

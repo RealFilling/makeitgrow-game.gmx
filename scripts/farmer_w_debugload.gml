@@ -11,6 +11,7 @@ if (global.savedebug == true) {
   else {
     if (global.savestring != "") {
       remainder = field_deserialize(global.savestring);
+      enqueueticker("Loaded [debug]");
       }
     }
   }
