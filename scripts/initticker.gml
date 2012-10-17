@@ -6,4 +6,4 @@ global.tickerflashcolors[0] = c_black;
 global.tickerflashcolors[1] = c_white;
 
 clearticker();
-enqueueticker("Welcome to MAKE IT GROW.");
+enqueueticker("Welcome to MAKE IT GROW. [program version "+global.version+"]");

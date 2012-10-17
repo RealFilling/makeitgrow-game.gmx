@@ -29,7 +29,9 @@ buildstring += numtostring(global.year);
 buildstring += numtostring(global.yearday);
 buildstring += numtostring(global.week);
 buildstring += numtostring(global.month);
+buildstring += numtostring(global.monthday);
 buildstring += numtostring(global.day);
+buildstring += numtostring(global.hour);
 buildstring += numtostring(global.tick);
 buildstring += numtostring(global.subtick);
 
@@ -144,6 +146,13 @@ for (a=0; a<MAXANIMALS; a+=1) {
   
 gd_log("serializing future expansion");
   
+buildstring += numtostring(global.hstime);
+// Compost amounts - I can't believe it went so long with this.
+for (a=0; a<3; a+=1) {
+  buildstring += numtostring(global.pmulch[a]);
+  }
+
+
 // Room for future expansion without invalidating save format
 for (a=0; a<100; a+=1) {
   buildstring += numtostring(0);

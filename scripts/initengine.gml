@@ -1,6 +1,9 @@
 var cx1, cy1;
 // Game initialization
 
+// Program version
+global.version = "0.10";
+
 // Debugging support
 global.demomode = false;
 global.debug = false;
@@ -8,6 +11,8 @@ global.savedebug = false;
 global.nosave = false;
 global.shadowdebug = false;
 global.miscdebug = false;
+global.skippreseed = false;
+global.skipprecalc = false;
 
 //init();
 script_utility();
@@ -24,6 +29,7 @@ weatherdefs();
 buildingdefs();
 soundframedefs();
 initsoundframe();
+timeconsts();
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;
@@ -54,14 +60,8 @@ global.cornerbuttonmenutitle[3] = "Trees";
 global.cornerbuttonmenutitle[4] = "Buildings";
 global.cornerbuttonmenutitle[5] = "Items";
 
-// Utility variables
-//script_utility()
-
 // Initial seed selection
 global.currentseed = TOOL_MOVE;
-
-// Game state (now handled in field_create()
-//global.gamestate = GSTATE_INIT;
 
 // Debugging
 global.plantgrowthdebug = false;

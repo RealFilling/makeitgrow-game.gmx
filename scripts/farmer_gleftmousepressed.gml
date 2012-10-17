@@ -3,8 +3,8 @@ if (global.ignoreclick == true) {
   return 0;
   }
   
-if (global.menustate != MENUSTATE_NONE) {
-  // A menu is open, so ignore field clicks for the time being.
+if ((global.menustate != MENUSTATE_NONE) or (global.gamestate != GSTATE_NORMAL)) {
+  // A menu is open or game state is special, so ignore field clicks for the time being.
   return 0;
   }
 

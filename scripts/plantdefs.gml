@@ -57,18 +57,18 @@ plantmineral[T_GREEN_BOTTOM] = GREEN;
 // deathmineral: the amount of mineral a dead plant is mulched for/returns to the soil
 globalvar deathmineral;
 deathmineral[P_EMPTY] = -1;
-deathmineral[P_REDX] = 2;
-deathmineral[P_REDPLUS] = 2;
-deathmineral[P_BLUEROUND] = 2;
-deathmineral[P_BLUECLUSTER] = 2;
-deathmineral[P_GREENCLUSTER] = 2;
-deathmineral[P_GREENMEANDER] = 2;
-deathmineral[P_REDSCATTER] = 2;
-deathmineral[P_REDHARDY] = 3;
-deathmineral[P_BLUEWAVE] = 2;
-deathmineral[P_BLUEVERTICAL] = 2;
-deathmineral[P_GREENDELICATE] = 2;
-deathmineral[P_GREENHORIZONTAL] = 2;
+deathmineral[P_REDX] = 60;
+deathmineral[P_REDPLUS] = 30;
+deathmineral[P_BLUEROUND] = 24;
+deathmineral[P_BLUECLUSTER] = 34;
+deathmineral[P_GREENCLUSTER] = 28;
+deathmineral[P_GREENMEANDER] = 45;
+deathmineral[P_REDSCATTER] = 30;
+deathmineral[P_REDHARDY] = 20;
+deathmineral[P_BLUEWAVE] = 30;
+deathmineral[P_BLUEVERTICAL] = 50;
+deathmineral[P_GREENDELICATE] = 60;
+deathmineral[P_GREENHORIZONTAL] = 50;
 deathmineral[P_GRASS] = 0; // It's better to grow grass than mulch it
 deathmineral[P_WEED] = 0; // This makes weeds fairly wasteful
 deathmineral[T_RED_TOP] = 20;
@@ -80,26 +80,26 @@ deathmineral[T_GREEN_BOTTOM] = 20;
 //                 spread, or produce fruit
 globalvar plantminneed;
 plantminneed[P_EMPTY] = 0;
-plantminneed[P_REDX] = 2;
-plantminneed[P_REDPLUS] = 2;
-plantminneed[P_BLUEROUND] = 2;
+plantminneed[P_REDX] = 3;
+plantminneed[P_REDPLUS] = 6;
+plantminneed[P_BLUEROUND] = 6;
 plantminneed[P_BLUECLUSTER] = 2;
 plantminneed[P_GREENCLUSTER] = 2;
 plantminneed[P_GREENMEANDER] = 2;
-plantminneed[P_REDSCATTER] = 2;
-plantminneed[P_REDHARDY] = 2;
-plantminneed[P_BLUEWAVE] = 1;
-plantminneed[P_BLUEVERTICAL] = 2;
-plantminneed[P_GREENDELICATE] = 3;
-plantminneed[P_GREENHORIZONTAL] = 2;
-plantminneed[P_GRASS] = 0; // In this game, grass has a restorative function.
+plantminneed[P_REDSCATTER] = 3;
+plantminneed[P_REDHARDY] = 4;
+plantminneed[P_BLUEWAVE] = 2;
+plantminneed[P_BLUEVERTICAL] = 3;
+plantminneed[P_GREENDELICATE] = 7;
+plantminneed[P_GREENHORIZONTAL] = 3;
+plantminneed[P_GRASS] = 1; // In this game, grass has a restorative function.
 plantminneed[P_WEED] = 1; // Weeds are low because it consumes all three, more than making up for it
 plantminneed[P_REDMELON] = 4; // Red Melon has higher than usual mineral requirements!
-plantminneed[P_GREENMELON] = 2;
-plantminneed[P_BLUEMELON] = 2;
-plantminneed[P_REDLEAFY] = 1; // Leafy plants require less minerals than average.
-plantminneed[P_GREENLEAFY] = 2; // But Green Leafy is an exception
-plantminneed[P_BLUELEAFY] = 1;
+plantminneed[P_GREENMELON] = 6;
+plantminneed[P_BLUEMELON] = 5;
+plantminneed[P_REDLEAFY] = 5; // Leafy plants require less minerals than average.
+plantminneed[P_GREENLEAFY] = 3; // But Green Leafy is an exception
+plantminneed[P_BLUELEAFY] = 4;
 plantminneed[T_RED_TOP] = 1; // Low tree requirements combine with large area drawn from to give trees
 plantminneed[T_RED_BOTTOM] = 1; // high longevity.
 plantminneed[T_GREEN_TOP] = 1;
@@ -111,24 +111,24 @@ plantminneed[T_GREEN_BOTTOM] = 1;
 globalvar plantwatneed;
 plantwatneed[P_EMPTY] = 0
 plantwatneed[P_REDX] = 2;
-plantwatneed[P_REDPLUS] = 2;
-plantwatneed[P_BLUEROUND] = 1;
-plantwatneed[P_BLUECLUSTER] = 2;
-plantwatneed[P_GREENCLUSTER] = 2;
+plantwatneed[P_REDPLUS] = 5;
+plantwatneed[P_BLUEROUND] = 3;
+plantwatneed[P_BLUECLUSTER] = 5;
+plantwatneed[P_GREENCLUSTER] = 5;
 plantwatneed[P_GREENMEANDER] = 2;
 plantwatneed[P_REDSCATTER] = 1;
-plantwatneed[P_REDHARDY] = 1;
+plantwatneed[P_REDHARDY] = 2;
 plantwatneed[P_BLUEWAVE] = 1;
-plantwatneed[P_BLUEVERTICAL] = 2;
-plantwatneed[P_GREENDELICATE] = 3;
-plantwatneed[P_GREENHORIZONTAL] = 2;
-plantwatneed[P_GRASS] = 1;
+plantwatneed[P_BLUEVERTICAL] = 3;
+plantwatneed[P_GREENDELICATE] = 5;
+plantwatneed[P_GREENHORIZONTAL] = 3;
+plantwatneed[P_GRASS] = 4;
 plantwatneed[P_WEED] = 1;
-plantwatneed[P_REDMELON] = 3; // All melons have higher-than-average moisture requirements
-plantwatneed[P_GREENMELON] = 3;
+plantwatneed[P_REDMELON] = 4; // All melons have higher-than-average moisture requirements
+plantwatneed[P_GREENMELON] = 4;
 plantwatneed[P_BLUEMELON] = 3;
-plantwatneed[P_REDLEAFY] = 2;
-plantwatneed[P_GREENLEAFY] = 2;
+plantwatneed[P_REDLEAFY] = 3;
+plantwatneed[P_GREENLEAFY] = 4;
 plantwatneed[P_BLUELEAFY] = 5; // Blue Leafy has very high moisture requirements!
 plantwatneed[T_RED_TOP] = 1; // Trees are pretty hardy
 plantwatneed[T_RED_BOTTOM] = 1;
@@ -139,26 +139,26 @@ plantwatneed[T_GREEN_BOTTOM] = 1;
 // harvestworth: The cash amount for each unit of harvest for this plant
 globalvar harvestworth;
 harvestworth[P_EMPTY] = 0;
-harvestworth[P_REDX] = 34;
-harvestworth[P_REDPLUS] = 35;
-harvestworth[P_BLUEROUND] = 41;
-harvestworth[P_BLUECLUSTER] = 34;
-harvestworth[P_GREENCLUSTER] = 29;
-harvestworth[P_GREENMEANDER] = 31;
-harvestworth[P_REDSCATTER] = 37;
-harvestworth[P_REDHARDY] = 17;
-harvestworth[P_BLUEWAVE] = 29;
-harvestworth[P_BLUEVERTICAL] = 35;
-harvestworth[P_GREENDELICATE] = 80;
-harvestworth[P_GREENHORIZONTAL] = 31;
+harvestworth[P_REDX] = 0;
+harvestworth[P_REDPLUS] = 3;
+harvestworth[P_BLUEROUND] = 4;
+harvestworth[P_BLUECLUSTER] = 0;
+harvestworth[P_GREENCLUSTER] = 1;
+harvestworth[P_GREENMEANDER] = 0;
+harvestworth[P_REDSCATTER] = 0;
+harvestworth[P_REDHARDY] = 2;
+harvestworth[P_BLUEWAVE] = 1;
+harvestworth[P_BLUEVERTICAL] = 0;
+harvestworth[P_GREENDELICATE] = 3;
+harvestworth[P_GREENHORIZONTAL] = 0;
 harvestworth[P_GRASS] = 0;
 harvestworth[P_WEED] = 0;
-harvestworth[P_REDMELON] = 122; // These plants don't spread on their own, are destroyed by
-harvestworth[P_GREENMELON] = 120; // harvesting, and have special requirements, so they are
-harvestworth[P_BLUEMELON] = 120; //  worth more money
-harvestworth[P_REDLEAFY] = 115;
-harvestworth[P_GREENLEAFY] = 114;
-harvestworth[P_BLUELEAFY] = 115;
+harvestworth[P_REDMELON] = 3; // These plants don't spread on their own, are destroyed by
+harvestworth[P_GREENMELON] = 5; // harvesting, and have special requirements, so they are
+harvestworth[P_BLUEMELON] = 2; //  worth more money
+harvestworth[P_REDLEAFY] = 2;
+harvestworth[P_GREENLEAFY] = 1;
+harvestworth[P_BLUELEAFY] = 2;
 harvestworth[T_RED_TOP] = 32; // Trees are weird cases; they should be balanced specially
 harvestworth[T_RED_BOTTOM] = 32; // These figures have not been balanced yet; they are arbitrary.
 harvestworth[T_GREEN_TOP] = 48;
@@ -370,26 +370,26 @@ isatree[T_GREEN_BOTTOM] = TREE_DOWN;
 // PMETAB_SLOWEST: Unimplemented, don't use
 globalvar metabolismspeed;
 metabolismspeed[P_EMPTY] = PMETAB_NONE;
-metabolismspeed[P_REDX] = PMETAB_NORMAL;
-metabolismspeed[P_REDPLUS] = PMETAB_NORMAL;
-metabolismspeed[P_BLUEROUND] = PMETAB_NORMAL;
+metabolismspeed[P_REDX] = PMETAB_FASTEST;
+metabolismspeed[P_REDPLUS] = PMETAB_SLOW;
+metabolismspeed[P_BLUEROUND] = PMETAB_SLOW;
 metabolismspeed[P_BLUECLUSTER] =  PMETAB_NORMAL;
-metabolismspeed[P_GREENCLUSTER] =  PMETAB_NORMAL;
+metabolismspeed[P_GREENCLUSTER] =  PMETAB_SLOW;
 metabolismspeed[P_GREENMEANDER] =  PMETAB_NORMAL;
-metabolismspeed[P_REDSCATTER] =  PMETAB_NORMAL;
+metabolismspeed[P_REDSCATTER] =  PMETAB_FASTEST;
 metabolismspeed[P_REDHARDY] =  PMETAB_NORMAL;
-metabolismspeed[P_BLUEWAVE] =  PMETAB_NORMAL;
+metabolismspeed[P_BLUEWAVE] =  PMETAB_FAST;
 metabolismspeed[P_BLUEVERTICAL] =  PMETAB_NORMAL;
-metabolismspeed[P_GREENDELICATE] =  PMETAB_NORMAL;
+metabolismspeed[P_GREENDELICATE] =  PMETAB_SLOW;
 metabolismspeed[P_GREENHORIZONTAL] =  PMETAB_NORMAL;
 metabolismspeed[P_GRASS] =  PMETAB_NORMAL;
 metabolismspeed[P_WEED] =  PMETAB_NORMAL;
-metabolismspeed[P_REDMELON] =  PMETAB_NORMAL;
-metabolismspeed[P_GREENMELON] =  PMETAB_NORMAL;
-metabolismspeed[P_BLUEMELON] =  PMETAB_NORMAL;
-metabolismspeed[P_REDLEAFY] =  PMETAB_NORMAL;
-metabolismspeed[P_GREENLEAFY] =  PMETAB_NORMAL;
-metabolismspeed[P_BLUELEAFY] =  PMETAB_NORMAL;
+metabolismspeed[P_REDMELON] =  PMETAB_SLOW;
+metabolismspeed[P_GREENMELON] =  PMETAB_SLOW;
+metabolismspeed[P_BLUEMELON] =  PMETAB_SLOW;
+metabolismspeed[P_REDLEAFY] =  PMETAB_SLOW;
+metabolismspeed[P_GREENLEAFY] =  PMETAB_SLOW;
+metabolismspeed[P_BLUELEAFY] =  PMETAB_SLOW;
 metabolismspeed[T_RED_TOP] = PMETAB_SLOW;
 metabolismspeed[T_RED_BOTTOM] = PMETAB_SLOW;
 metabolismspeed[T_GREEN_TOP] = PMETAB_SLOW;
@@ -401,19 +401,19 @@ metabolismspeed[T_GREEN_BOTTOM] = PMETAB_SLOW;
 
 globalvar germinationbase;
 germinationbase[P_EMPTY] = -1000;
-germinationbase[P_REDX] = 65;
-germinationbase[P_REDPLUS] = 65;
-germinationbase[P_BLUEROUND] = 65;
-germinationbase[P_BLUECLUSTER] =  65;
-germinationbase[P_GREENCLUSTER] =  65;
-germinationbase[P_GREENMEANDER] =  65;
-germinationbase[P_REDSCATTER] =  65;
-germinationbase[P_REDHARDY] =  70;
-germinationbase[P_BLUEWAVE] =  65;
-germinationbase[P_BLUEVERTICAL] =  65;
-germinationbase[P_GREENDELICATE] =  60;
-germinationbase[P_GREENHORIZONTAL] =  65;
-germinationbase[P_GRASS] =  90;
+germinationbase[P_REDX] = 25;
+germinationbase[P_REDPLUS] = 15;
+germinationbase[P_BLUEROUND] = 5;
+germinationbase[P_BLUECLUSTER] =  20;
+germinationbase[P_GREENCLUSTER] =  18;
+germinationbase[P_GREENMEANDER] =  12;
+germinationbase[P_REDSCATTER] =  55;
+germinationbase[P_REDHARDY] =  3;
+germinationbase[P_BLUEWAVE] =  25;
+germinationbase[P_BLUEVERTICAL] =  35;
+germinationbase[P_GREENDELICATE] =  10;
+germinationbase[P_GREENHORIZONTAL] =  35;
+germinationbase[P_GRASS] =  40;
 germinationbase[P_WEED] =  90;
 germinationbase[P_REDMELON] =  0; // Never spreads on its own anyway
 germinationbase[P_GREENMELON] =  0;
@@ -437,7 +437,7 @@ germinationbase[T_GREEN_BOTTOM] = -1000;
 // Plants that behave in this later manner are marked with a nonspread flag in
 //   this array.
 globalvar nonspread;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   nonspread[a] = false;
   }
 nonspread[P_ONION] = true;
@@ -450,7 +450,7 @@ nonspread[P_BLUELETTUCE] = true;
 // harvestconsume
 // Some plants are removed from the board once harvested.  These plants.
 globalvar harvestconsume;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   harvestconsume[a] = false;
   }
 harvestconsume[P_ONION] = true;
@@ -463,7 +463,7 @@ harvestconsume[P_BLUELETTUCE] = true;
 // noharvest
 // These plants don't produce any useful harvest at all.
 globalvar noharvest;
-for (a=0; a<NUMPLANTTYPES; a+=1) {
+for (a=0; a<NUMPLANTTYPES+1; a+=1) {
   noharvest[a] = false;
   }
 noharvest[P_ITCHGRASS] = true;

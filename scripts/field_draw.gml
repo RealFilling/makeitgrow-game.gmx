@@ -45,6 +45,22 @@ for (by=by1; by<by2; by+=1) {
     else {
       draw_sprite_ext(spr_tilledtiles2,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
       }
+    // Bugs
+    bugset = global.bugs[bx,by];
+    if (bugset != 0) {
+      getallbugs(bugset);
+      mostbugs = -1;
+      mostbugcount = -1;
+      for (a=0;a<NUMBUGS;a+=1) {
+        if global.bugarray[a] > mostbugcount {
+          mostbugs = a;
+          mostbugcount = global.bugarray[a];
+          }
+        }       
+      draw_sprite_ext(bugsprites[mostbugs],0,pixx,pixy-16,
+                      1.0,1.0,0,c_white,1.0);
+      draw_text(pixx,pixy-16,string(mostbugcount));
+      }
     // Plant
     thisplant = global.plants[bx,by];
     thisspecies = getspecies(thisplant);
@@ -121,22 +137,6 @@ for (by=by1; by<by2; by+=1) {
     if (getgreenh(bx,by)) {
       draw_sprite(spr_greenhouse,0,pixx,pixy);
       }
-    // Bugs
-    bugset = global.bugs[bx,by];
-    if (bugset != 0) {
-      getallbugs(bugset);
-      mostbugs = -1;
-      mostbugcount = -1;
-      for (a=0;a<NUMBUGS;a+=1) {
-        if global.bugarray[a] > mostbugcount {
-          mostbugs = a;
-          mostbugcount = global.bugarray[a];
-          }
-        }       
-      draw_sprite_ext(bugsprites[mostbugs],0,pixx,pixy-16,
-                      1.0,1.0,0,c_white,1.0);
-      draw_text(pixx,pixy-16,string(mostbugcount));
-      }
     // Water
     if global.water[bx,by] != 0 {
       //thiswater = median(0,global.water[bx,by]-1,31);
@@ -158,11 +158,18 @@ if (coordsinbounds(hx,hy)) {
   }
 
 // Draw the farmer
-farmerobj = instance_find(obj_farmer,0);
-with (farmerobj) {
-  farmer_draw();
+if (global.gamestate == GSTATE_NORMAL) {
+  farmerobj = instance_find(obj_farmer,0);
+  with (farmerobj) {
+    farmer_draw();
+    }
   }
-
+else {
+  draw_set_halign(fa_center);
+  draw_set_valign(fa_middle);
+  drawshadowedtext(font_bigtext,c_white,"PLEASE WAIT",cx(),cy(),false);
+  }
+  
 // Draw the weather
 for (wy=0;wy<(view_hview[0] div 256)+1;wy+=1) {
   for (wx=0;wx<(view_wview[0] div 256)+1;wx+=1) {
@@ -170,15 +177,5 @@ for (wy=0;wy<(view_hview[0] div 256)+1;wy+=1) {
                 ax(wx*256),ay(wy*256));
     }
   }  
-  
-// Draw the selection bar -- Old system
-//drawselectbar();
-  
-// DEBUG
-//farmerxobj = instance_find(obj_farmerx,0);
-//with (farmerxobj) {
-//  farmer_draw();
-//  }
-
 
 

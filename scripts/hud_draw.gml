@@ -44,7 +44,7 @@ draw_sprite(spr_hudiconbar,0,scrx,scry+86);
 drawshadowedtext(font_hud,c_white,timeofday(),view_wview[0]-221,4,true);
 // Draw time of year
 drawshadowedtext(font_hud,c_white,global.months[global.month]+" "+
-                                  string(global.day+1)+", "+
+                                  string(global.monthday+1)+", "+
                                   string(global.year+2012),view_wview[0]-127,4,true);
 
 //outputtext1 = "Year "+string(global.year);
