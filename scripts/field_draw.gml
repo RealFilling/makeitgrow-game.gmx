@@ -45,6 +45,12 @@ for (by=by1; by<by2; by+=1) {
     else {
       draw_sprite_ext(spr_tilledtiles2,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
       }
+    }
+  for (bx=bx1; bx<bx2; bx+=1) {
+    hextopix(bx,by);
+    pixx = global.hexx;
+    thisheight = global.height[bx,by];
+    pixy = global.hexy - (thisheight * HEIGHTPIX);
     // Bugs
     bugset = global.bugs[bx,by];
     if (bugset != 0) {
