@@ -1,5 +1,6 @@
 var species;
-species = irandom_range(1,20);
+species = irandom_range(0,20);
+
 if ((species == P_WEED) or (species == P_HEDGE) or (species == P_BLUEHEDGE))  or (species == P_STRAWBERRY)
  or (species == P_BLUEBERRY) or (species == P_ONION) or (species == P_GREENTOMATO)
  or (species == P_TOMATO) or (species == P_WATERMELON) or (species == P_EGGPLANT)
