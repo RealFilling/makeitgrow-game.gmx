@@ -5,9 +5,9 @@ var cx1, cy1;
 global.version = "0.10";
 
 // Debugging support
-global.demomode = true;
+global.demomode = false;
 global.debug = false;
-global.savedebug = true;
+global.savedebug = false;
 global.nosave = false;
 global.shadowdebug = false;
 global.miscdebug = false;
