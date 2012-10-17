@@ -357,13 +357,16 @@
       <script>scripts\debug_grantsomehypertime.gml</script>
     </scripts>
     <scripts name="time">
+      <script>scripts\timeconsts.gml</script>
       <script>scripts\inittime.gml</script>
       <script>scripts\timeofday.gml</script>
       <script>scripts\toggle_speed.gml</script>
       <scripts name="periodic functions">
-        <script>scripts\time_daily.gml</script>
-        <script>scripts\time_monthly.gml</script>
         <script>scripts\time_yearly.gml</script>
+        <script>scripts\time_monthly.gml</script>
+        <script>scripts\time_weekly.gml</script>
+        <script>scripts\time_daily.gml</script>
+        <script>scripts\time_hourly.gml</script>
       </scripts>
       <script>scripts\time_advsubticks.gml</script>
       <script>scripts\time_advtick.gml</script>
@@ -914,7 +917,7 @@
   </rooms>
   <constants number="343">
     <constant name="MAJORVERSION">0</constant>
-    <constant name="MINORVERSION">6</constant>
+    <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
     <constant name="TILEHEIGHT">48</constant>
     <constant name="ETILEHEIGHT">36</constant>

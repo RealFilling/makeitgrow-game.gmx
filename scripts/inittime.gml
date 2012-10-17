@@ -1,7 +1,4 @@
-// Timekeeping constants
-global.ticksperhour = 60/MINUTESPERTICK;
-global.ticksperday = 24*global.ticksperhour;
-global.tickspermonth = global.ticksperday * DAYSPERMONTH;
+
 
 // Timekeeping initialization
 global.cellcalc = 0;
@@ -16,7 +13,9 @@ global.yearday = 0;
 //global.season = 0;
 global.week = 0;
 global.month = 0;
+global.monthday = 0;
 global.day = 0;
+global.hour = 0;
 global.tick = 0;
 global.subtick = 0;
 // Year length:

@@ -41,7 +41,11 @@ global.week = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.month = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);
+global.monthday = stringtonum(global.bittenchars);
+processstring = biteoffsubstring(processstring,global.charspernum);
 global.day = stringtonum(global.bittenchars);
+processstring = biteoffsubstring(processstring,global.charspernum);
+global.hour = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.tick = stringtonum(global.bittenchars);
 processstring = biteoffsubstring(processstring,global.charspernum);
@@ -155,24 +159,16 @@ if (global.animalcount != global.checkanimalcount) {
   show_error("ERROR: Animals loaded doesn't match record!",false);
   }
   
-    
-// At this point, we should only have the "future expansion" variables left.
-// Used
-// global.hstime is +-, instead of =, because we've already initialized
-//   this value back in field_deserializer (where it was originally set
-//   by the code that parsed out the digits added by the server that
-//   indicated how much hypertime, due to being offline, should be
-//   awarded)
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.hstime += stringtonum(global.bittenchars);
 
 for (a=0; a<3; a+=1) {
   processstring = biteoffsubstring(processstring,global.charspernum);
-  global.pmulch[a] += stringtonum(global.bittenchars);
+  global.pmulch[a] = stringtonum(global.bittenchars);
   }
 
 // Remaining dummy space
-for (a=0; a<96; a+=1) {
+for (a=0; a<100; a+=1) {
   processstring = biteoffsubstring(processstring,global.charspernum);
   // Note: we do nothing with the values right now.  The above is
   //         only for form's sake.

@@ -29,6 +29,7 @@ weatherdefs();
 buildingdefs();
 soundframedefs();
 initsoundframe();
+timeconsts();
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;
