@@ -154,16 +154,6 @@ for (by=by1; by<by2; by+=1) {
     }
   }
 
-// Building pass
-// 
-for (by=by1; by<by2; by+=1) {
-  for (bx=bx1; bx<bx2; bx+=1) {
-    hextopix(bx,by);
-    pixx = global.hexx;
-    thisheight = global.height[bx,by];
-    pixy = global.hexy - (thisheight * HEIGHTPIX);
-    }
-  }
   
 // Draw the hex cursor
 pixtohexmouse(mouse_x,mouse_y);
