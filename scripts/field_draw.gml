@@ -91,28 +91,6 @@ for (by=by1; by<by2; by+=1) {
       compostimg = ((thisspecies-P_COMPOST_START)*4)+(thisgrowth-1);
       draw_sprite_ext(spr_composttiles,compostimg,pixx,pixy,1.0,1.0,0,c_white,1);
       }
-    else if (istree(thisspecies)) { // Tree
-      if ((thisspecies == T_RED_TOP) or (thisspecies == T_GREEN_TOP)) {
-        treeimg = thisgrowth+((thisspecies-T_RED_TOP)*5);
-        draw_sprite_ext(spr_treetilesup,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
-        }
-      else {
-        treeimg = thisgrowth+((thisspecies-T_RED_BOTTOM)*5);
-        draw_sprite_ext(spr_treetilesdown,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
-        }
-      }
-    else if (isbuilding(thisspecies)) { // Building
-      if (thisgrowth < BLDGGROWTH_BUILT) {
-        frame = 0;
-        }
-      else if (thisgrowth == BLDGGROWTH_BUILT) {
-        frame = 1;
-        }
-      else {
-        frame = 2;
-        }
-      draw_sprite_ext(spr_buildings,(buildingidtoord(thisspecies)*3)+frame,pixx,pixy,1.0,1.0,0,c_white,1);
-      }
     else if (isshadow(thisspecies) and global.shadowdebug) { // Shadow
       draw_sprite_ext(spr_debugplaceholder,thisspecies-P_SHADOW_START,pixx,pixy,1.0,1.0,0,c_white,1);
       }
@@ -154,6 +132,39 @@ for (by=by1; by<by2; by+=1) {
     }
   }
 
+// Building pass
+// 
+for (by=by1; by<by2; by+=1) {
+  for (bx=bx1; bx<bx2; bx+=1) {
+    hextopix(bx,by);
+    pixx = global.hexx;
+    thisheight = global.height[bx,by];
+    pixy = global.hexy - (thisheight * HEIGHTPIX);
+    if (istree(thisspecies)) { // Tree
+      if ((thisspecies == T_RED_TOP) or (thisspecies == T_GREEN_TOP)) {
+        treeimg = thisgrowth+((thisspecies-T_RED_TOP)*5);
+        draw_sprite_ext(spr_treetilesup,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
+        }
+      else {
+        treeimg = thisgrowth+((thisspecies-T_RED_BOTTOM)*5);
+        draw_sprite_ext(spr_treetilesdown,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
+        }
+      }
+    else if (isbuilding(thisspecies)) { // Building
+      if (thisgrowth < BLDGGROWTH_BUILT) {
+        frame = 0;
+        }
+      else if (thisgrowth == BLDGGROWTH_BUILT) {
+        frame = 1;
+        }
+      else {
+        frame = 2;
+        }
+      draw_sprite_ext(spr_buildings,(buildingidtoord(thisspecies)*3)+frame,pixx,pixy,1.0,1.0,0,c_white,1);
+      }
+    }
+  }
+  
 // Draw the hex cursor
 pixtohexmouse(mouse_x,mouse_y);
 hx = global.hexx;
