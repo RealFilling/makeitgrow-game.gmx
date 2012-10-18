@@ -10,6 +10,20 @@ buildingnames[BLDGO_SCARECROW] = "Scarecrow";
 buildingnames[BLDGO_PIPEPUMP] = "Water Pump";
 buildingnames[BLDGO_COOP] = "Chicken Coop";
 
+// Sprites for buildings
+globalvar buildingsprites;
+buildingsprites[BLDGO_SMALLBARN] = spr_smallbarn;
+buildingsprites[BLDGO_BIGBARN] = spr_bigbarn;
+buildingsprites[BLDGO_FEED] = spr_feedtrough;
+buildingsprites[BLDGO_PIPE] = spr_scarecrow; // Shouldn't appear
+buildingsprites[BLDGO_GREENHOUSE] = spr_scarecrow; // Shouldn't appear
+buildingsprites[BLDGO_FENCE] = spr_fencepost;
+buildingsprites[BLDGO_SCARECROW] = spr_scarecrow;
+buildingsprites[BLDGO_PIPEPUMP] = spr_waterpump;
+buildingsprites[BLDGO_COOP] = spr_smallcoop;
+
+
+
 // Descriptions
 globalvar buildingdescs;
 buildingdescs[BLDGO_SMALLBARN] = "Can house one large animal.";

@@ -154,6 +154,15 @@
         <sprite>sprites\spr_p_sunflowers</sprite>
         <sprite>sprites\spr_p_empty</sprite>
       </sprites>
+      <sprites name="buildings">
+        <sprite>sprites\spr_smallbarn</sprite>
+        <sprite>sprites\spr_bigbarn</sprite>
+        <sprite>sprites\spr_smallcoop</sprite>
+        <sprite>sprites\spr_feedtrough</sprite>
+        <sprite>sprites\spr_scarecrow</sprite>
+        <sprite>sprites\spr_waterpump</sprite>
+        <sprite>sprites\spr_fencepost</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
     <sprite>sprites\spr_farmer</sprite>

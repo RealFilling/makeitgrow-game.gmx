@@ -160,7 +160,7 @@ for (by=by1; by<by2; by+=1) {
       else {
         frame = 2;
         }
-      draw_sprite_ext(spr_buildings,(buildingidtoord(thisspecies)*3)+frame,pixx,pixy,1.0,1.0,0,c_white,1);
+      draw_sprite_ext(buildingsprites[buildingidtoord(thisspecies)],frame,pixx,pixy,1.0,1.0,0,c_white,1);
       }
     }
   }
