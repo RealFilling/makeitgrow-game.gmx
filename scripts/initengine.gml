@@ -2,13 +2,13 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.10";
+global.version = "0.11";
 
 // Debugging support
-global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
-global.nosave = true; // Disable saving entirely
+global.nosave = false; // Disable saving entirely
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 // 
