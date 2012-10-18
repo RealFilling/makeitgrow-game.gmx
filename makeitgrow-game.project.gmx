@@ -95,6 +95,9 @@
         <sprite>sprites\spr_speedbutton2</sprite>
         <sprite>sprites\spr_speedbutton3</sprite>
       </sprites>
+      <sprites name="tutorial">
+        <sprite>sprites\spr_arrow_up</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bugs">
       <sprite>sprites\spr_bug1</sprite>
@@ -842,6 +845,12 @@
     </scripts>
     <scripts name="tutorial">
       <script>scripts\inittutorial.gml</script>
+      <script>scripts\setflag.gml</script>
+      <scripts name="tutorialcard">
+        <script>scripts\tutorialcard_create.gml</script>
+        <script>scripts\tutorialcard_drawgui.gml</script>
+        <script>scripts\tutorialcard_step.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -890,6 +899,9 @@
         <object>objects\obj_speedbutton3</object>
         <object>objects\obj_speedbuttonbase</object>
       </objects>
+      <objects name="tutorial">
+        <object>objects\obj_tutorialcard</object>
+      </objects>
     </objects>
     <objects name="SFX">
       <object>objects\obj_planteffect</object>
@@ -915,7 +927,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="344">
+  <constants number="349">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1260,6 +1272,11 @@
     <constant name="NICHE_MINERALSUMNEG">6</constant>
     <constant name="PREGAMESIMTIME">21</constant>
     <constant name="PREGAMESIMDUR">20</constant>
+    <constant name="TCSTATE_NULL">0</constant>
+    <constant name="TCSTATE_APPEAR">1</constant>
+    <constant name="TCSTATE_NORMAL">2</constant>
+    <constant name="TCSTATE_DISAPPEAR">3</constant>
+    <constant name="TCSTATE_DESTROY">4</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
