@@ -1,12 +1,12 @@
 // weatherevap
 // Weather type evaporation/addition factor
-global.weatherevap[WEATHER_STORM] = -6;
+global.weatherevap[WEATHER_STORM] = -5;
 global.weatherevap[WEATHER_RAIN] = -3;
 global.weatherevap[WEATHER_DRIZZLE] = -1;
-global.weatherevap[WEATHER_CLOUDY] = 9;
-global.weatherevap[WEATHER_CLEAR] = 12;
-global.weatherevap[WEATHER_HOT] = 15;
-global.weatherevap[WEATHER_DROUGHT] = 18;
+global.weatherevap[WEATHER_CLOUDY] = 0;
+global.weatherevap[WEATHER_CLEAR] = 1;
+global.weatherevap[WEATHER_HOT] = 2;
+global.weatherevap[WEATHER_DROUGHT] = 3;
 
 // weathernames
 // Text strings representing the evaporation value of the weather.

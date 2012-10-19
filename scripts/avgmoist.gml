@@ -26,6 +26,7 @@ else {
   }
 //thismoist = median(0,thismoist,31);
 
+/*
 moistsum = thismoist;
 for (dir=0;dir<6;dir+=1) {
   hexadj(mx,my,dir);
@@ -54,10 +55,8 @@ for (dir=0;dir<6;dir+=1) {
   setmoist(dx,dy,moistavg);
   }
 setmoist(mx,my,moistavg);//+moistremain);
+*/
 
-
-
-/*
 dir = irandom_range(0,6);
 for (dcount=0;dcount<6;dcount+=1) {
   dir = (dir+1) mod 6; // Start spreading in a random direction
@@ -86,5 +85,4 @@ for (dcount=0;dcount<6;dcount+=1) {
     }
   }
 setmoist(mx,my,thismoist);
-*/
 
