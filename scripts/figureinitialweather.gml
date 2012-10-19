@@ -16,6 +16,9 @@ global.oldweather = global.currentweather;
 //         because days off the end of the range aren't factored in.  This
 //         doesn't matter for days at the beginning since they're already past,
 //         but at the end it is troublesome.  So, when we advance time a day
-//         and scroll a new dau into the range, we should recalculate
+//         and scroll a new day into the range, we should recalculate
 //         *four* days of rainfall, not just the new one.
-  
+
+if (global.weatherdebug) {
+  DEBUG_logweatheryear();
+  }

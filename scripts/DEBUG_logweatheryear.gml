@@ -1,5 +1,5 @@
 var day, weatherlog, absoluteday;
-weatherlog = file_text_open_write("weatherlog.txt");
+weatherlog = file_text_open_write(working_directory+"weatherlog.txt");
 for (day=0;day<global.daysperyear;day+=1) {
   absoluteday = figureabsoluteday(day);
   if (day==13) {

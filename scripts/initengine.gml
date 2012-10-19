@@ -5,15 +5,16 @@ var cx1, cy1;
 global.version = "0.11";
 
 // Debugging support
-global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
-global.nosave = false; // Disable saving entirely
+global.nosave = true; // Disable saving entirely
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
+global.weatherdebug = true; // Provide debugging information for weather system
 // 
-global.skippreseed = false; // Don't put random thing on the field at the start
-global.skipprecalc = false; // Don't run very fast for two months at start
+global.skippreseed = true; // Don't put random thing on the field at the start
+global.skipprecalc = true; // Don't run very fast for two months at start
 
 //init();
 script_utility();

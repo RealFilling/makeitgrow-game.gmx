@@ -69,6 +69,7 @@ if (global.currentseed == TOOL_QUERY) {
   outputtext3 += " Soilext:" + string(global.soilext[bx,by]);
   outputtext3 += " Buildext:" + string(global.buildext[bx,by]);
   outputtext3 += " Harvest:" + string(global.harvest[bx,by]);
+  outputtext3 += " Moisture:" + string(getmoist(bx,by));
   }
 else {
   outputtext3 = "";

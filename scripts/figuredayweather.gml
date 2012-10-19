@@ -7,5 +7,5 @@ for (offset=-WEATHER_SPREADDAYS;offset<=WEATHER_SPREADDAYS;offset+=1) {
     }
   }
 //runningtotal = median(-3,runningtotal,3);
-global.weatherrainfall[relativeday] = convertrawweather(median(0,runningtotal,15));
+global.weatherrainfall[relativeday] = convertrawweather(median(-7,runningtotal,7));
 return global.weatherrainfall[relativeday];

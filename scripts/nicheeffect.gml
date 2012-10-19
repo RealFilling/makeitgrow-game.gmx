@@ -18,10 +18,10 @@ switch (niche) {
     break;
   case NICHE_MOISTURE:
     // Moisture maximum is 63, resulting range is -5 - 16
-    return (global.moisture[px,py] div 3) - 5;
+    return (getmoist(px,py) div 3) - 5;
     break;
   case NICHE_MOISTURENEG:
-    return ((MAXMOIST div 3) - (global.moisture[px,py] div 3)) - 5;
+    return ((MAXMOIST div 3) - (getmoist(px,py) div 3)) - 5;
     break;
   case NICHE_MINERALSUM:
     soilminerals = global.soil[px,py];

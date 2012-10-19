@@ -411,6 +411,7 @@
       <script>scripts\nan_check.gml</script>
       <script>scripts\debug_lowestredcount.gml</script>
       <script>scripts\debug_grantsomehypertime.gml</script>
+      <script>scripts\farmer_1_skiptime.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\timeconsts.gml</script>
@@ -703,9 +704,9 @@
     </scripts>
     <scripts name="weather">
       <script>scripts\weatherdefs.gml</script>
-      <script>scripts\weatherwetter.gml</script>
-      <script>scripts\weatherdryer.gml</script>
-      <script>scripts\weatherset.gml</script>
+      <script>scripts\weatherwetter_OLD.gml</script>
+      <script>scripts\weatherdryer_OLD.gml</script>
+      <script>scripts\weatherset_OLD.gml</script>
       <script>scripts\rollweatherback.gml</script>
       <script>scripts\determinedaybaserain.gml</script>
       <script>scripts\determinedayraininfluence.gml</script>
@@ -965,7 +966,7 @@
     <constant name="SUBTICKSPERTICK">15</constant>
     <constant name="TICKSPERCYCLE">384</constant>
     <constant name="MINUTESPERTICK">5</constant>
-    <constant name="DAYSPERMONTH">30</constant>
+    <constant name="DAYSPERMONTH">28</constant>
     <constant name="DAYSPERWEEK">7</constant>
     <constant name="WEEKSPERYEAR">48</constant>
     <constant name="WEEKSPERMONTH">4</constant>
