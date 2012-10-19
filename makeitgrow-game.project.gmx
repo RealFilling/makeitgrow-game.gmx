@@ -937,7 +937,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="349">
+  <constants number="350">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1096,7 +1096,8 @@
     <constant name="BLDGGROWTH_CONSTRUCT3">2</constant>
     <constant name="BLDGGROWTH_BUILT">3</constant>
     <constant name="BLDGGROWTH_DAMAGE">4</constant>
-    <constant name="HIGHBITMASK">4294967295</constant>
+    <constant name="HIGHBITMASK">2147483647</constant>
+    <constant name="OLD_HIGHBITMASK">4294967295</constant>
     <constant name="NUMBUGS">8</constant>
     <constant name="NUMTOOLS">21</constant>
     <constant name="TOOL_WATERCAN">-1</constant>

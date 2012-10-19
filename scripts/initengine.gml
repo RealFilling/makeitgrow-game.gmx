@@ -11,10 +11,11 @@ global.savedebug = false; // With demomode, saves to variable
 global.nosave = true; // Disable saving entirely
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
-global.weatherdebug = true; // Provide debugging information for weather system
+global.weatherdebug = false; // Provide debugging information for weather system
 // 
 global.skippreseed = true; // Don't put random thing on the field at the start
 global.skipprecalc = true; // Don't run very fast for two months at start
+global.poisonflag = false; // For isolating a single instance of a problem
 
 //init();
 script_utility();
