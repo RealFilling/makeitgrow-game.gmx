@@ -75,7 +75,7 @@ for (dcount=0;dcount<6;dcount+=1) {
   //heightdiff = round(global.height[mx,my] - global.height[dx,dy])/3;
   if (thismoist > -(thatmoist-heightdiff)) {
     //moistexchange = round((thismoist - thatmoist)/2);
-    moistdiff = (thismoist-thatmoist) //+heightdiff;
+    moistdiff = (thismoist-thatmoist) + heightdiff;
     if (moistdiff > 4) {
       moistexchange = irandom_range(1,moistdiff-4);
       thismoist -= moistexchange;

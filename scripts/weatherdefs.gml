@@ -39,14 +39,14 @@ rawweatherlookup[3] = WEATHER_DRIZZLE;
 rawweatherlookup[4] = WEATHER_CLOUDY;
 rawweatherlookup[5] = WEATHER_CLOUDY;
 rawweatherlookup[6] = WEATHER_CLOUDY;
-rawweatherlookup[7] = WEATHER_CLEAR; // Zero point
+rawweatherlookup[7] = WEATHER_CLEAR; // Zero point: (WEATHER_SPEADDAYS * 2) + 1
 rawweatherlookup[8] = WEATHER_CLEAR;
 rawweatherlookup[9] = WEATHER_CLEAR;
 rawweatherlookup[10] = WEATHER_CLEAR;
-rawweatherlookup[11] = WEATHER_HOT;
+rawweatherlookup[11] = WEATHER_CLEAR;
 rawweatherlookup[12] = WEATHER_HOT;
 rawweatherlookup[13] = WEATHER_HOT;
-rawweatherlookup[14] = WEATHER_DROUGHT;
+rawweatherlookup[14] = WEATHER_HOT;
 rawweatherlookup[15] = WEATHER_DROUGHT;
 
 // weathertilllookup
