@@ -18,3 +18,11 @@ function gd_log(msg)
   console.log(msg);
   return 1;
 }
+
+function gd_get_tutorial_step (step) {
+  return tutorial_step(step);
+}
+
+function gd_save_tutorial_status(status) {
+  return save_tutorial(status);
+}
