@@ -30,7 +30,6 @@ itemdefs();
 // Needs to come after inittime()
 weatherdefs();
 buildingdefs();
-animaldefs();
 soundframedefs();
 initsoundframe();
 timeconsts();

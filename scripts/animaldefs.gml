@@ -1,42 +1,7 @@
-// Name of type of animal
-global.animalname[ANIMAL_CHICKEN] = "Chicken";
-global.animalname[ANIMAL_COW] = "Cow";
-global.animalname[ANIMAL_PIG] = "Pig"
+global.animalname[0] = "Chicken";
+global.animalname[1] = "Cow";
 
-// Sprite set to use for animal
-global.animalsprite[ANIMAL_CHICKEN] = spr_chicken;
-global.animalsprite[ANIMAL_COW] = spr_cow;
-global.animalsprite[ANIMAL_PIG] = spr_pig;
+global.animalsprite[0] = spr_chicken;
+global.animalsprite[1] = spr_cow;
 
-// Is this animal a predator?  (Currently doesn't work.)
-global.a_predator[ANIMAL_CHICKEN] = false;
-global.a_predator[ANIMAL_COW] = false;
-global.a_predator[ANIMAL_PIG] = false;
-
-// How frequently does this animal move? (larger is less often)
-global.a_movefreq[ANIMAL_CHICKEN] = 35;
-global.a_movefreq[ANIMAL_COW] = 10;
-global.a_movefreq[ANIMAL_PIG] = 30;
-
-// How quickly does this animal move? (larger is faster)
-global.a_movespeed[ANIMAL_CHICKEN] = 10;
-global.a_movespeed[ANIMAL_COW] = 6;
-global.a_movespeed[ANIMAL_PIG] = 10;
-
-// How quickly does this animal animate (smaller is faster)
-global.a_animdelaymax[ANIMAL_CHICKEN] = 2;
-global.a_animdelaymax[ANIMAL_COW] = 10;
-global.a_animdelaymax[ANIMAL_PIG] = 5;
-
-// What is the maximum amount of water this animal can store?
-// Larger numbers mean searching out water less often.
-global.a_watermax[ANIMAL_CHICKEN] = 25;
-global.a_watermax[ANIMAL_COW] = 200;
-global.a_watermax[ANIMAL_PIG] = 200;
-
-// What is the maximum amount of food this animal can store?
-// Larger numbers mean searching for food less often, and ultimately eating less.
-global.a_foodmax[ANIMAL_CHICKEN] = 35;
-global.a_foodmax[ANIMAL_COW] = 300;
-global.a_foodmax[ANIMAL_PIG] = 300;
 

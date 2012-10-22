@@ -1,13 +1,5 @@
 exists = true;
 //
-// Get animal attributes from arrays
-predator = global.a_predator[animaltype];
-movefreq = global.a_movefreq[animaltype];
-movespeed = global.a_movespeed[animaltype];
-animdelaymax = global.a_animdelaymax[animaltype];
-watermax = global.a_watermax[animaltype];
-foodmax = global.a_foodmax[animaltype];
-//
 boardx = global.parameter1;
 boardy = global.parameter2;
 homex = global.parameter3;
