@@ -123,12 +123,16 @@ else {
         growth = 0;
         }
       else {
-        if !farmer_energycheck(ENERGY_PLANTCOST) {
-          return -1;
+        if (!farmer_energycheck(ENERGY_PLANTCOST)) {
+          return -1; // Too tired
           break;
           }
-        farmer_setanim(FARMERANIM_PLANTING);
         species = global.itemnum[actionconvert];
+        if (global.money < seedcost[species]) {
+          return -1; // Not enough money
+          }
+        global.money -= seedcost[species];
+        farmer_setanim(FARMERANIM_PLANTING);
         //species = global.currentseed+1; // offset from seed items to plant species is 1
         subtype = 0;
         growth = 0;

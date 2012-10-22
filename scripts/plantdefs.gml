@@ -504,6 +504,30 @@ plantniche[P_PEPPER] = NICHE_NONE;
 plantniche[P_LETTUCE] = NICHE_NONE;
 plantniche[P_BLUELETTUCE] = NICHE_NONE;
 
+// seedcost
+// The number of dollars it costs to place an entity of this time.
+globalvar seedcost;
+seedcost[P_EMPTY] = -1; // Should not happen
+seedcost[P_ITCHGRASS] = 3;
+seedcost[P_STRAWBERRY] = 10;
+seedcost[P_BLUEBERRY] = 10;
+seedcost[P_CORNFLOWER] = 3;
+seedcost[P_CLIANTRO] = 3;
+seedcost[P_CLOVER] = 3;
+seedcost[P_DANDELION] = 3;
+seedcost[P_ONION] = 10;
+seedcost[P_MUSHROOM] = 15;
+seedcost[P_BLUEHEDGE] = 3;
+seedcost[P_GREENTOMATO] = 10;
+seedcost[P_HEDGE] = 3;
+seedcost[P_GRASS] = 5;
+seedcost[P_WEED] = 1;
+seedcost[P_TOMATO] = 30;
+seedcost[P_WATERMELON] = 30;
+seedcost[P_EGGPLANT] = 30;
+seedcost[P_PEPPER] = 30;
+seedcost[P_LETTUCE] = 30;
+seedcost[P_BLUELETTUCE] = 30;
 
 // plantseason
 // The year is divided into twelve months, divided into four seasons.  January is month 0,
