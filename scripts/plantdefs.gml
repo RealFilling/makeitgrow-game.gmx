@@ -529,6 +529,57 @@ seedcost[P_PEPPER] = 30;
 seedcost[P_LETTUCE] = 30;
 seedcost[P_BLUELETTUCE] = 30;
 
+// nutritionvalue
+// Affects how much food value an animal gets from this plant.
+globalvar nutritionvalue;
+nutritionvalue[P_EMPTY] = -1; // Should not happen
+nutritionvalue[P_ITCHGRASS] = 2;
+nutritionvalue[P_STRAWBERRY] = 3;
+nutritionvalue[P_BLUEBERRY] = 3;
+nutritionvalue[P_CORNFLOWER] = 2;
+nutritionvalue[P_CLIANTRO] = 2;
+nutritionvalue[P_CLOVER] = 2;
+nutritionvalue[P_DANDELION] = 2;
+nutritionvalue[P_ONION] = 3;
+nutritionvalue[P_MUSHROOM] = 3;
+nutritionvalue[P_BLUEHEDGE] = 2;
+nutritionvalue[P_GREENTOMATO] = 3;
+nutritionvalue[P_HEDGE] = 2;
+nutritionvalue[P_GRASS] = 4;
+nutritionvalue[P_WEED] = 1;
+nutritionvalue[P_TOMATO] = 3;
+nutritionvalue[P_WATERMELON] = 3;
+nutritionvalue[P_EGGPLANT] = 3;
+nutritionvalue[P_PEPPER] = 3;
+nutritionvalue[P_LETTUCE] = 3;
+nutritionvalue[P_BLUELETTUCE] = 3;
+
+// poopvalue
+// Affects how much progress towards pooping this plant ultimately produced when an animal eats it.
+globalvar poopvalue;
+poopvalue[P_EMPTY] = -1; // Should not happen
+poopvalue[P_ITCHGRASS] = 3;
+poopvalue[P_STRAWBERRY] = 3;
+poopvalue[P_BLUEBERRY] = 3;
+poopvalue[P_CORNFLOWER] = 3;
+poopvalue[P_CLIANTRO] = 3;
+poopvalue[P_CLOVER] = 4;
+poopvalue[P_DANDELION] = 3;
+poopvalue[P_ONION] = 3;
+poopvalue[P_MUSHROOM] = 3;
+poopvalue[P_BLUEHEDGE] = 3;
+poopvalue[P_GREENTOMATO] = 3;
+poopvalue[P_HEDGE] = 3;
+poopvalue[P_GRASS] = 4;
+poopvalue[P_WEED] = 2;
+poopvalue[P_TOMATO] = 3;
+poopvalue[P_WATERMELON] = 3;
+poopvalue[P_EGGPLANT] = 3;
+poopvalue[P_PEPPER] = 3;
+poopvalue[P_LETTUCE] = 3;
+poopvalue[P_BLUELETTUCE] = 3;
+
+
 // plantseason
 // The year is divided into twelve months, divided into four seasons.  January is month 0,
 //   December is 11.

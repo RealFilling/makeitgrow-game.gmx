@@ -1,5 +1,5 @@
 // Here is where the animal does his thing.
-var searchfor;
+var searchfor, specieseaten;
 searchfor = argument0;
 
 switch (searchfor) {
@@ -22,8 +22,9 @@ switch (searchfor) {
         break;
       case FOUNDFOOD_PLANT:
         // Nom nom nom
+        specieseaten = getspecies(global.plants[boardx,boardy]);
         global.plants[boardx,boardy] = 0;
-        foodfull = foodmax;
+        foodfull += nutritionvalue[specieseaten];
         break;
       case FOUNDFOOD_FEED:
         // Automatic success
