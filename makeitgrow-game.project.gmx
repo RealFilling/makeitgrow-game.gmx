@@ -821,8 +821,8 @@
         <script>scripts\animalbase_draw.gml</script>
         <script>scripts\debug_animalbase_endstep.gml</script>
       </scripts>
-      <script>scripts\initanimals.gml</script>
       <script>scripts\animaldefs.gml</script>
+      <script>scripts\initanimals.gml</script>
       <script>scripts\addanimal.gml</script>
       <script>scripts\removeanimal.gml</script>
       <script>scripts\validateanimals.gml</script>
