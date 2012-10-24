@@ -25,6 +25,7 @@ switch (state) {
     break;
   case TCSTATE_DESTROY:
     instance_destroy();
+    global.tutorialcard = noone;
     break;
   default:
     show_message("ERROR: bad state in tutorialcard_step!");

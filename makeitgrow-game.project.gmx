@@ -412,6 +412,7 @@
       <script>scripts\debug_lowestredcount.gml</script>
       <script>scripts\debug_grantsomehypertime.gml</script>
       <script>scripts\farmer_1_skiptime.gml</script>
+      <script>scripts\debug_t_tutorialcard.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\timeconsts.gml</script>
@@ -855,12 +856,15 @@
     </scripts>
     <scripts name="tutorial">
       <script>scripts\inittutorial.gml</script>
-      <script>scripts\setflag.gml</script>
+      <script>scripts\settutorialflag.gml</script>
+      <script>scripts\loadtutorialsteps.gml</script>
       <scripts name="tutorialcard">
         <script>scripts\tutorialcard_create.gml</script>
         <script>scripts\tutorialcard_drawgui.gml</script>
         <script>scripts\tutorialcard_step.gml</script>
         <script>scripts\tutorialparse.gml</script>
+        <script>scripts\spawntutorialcard.gml</script>
+        <script>scripts\cleartutorialcard.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -938,7 +942,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="350">
+  <constants number="352">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1289,6 +1293,8 @@
     <constant name="TCSTATE_NORMAL">2</constant>
     <constant name="TCSTATE_DISAPPEAR">3</constant>
     <constant name="TCSTATE_DESTROY">4</constant>
+    <constant name="MAXTUTORIALSTEPS">16</constant>
+    <constant name="TUTORIALCARDLINEHEIGHT">14</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

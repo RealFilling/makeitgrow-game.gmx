@@ -16,6 +16,9 @@ global.weatherdebug = false; // Provide debugging information for weather system
 global.skippreseed = true; // Don't put random thing on the field at the start
 global.skipprecalc = true; // Don't run very fast for two months at start
 global.poisonflag = false; // For isolating a single instance of a problem
+//
+global.tutorialdebug = true; // Tutorial card debugging, activates T key for spawning a card
+
 
 //init();
 script_utility();
@@ -124,6 +127,7 @@ global.menutimer = 0;
 global.menutip1 = ""; // Menu identification
 global.menutip2 = ""; // Menu item identification
 global.currentitemname = "Move";
+global.tutorialcard = noone;
 
 // Leo's energy usage flash effect timer
 global.energyflasheffect = 0;
