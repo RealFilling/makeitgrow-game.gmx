@@ -66,6 +66,42 @@
             <arg>2</arg>
           </args>
         </function>
+        <function>
+          <name>gd_get_tutorial_step</name>
+          <externalName>gd_get_tutorial_step</externalName>
+          <kind>11</kind>
+          <id>7</id>
+          <help></help>
+          <returnType>1</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>1</arg>
+          </args>
+        </function>
+        <function>
+          <name>gd_save_tutorial_status</name>
+          <externalName>gd_save_tutorial_status</externalName>
+          <kind>11</kind>
+          <id>7</id>
+          <help></help>
+          <returnType>1</returnType>
+          <argCount>1</argCount>
+          <args>
+            <arg>1</arg>
+          </args>
+        </function>
+        <function>
+          <name>gd_mixpanel_register</name>
+          <externalName>gd_mixpanel_register</externalName>
+          <kind>11</kind>
+          <id>7</id>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>2</argCount>
+          <args>
+            <arg>2</arg>
+          </args>
+        </function>
       </functions>
       <constants/>
     </file>
