@@ -860,6 +860,7 @@
         <script>scripts\tutorialcard_create.gml</script>
         <script>scripts\tutorialcard_drawgui.gml</script>
         <script>scripts\tutorialcard_step.gml</script>
+        <script>scripts\tutorialparse.gml</script>
       </scripts>
     </scripts>
   </scripts>
