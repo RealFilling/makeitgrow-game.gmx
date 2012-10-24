@@ -866,6 +866,7 @@
         <script>scripts\spawntutorialcard.gml</script>
         <script>scripts\cleartutorialcard.gml</script>
       </scripts>
+      <script>scripts\tutorialtest.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
