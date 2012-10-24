@@ -28,7 +28,7 @@ starterinventory();
 // Generate a new field
 field_initmap();           // Prepare the map arrays
 field_generate();          // Generate a random map
-field_dryuntil(200);       // Remove some water
+field_dryuntil(50);       // Remove some water
     
 // Starting weather type
 global.currentweather = WEATHER_CLEAR;

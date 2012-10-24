@@ -2,11 +2,11 @@ var xa,ya,redplus,greenplus,blueplus,y1,x1,yb,xb,soilvalue,soilred,soilgreen,soi
 //Generate starting soil map
 for (ya=0;ya<BOARDWIDTH;ya+=1) {
   for (xa=0;xa<BOARDHEIGHT;xa+=1) {
-    redplus = irandom_range(0,3);
-    greenplus = irandom_range(0,3);
+    redplus = irandom_range(0,6);
+    greenplus = irandom_range(0,5);
     //if (greenrandom == 0) {greenplus = 1;}
     //  else {greenplus = 0;}
-    blueplus = irandom_range(0,3);
+    blueplus = irandom_range(0,4);
     //if (bluerandom == 0) {blueplus = 1;}
     //  else {blueplus = 0;}
     for (y1=-3;y1<4;y1+=1) {
