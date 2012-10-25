@@ -1,0 +1,12 @@
+global.tutstepcount = 0;
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);
+registertutorialstep("Welcome to MAKE IT GROW!",TUTORIALCARDTYPE_A,400,400,5*30,-1);

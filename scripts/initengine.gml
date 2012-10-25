@@ -18,7 +18,7 @@ global.skipprecalc = true; // Don't run very fast for two months at start
 global.poisonflag = false; // For isolating a single instance of a problem
 //
 global.tutorialdebug = true; // Tutorial card debugging, activates T key for spawning a card
-
+global.tutorialskip = false; // Skip all tutorial cards.
 
 //init();
 script_utility();
@@ -37,6 +37,7 @@ animaldefs();
 soundframedefs();
 initsoundframe();
 timeconsts();
+tutorialdef();
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;

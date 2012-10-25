@@ -862,11 +862,14 @@
         <script>scripts\tutorialcard_create.gml</script>
         <script>scripts\tutorialcard_drawgui.gml</script>
         <script>scripts\tutorialcard_step.gml</script>
-        <script>scripts\tutorialparse.gml</script>
         <script>scripts\spawntutorialcard.gml</script>
         <script>scripts\cleartutorialcard.gml</script>
       </scripts>
       <script>scripts\tutorialtest.gml</script>
+      <script>scripts\tutorialdef.gml</script>
+      <script>scripts\registertutorialstep.gml</script>
+      <script>scripts\searchfortile.gml</script>
+      <script>scripts\tutorialturn.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -943,7 +946,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="352">
+  <constants number="359">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1296,6 +1299,13 @@
     <constant name="TCSTATE_DESTROY">4</constant>
     <constant name="MAXTUTORIALSTEPS">16</constant>
     <constant name="TUTORIALCARDLINEHEIGHT">14</constant>
+    <constant name="WATERDRYTARGET">200</constant>
+    <constant name="TUTORIALCARDTYPE_A">0</constant>
+    <constant name="TUTORIALCARDTYPE_B">1</constant>
+    <constant name="TUTORIALCARDTYPE_C">2</constant>
+    <constant name="TCT_C_TILESEARCH">3</constant>
+    <constant name="TCT_C_TILESEARCH_MOIST">4</constant>
+    <constant name="TCT_C_TILESEARCH_HARVEST">5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

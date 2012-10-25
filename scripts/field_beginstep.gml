@@ -15,7 +15,7 @@ if (global.framecount == 10) {
 else if (global.framecount < 10) {
   return 0;
   }
-  
+
 // Per frame stuff, by state
 switch (global.gamestate) {
   case GSTATE_INIT:
@@ -41,7 +41,10 @@ switch (global.gamestate) {
       }
     break;
   case GSTATE_NORMAL:
+    // Make appropriate noises
     processsoundframe();
+    // Process tutorial tasks & timers
+    tutorialturn();  
     // Timekeeping
     if (global.iostate == IOSTATE_NEUTRAL) {
       if (global.currentmenu != noone) {break;};
