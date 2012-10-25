@@ -659,6 +659,12 @@
           <script>scripts\donebutton_lclick.gml</script>
           <script>scripts\donebutton_step.gml</script>
           <script>scripts\rootbutton_draw.gml</script>
+          <script>scripts\seedbutton_draw.gml</script>
+          <script>scripts\compostbutton_draw.gml</script>
+          <script>scripts\toolbutton_draw.gml</script>
+          <script>scripts\treebutton_draw.gml</script>
+          <script>scripts\buildingbutton_draw.gml</script>
+          <script>scripts\donebutton_draw.gml</script>
         </scripts>
         <scripts name="speedbuttons">
           <script>scripts\speedbutton_create.gml</script>
@@ -669,6 +675,9 @@
           <script>scripts\speedbutton2_step.gml</script>
           <script>scripts\speedbutton3_step.gml</script>
           <script>scripts\speedbutton_draw.gml</script>
+          <script>scripts\speedbutton1_draw.gml</script>
+          <script>scripts\speedbutton2_draw.gml</script>
+          <script>scripts\speedbutton3_draw.gml</script>
         </scripts>
       </scripts>
     </scripts>
