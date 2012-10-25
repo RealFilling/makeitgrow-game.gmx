@@ -6,6 +6,7 @@ switch (state) {
       state = TCSTATE_NORMAL;
       statetimer = 4
       }
+    tutcardpositioning();
     break;
   case TCSTATE_NORMAL:
     if (statetimer <= 0) {
@@ -17,6 +18,8 @@ switch (state) {
         frameflash = c_white;
         }
       }
+    tutcardpositioning();  
+    tutcardtaskcheck();
     break;
   case TCSTATE_DISAPPEAR:
     if (statetimer <= 0) {
@@ -25,6 +28,7 @@ switch (state) {
     break;
   case TCSTATE_DESTROY:
     instance_destroy();
+    global.tutcardcleared = true;
     global.tutorialcard = noone;
     break;
   default:

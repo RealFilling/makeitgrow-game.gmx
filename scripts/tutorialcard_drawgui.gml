@@ -1,3 +1,8 @@
+x1 = x - (boxwidth / 2); // x and y are determined in the step event
+x2 = x + (boxwidth / 2);
+y1 = y - (boxheight / 2);
+y2 = y + (boxheight / 2);
+
 switch (state) {
   case TCSTATE_APPEAR:
     draw_set_color(boxcolor);
@@ -11,6 +16,8 @@ switch (state) {
     draw_set_color(frameflash);
     draw_rectangle(x1,y1,x2,y2,true);
     switch (arrowdir) {
+      case -1:
+        break; // Don't draw an arrow.
       case 0:
         draw_sprite_ext(spr_arrow_up,0,x,y1-16,1.0,1.0,0.0,boxcolor,1.0);
         break;

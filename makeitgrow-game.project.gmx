@@ -97,6 +97,7 @@
       </sprites>
       <sprites name="tutorial">
         <sprite>sprites\spr_arrow_up</sprite>
+        <sprite>sprites\spr_highlight</sprite>
       </sprites>
     </sprites>
     <sprites name="Bugs">
@@ -687,6 +688,7 @@
       <script>scripts\text_newtool.gml</script>
       <script>scripts\text_addingabuilding.gml</script>
       <script>scripts\text_newplantspeciesscheme.gml</script>
+      <script>scripts\text_tutorialflow.gml</script>
     </scripts>
     <scripts name="tiletype">
       <script>scripts\isshadow.gml</script>
@@ -855,21 +857,24 @@
       <script>scripts\clearanimals.gml</script>
     </scripts>
     <scripts name="tutorial">
+      <script>scripts\tutorialdef.gml</script>
       <script>scripts\inittutorial.gml</script>
-      <script>scripts\settutorialflag.gml</script>
-      <script>scripts\loadtutorialsteps.gml</script>
+      <script>scripts\settutorialflag_OBS.gml</script>
+      <script>scripts\loadtutorialsteps_OBS.gml</script>
       <scripts name="tutorialcard">
         <script>scripts\tutorialcard_create.gml</script>
         <script>scripts\tutorialcard_drawgui.gml</script>
         <script>scripts\tutorialcard_step.gml</script>
         <script>scripts\spawntutorialcard.gml</script>
         <script>scripts\cleartutorialcard.gml</script>
+        <script>scripts\tutcardpositioning.gml</script>
+        <script>scripts\tutcardtaskcheck.gml</script>
       </scripts>
       <script>scripts\tutorialtest.gml</script>
-      <script>scripts\tutorialdef.gml</script>
       <script>scripts\registertutorialstep.gml</script>
       <script>scripts\searchfortile.gml</script>
       <script>scripts\tutorialturn.gml</script>
+      <script>scripts\tutorialadvcard.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -946,7 +951,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="359">
+  <constants number="377">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1300,12 +1305,30 @@
     <constant name="MAXTUTORIALSTEPS">16</constant>
     <constant name="TUTORIALCARDLINEHEIGHT">14</constant>
     <constant name="WATERDRYTARGET">200</constant>
-    <constant name="TUTORIALCARDTYPE_A">0</constant>
-    <constant name="TUTORIALCARDTYPE_B">1</constant>
-    <constant name="TUTORIALCARDTYPE_C">2</constant>
-    <constant name="TCT_C_TILESEARCH">3</constant>
-    <constant name="TCT_C_TILESEARCH_MOIST">4</constant>
-    <constant name="TCT_C_TILESEARCH_HARVEST">5</constant>
+    <constant name="TCT_HOVER">0</constant>
+    <constant name="TCT_MENU">1</constant>
+    <constant name="TCT_TILESEARCH">2</constant>
+    <constant name="TCT_TILESEARCH_MOIST">3</constant>
+    <constant name="TCT_TILESEARCH_HARVEST">4</constant>
+    <constant name="TTT_WAIT">0</constant>
+    <constant name="TTT_CLICK">1</constant>
+    <constant name="TTT_USE">2</constant>
+    <constant name="TTT_USEPLACE">3</constant>
+    <constant name="ARROWDIR_NONE">-1</constant>
+    <constant name="ARROWDIR_UP">0</constant>
+    <constant name="ARROWDIR_RIGHT">1</constant>
+    <constant name="ARROWDIR_DOWN">2</constant>
+    <constant name="ARROWDIR_LEFT">3</constant>
+    <constant name="ARROWDIR_AUTO">4</constant>
+    <constant name="UIBUTTON_SEEDS">0</constant>
+    <constant name="UIBUTTON_COMPOST">1</constant>
+    <constant name="UIBUTTON_TOOLS">2</constant>
+    <constant name="UIBUTTON_TREES">3</constant>
+    <constant name="UIBUTTON_BUILDINGS">4</constant>
+    <constant name="UIBUTTON_SLOWSPEED">5</constant>
+    <constant name="UIBUTTON_MEDSPEED">6</constant>
+    <constant name="UIBUTTON_FASTSPEED">7</constant>
+    <constant name="UIBUTTON_CANCEL">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

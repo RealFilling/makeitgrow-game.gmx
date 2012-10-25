@@ -13,3 +13,5 @@ else {
   global.tutorialstep = 9999;
   global.tutorialtimer = -1;
   }  
+global.tutcardcleared = true; // So we progress to first step immediately.
+

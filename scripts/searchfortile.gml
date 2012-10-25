@@ -14,10 +14,10 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
       }
     suitability = 99999 - (abs(farmerx - sx) + abs(farmery - sy));
     switch(emphasistofind) {
-      case TCT_C_TILESEARCH_MOIST:
+      case TCT_TILESEARCH_MOIST:
         suitability += (MAXMOIST - getmoist(sx,sy));
         break;
-      case TCT_C_TILESEARCH_HARVEST:
+      case TCT_TILESEARCH_HARVEST:
         suitability += global.harvest[sx,sy];
         break;
       default:
