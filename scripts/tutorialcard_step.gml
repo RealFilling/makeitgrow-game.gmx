@@ -11,11 +11,13 @@ switch (state) {
   case TCSTATE_NORMAL:
     if (statetimer <= 0) {
       statetimer = 4
-      if (frameflash == c_white) {
+      if (frameflashstate == 0) {
         frameflash = c_black;
+        frameflashstate = 1;
         }
       else {
         frameflash = c_white;
+        frameflashstate = 0;
         }
       }
     tutcardpositioning();  

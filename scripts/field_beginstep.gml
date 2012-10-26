@@ -44,7 +44,9 @@ switch (global.gamestate) {
     // Make appropriate noises
     processsoundframe();
     // Process tutorial tasks & timers
-    tutorialturn();  
+    if (global.titlecard == noone) {
+      tutorialturn();
+      }
     // Timekeeping
     if (global.iostate == IOSTATE_NEUTRAL) {
       if (global.currentmenu != noone) {break;};

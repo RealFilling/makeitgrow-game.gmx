@@ -5,6 +5,9 @@ xparam = global.parameter3;
 yparam = global.parameter4;
 displaymode = global.parameter5;
 boxcolor = global.parameter6;
+arrowdirauto = -1;
+spotx = -1;
+spoty = -1;
 
 // Basic processing
 boxwidth = max((string_length(textparam)*4)+10,90);
@@ -20,6 +23,18 @@ y2 = y + (boxheight / 2);
 state = TCSTATE_APPEAR;
 statetimer = 10; // Counts down
 frameflash = c_white;
+frameflashstate = 0;
+
+switch (displaymode) {
+  case TCT_TILESEARCH:
+  case TCT_TILESEARCH_MOIST:
+  case TCT_TILESEARCH_HARVEST:
+    tilex = xparam;
+    tiley = yparam;
+    break;
+  }
+
+tutcardpositioning();
 
 // Task completion info
 tasktype = global.parameter7;

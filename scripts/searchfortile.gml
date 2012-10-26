@@ -30,6 +30,6 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
       }
     }
   }
-global.returnvalue1 = bestx;
-global.returnvalue2 = besty;
+global.returnx = bestx;
+global.returny = besty;
 return bestsuitability;

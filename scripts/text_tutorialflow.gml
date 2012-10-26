@@ -9,6 +9,7 @@ Tutorial card display logic is handled in tutorialcard_step() and
   tutorialcard_drawgui().
 State logic is done in tutorialcard_step().  It watches various flags
   set throughout the code to determine if the current taask has been
-  completed or not.
+  completed or not.  Note, it's the card object's job to watch whether
+  its task has been completed yet.
 
 */

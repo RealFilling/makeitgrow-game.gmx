@@ -8,6 +8,7 @@ else if (timer < (TITLEFRAMELENGTH*2)) {
   image_alpha = ( (TITLEFRAMELENGTH-(timer-TITLEFRAMELENGTH)) /TITLEFRAMELENGTH);
   }
 else {
+  global.titlecard = noone;
   instance_destroy();
   }
 

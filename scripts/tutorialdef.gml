@@ -25,5 +25,8 @@ global.tuttoolusedy = -1;
 //                 When used, the highlight goes away.
 
 // Here is where the tutorial steps are defined:
-registertutorialstep("Welcome to MAKE IT GROW! 1",TCT_HOVER,400,400,TTT_WAIT,5*30,0,-1,c_blue);
+registertutorialstep("Welcome to MAKE IT GROW! 1",TCT_HOVER,400,400,TTT_WAIT,5*30,0,ARROWDIR_NONE,c_blue);
+registertutorialstep("Welcome to MAKE IT GROW! 2",TCT_TILESEARCH,P_EMPTY,-1,TTT_WAIT,1000*30,0,ARROWDIR_AUTO,c_blue);
+registertutorialstep("Welcome to MAKE IT GROW! 3",TCT_HOVER,400,400,TTT_WAIT,5*30,0,-1,c_blue);
+registertutorialstep("Welcome to MAKE IT GROW! 4",TCT_HOVER,400,400,TTT_WAIT,5*30,0,-1,c_blue);
 

@@ -98,6 +98,7 @@
       <sprites name="tutorial">
         <sprite>sprites\spr_arrow_up</sprite>
         <sprite>sprites\spr_highlight</sprite>
+        <sprite>sprites\spr_highlightcircle</sprite>
       </sprites>
     </sprites>
     <sprites name="Bugs">
@@ -185,6 +186,12 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="initgame">
+      <script>scripts\field_create.gml</script>
+      <script>scripts\initengine.gml</script>
+      <script>scripts\initgame.gml</script>
+      <script>scripts\initload_OBS.gml</script>
+    </scripts>
     <scripts name="plants">
       <script>scripts\plantdefs.gml</script>
       <script>scripts\plantdefs_OLDSEASONS.gml</script>
@@ -228,12 +235,6 @@
       <script>scripts\isadult.gml</script>
       <script>scripts\monthaffinity.gml</script>
       <script>scripts\nicheeffect.gml</script>
-    </scripts>
-    <scripts name="initgame">
-      <script>scripts\field_create.gml</script>
-      <script>scripts\initengine.gml</script>
-      <script>scripts\initgame.gml</script>
-      <script>scripts\initload_OBS.gml</script>
     </scripts>
     <scripts name="field">
       <script>scripts\field_beginstep.gml</script>
@@ -878,12 +879,16 @@
         <script>scripts\cleartutorialcard.gml</script>
         <script>scripts\tutcardpositioning.gml</script>
         <script>scripts\tutcardtaskcheck.gml</script>
+        <script>scripts\drawarrow.gml</script>
       </scripts>
       <script>scripts\tutorialtest.gml</script>
       <script>scripts\registertutorialstep.gml</script>
       <script>scripts\searchfortile.gml</script>
       <script>scripts\tutorialturn.gml</script>
       <script>scripts\tutorialadvcard.gml</script>
+      <script>scripts\isspaceonscreen.gml</script>
+      <script>scripts\pixscreentofield.gml</script>
+      <script>scripts\reltodir.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -960,7 +965,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="377">
+  <constants number="383">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1325,10 +1330,14 @@
     <constant name="TTT_USEPLACE">3</constant>
     <constant name="ARROWDIR_NONE">-1</constant>
     <constant name="ARROWDIR_UP">0</constant>
-    <constant name="ARROWDIR_RIGHT">1</constant>
-    <constant name="ARROWDIR_DOWN">2</constant>
-    <constant name="ARROWDIR_LEFT">3</constant>
-    <constant name="ARROWDIR_AUTO">4</constant>
+    <constant name="ARROWDIR_UPRIGHT">1</constant>
+    <constant name="ARROWDIR_RIGHT">2</constant>
+    <constant name="ARROWDIR_DOWNRIGHT">3</constant>
+    <constant name="ARROWDIR_DOWN">4</constant>
+    <constant name="ARROWDIR_DOWNLEFT">5</constant>
+    <constant name="ARROWDIR_LEFT">6</constant>
+    <constant name="ARROWDIR_UPLEFT">7</constant>
+    <constant name="ARROWDIR_AUTO">8</constant>
     <constant name="UIBUTTON_SEEDS">0</constant>
     <constant name="UIBUTTON_COMPOST">1</constant>
     <constant name="UIBUTTON_TOOLS">2</constant>
@@ -1338,6 +1347,8 @@
     <constant name="UIBUTTON_MEDSPEED">6</constant>
     <constant name="UIBUTTON_FASTSPEED">7</constant>
     <constant name="UIBUTTON_CANCEL">8</constant>
+    <constant name="TUTARROWVERTOFFSET">-120</constant>
+    <constant name="TUTAUTOPOSEDGE">130</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
