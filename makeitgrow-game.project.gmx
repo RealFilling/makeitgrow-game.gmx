@@ -869,6 +869,7 @@
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
+      <script>scripts\tutorialsetup.gml</script>
       <script>scripts\inittutorial.gml</script>
       <script>scripts\settutorialflag_OBS.gml</script>
       <script>scripts\loadtutorialsteps_OBS.gml</script>
