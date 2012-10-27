@@ -12,7 +12,7 @@ spoty = -1;
 // Basic processing
 boxwidth = max((string_length(textparam)*4)+10,90);
 textwork = wordwrap(textparam,boxwidth-10);
-cardtext = string_copy(textwork,2,string_length(textwork)-1); // Inserts linebreaks
+cardtext = delleadinghashmark(textwork); // Inserts linebreaks
 lines = string_count("#",cardtext);
 boxheight = (lines * TUTORIALCARDLINEHEIGHT)+20;
 
@@ -21,7 +21,7 @@ x2 = x + (boxwidth / 2);
 y1 = y - (boxheight / 2);
 y2 = y + (boxheight / 2);
 state = TCSTATE_APPEAR;
-statetimer = 10; // Counts down
+statetimer = TUTBOXSTATETIMEMAX; // Counts down
 frameflash = c_white;
 frameflashstate = 0;
 

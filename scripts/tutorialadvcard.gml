@@ -1,7 +1,9 @@
 var cardtype;
 global.tutcardcleared = false; // Clear pass flag to prepare for next step
+global.tutmenuitemselected = false;
 global.tutlock_menu = -1; // Failsafe to clear tutorial locks
 global.tutlock_item = -9999; // Not -1 to avoid conflicts with tools
+//global.tutlock_disablecancel = false;
 
 global.tutorialstep += 1;
 if (global.tutorialstep >= global.tutstepcount) {
@@ -24,7 +26,7 @@ switch (cardtype) {
   case TCT_MENUSELECT:
     global.parameter3 = global.tutstep_cparam1[global.tutorialstep];
     global.parameter4 = global.tutstep_cparam2[global.tutorialstep];
-    global.tutlock_item = global.tutstep_tparam1;
+    global.tutlock_item = global.tutstep_tparam1[global.tutorialstep];
     break;
   case TCT_TILESEARCH:
   case TCT_TILESEARCH_MOIST:
@@ -34,6 +36,16 @@ switch (cardtype) {
     global.parameter4 = global.returny;
     global.tuttilex = global.returnx;
     global.tuttiley = global.returny;
+    break;
+  case TCT_DISABLECANCEL: // Fake step to disable cancelling
+    global.tutlock_disablecancel = true;
+    global.tutcardcleared = true;
+    return false;
+    break;
+  case TCT_ENABLECANCEL: // Fake step to enable cancelling
+    global.tutlock_disablecancel = false;
+    global.tutcardcleared = true;
+    return false;
     break;
   default:
     break;

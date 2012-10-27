@@ -5,6 +5,11 @@ switch(tasktype) {
       state = TCSTATE_DISAPPEAR;// Signal to tutorialcard_step that we're done.
       }
     break;
+  case TTT_MENUSELECT:
+    if (global.tutmenuitemselected = true) {
+      state = TCSTATE_DISAPPEAR;
+      }
+    break;
   case TTT_CLICK:
     if (global.tutbuttonpressed == ttt_click_buttontowatch) {
       state = TCSTATE_DISAPPEAR;
@@ -16,8 +21,7 @@ switch(tasktype) {
       }
     break;
   case TTT_USEPLACE:
-    if ((global.tuttoolused == ttt_click_buttontowatch) and
-        (global.tuttoolusedx == global.tuttilex) and
+    if ((global.tuttoolusedx == global.tuttilex) and
         (global.tuttoolusedy == global.tuttiley)) {
       state = TCSTATE_DISAPPEAR;
       }

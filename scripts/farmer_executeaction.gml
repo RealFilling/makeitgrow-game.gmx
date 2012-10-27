@@ -15,7 +15,12 @@ growth = getsubtype(thisplant);
 if (action == TOOL_MOVE) {
   return farmer_toolmove();
   }
-else if (action < 0) {
+
+// If tutorial requires an item be used here, this is our means for detecting it.  
+global.tuttoolusedx = boardx;
+global.tuttoolusedy = boardy;
+
+if (action < 0) {
   switch (action) {
     case TOOL_WATERCAN:
       farmer_setanim(FARMERANIM_WATERING);

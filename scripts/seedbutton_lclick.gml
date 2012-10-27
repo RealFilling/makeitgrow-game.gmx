@@ -6,6 +6,9 @@ if (global.currentmenu != noone) {
 if ((global.tutlock_menu != -1) and (global.tutlock_menu != UIBUTTON_SEEDS)) {
   return false;
   }
+if (global.tutlock_disablecancel == true) {
+  return false;
+  }
 global.parameter1 = MENUTYPE_SEEDINVENT; // Menu type
 global.parameter2 = "Seeds"; // Menu name
 global.tutbuttonpressed = UIBUTTON_SEEDS;

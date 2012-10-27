@@ -11,10 +11,23 @@ else {
 
 switch (state) {
   case TCSTATE_APPEAR:
+    x1diffpart = (x-x1)/TUTBOXSTATETIMEMAX;
+    x2diffpart = (x2-x)/TUTBOXSTATETIMEMAX;
+    y1diffpart = (y-y1)/TUTBOXSTATETIMEMAX;
+    y2diffpart = (y2-y)/TUTBOXSTATETIMEMAX;
+    timerinverse = TUTBOXSTATETIMEMAX - statetimer;
     draw_set_color(boxcolor);
-    draw_rectangle(x1,y1,x2,y2,false);
+    draw_rectangle(x-(x1diffpart*timerinverse),
+                   y-(y1diffpart*timerinverse),
+                   x+(x2diffpart*timerinverse),
+                   y+(y2diffpart*timerinverse),
+                   false);
     draw_set_color(frameflash);
-    draw_rectangle(x1,y1,x2,y2,true);
+    draw_rectangle(x-(x1diffpart*timerinverse),
+                   y-(y1diffpart*timerinverse),
+                   x+(x2diffpart*timerinverse),
+                   y+(y2diffpart*timerinverse),
+                   true);
     break;
   case TCSTATE_NORMAL:
     if ((displaymode == TCT_TILESEARCH) or

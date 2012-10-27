@@ -2,11 +2,13 @@ global.tutstepcount = 0; // Progress in the tutorial
 global.tuttilex = -1; // Current tile of interest -- remembered after a step completes!
 global.tuttiley = -1;
 global.tutbuttonpressed = -1; // Used in detecting actions - UI element clicked
+global.tutmenuitemselected = false;
 global.tuttoolused = -1;      // "                       " - Item used
 global.tuttoolusedx = -1;     // "                       " - X,Y position item used on
 global.tuttoolusedy = -1;
 global.tutlock_menu = -1;     // Used in restricting access to non-focused menus
 global.tutlock_item = -9999;     // Used in restricting access to non-focused items
+global.tutlock_disablecancel = false;
 global.tutpostx = -1;         // Place for menu buttons and items to post coordinates
 global.tutposty = -1;         // Place for menu buttons and items to post coordinates
 global.tutpostarrowdir = -1;  // Place for menu buttons and items to post arrow direction
@@ -32,7 +34,10 @@ global.tutpostarrowdir = -1;  // Place for menu buttons and items to post arrow 
 // Here is where the tutorial steps are defined:
 //registertutorialstep("Welcome to MAKE IT GROW! 1",TCT_HOVER,400,400,TTT_WAIT,5*30,0,ARROWDIR_NONE,c_blue);
 //registertutorialstep("Welcome to MAKE IT GROW! 2",TCT_TILESEARCH,P_EMPTY,-1,TTT_WAIT,1000*30,0,ARROWDIR_AUTO,c_blue);
-registertutorialstep("Welcome to MAKE IT GROW! 3",TCT_MENU,-1,-1,TTT_CLICK,UIBUTTON_SEEDS,4,ARROWDIR_LEFT,c_blue);
-registertutorialstep("Welcome to MAKE IT GROW! 4",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,P_STRAWBERRY,4,ARROWDIR_DOWN,c_blue);
+registertutorialstep("Open the Seeds menu",TCT_MENU,-1,-1,TTT_CLICK,UIBUTTON_SEEDS,-1,ARROWDIR_LEFT,c_blue);
+registertutorialstep("Select Strawberries",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,1,-1,ARROWDIR_DOWN,c_blue);
+registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1,-1,1,-1,-1,-1);
+registertutorialstep("Plant it in this empty spot",TCT_TILESEARCH,P_EMPTY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_blue);
+registertutorialstep("-fake card to enable cancelling-",TCT_ENABLECANCEL,-1,-1,-1,1,-1,-1,-1);
 //registertutorialstep("Welcome to MAKE IT GROW! 4",TCT_HOVER,400,400,TTT_WAIT,5*30,0,-1,c_blue);
 
