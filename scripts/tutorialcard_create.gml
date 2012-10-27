@@ -26,6 +26,14 @@ frameflash = c_white;
 frameflashstate = 0;
 
 switch (displaymode) {
+  case TCT_HOVER:
+    x = xparam;
+    y = yparam;
+    break;
+  case TCT_MENU:
+  case TCT_MENUSELECT:
+    x = -1000; // Offscreen; button posts coordinates
+    y = -1000;
   case TCT_TILESEARCH:
   case TCT_TILESEARCH_MOIST:
   case TCT_TILESEARCH_HARVEST:
@@ -44,6 +52,9 @@ switch(tasktype) {
     break;
   case TTT_CLICK:
     ttt_click_buttontowatch = global.parameter8;
+    break;
+  case TTT_MENUSELECT:
+    ttt_menuitemtoselect = global.parameter8;
     break;
   case TTT_USE:
     ttt_use_tool = global.parameter8;

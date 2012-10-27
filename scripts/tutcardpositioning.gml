@@ -7,7 +7,9 @@ switch(displaymode) {
     y = yparam;
     break;
   case TCT_MENU:
-    // Two states: out of menu and in menu.
+  case TCT_MENUSELECT:
+    x = global.tutpostx-ax(0);
+    y = global.tutposty-ay(0);
     break;
   case TCT_TILESEARCH:
   case TCT_TILESEARCH_MOIST:

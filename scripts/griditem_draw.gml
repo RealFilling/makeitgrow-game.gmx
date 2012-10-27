@@ -2,6 +2,11 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_center);
 draw_set_font(font_hud);
 
+if (global.tutlock_item == menuitem) {
+  draw_sprite_ext(spr_highlightcircle, 0, x, y, 2.0, 2.0, 0, c_white, 1.0);
+  }
+
+
 draw_sprite(sprite_index, image_index, x, y);
 draw_sprite_ext(iconsprite, iconindex, x, y, 1.0, 1.0, 0, c_white, 1.0);
 

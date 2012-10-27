@@ -1,5 +1,7 @@
 var cardtype;
 global.tutcardcleared = false; // Clear pass flag to prepare for next step
+global.tutlock_menu = -1; // Failsafe to clear tutorial locks
+global.tutlock_item = -9999; // Not -1 to avoid conflicts with tools
 
 global.tutorialstep += 1;
 if (global.tutorialstep >= global.tutstepcount) {
@@ -14,11 +16,15 @@ global.parameter6 = global.tutstep_boxcolor; //boxcolor
 // Here we turn the registered parameters into a form useable by the card code.
 switch (cardtype) {
   case TCT_HOVER:
+  case TCT_MENU:
     global.parameter3 = global.tutstep_cparam1[global.tutorialstep];
     global.parameter4 = global.tutstep_cparam2[global.tutorialstep];
+    global.tutlock_menu = global.tutstep_tparam1;
     break;
-  case TCT_MENU:
-    // WIP
+  case TCT_MENUSELECT:
+    global.parameter3 = global.tutstep_cparam1[global.tutorialstep];
+    global.parameter4 = global.tutstep_cparam2[global.tutorialstep];
+    global.tutlock_item = global.tutstep_tparam1;
     break;
   case TCT_TILESEARCH:
   case TCT_TILESEARCH_MOIST:

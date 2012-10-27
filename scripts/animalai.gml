@@ -82,4 +82,4 @@ else {
     }
   }
   
-nan_check(boardx);
+

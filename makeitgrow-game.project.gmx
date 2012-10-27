@@ -410,7 +410,7 @@
       <script>scripts\farmer_6_testmenu.gml</script>
       <script>scripts\stringtestsuite.gml</script>
       <script>scripts\farmer_debug_m.gml</script>
-      <script>scripts\nan_check.gml</script>
+      <script>scripts\nan_check_OBS.gml</script>
       <script>scripts\debug_lowestredcount.gml</script>
       <script>scripts\debug_grantsomehypertime.gml</script>
       <script>scripts\farmer_1_skiptime.gml</script>
@@ -615,7 +615,7 @@
             <script>scripts\gridmenuinfocard_clear.gml</script>
           </scripts>
         </scripts>
-        <scripts name="ringmenu">
+        <scripts name="ringmenu_OBS">
           <script>scripts\ringmenu_create.gml</script>
           <script>scripts\ringmenu_leftclick.gml</script>
           <script>scripts\ringmenu_rightclick.gml</script>
@@ -642,6 +642,7 @@
           </scripts>
         </scripts>
         <script>scripts\selectmenuitem.gml</script>
+        <script>scripts\menuselectortocurrentseed.gml</script>
       </scripts>
       <script>scripts\ismovetoolactive.gml</script>
       <scripts name="hud">
@@ -653,7 +654,7 @@
           <script>scripts\seedbutton_lclick.gml</script>
           <script>scripts\compostbutton_lclick.gml</script>
           <script>scripts\toolbutton_lclick.gml</script>
-          <script>scripts\treebutton_invent.gml</script>
+          <script>scripts\treebutton_lclick.gml</script>
           <script>scripts\buildingbutton_lclick.gml</script>
           <script>scripts\rootbutton_create.gml</script>
           <script>scripts\rootbutton_step.gml</script>
@@ -965,7 +966,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="383">
+  <constants number="388">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1321,13 +1322,15 @@
     <constant name="WATERDRYTARGET">200</constant>
     <constant name="TCT_HOVER">0</constant>
     <constant name="TCT_MENU">1</constant>
-    <constant name="TCT_TILESEARCH">2</constant>
-    <constant name="TCT_TILESEARCH_MOIST">3</constant>
-    <constant name="TCT_TILESEARCH_HARVEST">4</constant>
+    <constant name="TCT_MENUSELECT">2</constant>
+    <constant name="TCT_TILESEARCH">3</constant>
+    <constant name="TCT_TILESEARCH_MOIST">4</constant>
+    <constant name="TCT_TILESEARCH_HARVEST">5</constant>
     <constant name="TTT_WAIT">0</constant>
     <constant name="TTT_CLICK">1</constant>
-    <constant name="TTT_USE">2</constant>
-    <constant name="TTT_USEPLACE">3</constant>
+    <constant name="TTT_MENUSELECT">2</constant>
+    <constant name="TTT_USE">3</constant>
+    <constant name="TTT_USEPLACE">4</constant>
     <constant name="ARROWDIR_NONE">-1</constant>
     <constant name="ARROWDIR_UP">0</constant>
     <constant name="ARROWDIR_UPRIGHT">1</constant>
@@ -1349,6 +1352,9 @@
     <constant name="UIBUTTON_CANCEL">8</constant>
     <constant name="TUTARROWVERTOFFSET">-120</constant>
     <constant name="TUTAUTOPOSEDGE">130</constant>
+    <constant name="TUTARROWHORIZOFFSET">140</constant>
+    <constant name="TUTARROWVERTOFFSET">20</constant>
+    <constant name="TUTARROWVERTOFFSETMENU">-90</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
