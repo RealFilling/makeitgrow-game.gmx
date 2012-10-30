@@ -7,6 +7,7 @@ global.tuttoolused = -1;      // "                       " - Item used
 global.tuttoolusedx = -1;     // "                       " - X,Y position item used on
 global.tuttoolusedy = -1;
 global.tutlock_menu = -1;     // Used in restricting access to non-focused menus
+global.tutpoint_menu = -9999;
 global.tutlock_item = -9999;     // Used in restricting access to non-focused items
 global.tutlock_disablecancel = false;
 global.tutpostx = -1;         // Place for menu buttons and items to post coordinates
