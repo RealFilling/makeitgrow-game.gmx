@@ -184,7 +184,6 @@ else {
       //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
       //global.currentseed = TOOL_MOVE;
       sound_play_respectdisable(snd_plop1);
-      }
       //mulchtype = global.itemnum[action];    
       ////mulchtype = global.currentseed-(NUMPLANTTYPES-1);//Assumes mulch is last in list
       //mulchtoadd = min(irandom_range(10,30),global.pmulch[mulchtype]);
@@ -210,14 +209,14 @@ else {
       
       break;
     case SELECT_TREE:
-      if !farmer_energycheck(ENERGY_UPROOTCOST) {
+      if (!farmer_energycheck(ENERGY_UPROOTCOST)) {
           return -1;
           break;
           }
       //Not implemented yet
       break;
     case SELECT_BUILDING:
-      if !farmer_energycheck(ENERGY_BUILDINGCOST) {
+      if (!farmer_energycheck(ENERGY_BUILDINGCOST)) {
           return -1;
           break;
           }
