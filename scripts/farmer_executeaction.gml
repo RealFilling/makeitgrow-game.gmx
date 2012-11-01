@@ -118,33 +118,31 @@ else {
   actionconvert = ptypetoitem(action);
   switch (global.itemtype[actionconvert]) {
     case SELECT_SEED:
-      if (species != 0) { // If there's already a plant here
-        if !farmer_energycheck(ENERGY_UPROOTCOST) {
-          return -1;
-          break;
-          }
+      if (isplant(species)) { // If there's already a plant here
+        //if !farmer_energycheck(ENERGY_UPROOTCOST) {
+        //  return -1;
+        //  break;
+        //  }
         species = 0;
         subtype = 0;
         growth = 0;
         }
-      else {
-        if (!farmer_energycheck(ENERGY_PLANTCOST)) {
-          return -1; // Too tired
-          break;
-          }
-        species = global.itemnum[actionconvert];
-        if (global.money < seedcost[species]) {
-          return -1; // Not enough money
-          }
-        global.money -= seedcost[species];
-        farmer_setanim(FARMERANIM_PLANTING);
-        //species = global.currentseed+1; // offset from seed items to plant species is 1
-        subtype = 0;
-        growth = 0;
-        hextopix(boardx,boardy);
-        instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
-        sound_play(snd_plant1);
+      if (!farmer_energycheck(ENERGY_PLANTCOST)) {
+        return -1; // Too tired
+        break;
         }
+      species = global.itemnum[actionconvert];
+      if (global.money < seedcost[species]) {
+        return -1; // Not enough money
+        }
+      global.money -= seedcost[species];
+      farmer_setanim(FARMERANIM_PLANTING);
+      //species = global.currentseed+1; // offset from seed items to plant species is 1
+      subtype = 0;
+      growth = 0;
+      hextopix(boardx,boardy);
+      instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
+      sound_play_respectdisable(snd_plant1);
       placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
       //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
       //global.currentseed = TOOL_MOVE;
@@ -152,41 +150,41 @@ else {
     case SELECT_COMPOST:
       // Colored compost should consume 24 units.
       // Brown compost should consume that much from each total, 72 units in all.
-      if (species == 0) { // Don't place if there's already something here
-        // Eventually we'll check for pre-existing compost and remove it.
-        //
-        // Compost is encoded similarly to plants, so we use the same functions.
-        if !farmer_energycheck(ENERGY_COMPOSTPLACECOST) {
-          return -1;
+      //if (species == 0) { // Don't place if there's already something here
+      //  // Eventually we'll check for pre-existing compost and remove it.
+      //  //
+      //  // Compost is encoded similarly to plants, so we use the same functions.
+      if !farmer_energycheck(ENERGY_COMPOSTPLACECOST) {
+        return -1;
+        break;
+        }
+      species = global.itemnum[actionconvert];
+      composttype = species - P_COMPOST_START;
+      if (composttype == COMPOST_ALL) {
+        if ( (global.pmulch[COMPOST_RED] < 24) or
+             (global.pmulch[COMPOST_GREEN] < 24) or
+             (global.pmulch[COMPOST_BLUE] < 24) ) {
           break;
           }
-        species = global.itemnum[actionconvert];
-        composttype = species - P_COMPOST_START;
-        if (composttype == COMPOST_ALL) {
-          if ( (global.pmulch[COMPOST_RED] < 24) or
-               (global.pmulch[COMPOST_GREEN] < 24) or
-               (global.pmulch[COMPOST_BLUE] < 24) ) {
-            break;
-            }
-          global.pmulch[COMPOST_RED] -= 24;
-          global.pmulch[COMPOST_GREEN] -= 24;
-          global.pmulch[COMPOST_BLUE] -= 24;
-          }
-        else {
-          if (global.pmulch[composttype] < 24) {
-            break;
-            }
-          global.pmulch[composttype] -= 24;
-          }
-        subtype = 0;
-        growth = 4; // Compost amounts are encoded in growth.
-        hextopix(boardx,boardy);
-        //instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
-        placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
-        //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
-        //global.currentseed = TOOL_MOVE;
-        sound_play(snd_plop1);
+        global.pmulch[COMPOST_RED] -= 24;
+        global.pmulch[COMPOST_GREEN] -= 24;
+        global.pmulch[COMPOST_BLUE] -= 24;
         }
+      else {
+        if (global.pmulch[composttype] < 24) {
+          break;
+          }
+        global.pmulch[composttype] -= 24;
+        }
+      subtype = 0;
+      growth = 4; // Compost amounts are encoded in growth.
+      hextopix(boardx,boardy);
+      //instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
+      placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
+      //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
+      //global.currentseed = TOOL_MOVE;
+      sound_play_respectdisable(snd_plop1);
+      }
       //mulchtype = global.itemnum[action];    
       ////mulchtype = global.currentseed-(NUMPLANTTYPES-1);//Assumes mulch is last in list
       //mulchtoadd = min(irandom_range(10,30),global.pmulch[mulchtype]);

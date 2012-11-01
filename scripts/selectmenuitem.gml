@@ -37,5 +37,5 @@ switch (global.menutype) {
     break;
   }
 global.menustate = MENUSTATE_SELECTING;
-//sound_play(snd_menuselect2);
+//sound_play_respectdisable(snd_menuselect2);
 

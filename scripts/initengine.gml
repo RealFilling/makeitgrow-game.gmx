@@ -19,6 +19,8 @@ global.poisonflag = false; // For isolating a single instance of a problem
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = false; // Skip all tutorial cards.
+//
+global.disablesound = true;
 
 //init();
 script_utility();

@@ -18,13 +18,13 @@ switch (global.menustate) {
   case MENUSTATE_SELECTING:
     if (global.menutimer >= MENUTIME_SELECTING) {
       gridmenu_beginclosing();
-      //sound_play(snd_menuselect2);
+      //sound_play_respectdisable(snd_menuselect2);
       }
     break;
   case MENUSTATE_ABORTING:
     if (global.menutimer >= MENUTIME_ABORTING) {
       gridmenu_beginclosing();
-      //sound_play(snd_menuclose1);
+      //sound_play_respectdisable(snd_menuclose1);
       }
     break;
   case MENUSTATE_CLOSING:

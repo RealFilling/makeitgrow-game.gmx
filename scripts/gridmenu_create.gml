@@ -194,5 +194,5 @@ switch (global.menutype) {
     break;
   }
 global.menutip2 = "";
-//sound_play(snd_menuopen1);
+//sound_play_respectdisable(snd_menuopen1);
 

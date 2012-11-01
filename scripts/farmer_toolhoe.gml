@@ -7,5 +7,5 @@ for (dir=0;dir<6;dir+=1) {
   field_increasetill(global.hexx,global.hexy);
   }
 field_increasetill(bx,by);
-sound_play(snd_hoe1);
+sound_play_respectdisable(snd_hoe1);
 return 0;

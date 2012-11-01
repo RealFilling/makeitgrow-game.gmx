@@ -798,6 +798,7 @@
       <script>scripts\soundframedefs.gml</script>
       <script>scripts\queuesound.gml</script>
       <script>scripts\clearsoundframe.gml</script>
+      <script>scripts\sound_play_respectdisable.gml</script>
     </scripts>
     <scripts name="text">
       <script>scripts\drawshadowedtext.gml</script>
@@ -968,7 +969,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="391">
+  <constants number="393">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1359,6 +1360,8 @@
     <constant name="TUTARROWHORIZOFFSET">140</constant>
     <constant name="TUTARROWVERTOFFSET">20</constant>
     <constant name="TUTARROWVERTOFFSETMENU">-90</constant>
+    <constant name="TUTARROWSPHORIZOFFSET">0</constant>
+    <constant name="TUTARROWSPVERTOFFSET">-90</constant>
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
   </constants>
   <help>
