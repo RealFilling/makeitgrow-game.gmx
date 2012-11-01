@@ -677,9 +677,9 @@
           <script>scripts\speedbutton2_step.gml</script>
           <script>scripts\speedbutton3_step.gml</script>
           <script>scripts\speedbutton_draw.gml</script>
-          <script>scripts\speedbutton1_draw.gml</script>
-          <script>scripts\speedbutton2_draw.gml</script>
-          <script>scripts\speedbutton3_draw.gml</script>
+          <script>scripts\speedbutton1_draw_OBS.gml</script>
+          <script>scripts\speedbutton2_draw_OBS.gml</script>
+          <script>scripts\speedbutton3_draw_OBS.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -1360,8 +1360,8 @@
     <constant name="TUTARROWHORIZOFFSET">140</constant>
     <constant name="TUTARROWVERTOFFSET">20</constant>
     <constant name="TUTARROWVERTOFFSETMENU">-90</constant>
-    <constant name="TUTARROWSPHORIZOFFSET">0</constant>
-    <constant name="TUTARROWSPVERTOFFSET">-90</constant>
+    <constant name="TUTCARDSPHORIZOFFSET">14</constant>
+    <constant name="TUTCARDSPVERTOFFSET">80</constant>
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
   </constants>
   <help>

@@ -1,3 +1,10 @@
+if (global.tutorialfailsafe == true) {
+  // We're in the middle of an abort!  Display variables might be bad.
+  // Also, self-destruct.
+  instance_destroy();
+  return 0;
+  }
+
 x1 = x - (boxwidth / 2); // x and y are determined in the step event
 x2 = x + (boxwidth / 2);
 y1 = y - (boxheight / 2);
@@ -33,7 +40,7 @@ switch (state) {
     if ((displaymode == TCT_TILESEARCH) or
         (displaymode == TCT_TILESEARCH_MOIST) or
         (displaymode == TCT_TILESEARCH_HARVEST)) {
-      draw_sprite(spr_highlightcircle,frameflashstate,spotx,spoty-(global.height[tilex,tiley]*HEIGHTPIX));
+      draw_sprite(spr_highlightcircle,frameflashstate,spotx,spoty-(global.height[global.tuttilex,global.tuttiley]*HEIGHTPIX));
       }
     draw_set_color(boxcolor);
     draw_rectangle(x1,y1,x2,y2,false);

@@ -7,6 +7,8 @@ if (global.tutorialdebug) {
     show_message("tutorialtest(): tutlock_disablecancel is false");
     }
   show_message("tutorialtest(): global.tutlock_menu is "+string(global.tutlock_menu));
+  show_message("tutorialtest(): global.tutpostx is "+string(global.tutpostx));
+  show_message("tutorialtest(): global.tutposty is "+string(global.tutposty));
   }
   
 

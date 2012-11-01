@@ -4,6 +4,7 @@ global.tutmenuitemselected = false;
 global.tutlock_menu = -1; // Failsafe to clear tutorial locks
 global.tutpoint_menu = -9999;
 global.tutlock_item = -9999; // Not -1 to avoid conflicts with tools
+global.tutorialfailsafe = false; // In case we aborted prior step, clear the flag
 //global.tutlock_disablecancel = false;
 
 if (global.tutorialdebug == true) {
@@ -57,8 +58,14 @@ switch (cardtype) {
     global.parameter4 = global.returny;
     global.tuttilex = global.returnx;
     global.tuttiley = global.returny;
+    if (!coordsinbounds(global.tuttilex,global.tuttiley)) {
+      global.tutorialfailsafe = true;
+      }
     if (global.tutorialdebug == true) {
       show_message("tutorialadvcard(): cardtype case 4");
+      if (global.tutorialfailsafe == true) {
+        show_message("tutorialadvcard(): WARNING, bad tutorial step, failsafe engaged!");
+        }
       }
     break;
   case TCT_DISABLECANCEL: // Fake step to disable cancelling

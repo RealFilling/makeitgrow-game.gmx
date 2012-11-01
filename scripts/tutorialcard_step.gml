@@ -1,5 +1,9 @@
 statetimer -= 1;
 
+if (global.tutorialfailsafe) {
+  global.tutcardcleared = true; // 
+  }
+
 switch (state) {
   case TCSTATE_APPEAR:
     if (statetimer <= 0) {

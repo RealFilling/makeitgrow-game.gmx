@@ -9,3 +9,9 @@ else {
 x = obj_hud.x + savedx;
 y = obj_hud.y + savedy;
 
+if (global.tutpoint_menu == UIBUTTON_MEDSPEED) {
+  global.tutpostx = (x+TUTCARDSPHORIZOFFSET)-ax(0);
+  global.tutposty = (y+TUTCARDSPVERTOFFSET)-ay(0);
+  global.tutpostarrowdir = ARROWDIR_UP;
+  }
+

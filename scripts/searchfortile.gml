@@ -9,6 +9,9 @@ besty = -1;
 bestsuitability = -1;
 for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
   for (sx=1;sx<BOARDWIDTH-1;sx+=1) {
+    if (global.water[sx,sy] >= 1) {
+      continue;
+      }
     if ((getspecies(global.plants[sx,sy]) != speciestofind) and (speciestofind != -1)){
       continue;
       }
