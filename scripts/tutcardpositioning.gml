@@ -8,8 +8,8 @@ switch(displaymode) {
     break;
   case TCT_MENU:
   case TCT_MENUSELECT:
-    x = global.tutpostx-ax(0);
-    y = global.tutposty-ay(0);
+    x = global.tutpostx;
+    y = global.tutposty;
     break;
   case TCT_TILESEARCH:
   case TCT_TILESEARCH_MOIST:

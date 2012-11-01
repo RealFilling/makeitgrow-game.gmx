@@ -885,10 +885,10 @@
         <script>scripts\delleadinghashmark.gml</script>
       </scripts>
       <script>scripts\tutorialtest.gml</script>
+      <script>scripts\tutorialadvcard.gml</script>
       <script>scripts\registertutorialstep.gml</script>
       <script>scripts\searchfortile.gml</script>
       <script>scripts\tutorialturn.gml</script>
-      <script>scripts\tutorialadvcard.gml</script>
       <script>scripts\isspaceonscreen.gml</script>
       <script>scripts\pixscreentofield.gml</script>
       <script>scripts\reltodir.gml</script>
