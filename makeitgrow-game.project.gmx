@@ -894,6 +894,7 @@
       <script>scripts\pixscreentofield.gml</script>
       <script>scripts\reltodir.gml</script>
       <script>scripts\getlowadjmineral.gml</script>
+      <script>scripts\iscolorsearch.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
