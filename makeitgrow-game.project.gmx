@@ -893,6 +893,7 @@
       <script>scripts\isspaceonscreen.gml</script>
       <script>scripts\pixscreentofield.gml</script>
       <script>scripts\reltodir.gml</script>
+      <script>scripts\getlowadjmineral.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -969,7 +970,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="393">
+  <constants number="397">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1329,6 +1330,10 @@
     <constant name="TCT_TILESEARCH">3</constant>
     <constant name="TCT_TILESEARCH_MOIST">4</constant>
     <constant name="TCT_TILESEARCH_HARVEST">5</constant>
+    <constant name="TCT_TILESEARCH_LOWMINREDADJ">6</constant>
+    <constant name="TCT_TILESEARCH_LOWMINGREENADJ">7</constant>
+    <constant name="TCT_TILESEARCH_LOWMINBLUEADJ">8</constant>
+    <constant name="TCT_TILESEARCH_LOWMINALLADJ">9</constant>
     <constant name="TCT_DISABLECANCEL">6</constant>
     <constant name="TCT_ENABLECANCEL">7</constant>
     <constant name="TTT_WAIT">0</constant>

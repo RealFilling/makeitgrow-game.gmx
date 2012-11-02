@@ -23,6 +23,18 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
       case TCT_TILESEARCH_HARVEST:
         suitability += global.harvest[sx,sy];
         break;
+      case TCT_TILESEARCH_LOWMINREDADJ:
+        suitability += 999-getlowadjmineral(sx,sy,RED);
+        break;
+      case TCT_TILESEARCH_LOWMINGREENADJ:
+        suitability += 999-getlowadjmineral(sx,sy,GREEN);
+        break;
+      case TCT_TILESEARCH_LOWMINBLUEADJ:
+        suitability += 999-getlowadjmineral(sx,sy,BLUE);
+        break;
+      case TCT_TILESEARCH_LOWMINALLADJ:
+        suitability += 999-getlowadjmineral(sx,sy,COLORALL);
+        break;
       default:
         break;
       }
