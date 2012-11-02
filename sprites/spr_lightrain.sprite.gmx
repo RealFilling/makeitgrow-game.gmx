@@ -6,8 +6,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>250</bbox_right>
+  <bbox_left>1</bbox_left>
+  <bbox_right>245</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>255</bbox_bottom>
   <HTile>0</HTile>
@@ -19,5 +19,9 @@
     <frame index="1">images\spr_lightrain_1.png</frame>
     <frame index="2">images\spr_lightrain_2.png</frame>
     <frame index="3">images\spr_lightrain_3.png</frame>
+    <frame index="4">images\spr_lightrain_4.png</frame>
+    <frame index="5">images\spr_lightrain_5.png</frame>
+    <frame index="6">images\spr_lightrain_6.png</frame>
+    <frame index="7">images\spr_lightrain_7.png</frame>
   </frames>
 </sprite>

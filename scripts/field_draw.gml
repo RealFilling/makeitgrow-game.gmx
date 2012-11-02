@@ -180,7 +180,7 @@ else {
 // Draw the weather
 for (wy=0;wy<(view_hview[0] div 256)+1;wy+=1) {
   for (wx=0;wx<(view_wview[0] div 256)+1;wx+=1) {
-    draw_sprite(global.weatherspr[global.currentweather],global.framecount mod 4,
+    draw_sprite(global.weatherspr[global.currentweather],global.framecount mod 8,
                 ax(wx*256),ay(wy*256));
     }
   }  
