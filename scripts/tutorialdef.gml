@@ -71,12 +71,33 @@ tutorialsetup();
 // Here is an example set of tutorial steps.  There are some graphics bugs so far but this
 //   should be enough for you to work on the structure of the tutorial.  The steps will be
 //   encountered in the order given here.
-registertutorialstep("Welcome to MAKE IT GROW!",TCT_HOVER,400,400,TTT_WAIT,5*30,0,ARROWDIR_NONE,c_blue);
-registertutorialstep("Click the Fast-Forward button",TCT_MENU,UIBUTTON_FASTSPEED,-1,TTT_CLICK,UIBUTTON_FASTSPEED,-1,ARROWDIR_UP,c_blue);
-registertutorialstep("Open the Tools menu",TCT_MENU,UIBUTTON_TOOLS,-1,TTT_CLICK,UIBUTTON_TOOLS,-1,ARROWDIR_LEFT,c_blue);
+registertutorialstep("Welcome to MAKE IT GROW!",TCT_HOVER,400,400,TTT_WAIT,3*30,0,ARROWDIR_NONE,c_green);
+registertutorialstep("Let's plant some seeds.",TCT_MENU,UIBUTTON_SEEDS,-1,TTT_CLICK,UIBUTTON_SEEDS,-1,ARROWDIR_LEFT,c_green);
+registertutorialstep("Strawberry seeds are in season.",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,1,-1,ARROWDIR_DOWN,c_green);
+registertutorialstep("Now plant that seed.",TCT_TILESEARCH,P_EMPTY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
+registertutorialstep("Try planting a whole row.",TCT_TILESEARCH,P_EMPTY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
+registertutorialstep("Keep Planting!",TCT_HOVER,400,400,TTT_WAIT,3*30,0,ARROWDIR_NONE,c_green);
+
+registertutorialstep("Speed up time to make things grow.",TCT_MENU,UIBUTTON_FASTSPEED,-1,TTT_CLICK,UIBUTTON_FASTSPEED,-1,ARROWDIR_UP,c_green);
+registertutorialstep("Watch...",TCT_HOVER,400,400,TTT_WAIT,5*30,0,ARROWDIR_NONE,c_green);
+registertutorialstep("Hypertime costs money, let's slow it down.",TCT_MENU,UIBUTTON_SLOWSPEED,-1,TTT_CLICK,UIBUTTON_FASTSPEED,-1,ARROWDIR_UP,c_green);
+
+registertutorialstep("These plants need water.",TCT_MENU,UIBUTTON_TOOLS,-1,TTT_CLICK,UIBUTTON_TOOLS,-1,ARROWDIR_LEFT,c_green);
 registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1,-1,1,-1,-1,-1);
-registertutorialstep("Select Harvest Basket",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,2,-1,ARROWDIR_DOWN,c_blue);
-registertutorialstep("Collect these wild mushrooms.",TCT_TILESEARCH,P_MUSHROOM,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_blue);
+registertutorialstep("Select the Watering Can",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,1,-1,ARROWDIR_DOWN,c_green);
+registertutorialstep("Quence these plants' thirst.",TCT_TILESEARCH,P_STRAWBERRY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
+registertutorialstep("-fake card to enable cancelling-",TCT_ENABLECANCEL,-1,-1,-1,1,-1,-1,-1);
+
+registertutorialstep("Now lets harvest some wild mushrooms.",TCT_MENU,UIBUTTON_TOOLS,-1,TTT_CLICK,UIBUTTON_TOOLS,-1,ARROWDIR_LEFT,c_green);
+registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1,-1,1,-1,-1,-1);
+registertutorialstep("Select Harvest Basket",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,2,-1,ARROWDIR_DOWN,c_green);
+registertutorialstep("Now go hunt for mushrooms!",TCT_TILESEARCH,P_MUSHROOM,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
+registertutorialstep("-fake card to enable cancelling-",TCT_ENABLECANCEL,-1,-1,-1,1,-1,-1,-1);
+
+registertutorialstep("Growing plants need compost.",TCT_MENU,UIBUTTON_COMPOST,-1,TTT_CLICK,UIBUTTON_COMPOST,-1,ARROWDIR_LEFT,c_green);
+registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1,-1,1,-1,-1,-1);
+registertutorialstep("Strawberries thrive on the red compost.",TCT_MENUSELECT,0,-1,TTT_MENUSELECT,0,-1,ARROWDIR_DOWN,c_green);
+registertutorialstep("Lay some next to the plants.",TCT_TILESEARCH,P_STRAWBERRY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
 registertutorialstep("-fake card to enable cancelling-",TCT_ENABLECANCEL,-1,-1,-1,1,-1,-1,-1);
 
 
