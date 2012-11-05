@@ -9,7 +9,7 @@ if (!planthasmineral(species)) {
   return 0;
   }
 else {
-  global.minreturn = mineraltype;
+  global.minreturn = mineraltype; // minreturn is the kind of mineral returned
   return deathmineral[species];
   }
   

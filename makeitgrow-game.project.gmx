@@ -362,6 +362,7 @@
         <script>scripts\farmer_toolbasket.gml</script>
         <script>scripts\farmer_bulldozer.gml</script>
         <script>scripts\seedselector.gml</script>
+        <script>scripts\mulchplant.gml</script>
       </scripts>
       <script>scripts\farmer_energycheck.gml</script>
       <script>scripts\farmer_selectmovetool.gml</script>

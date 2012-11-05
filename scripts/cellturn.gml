@@ -335,12 +335,13 @@ if (isplant(species) or istree(species)) {
     else if ((isdead(growth)) and (irandom_range(0,7) == 0) and !istree(species)) {
       //addmineral(mintoeat,((amttoeat div 2)*(2+global.harvest[myx,myy])),myx,myy)
       // Immediate decomposition
-      amtreplenish = getamtmulch(species,global.harvest[myx,myy]);
-      species = 0;
-      subtype = 0;
-      growth = 0;
-      addmineral(global.minreturn,amtreplenish,myx,myy);
-      global.harvest[myx,myy] = 0;
+      mulchplant(myx,myy);
+      //amtreplenish = getamtmulch(species,global.harvest[myx,myy]);
+      //species = 0;
+      //subtype = 0;
+      //growth = 0;
+      //addmineral(global.minreturn,amtreplenish,myx,myy);
+      //global.harvest[myx,myy] = 0;
       }
     }
   if (istree(species)) {

@@ -17,6 +17,8 @@
   <option_android_display_name>agrigame1-116</option_android_display_name>
   <option_android_flurry_enable>false</option_android_flurry_enable>
   <option_android_flurry_id></option_android_flurry_id>
+  <option_android_google_analytics_enable>false</option_android_google_analytics_enable>
+  <option_android_google_tracking_id></option_android_google_tracking_id>
   <option_android_icon_170>Configs\Default\android\icons\icon170.png</option_android_icon_170>
   <option_android_icon_36>Configs\Default\android\icons\icon36.png</option_android_icon_36>
   <option_android_icon_48>Configs\Default\android\icons\icon48.png</option_android_icon_48>
@@ -65,8 +67,12 @@
   <option_html5_allow_fullscreen>true</option_html5_allow_fullscreen>
   <option_html5_alwaysreload>false</option_html5_alwaysreload>
   <option_html5_centergame>false</option_html5_centergame>
+  <option_html5_flurry_enable>false</option_html5_flurry_enable>
+  <option_html5_flurry_id></option_html5_flurry_id>
   <option_html5_foldername>html5game</option_html5_foldername>
   <option_html5_generate_spotify_app>false</option_html5_generate_spotify_app>
+  <option_html5_google_analytics_enable>false</option_html5_google_analytics_enable>
+  <option_html5_google_tracking_id></option_html5_google_tracking_id>
   <option_html5_icon>Configs\Default\html5\fav.ico</option_html5_icon>
   <option_html5_index>-1</option_html5_index>
   <option_html5_interpolate>true</option_html5_interpolate>
@@ -78,6 +84,7 @@
   <option_html5_usesplash>false</option_html5_usesplash>
   <option_icon>nil</option_icon>
   <option_in_app_purchase_enable>false</option_in_app_purchase_enable>
+  <option_in_app_purchase_sandbox_mode>false</option_in_app_purchase_sandbox_mode>
   <option_in_app_purchase_server_url></option_in_app_purchase_server_url>
   <option_information></option_information>
   <option_interpolate>true</option_interpolate>
@@ -92,6 +99,8 @@
   <option_ios_display_name>agrigame1-116</option_ios_display_name>
   <option_ios_flurry_enable>false</option_ios_flurry_enable>
   <option_ios_flurry_id></option_ios_flurry_id>
+  <option_ios_google_analytics_enable>false</option_ios_google_analytics_enable>
+  <option_ios_google_tracking_id></option_ios_google_tracking_id>
   <option_ios_icon_114>Configs\Default\ios\icons\icon114.png</option_ios_icon_114>
   <option_ios_icon_144>Configs\Default\ios\icons\icon144.png</option_ios_icon_144>
   <option_ios_icon_57>Configs\Default\ios\icons\icon57.png</option_ios_icon_57>
@@ -149,6 +158,7 @@
   <option_stayontop>false</option_stayontop>
   <option_sync_vertex>0</option_sync_vertex>
   <option_textureGroup0_border>2</option_textureGroup0_border>
+  <option_textureGroup0_nocropping>false</option_textureGroup0_nocropping>
   <option_textureGroup0_scaled>false</option_textureGroup0_scaled>
   <option_textureGroup_count>1</option_textureGroup_count>
   <option_textureGroups0>Default</option_textureGroups0>
@@ -204,5 +214,23 @@
   <option_windows_runner_header>Configs\Default\windows\Runner_header.bmp</option_windows_runner_header>
   <option_windows_splash_screen>Configs\Default\windows\splash.png</option_windows_splash_screen>
   <option_windows_texture_page>2048</option_windows_texture_page>
+  <option_winphone_author>You</option_winphone_author>
+  <option_winphone_build_version>0</option_winphone_build_version>
+  <option_winphone_description>YourDescription</option_winphone_description>
+  <option_winphone_display_name>YourGameName</option_winphone_display_name>
+  <option_winphone_genre>1</option_winphone_genre>
+  <option_winphone_icon_image>Configs\Default\WinPhone\ApplicationIcon.png</option_winphone_icon_image>
+  <option_winphone_landscape_allowed>true</option_winphone_landscape_allowed>
+  <option_winphone_landscape_flipped_allowed>true</option_winphone_landscape_flipped_allowed>
+  <option_winphone_major_version>1</option_winphone_major_version>
+  <option_winphone_minor_version>0</option_winphone_minor_version>
+  <option_winphone_portrait_allowed>true</option_winphone_portrait_allowed>
+  <option_winphone_publisher>YourPublisherName</option_winphone_publisher>
+  <option_winphone_revision_version>0</option_winphone_revision_version>
+  <option_winphone_splash_image>Configs\Default\WinPhone\SplashScreenImage.jpg</option_winphone_splash_image>
+  <option_winphone_supports_720p>true</option_winphone_supports_720p>
+  <option_winphone_supports_wvga>true</option_winphone_supports_wvga>
+  <option_winphone_supports_wxga>true</option_winphone_supports_wxga>
+  <option_winphone_texture_page>1024</option_winphone_texture_page>
   <option_writeerrors>false</option_writeerrors>
 </Config>
