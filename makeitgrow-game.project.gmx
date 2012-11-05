@@ -235,6 +235,7 @@
       <script>scripts\isadult.gml</script>
       <script>scripts\monthaffinity.gml</script>
       <script>scripts\nicheeffect.gml</script>
+      <script>scripts\pickwildplant.gml</script>
     </scripts>
     <scripts name="field">
       <script>scripts\field_beginstep.gml</script>
@@ -312,7 +313,10 @@
         <script>scripts\ctoh.gml</script>
       </scripts>
       <script>scripts\field_drawinfocard.gml</script>
+      <script>scripts\addplantcheck.gml</script>
       <script>scripts\addbugcheck.gml</script>
+      <script>scripts\randomhex.gml</script>
+      <script>scripts\randomborderhex.gml</script>
     </scripts>
     <scripts name="farmer">
       <script>scripts\farmer_create.gml</script>
@@ -972,7 +976,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="397">
+  <constants number="399">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1370,6 +1374,8 @@
     <constant name="TUTCARDSPHORIZOFFSET">14</constant>
     <constant name="TUTCARDSPVERTOFFSET">80</constant>
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
+    <constant name="PLACEBUGODDS">500</constant>
+    <constant name="PLACEPLANTODDS">500</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
