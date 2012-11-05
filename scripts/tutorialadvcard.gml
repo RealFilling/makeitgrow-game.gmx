@@ -11,7 +11,11 @@ if (global.tutorialdebug == true) {
   show_message("tutorialadvcard(): entered");
   }
 
+
 global.tutorialstep += 1;
+// Register the event at mixpanel
+gd_mixpanel_register(global.tutstep_text[global.tutorialstep], "");
+
 if (global.tutorialstep >= global.tutstepcount) {
   global.tutorialstep = 9999;
   global.tutlock_disablecancel = false; // Sanity
