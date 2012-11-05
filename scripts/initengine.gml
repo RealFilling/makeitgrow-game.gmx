@@ -5,6 +5,7 @@ var cx1, cy1;
 global.version = "0.13";
 
 // Debugging support
+global.disablemetrics = false; // Disables gd_mixpanel_register calls
 global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable

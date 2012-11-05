@@ -13,8 +13,11 @@ if (global.tutorialdebug == true) {
 
 
 global.tutorialstep += 1;
-// Register the event at mixpanel
-gd_mixpanel_register(global.tutstep_text[global.tutorialstep], "");
+
+if (global.disablemetrics == false) {
+  // Register the event at mixpanel
+  gd_mixpanel_register(global.tutstep_text[global.tutorialstep], "");
+}
 
 if (global.tutorialstep >= global.tutstepcount) {
   global.tutorialstep = 9999;
