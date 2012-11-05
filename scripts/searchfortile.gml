@@ -12,7 +12,7 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
     if (global.water[sx,sy] >= 1) {
       continue;
       }
-    if ((getspecies(global.plants[sx,sy]) != speciestofind) and (speciestofind != -1) and !iscolorsearch(emphasistofind)){
+    if ((getspecies(global.plants[sx,sy]) != speciestofind) and (speciestofind != -1)){
       continue;
       }
     suitability = 99999 - (abs(farmerx - sx) + abs(farmery - sy));
@@ -22,18 +22,6 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
         break;
       case TCT_TILESEARCH_HARVEST:
         suitability += global.harvest[sx,sy];
-        break;
-      case TCT_TILESEARCH_LOWMINREDADJ:
-        suitability += 999-getlowadjmineral(sx,sy,RED,speciestofind);
-        break;
-      case TCT_TILESEARCH_LOWMINGREENADJ:
-        suitability += 999-getlowadjmineral(sx,sy,GREEN,speciestofind);
-        break;
-      case TCT_TILESEARCH_LOWMINBLUEADJ:
-        suitability += 999-getlowadjmineral(sx,sy,BLUE,speciestofind);
-        break;
-      case TCT_TILESEARCH_LOWMINALLADJ:
-        suitability += 999-getlowadjmineral(sx,sy,COLORALL,speciestofind);
         break;
       default:
         break;

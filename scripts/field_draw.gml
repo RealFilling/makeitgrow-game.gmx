@@ -46,16 +46,6 @@ for (by=by1; by<by2; by+=1) {
       draw_sprite_ext(spr_tilledtiles2,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
       }
     }
-  // Here's where we draw the farmer
-  if (obj_farmer.boardy == by) {
-    if (global.gamestate == GSTATE_NORMAL) {
-      farmerobj = instance_find(obj_farmer,0);
-      with (farmerobj) {
-        farmer_draw();
-        }
-      }
-    }
-  // Now, draw the rest of the things on the tile
   for (bx=bx1; bx<bx2; bx+=1) {
     hextopix(bx,by);
     pixx = global.hexx;
@@ -174,15 +164,14 @@ if (coordsinbounds(hx,hy)) {
   draw_sprite(spr_hexcursor,0,global.hexx,(global.hexy)-(global.height[hx,hy]*HEIGHTPIX));
   }
 
-// Draw the farmer OBSOLETE
-//if (global.gamestate == GSTATE_NORMAL) {
-//  farmerobj = instance_find(obj_farmer,0);
-//  with (farmerobj) {
-//    farmer_draw();
-//    }
-//  }
-//else {
-if (global.gamestate != GSTATE_NORMAL) {
+// Draw the farmer
+if (global.gamestate == GSTATE_NORMAL) {
+  farmerobj = instance_find(obj_farmer,0);
+  with (farmerobj) {
+    farmer_draw();
+    }
+  }
+else {
   draw_set_halign(fa_center);
   draw_set_valign(fa_middle);
   drawshadowedtext(font_bigtext,c_white,"PLEASE WAIT",cx(),cy(),false);
