@@ -41,6 +41,12 @@
       <sprite>sprites\spr_chicken</sprite>
       <sprite>sprites\spr_cow</sprite>
       <sprite>sprites\spr_pig</sprite>
+      <sprite>sprites\spr_cowmature_idle1</sprite>
+      <sprite>sprites\spr_cowmature_walk1</sprite>
+      <sprite>sprites\spr_cowmature_eat1</sprite>
+      <sprite>sprites\spr_cowadult_idle1</sprite>
+      <sprite>sprites\spr_cowadult_eat1</sprite>
+      <sprite>sprites\spr_cowadult_walk1</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_hexclick</sprite>
