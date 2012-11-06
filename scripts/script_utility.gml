@@ -594,5 +594,16 @@ global.searchdist[1] = 6;
 global.searchdist[2] = 18;
 global.searchdist[3] = 36;
 global.searchdist[4] = 60;
+// 
+global.reltodirlookup[0,0] = 7;
+global.reltodirlookup[1,0] = 0;
+global.reltodirlookup[2,0] = 1;
+global.reltodirlookup[0,1] = 6;
+global.reltodirlookup[1,1] = -1;
+global.reltodirlookup[2,1] = 2;
+global.reltodirlookup[0,2] = 5;
+global.reltodirlookup[1,2] = 4;
+global.reltodirlookup[2,2] = 3;
+
 
 

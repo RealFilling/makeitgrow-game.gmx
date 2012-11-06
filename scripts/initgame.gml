@@ -24,11 +24,13 @@ for (a=0;a<NUMMINERALS;a+=1) {
 initinventory();
 // New game starting items
 starterinventory();
+// Initialize new player instructions
+inittutorial();
 
 // Generate a new field
 field_initmap();           // Prepare the map arrays
 field_generate();          // Generate a random map
-field_dryuntil(50);       // Remove some water
+field_dryuntil(WATERDRYTARGET);       // Remove some water
     
 // Starting weather type
 global.currentweather = WEATHER_CLEAR;
@@ -50,6 +52,3 @@ if (global.skipprecalc) {
 else {
   global.hstime = (global.tickspermonth * 2)+537;
   }
-
-
-

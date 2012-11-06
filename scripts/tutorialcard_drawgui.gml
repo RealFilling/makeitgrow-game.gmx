@@ -1,39 +1,62 @@
+if (global.tutorialfailsafe == true) {
+  // We're in the middle of an abort!  Display variables might be bad.
+  // Also, self-destruct.
+  instance_destroy();
+  return 0;
+  }
+
+x1 = x - (boxwidth / 2); // x and y are determined in the step event
+x2 = x + (boxwidth / 2);
+y1 = y - (boxheight / 2);
+y2 = y + (boxheight / 2);
+if (arrowdir != 8) {
+  arrowdirwork = arrowdir;
+  }
+else {
+  arrowdirwork = arrowdirauto;
+  }
+
 switch (state) {
   case TCSTATE_APPEAR:
-    draw_set_color(c_yellow);
-    draw_rectangle(x1,y1,x2,y2,false);
-    draw_set_color(flashframe);
-    draw_rectangle(x1,y1,x2,y2,true);
+    x1diffpart = (x-x1)/TUTBOXSTATETIMEMAX;
+    x2diffpart = (x2-x)/TUTBOXSTATETIMEMAX;
+    y1diffpart = (y-y1)/TUTBOXSTATETIMEMAX;
+    y2diffpart = (y2-y)/TUTBOXSTATETIMEMAX;
+    timerinverse = TUTBOXSTATETIMEMAX - statetimer;
+    draw_set_color(boxcolor);
+    draw_rectangle(x-(x1diffpart*timerinverse),
+                   y-(y1diffpart*timerinverse),
+                   x+(x2diffpart*timerinverse),
+                   y+(y2diffpart*timerinverse),
+                   false);
+    draw_set_color(frameflash);
+    draw_rectangle(x-(x1diffpart*timerinverse),
+                   y-(y1diffpart*timerinverse),
+                   x+(x2diffpart*timerinverse),
+                   y+(y2diffpart*timerinverse),
+                   true);
     break;
   case TCSTATE_NORMAL:
-    draw_set_color(c_yellow);
-    draw_rectangle(x1,y1,x2,y2,false);
-    draw_set_color(flashframe);
-    draw_rectangle(x1,y1,x2,y2,true);
-    switch (arrowdir) {
-      case 0:
-        draw_sprite_ext(spr_arrow_up,0,x,y1-16,1.0,1.0,0.0,c_yellow,1.0);
-        break;
-      case 1:
-        draw_sprite_ext(spr_arrow_up,0,x2+16,y,1.0,1.0,90.0,c_yellow,1.0);
-        break;
-      case 2:
-        draw_sprite_ext(spr_arrow_up,0,x,y2+16,1.0,1.0,180.0,c_yellow,1.0);
-        break;
-      case 3:
-        draw_sprite_ext(spr_arrow_up,0,x1-16,y,1.0,1.0,270.0,c_yellow,1.0);
-        break;
+    if ((displaymode == TCT_TILESEARCH) or
+        (displaymode == TCT_TILESEARCH_MOIST) or
+        (displaymode == TCT_TILESEARCH_HARVEST)) {
+      draw_sprite(spr_highlightcircle,frameflashstate,spotx,spoty-(global.height[global.tuttilex,global.tuttiley]*HEIGHTPIX));
       }
-      draw_set_valign(fa_middle);
-      draw_set_halign(fa_center);
-      draw_set_font(font_hud);
-      draw_set_color(c_white);
-      draw_text_ext(x, y, cardtext, 2.0, boxwidth-10);
+    draw_set_color(boxcolor);
+    draw_rectangle(x1,y1,x2,y2,false);
+    draw_set_color(frameflash);
+    draw_rectangle(x1,y1,x2,y2,true);
+    drawarrow(arrowdirwork,x1,y1,x2,y2);
+    draw_set_valign(fa_middle);
+    draw_set_halign(fa_center);
+    draw_set_font(font_hud);
+    draw_set_color(c_white);
+    draw_text_ext(x, y, cardtext, TUTORIALCARDLINEHEIGHT, boxwidth-10);
     break;
   case TCSTATE_DISAPPEAR:
-    draw_set_color(c_yellow);
+    draw_set_color(boxcolor);
     draw_rectangle(x1,y1,x2,y2,false);
-    draw_set_color(flashframe);
+    draw_set_color(frameflash);
     draw_rectangle(x1,y1,x2,y2,true);
     break;
   case TCSTATE_DESTROY:

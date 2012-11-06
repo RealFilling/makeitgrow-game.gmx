@@ -6,6 +6,11 @@ switch (global.menustate) {
   case MENUSTATE_OPENING:
     break;
   case MENUSTATE_OPEN:
+    if (global.tutlock_item == menuitem) {
+      global.tutpostx = x;
+      global.tutposty = y+TUTARROWVERTOFFSETMENU;
+      global.tutpostarrowdir = ARROWDIR_DOWN;
+      }
     break;
   case MENUSTATE_SELECTING:
     if (((global.menutimer mod 2) == 0) and (self.menuitem == global.menuselection)) {

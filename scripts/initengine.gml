@@ -2,10 +2,11 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.12";
+global.version = "0.13";
 
 // Debugging support
-global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
+global.disablemetrics = true; // Disables gd_mixpanel_register calls
+global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
 global.nosave = true; // Disable saving entirely
@@ -16,6 +17,14 @@ global.weatherdebug = false; // Provide debugging information for weather system
 global.skippreseed = false; // Don't put random thing on the field at the start
 global.skipprecalc = false; // Don't run very fast for two months at start
 global.poisonflag = false; // For isolating a single instance of a problem
+//
+global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
+global.tutorialskip = false; // Skip all tutorial cards.
+global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
+                                 //   of field creation, this gets us out of it.
+//
+global.disablesound = true;
+
 
 //init();
 script_utility();
@@ -34,6 +43,7 @@ animaldefs();
 soundframedefs();
 initsoundframe();
 timeconsts();
+tutorialdef();
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;
@@ -124,6 +134,7 @@ global.menutimer = 0;
 global.menutip1 = ""; // Menu identification
 global.menutip2 = ""; // Menu item identification
 global.currentitemname = "Move";
+global.tutorialcard = noone;
 
 // Leo's energy usage flash effect timer
 global.energyflasheffect = 0;

@@ -16,6 +16,6 @@ if (longrange == 1) {
       }
     }
   }
-sound_play(snd_water1);
+sound_play_respectdisable(snd_water1);
 return 0; 
 

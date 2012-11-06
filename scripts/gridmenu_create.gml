@@ -94,7 +94,7 @@ switch (global.menutype) {
     global.menutip1 = "Choose sapling:";
     break;
   case MENUTYPE_BUILDINGS:
-    // NOTE: THIS IS BROKEN, but isn't used anyway
+    // NOTE: THIS IS BROKEN, but isn't used anyway -- instead see MENUTYPE_BUILDINGINVENT
     global.parameter1 = spr_buildingicons;
     menuitems = NUMBUILDINGS;
     global.parameter4 = menuitems;
@@ -194,5 +194,5 @@ switch (global.menutype) {
     break;
   }
 global.menutip2 = "";
-//sound_play(snd_menuopen1);
+//sound_play_respectdisable(snd_menuopen1);
 

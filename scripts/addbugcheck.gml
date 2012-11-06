@@ -1,6 +1,7 @@
 var lookx, looky, bugx, bugy, species, newbug;
-lookx = irandom_range(1,BOARDWIDTH-1);
-looky = irandom_range(1,BOARDHEIGHT-1);
+randomhex()
+lookx = global.hexx;
+looky = global.hexy;
 species = getspecies(global.plants[lookx,looky]);
 switch (species) {
   case P_CLIANTRO:
@@ -8,7 +9,7 @@ switch (species) {
   default:
     // Still a 1-in-500 chance for a completely random bug.
     // Most of these will probably die, but once in a while....
-    if (irandom_range(0,499)==0) {
+    if (irandom_range(0,PLACEBUGODDS-1)==0) {
       newbug = irandom_range(0,6);
       if (newbug == B_BLUESPIDER) {
         return false; // art isn't ready yet
@@ -18,28 +19,9 @@ switch (species) {
       return false;
       }
   }
-if (fiftyfifty() == 0) {
-  // Left or right edges
-  if (fiftyfifty() == 0) {
-    bugx = 1;
-    bugy = irandom_range(1,BOARDHEIGHT-1);
-    }
-  else {
-    bugx = BOARDWIDTH-1;
-    bugy = irandom_range(1,BOARDHEIGHT-1);
-    }
-  }
-else {
-  // Top or bottom edges
-  if (fiftyfifty() == 0) {
-    bugx = irandom_range(1,BOARDWIDTH-1);
-    bugy = 1;
-    }
-  else {
-    bugx = irandom_range(1,BOARDWIDTH-1);
-    bugy = BOARDHEIGHT-1;
-    }
-  }
+randomborderhex();
+bugx = global.hexx;
+bugy = global.hexy;
 addbugs(bugx,bugy,newbug,irandom_range(1,8));
 return true;
   

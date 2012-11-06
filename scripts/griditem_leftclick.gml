@@ -5,7 +5,10 @@
 //with parentmenu {
 //  event_user(0);
 //  }
-
+if ((global.tutlock_item != -9999) and (global.tutlock_item != menuitem)){
+  return false;
+  }
+  
 selectmenuitem(menuitem);
 if (not ismovetoolactive()) {
   with (obj_hud) {
@@ -13,5 +16,8 @@ if (not ismovetoolactive()) {
     global.parameter2 = view_hview[0]-24;
     instance_create(x+24,y+view_hview[0]-24,obj_donebutton);
     }
+  }
+if (global.tutlock_item != 9999) {
+  global.tutmenuitemselected = true;  
   }
 

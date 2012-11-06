@@ -579,6 +579,31 @@ poopvalue[P_PEPPER] = 3;
 poopvalue[P_LETTUCE] = 3;
 poopvalue[P_BLUELETTUCE] = 3;
 
+// iswild
+// Does this plant occur naturally?  Can it encroach from the edges randomly?
+globalvar iswild;
+iswild[P_EMPTY] = -1; // Should not happen
+iswild[P_ITCHGRASS] = true;
+iswild[P_STRAWBERRY] = true;
+iswild[P_BLUEBERRY] = true;
+iswild[P_CORNFLOWER] = true;
+iswild[P_CLIANTRO] = true;
+iswild[P_CLOVER] = true;
+iswild[P_DANDELION] = true;
+iswild[P_ONION] = true;
+iswild[P_MUSHROOM] = true;
+iswild[P_BLUEHEDGE] = true;
+iswild[P_GREENTOMATO] = false;
+iswild[P_HEDGE] = true;
+iswild[P_GRASS] = true;
+iswild[P_WEED] = true;
+iswild[P_TOMATO] = false;
+iswild[P_WATERMELON] = false;
+iswild[P_EGGPLANT] = false;
+iswild[P_PEPPER] = false;
+iswild[P_LETTUCE] = false;
+iswild[P_BLUELETTUCE] = false;
+
 
 // plantseason
 // The year is divided into twelve months, divided into four seasons.  January is month 0,
