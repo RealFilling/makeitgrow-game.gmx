@@ -174,7 +174,7 @@ if (global.gamestate == GSTATE_NORMAL) {
 else {
   draw_set_halign(fa_center);
   draw_set_valign(fa_middle);
-  drawshadowedtext(font_bigtext,c_white,"PLEASE WAIT",cx(),cy(),false);
+  drawshadowedtext(font_bigtext,c_white,"Growing...",cx(),cy(),false);
   }
   
 // Draw the weather

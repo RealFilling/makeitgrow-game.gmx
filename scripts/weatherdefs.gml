@@ -1,8 +1,8 @@
 // weatherevap
 // Weather type evaporation/addition factor
-global.weatherevap[WEATHER_STORM] = -5;
-global.weatherevap[WEATHER_RAIN] = -3;
-global.weatherevap[WEATHER_DRIZZLE] = -1;
+global.weatherevap[WEATHER_STORM] = -10;
+global.weatherevap[WEATHER_RAIN] = -6;
+global.weatherevap[WEATHER_DRIZZLE] = -2;
 global.weatherevap[WEATHER_CLOUDY] = 0;
 global.weatherevap[WEATHER_CLEAR] = 1;
 global.weatherevap[WEATHER_HOT] = 2;
@@ -68,9 +68,9 @@ weathertilllookup[3] = 1.5;
 //   be rainy, but they may not be.
 
 globalvar monthlymoist;
-monthlymoist[0] = 0; monthlymoist[1] = 0; monthlymoist[2] = -1; monthlymoist [3] = -1;
-monthlymoist[4] = 1; monthlymoist[5] = 2; monthlymoist[6] =  2; monthlymoist [7] = 1;
-monthlymoist[8] = 0; monthlymoist[9] = 0; monthlymoist[10] = -1; monthlymoist [11] = -1;
+monthlymoist[0] = -1; monthlymoist[1] = -1; monthlymoist[2] = -1; monthlymoist [3] = -2;
+monthlymoist[4] = -3; monthlymoist[5] = 1; monthlymoist[6] =  2; monthlymoist [7] = 1;
+monthlymoist[8] = 0; monthlymoist[9] = -1; monthlymoist[10] = -2; monthlymoist [11] = -2;
 
 // weatherspr
 // The sprite overlays drawn atop the field for each weather condition.
