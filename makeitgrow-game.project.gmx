@@ -165,6 +165,7 @@
         <sprite>sprites\spr_coop_s</sprite>
         <sprite>sprites\spr_coop_m</sprite>
         <sprite>sprites\spr_coop_l</sprite>
+        <sprite>sprites\spr_greenhouse_concept</sprite>
       </sprites>
       <sprite>sprites\spr_woodfence</sprite>
     </sprites>
