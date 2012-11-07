@@ -13,7 +13,7 @@ bugnames[B_BEE] = "Bee";
 // Some bugs eat plants.  This is a 2D array of six types of plants the bug will eat.
 // 
 globalvar bugeatsplants;
-bugeatsplants[B_REDBUG,0] = P_EMPTY; // No plant
+bugeatsplants[B_REDBUG,0] = P_CLIANTRO; // No plant
 bugeatsplants[B_REDBUG,1] = P_EMPTY;
 bugeatsplants[B_REDBUG,2] = P_EMPTY; 
 bugeatsplants[B_REDBUG,3] = P_EMPTY; 

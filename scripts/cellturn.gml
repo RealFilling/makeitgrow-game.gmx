@@ -37,7 +37,7 @@ if (bugs != 0) {
       if ((plantx == myx) and (planty == myy)) {
         pnomflag = true;
         bugeatenflag = true;
-        bugcount = min(bugcount+irandom_range(1,4),15);
+        bugcount = min(bugcount+irandom_range(0,2),15);
         }
       else {
         global.bugarray[bugnum] = 0;
@@ -60,7 +60,7 @@ if (bugs != 0) {
           bnomflag = true;
           //eatenflag = true;
           global.bugarray[foundbug] = max(0,global.bugarray[foundbug]-bugcount);
-          bugcount = min(bugcount+irandom_range(1,4),15);
+          bugcount = min(bugcount+irandom_range(0,1),15);
           }
         else {
           global.bugarray[bugnum] = 0;
@@ -75,8 +75,8 @@ if (bugs != 0) {
     
     // if no yummy plant here, and not eaten: maybe die, otherwise spread
     if ((pnomflag and bnomflag and nomskip) == false) {
-      if (irandom_range(0,1) == 0) {
-        bugcount = max(0,bugcount-1);
+      if (irandom_range(0,10) <= 7) {
+        bugcount = max(0,bugcount-irandom_range(1,3));
         }
       travelnumber = irandom_range(1,bugcount);
       traveldirection = irandom_range(0,5);
