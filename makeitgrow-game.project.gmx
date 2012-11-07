@@ -162,6 +162,9 @@
         <sprite>sprites\spr_scarecrow</sprite>
         <sprite>sprites\spr_waterpump</sprite>
         <sprite>sprites\spr_fencepost</sprite>
+        <sprite>sprites\spr_coop_s</sprite>
+        <sprite>sprites\spr_coop_m</sprite>
+        <sprite>sprites\spr_coop_l</sprite>
       </sprites>
       <sprite>sprites\spr_woodfence</sprite>
     </sprites>
