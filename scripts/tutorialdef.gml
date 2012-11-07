@@ -80,7 +80,7 @@ registertutorialstep("Keep Planting!",TCT_HOVER,400,400,TTT_WAIT,3*30,0,ARROWDIR
 
 registertutorialstep("Speed up time to make things grow.",TCT_MENU,UIBUTTON_FASTSPEED,-1,TTT_CLICK,UIBUTTON_FASTSPEED,-1,ARROWDIR_UP,c_green);
 registertutorialstep("Watch...",TCT_HOVER,400,400,TTT_WAIT,5*30,0,ARROWDIR_NONE,c_green);
-registertutorialstep("Hypertime costs money, let's slow it down.",TCT_MENU,UIBUTTON_SLOWSPEED,-1,TTT_CLICK,UIBUTTON_FASTSPEED,-1,ARROWDIR_UP,c_green);
+registertutorialstep("Hypertime costs money, let's slow it down.",TCT_MENU,UIBUTTON_SLOWSPEED,-1,TTT_CLICK,UIBUTTON_SLOWSPEED,-1,ARROWDIR_UP,c_green);
 
 registertutorialstep("These plants need water.",TCT_MENU,UIBUTTON_TOOLS,-1,TTT_CLICK,UIBUTTON_TOOLS,-1,ARROWDIR_LEFT,c_green);
 registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1,-1,1,-1,-1,-1);

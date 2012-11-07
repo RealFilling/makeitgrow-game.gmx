@@ -78,7 +78,7 @@ if (bugs != 0) {
       if (irandom_range(0,1) == 0) {
         bugcount = max(0,bugcount-1);
         }
-      travelnumber = irandom_range(0,bugcount);
+      travelnumber = irandom_range(1,bugcount);
       traveldirection = irandom_range(0,5);
       traveldistance = 1; // Flying bugs travel farther, for later.
       travelx = myx;
