@@ -8,6 +8,8 @@ boxcolor = global.parameter6;
 arrowdirauto = -1;
 spotx = -1;
 spoty = -1;
+tilex = -1;
+tiley = -1;
 
 // Basic processing
 boxwidth = max((string_length(textparam)*4)+10,90);

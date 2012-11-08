@@ -426,6 +426,10 @@
       <script>scripts\debug_grantsomehypertime.gml</script>
       <script>scripts\farmer_1_skiptime.gml</script>
       <script>scripts\debug_t_tutorialcard.gml</script>
+      <script>scripts\debug_tutorial_w.gml</script>
+      <script>scripts\debug_tutorial_s.gml</script>
+      <script>scripts\debug_tutorial_a.gml</script>
+      <script>scripts\debug_tutorial_d.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\timeconsts.gml</script>
@@ -983,7 +987,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="768">
+  <constants number="769">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1749,6 +1753,7 @@
     <constant name="TUTARROWVERTOFFSETMENU">-90</constant>
     <constant name="TUTCARDSPHORIZOFFSET">14</constant>
     <constant name="TUTCARDSPVERTOFFSET">80</constant>
+    <constant name="TUTCARDTILEVERTOFFSET">-70</constant>
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
     <constant name="PLACEBUGODDS">500</constant>
     <constant name="PLACEPLANTODDS">500</constant>

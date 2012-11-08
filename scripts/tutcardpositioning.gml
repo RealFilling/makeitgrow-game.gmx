@@ -19,7 +19,7 @@ switch(displaymode) {
     spotx = global.hexx-view_xview[0];
     spoty = (global.hexy-view_yview[0]);
     tempx = spotx;
-    tempy = spoty + TUTARROWVERTOFFSET;
+    tempy = (spoty + TUTCARDTILEVERTOFFSET) - (global.height[tilex,tiley]*HEIGHTPIX);
     //if (global.poisonflag == false) {
     //  global.poisonflag = true;
     //  show_message("tutcardpositioning(): tempx:"+string(tempx)+" tempy:"+string(tempy));

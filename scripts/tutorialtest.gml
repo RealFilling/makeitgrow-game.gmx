@@ -7,8 +7,10 @@ if (global.tutorialdebug) {
     show_message("tutorialtest(): tutlock_disablecancel is false");
     }
   show_message("tutorialtest(): global.tutlock_menu is "+string(global.tutlock_menu));
-  show_message("tutorialtest(): global.tutpostx is "+string(global.tutpostx));
-  show_message("tutorialtest(): global.tutposty is "+string(global.tutposty));
+  show_message("tutorialtest(): global.tuttilex is "+string(global.tuttilex));
+  show_message("tutorialtest(): global.tuttiley is "+string(global.tuttiley));
+  show_message("tutorialtest(): obj.tutorialcard.tilex is "+string(obj_tutorialcard.tilex));
+  show_message("tutorialtest(): obj.tutorialcard.tiley is "+string(obj_tutorialcard.tiley));
   }
   
 

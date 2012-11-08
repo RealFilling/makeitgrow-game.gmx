@@ -21,6 +21,9 @@ for (dir=0; dir<6; dir+=1) {
   if (!coordsinbounds(thisx,thisy)) {
     continue;
     }
+  if (global.water[thisx,thisy] >= 1) {
+    continue;
+    }
   thisspecies = getspecies(global.plants[thisx,thisy]);
   thissuitability = 0;
   if (isempty(getspecies(thisspecies))) {

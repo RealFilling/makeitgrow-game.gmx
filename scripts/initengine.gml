@@ -25,6 +25,7 @@ global.tutorialfailsafe = false; // If a tutorial step is bad because of the ran
 //
 global.disablesound = true;
 
+randomize();
 
 //init();
 script_utility();
