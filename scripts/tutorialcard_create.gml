@@ -59,6 +59,12 @@ switch(tasktype) {
   case TTT_USE:
     ttt_use_tool = global.parameter8;
     break;
+  case TTT_USEPLACEBESIDE:
+    // This case is just like TTT_USEPLACE, except our focus is a
+    //   tile beside the one found, not it itself.
+    getbestadjhex(global.tuttilex,global.tuttiley);
+    global.tuttilex = global.hexx;
+    global.tuttiley = global.hexy;
   case TTT_USEPLACE:
     ttt_useplace_tool = global.parameter8;
     // Location info stored in global.tuttilex and global.tuttiley

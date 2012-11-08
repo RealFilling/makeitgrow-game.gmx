@@ -906,6 +906,7 @@
       <script>scripts\reltodir.gml</script>
       <script>scripts\getlowadjmineral.gml</script>
       <script>scripts\iscolorsearch.gml</script>
+      <script>scripts\getbestadjhex.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -982,7 +983,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="767">
+  <constants number="768">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1721,6 +1722,7 @@
     <constant name="TTT_MENUSELECT">2</constant>
     <constant name="TTT_USE">3</constant>
     <constant name="TTT_USEPLACE">4</constant>
+    <constant name="TTT_USEPLACEBESIDE">5</constant>
     <constant name="ARROWDIR_NONE">-1</constant>
     <constant name="ARROWDIR_UP">0</constant>
     <constant name="ARROWDIR_UPRIGHT">1</constant>

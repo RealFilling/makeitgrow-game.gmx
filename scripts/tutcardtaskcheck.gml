@@ -21,6 +21,7 @@ switch(tasktype) {
       }
     break;
   case TTT_USEPLACE:
+  case TTT_USEPLACEBESIDE:
     if ((global.tuttoolusedx == global.tuttilex) and
         (global.tuttoolusedy == global.tuttiley)) {
       state = TCSTATE_DISAPPEAR;
