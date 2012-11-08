@@ -15,6 +15,9 @@ for (sy=1;sy<BOARDHEIGHT-1;sy+=1) {
     if ((getspecies(global.plants[sx,sy]) != speciestofind) and (speciestofind != -1) and !iscolorsearch(emphasistofind)){
       continue;
       }
+    if (getgrowth(global.plants[sx,sy]) == GROWTH_DEAD) {
+      continue;
+      }
     suitability = 99999 - (abs(farmerx - sx) + abs(farmery - sy));
     switch(emphasistofind) {
       case TCT_TILESEARCH_MOIST:

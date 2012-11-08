@@ -63,6 +63,8 @@ switch(tasktype) {
     // This case is just like TTT_USEPLACE, except our focus is a
     //   tile beside the one found, not it itself.
     getbestadjhex(global.tuttilex,global.tuttiley);
+    tilex = global.hexx;
+    tiley = global.hexy;
     global.tuttilex = global.hexx;
     global.tuttiley = global.hexy;
   case TTT_USEPLACE:

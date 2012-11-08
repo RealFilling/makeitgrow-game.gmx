@@ -24,6 +24,9 @@ for (dir=0; dir<6; dir+=1) {
   thisspecies = getspecies(global.plants[thisx,thisy]);
   thissuitability = 0;
   if (isempty(getspecies(thisspecies))) {
+    thissuitability += 3;
+    }
+  else if (getgrowth(global.plants[thisx,thisy]) == GROWTH_DEAD) {
     thissuitability += 2;
     }
   else if (iswild[thisspecies]) {
