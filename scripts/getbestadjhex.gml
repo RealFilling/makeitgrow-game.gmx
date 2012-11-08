@@ -4,6 +4,8 @@ var bx, by, dir, bestx, besty, bestsuitability, thisx, thisy, thissuitability, t
 // - Top priority is an empty tile
 // - If not available, then a tile containing a wild plant
 // - If not available, then any tile will do
+bx = argument0;
+by = argument1;
 
 bestx = -1;
 besty = -1;

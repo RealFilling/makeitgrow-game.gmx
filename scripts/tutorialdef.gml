@@ -72,6 +72,8 @@ tutorialsetup();
 //   should be enough for you to work on the structure of the tutorial.  The steps will be
 //   encountered in the order given here.
 registertutorialstep("Welcome to MAKE IT GROW!",TCT_HOVER,400,400,TTT_WAIT,3*30,0,ARROWDIR_NONE,c_green);
+registertutorialstep("Lay some next to the plants.",TCT_TILESEARCH,P_CLOVER,-1,TTT_USEPLACEBESIDE,0,0,ARROWDIR_AUTO,c_green);
+/*
 registertutorialstep("Let's plant some seeds.",TCT_MENU,UIBUTTON_SEEDS,-1,TTT_CLICK,UIBUTTON_SEEDS,-1,ARROWDIR_LEFT,c_green);
 registertutorialstep("Strawberry seeds are in season.",TCT_MENUSELECT,-1,-1,TTT_MENUSELECT,1,-1,ARROWDIR_DOWN,c_green);
 registertutorialstep("Now plant that seed.",TCT_TILESEARCH,P_EMPTY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
@@ -99,6 +101,6 @@ registertutorialstep("-fake card to disable cancelling-",TCT_DISABLECANCEL,-1,-1
 registertutorialstep("Strawberries thrive on the red compost.",TCT_MENUSELECT,0,-1,TTT_MENUSELECT,0,-1,ARROWDIR_DOWN,c_green);
 registertutorialstep("Lay some next to the plants.",TCT_TILESEARCH,P_STRAWBERRY,-1,TTT_USEPLACE,0,0,ARROWDIR_AUTO,c_green);
 registertutorialstep("-fake card to enable cancelling-",TCT_ENABLECANCEL,-1,-1,-1,1,-1,-1,-1);
-
+*/
 
 //registertutorialstep("Let's harvest some wild mushrooms.",TCT_MENU,UIBUTTON_TOOLS,-1,TTT_CLICK,UIBUTTON_TOOLS,-1,ARROWDIR_LEFT,c_green);
