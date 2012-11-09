@@ -43,7 +43,6 @@
       <sprite>sprites\spr_pig</sprite>
       <sprites name="cows">
         <sprite>sprites\spr_cowadult_walk1_s</sprite>
-        <sprite>sprites\spr_cowadult_walk1_s_rev</sprite>
         <sprite>sprites\spr_cowadult_eat1_s</sprite>
         <sprite>sprites\spr_cowadult_idle1_s</sprite>
         <sprite>sprites\spr_cowmature_eat1_s</sprite>
