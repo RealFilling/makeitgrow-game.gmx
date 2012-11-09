@@ -8,6 +8,12 @@ animdelaymax = global.a_animdelaymax[animaltype];
 watermax = global.a_watermax[animaltype];
 foodmax = global.a_foodmax[animaltype];
 //
+animsprite_idle = global.a_sprite_idle[animaltype]; // No facing
+animsprite_walk = global.a_sprite_walk[animaltype]; // Six directions
+animsprite_eat = global.a_sprite_eat[animaltype]; // No facing
+animstate = ANIANIMSTATE_IDLE;
+animframe = 0;
+//
 boardx = global.parameter1;
 boardy = global.parameter2;
 homex = global.parameter3;

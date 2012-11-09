@@ -19,7 +19,7 @@ global.skipprecalc = false; // Don't run very fast for two months at start
 global.poisonflag = false; // For isolating a single instance of a problem
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
-global.tutorialskip = false; // Skip all tutorial cards.
+global.tutorialskip = true; // Skip all tutorial cards.
 global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
                                  //   of field creation, this gets us out of it.
 //

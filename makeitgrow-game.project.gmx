@@ -41,12 +41,23 @@
       <sprite>sprites\spr_chicken</sprite>
       <sprite>sprites\spr_cow</sprite>
       <sprite>sprites\spr_pig</sprite>
-      <sprite>sprites\spr_cowmature_idle1</sprite>
-      <sprite>sprites\spr_cowmature_walk1</sprite>
-      <sprite>sprites\spr_cowmature_eat1</sprite>
-      <sprite>sprites\spr_cowadult_idle1</sprite>
-      <sprite>sprites\spr_cowadult_eat1</sprite>
-      <sprite>sprites\spr_cowadult_walk1</sprite>
+      <sprites name="cows">
+        <sprite>sprites\spr_cowadult_walk1_s</sprite>
+        <sprite>sprites\spr_cowadult_walk1_s_rev</sprite>
+        <sprite>sprites\spr_cowadult_eat1_s</sprite>
+        <sprite>sprites\spr_cowadult_idle1_s</sprite>
+        <sprite>sprites\spr_cowmature_eat1_s</sprite>
+        <sprite>sprites\spr_cowmature_walk1_s</sprite>
+        <sprite>sprites\spr_cowmature_idle1_s</sprite>
+        <sprites name="orig">
+          <sprite>sprites\spr_cowmature_idle1</sprite>
+          <sprite>sprites\spr_cowmature_walk1</sprite>
+          <sprite>sprites\spr_cowmature_eat1</sprite>
+          <sprite>sprites\spr_cowadult_idle1</sprite>
+          <sprite>sprites\spr_cowadult_eat1</sprite>
+          <sprite>sprites\spr_cowadult_walk1</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_hexclick</sprite>
@@ -850,6 +861,7 @@
         <script>scripts\animalbase_lclick.gml</script>
         <script>scripts\animalbase_draw.gml</script>
         <script>scripts\debug_animalbase_endstep.gml</script>
+        <script>scripts\animalbase_changeanimstate.gml</script>
       </scripts>
       <script>scripts\animaldefs.gml</script>
       <script>scripts\initanimals.gml</script>
@@ -987,7 +999,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="769">
+  <constants number="772">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1757,6 +1769,9 @@
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
     <constant name="PLACEBUGODDS">500</constant>
     <constant name="PLACEPLANTODDS">500</constant>
+    <constant name="ANIANIMSTATE_IDLE">0</constant>
+    <constant name="ANIANIMSTATE_WALK">1</constant>
+    <constant name="ANIANIMSTATE_EAT">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

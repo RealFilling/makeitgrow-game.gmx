@@ -16,7 +16,7 @@ if (action == TOOL_MOVE) {
   return farmer_toolmove();
   }
 
-// If tutorial requires an item be used here, this is our means for detecting it.  
+// If tutorial requires an item be used at this place, this is our means for detecting it.  
 global.tuttoolusedx = boardx;
 global.tuttoolusedy = boardy;
 
