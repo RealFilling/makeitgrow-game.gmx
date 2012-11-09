@@ -385,6 +385,7 @@
         <script>scripts\mulchplant.gml</script>
       </scripts>
       <script>scripts\farmer_energycheck.gml</script>
+      <script>scripts\farmer_moneycheck.gml</script>
       <script>scripts\farmer_selectmovetool.gml</script>
       <scripts name="animation">
         <script>scripts\farmer_animsprites.gml</script>
@@ -837,38 +838,14 @@
       <script>scripts\itemuse.gml</script>
     </scripts>
     <scripts name="animals">
-      <scripts name="Chicken">
-        <script>scripts\chicken_create.gml</script>
-        <script>scripts\chickenfoodlike.gml</script>
-      </scripts>
-      <scripts name="Cow">
-        <script>scripts\cow_create.gml</script>
-        <script>scripts\cowfoodlike.gml</script>
-      </scripts>
-      <scripts name="Animal Base">
-        <script>scripts\animalbase_create.gml</script>
-        <script>scripts\animalbase_step_OBS.gml</script>
-        <script>scripts\animalbase_destroy.gml</script>
-        <script>scripts\animalbase_mouseover.gml</script>
-        <script>scripts\animalbase_lclick.gml</script>
-        <script>scripts\animalbase_draw.gml</script>
-        <script>scripts\debug_animalbase_endstep.gml</script>
-        <script>scripts\animalbase_changeanimstate.gml</script>
-      </scripts>
       <script>scripts\animaldefs.gml</script>
       <script>scripts\initanimals.gml</script>
       <script>scripts\addanimal.gml</script>
       <script>scripts\removeanimal.gml</script>
       <script>scripts\validateanimals.gml</script>
       <script>scripts\findanimal.gml</script>
-      <script>scripts\animalturn.gml</script>
       <script>scripts\searchspot.gml</script>
       <script>scripts\searchfrom.gml</script>
-      <scripts name="Pig">
-        <script>scripts\pigfoodlike.gml</script>
-        <script>scripts\pig_create.gml</script>
-      </scripts>
-      <script>scripts\animalai.gml</script>
       <script>scripts\animal_move.gml</script>
       <script>scripts\okaytomoveto.gml</script>
       <script>scripts\animal_moverandom.gml</script>
@@ -879,13 +856,37 @@
       <script>scripts\isanimalhere.gml</script>
       <script>scripts\isplayerhere.gml</script>
       <script>scripts\eatbugs.gml</script>
+      <script>scripts\clearanimals.gml</script>
       <script>scripts\allanimalturns.gml</script>
+      <scripts name="Chicken">
+        <script>scripts\chicken_create.gml</script>
+        <script>scripts\chickenfoodlike.gml</script>
+      </scripts>
+      <scripts name="Cow">
+        <script>scripts\cow_create.gml</script>
+        <script>scripts\cowfoodlike.gml</script>
+      </scripts>
+      <scripts name="Pig">
+        <script>scripts\pigfoodlike.gml</script>
+        <script>scripts\pig_create.gml</script>
+      </scripts>
+      <scripts name="Animal Base">
+        <script>scripts\animalbase_create.gml</script>
+        <script>scripts\animalbase_step_OBS.gml</script>
+        <script>scripts\animalbase_destroy.gml</script>
+        <script>scripts\animalbase_mouseover.gml</script>
+        <script>scripts\animalbase_lclick.gml</script>
+        <script>scripts\animalbase_draw.gml</script>
+        <script>scripts\debug_animalbase_endstep.gml</script>
+        <script>scripts\animalbase_changeanimstate.gml</script>
+        <script>scripts\animalturn.gml</script>
+        <script>scripts\animalai.gml</script>
+      </scripts>
       <scripts name="save">
         <script>scripts\dumpanimal.gml</script>
         <script>scripts\dumpnullanimal.gml</script>
         <script>scripts\restoreanimal.gml</script>
       </scripts>
-      <script>scripts\clearanimals.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>

@@ -1,7 +1,9 @@
 var thisplant, species, subtype, growth, mulchtype, mulchtoadd, satmulch, cenmulch, mulchadded;
 var composttype, mx, my, result, newanimal, actionconvert;
 
-// Note: gets boardx and boardy from farmer object!
+// Note: gets boardx and boardy from farmer object, so call from that context.
+// Also note: some of these code branches return out, so don't rely on code
+//              at the end of the script getting executed.
 
 action = argument0;
 
@@ -46,6 +48,9 @@ if (action < 0) {
       return farmer_bulldozer(boardx,boardy);
       break;
     case TOOL_ADDCHICKEN:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_CHICKEN])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -59,6 +64,9 @@ if (action < 0) {
         }
       break;
     case TOOL_ADDCOW:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_COW])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -72,6 +80,9 @@ if (action < 0) {
         }
       break;
     case TOOL_ADDPIG:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_PIG])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -132,10 +143,9 @@ else {
         break;
         }
       species = global.itemnum[actionconvert];
-      if (global.money < seedcost[species]) {
+      if (!farmer_moneycheck(seedcost[species])) {
         return -1; // Not enough money
         }
-      global.money -= seedcost[species];
       farmer_setanim(FARMERANIM_PLANTING);
       //species = global.currentseed+1; // offset from seed items to plant species is 1
       subtype = 0;

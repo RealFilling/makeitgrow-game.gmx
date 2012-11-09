@@ -16,6 +16,18 @@ global.a_sprite_eat[ANIMAL_CHICKEN] = spr_chicken;
 global.a_sprite_eat[ANIMAL_COW] = spr_cowadult_eat1_s;
 global.a_sprite_eat[ANIMAL_PIG] = spr_pig;
 
+// How fast should this animal animate?
+// At 0, it animates one sprite frame per game frame, which is quite
+//   speedy.  Higher numbers animate more slowly.  This should be
+//   coordinated with global.a_movespeed, below.
+global.a_animdelay[ANIMAL_CHICKEN] = 0;
+global.a_animdelay[ANIMAL_COW] = 2;
+global.a_animdelay[ANIMAL_PIG] = 1;
+
+// How much does it cost to get one of these animals?
+global.a_cost[ANIMAL_CHICKEN] = 500;
+global.a_cost[ANIMAL_COW] = 5000;
+global.a_cost[ANIMAL_PIG] = 3000;
 
 // Is this animal a predator?  (Currently doesn't work.)
 global.a_predator[ANIMAL_CHICKEN] = false;
@@ -28,14 +40,9 @@ global.a_movefreq[ANIMAL_COW] = 10;
 global.a_movefreq[ANIMAL_PIG] = 30;
 
 // How quickly does this animal move? (larger is faster)
-global.a_movespeed[ANIMAL_CHICKEN] = 10;
-global.a_movespeed[ANIMAL_COW] = 6;
-global.a_movespeed[ANIMAL_PIG] = 10;
-
-// How quickly does this animal animate (smaller is faster) (depreciated)
-global.a_animdelaymax[ANIMAL_CHICKEN] = 2;
-global.a_animdelaymax[ANIMAL_COW] = 10;
-global.a_animdelaymax[ANIMAL_PIG] = 5;
+global.a_movespeed[ANIMAL_CHICKEN] = 8;
+global.a_movespeed[ANIMAL_COW] = 2;
+global.a_movespeed[ANIMAL_PIG] = 6;
 
 // What is the maximum amount of water this animal can store?
 // Larger numbers mean searching out water less often.

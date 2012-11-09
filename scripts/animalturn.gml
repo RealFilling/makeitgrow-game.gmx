@@ -1,39 +1,27 @@
 var faceoffset;
 
-switch (animstate) {
-  case ANIANIMSTATE_IDLE:
-    animframe = (animframe + 1) mod global.a_sprite_idle[animaltype];
-    sprite_index = global.a_sprite_idle[animaltype];
-    image_index = animframe;
-    break;
-  case ANIANIMSTATE_EAT:
-    animframe = (animframe + 1) mod global.a_sprite_eat[animaltype];
-    sprite_index = global.a_sprite_eat[animaltype];
-    image_index = animframe;
-    break;
-  case ANIANIMSTATE_WALK:
-    faceoffset = sprite_get_number(global.a_sprite_walk[animaltype]) div 6;
-    animframe = (animframe + 1) mod faceoffset;
-    sprite_index = global.a_sprite_walk[animaltype];
-    image_index = animframe + (faceoffset * facing);
-    break;
+animdelaycount -= 1;
+if (animdelaycount < 0) {
+  animdelaycount = animdelay;
+  switch (animstate) {
+    case ANIANIMSTATE_IDLE:
+      animframe = (animframe + 1) mod global.a_sprite_idle[animaltype];
+      sprite_index = global.a_sprite_idle[animaltype];
+      image_index = animframe;
+      break;
+    case ANIANIMSTATE_EAT:
+      animframe = (animframe + 1) mod global.a_sprite_eat[animaltype];
+      sprite_index = global.a_sprite_eat[animaltype];
+      image_index = animframe;
+      break;
+    case ANIANIMSTATE_WALK:
+      faceoffset = sprite_get_number(global.a_sprite_walk[animaltype]) div 6;
+      animframe = (animframe + 1) mod faceoffset;
+      sprite_index = global.a_sprite_walk[animaltype];
+      image_index = animframe + (faceoffset * facing);
+      break;
+    }
   }
-
-/*
-animdelay -= 1;
-if (animdelay <= 0) {
-  animframe = (animframe + 1) mod 
-  animdelay = animdelaymax;
-  animframe = (animframe + 1) mod 3;
-  }
-if (facing > 2) {
-  faceoffset = 3;
-  }
-else {
-  faceoffset = 0;
-  }
-image_index = faceoffset + animframe;
-*/  
 
 // If the animal is moving between cells:
 if (moving) {

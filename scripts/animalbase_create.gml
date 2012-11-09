@@ -4,7 +4,7 @@ exists = true;
 predator = global.a_predator[animaltype];
 movefreq = global.a_movefreq[animaltype];
 movespeed = global.a_movespeed[animaltype];
-animdelaymax = global.a_animdelaymax[animaltype];
+animdelay = global.a_animdelay[animaltype];
 watermax = global.a_watermax[animaltype];
 foodmax = global.a_foodmax[animaltype];
 //
@@ -29,7 +29,7 @@ fooddecrease = 2;
 threatened = false; // Predator in sight
 panicked = false; // Some condition is critical
 sick = false; // Has come down with something
-animdelay = animdelaymax;
+animdelaycount = animdelay;
 animframe = 0;
 
 isplayer = false;

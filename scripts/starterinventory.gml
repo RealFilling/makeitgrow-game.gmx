@@ -32,7 +32,7 @@ if (global.demomode == false) {
   //addtoinvent(INVENTTYPE_TOOL,TOOL_MOISTUREVIEW,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_BULLDOZER,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCHICKEN,1);
-  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCOW,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCOW,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDPIG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDREDBUG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGREENBUG,1);
@@ -61,6 +61,7 @@ if (global.demomode == false) {
 
   }
 else {
+  global.money += 990000; // Extra cash for demomode
   // Starting seeds
   addtoinvent(INVENTTYPE_SEED,P_REDX,30);
   addtoinvent(INVENTTYPE_SEED,P_REDPLUS,30);
