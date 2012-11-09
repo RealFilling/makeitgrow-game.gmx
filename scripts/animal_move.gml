@@ -15,5 +15,6 @@ boardy = desty;
 hextopix(boardx, boardy);
 moving = true;
 moveprogress = 0;
+animalbase_changeanimstate(ANIANIMSTATE_WALK);
 return true;
 

@@ -1,17 +1,13 @@
-var gamestring, loginstatus;
-
-if (global.savedebug == true) {
-  if (global.demomode == true) {
-    // NOTE:
-    // The "0" below is due to Leandro's solution to server-provided hypertime.
-    // We have to account for that now so loading doesn't break.
-    global.savestring = "0000"+field_serialize();
-    enqueueticker("Saved [debug].");
-    return 0;
-    }
-  else {
-    savegame();
-    }
+var gamestring, loginstatus, outstring, filename;
+filename = "fieldexport.txt";
+if (global.q_exportstofile == true) {
+  // NOTE:
+  // The "0" below is due to Leandro's solution to server-provided hypertime.
+  // We have to account for that now so loading doesn't break.
+  outstring = field_serialize();
+  stringtofile(filename,outstring);
+  enqueueticker("Exported field to file "+filename+".");
+  return 0;
   }
 else {
   // Disabled

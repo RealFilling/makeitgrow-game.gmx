@@ -44,6 +44,7 @@ if (moving) {
     hextopix(boardx, boardy);
     x = global.hexx;
     y = global.hexy;
+    animalbase_changeanimstate(ANIANIMSTATE_IDLE);
     }
   else {
     hextopix(boardx, boardy);

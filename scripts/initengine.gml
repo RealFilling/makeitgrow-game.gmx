@@ -6,7 +6,7 @@ global.version = "0.13";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
-global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
 global.nosave = true; // Disable saving entirely
@@ -23,7 +23,17 @@ global.tutorialskip = true; // Skip all tutorial cards.
 global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
                                  //   of field creation, this gets us out of it.
 //
+global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
+                                //   field portion of the game state.
+                                // WARNING: Not complete!  Abandoned (at least temporarily)
+                                // Leave false unless you are trying to get it working.
+//
 global.disablesound = true;
+
+// Debug logging:
+global.debuglog = false; // Logging, currently unused
+global.debuglogfilename = "debuglog.txt";
+global.debugloghandle = noone // Replaced with handle to logfile
 
 randomize();
 
@@ -52,8 +62,8 @@ bs_width = BUTTONWIDTH/sprite_get_width(spr_plainbutton2);
 bs_height = BUTTONHEIGHT/sprite_get_height(spr_plainbutton2);
 
 // Initialize debug log
-if (global.debug == true) {
-  debug_createlog()
+if (global.debuglog == true) {
+  global.debugloghandle = debug_createlog(global.debuglogfilename);
   }
   
 // For use in serialization

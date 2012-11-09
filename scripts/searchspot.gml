@@ -9,7 +9,7 @@ switch(searchfor) {
       returnxy(sx,sy);
       return true;
       }
-    else if (searchfrom(sx,sy,1,SEARCHFOR_ADJWATER)) {
+    else if (searchfrom(sx,sy,SEARCHFOR_ADJWATER,1)) {
       returnxy(sx,sy);
       return true;
       }
@@ -34,7 +34,7 @@ switch(searchfor) {
       }
     break;
   case SEARCHFOR_SHELTER:
-    if (searchfrom(sx,sy,1,SEARCHFOR_ADJBUILDING)) {
+    if (searchfrom(sx,sy,SEARCHFOR_ADJBUILDING,1)) {
       returnxy(sx,sy);
       return true;
       }
@@ -63,7 +63,7 @@ switch(searchfor) {
       }
     break;
   default:
-    show_error("searchfrom(): unrecognized search type!", false);
+    show_error("searchspot(): unrecognized search type!", false);
     return false;
   }
 

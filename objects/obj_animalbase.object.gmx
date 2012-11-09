@@ -109,7 +109,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>animalbase_step</script>
+            <script>animalbase_step_OBS</script>
           </argument>
           <argument>
             <kind>0</kind>

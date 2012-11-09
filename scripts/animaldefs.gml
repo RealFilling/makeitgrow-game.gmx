@@ -32,7 +32,7 @@ global.a_movespeed[ANIMAL_CHICKEN] = 10;
 global.a_movespeed[ANIMAL_COW] = 6;
 global.a_movespeed[ANIMAL_PIG] = 10;
 
-// How quickly does this animal animate (smaller is faster)
+// How quickly does this animal animate (smaller is faster) (depreciated)
 global.a_animdelaymax[ANIMAL_CHICKEN] = 2;
 global.a_animdelaymax[ANIMAL_COW] = 10;
 global.a_animdelaymax[ANIMAL_PIG] = 5;

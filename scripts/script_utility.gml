@@ -527,6 +527,7 @@ global.waveheight[15] = 1;
 //  }
 
 // Searching order for tiles, starting from a center location, used in animal AI.
+// It follows a circular winding pattern, going clockwise.
 global.searchdir[ 0] = 0;
 global.searchdir[ 1] = 2;
 global.searchdir[ 2] = 3;
