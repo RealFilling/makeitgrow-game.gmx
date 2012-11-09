@@ -59,8 +59,15 @@ for (by=by1; by<by2; by+=1) {
     }
   // Drawing animals
   for (a=0; a<global.animalcount; a+=1) {
-    if (global.animalinstances[a].boardy == by) {
-      with (global.animalinstances[a]) {
+    thisanimal = global.animalinstances[a];
+    eby = thisanimal.boardy;
+    // If this animal is currently walking up, draw as if one tile lower on screen.
+    // (This is to fix soil overlap problems.)
+    if (((thisanimal.facing == 5) or (thisanimal.facing == 0)) and thisanimal.moving) {
+      eby+=1;
+      }
+    if (eby == by) {
+      with (thisanimal) {
         animalbase_draw();
         }      
       }
