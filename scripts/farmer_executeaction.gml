@@ -119,6 +119,9 @@ if (action < 0) {
     case TOOL_ADDBEE:
       addbugs(boardx, boardy, B_BEE, 8);
       break;
+    case TOOL_CALLANIMALS:
+      return farmer_toolcallanimals(boardx, boardy);
+      break;
     default:
       show_error("unrecognized tool in farmer_executeaction()!",false);
       return 0;

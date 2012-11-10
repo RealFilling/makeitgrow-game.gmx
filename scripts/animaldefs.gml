@@ -29,6 +29,19 @@ global.a_cost[ANIMAL_CHICKEN] = 500;
 global.a_cost[ANIMAL_COW] = 5000;
 global.a_cost[ANIMAL_PIG] = 3000;
 
+// How strongly does this animal herd with others of its type?
+// 0 means not at all, then higher numbers increase its influence.
+global.a_herdstrength[ANIMAL_CHICKEN] = 3;
+global.a_herdstrength[ANIMAL_COW] = 8;
+global.a_herdstrength[ANIMAL_CHICKEN] = 1;
+
+// How strongly does this animal respond to calls?
+// 0 means not at all, higher numbers mean more responsive.
+// This value is scaled by the inverse of the age of the call.
+global.a_callstrength[ANIMAL_CHICKEN] = 3;
+global.a_callstrength[ANIMAL_COW] = 6;
+global.a_callstrength[ANIMAL_CHICKEN] = 2;
+
 // Is this animal a predator?  (Currently doesn't work.)
 global.a_predator[ANIMAL_CHICKEN] = false;
 global.a_predator[ANIMAL_COW] = false;
@@ -55,4 +68,6 @@ global.a_watermax[ANIMAL_PIG] = 200;
 global.a_foodmax[ANIMAL_CHICKEN] = 35;
 global.a_foodmax[ANIMAL_COW] = 300;
 global.a_foodmax[ANIMAL_PIG] = 300;
+
+
 

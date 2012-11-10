@@ -21,6 +21,9 @@ ahealth = 100; // Not named "health" because Game Maker uses that variable, and 
                //   don't want it automatically doing things based on this thank you.
 waterfull = watermax;
 foodfull = foodmax;
+//
+herdstrength = global.a_herdstrength[animaltype];
+callstrength = global.a_callstrength[animaltype];
 
 age = 0;
 

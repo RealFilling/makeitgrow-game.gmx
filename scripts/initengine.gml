@@ -2,7 +2,7 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.13";
+global.version = "0.14";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
@@ -158,6 +158,13 @@ global.iostate = IOSTATE_NEUTRAL;
 
 // For stopping menus from instantly closing and mismoving
 global.ignoreclick = false;
+
+// Animal calling support
+//   This should eventually be moved into initgame() and loadgame()!
+global.a_callx = -1;
+global.a_cally = -1;
+global.a_callage = -1;
+
 
 // Now we should be ready for initgame() or the game load code to set up game-specific data,
 //   then to return to field_create() to set up the game board.

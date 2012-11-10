@@ -1,10 +1,16 @@
-// Object activation
-//instance_activate_all();
-//instance_deactivate_region(view_xview[0],view_yview[0],view_wview[0],view_hview[0],false,true)
+var moveaction;
+
 instance_activate_object(fieldid);
 obj_field.x = x;
 obj_field.y = y;
-//instance_activate_object(hudid)
+
+// Age an existing call
+if (global.callage != -1) {
+  global.callage += 1;
+  if (global.callage > MAXCALLAGE) {
+    global.callage = -1;
+    }
+  }
 
 framenumber += 1;
 if (framenumber == 2) {
@@ -14,7 +20,6 @@ if (framenumber == 2) {
   //seedbutton_createarray();
   }
 
-var moveaction;
 moveaction = false;
 // Movement
 if (moving == true) {

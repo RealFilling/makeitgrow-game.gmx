@@ -67,8 +67,6 @@
       <sprite>sprites\spr_itemicons3</sprite>
       <sprite>sprites\spr_hexcursor</sprite>
       <sprite>sprites\spr_longbutton</sprite>
-      <sprite>sprites\spr_facebook</sprite>
-      <sprite>sprites\spr_twitter</sprite>
       <sprites name="itembuttons">
         <sprite>sprites\spr_plainbutton</sprite>
         <sprite>sprites\spr_plainbutton2</sprite>
@@ -183,13 +181,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
-    <sprite>sprites\spr_farmer</sprite>
-    <sprite>sprites\spr_farmerx</sprite>
     <sprite>sprites\spr_nothing</sprite>
-    <sprite>sprites\spr_testobj</sprite>
-    <sprite>sprites\spr_splash_OLD</sprite>
-    <sprite>sprites\spr_pixtitle</sprite>
-    <sprite>sprites\spr_splash</sprite>
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_white</sprite>
     <sprites name="Farmer">
@@ -197,6 +189,16 @@
       <sprite>sprites\spr_farmerplant1</sprite>
       <sprite>sprites\spr_farmerwalk1</sprite>
       <sprite>sprites\spr_farmerneutral1</sprite>
+    </sprites>
+    <sprites name="OBS">
+      <sprite>sprites\spr_splash</sprite>
+      <sprite>sprites\spr_pixtitle</sprite>
+      <sprite>sprites\spr_splash_OLD</sprite>
+      <sprite>sprites\spr_testobj</sprite>
+      <sprite>sprites\spr_farmerx</sprite>
+      <sprite>sprites\spr_farmer</sprite>
+      <sprite>sprites\spr_facebook</sprite>
+      <sprite>sprites\spr_twitter</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -381,6 +383,7 @@
         <script>scripts\farmer_toolwater.gml</script>
         <script>scripts\farmer_toolbasket.gml</script>
         <script>scripts\farmer_bulldozer.gml</script>
+        <script>scripts\farmer_toolcallanimals.gml</script>
         <script>scripts\seedselector.gml</script>
         <script>scripts\mulchplant.gml</script>
       </scripts>
@@ -887,6 +890,7 @@
         <script>scripts\dumpnullanimal.gml</script>
         <script>scripts\restoreanimal.gml</script>
       </scripts>
+      <script>scripts\avgnearbyanimalpos.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
@@ -992,7 +996,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="772">
+  <constants number="776">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1096,6 +1100,7 @@
     <constant name="ENERGY_TREEPLANTCOST">100</constant>
     <constant name="ENERGY_UPROOTCOST">15</constant>
     <constant name="ENERGY_WATERCOST">25</constant>
+    <constant name="ENERGY_CALLCOST">50</constant>
     <constant name="ETILEHEIGHT">36</constant>
     <constant name="FARMERANIM_NEUTRAL">0</constant>
     <constant name="FARMERANIM_PLANTING">2</constant>
@@ -1522,7 +1527,7 @@
     <constant name="HIGHBITMASK">2147483647</constant>
     <constant name="OLD_HIGHBITMASK">4294967295</constant>
     <constant name="NUMBUGS">8</constant>
-    <constant name="NUMTOOLS">21</constant>
+    <constant name="NUMTOOLS">22</constant>
     <constant name="TOOL_WATERCAN">-1</constant>
     <constant name="TOOL_HOE">-2</constant>
     <constant name="TOOL_BASKET">-3</constant>
@@ -1544,6 +1549,7 @@
     <constant name="TOOL_ADDCYANBUG">-19</constant>
     <constant name="TOOL_ADDGRAYBUG">-20</constant>
     <constant name="TOOL_ADDBEE">-21</constant>
+    <constant name="TOOL_CALLANIMALS">-22</constant>
     <constant name="BUTTONWIDTH">32</constant>
     <constant name="BUTTONHEIGHT">32</constant>
     <constant name="NUMBITSSAVE">4</constant>
@@ -1765,6 +1771,8 @@
     <constant name="ANIANIMSTATE_IDLE">0</constant>
     <constant name="ANIANIMSTATE_WALK">1</constant>
     <constant name="ANIANIMSTATE_EAT">2</constant>
+    <constant name="MAXANIMALAVGRANGE">8</constant>
+    <constant name="MAXCALLAGE">60</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
