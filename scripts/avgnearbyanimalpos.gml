@@ -14,8 +14,8 @@ for (a=0; a<global.animalcount; a+=1) {
   if (distance > MAXANIMALAVGRANGE) {
     continue;
     }
-  avgx += thisanimal.boardx;
-  avgy += thisanimal.boardy;
+  avgxtotal += thisanimal.boardx;
+  avgytotal += thisanimal.boardy;
   count += 1;
   }
 if (count == 0) {
@@ -24,8 +24,8 @@ if (count == 0) {
   return false;
   }
 else {
-  global.hexx = avgx / count;
-  global.hexy = avgy / count;
+  global.hexx = avgxtotal / count;
+  global.hexy = avgytotal / count;
   return true;
   }
 

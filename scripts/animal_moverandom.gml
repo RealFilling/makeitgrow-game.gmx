@@ -14,9 +14,9 @@ if (avgnearbyanimalpos(boardx, boardy, animaltype)) {
   strength[dirtoherd] += herdstrength;
   }
 if (global.callage != -1) {
-  dirtobeacon = closestdir(boardx, boardy, global.callx, global.cally);
+  dirtobeacon = closestdir(boardx, boardy, global.a_callx, global.a_cally);
   if (dirtobeacon != -1) {
-    strength[dirtobeacon] += callstrength * ((MAXCALLAGE - global.callage)/2);
+    strength[dirtobeacon] += callstrength * ((MAXCALLAGE - global.a_callage)/2);
     }      
   }
 

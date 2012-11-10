@@ -4,14 +4,6 @@ instance_activate_object(fieldid);
 obj_field.x = x;
 obj_field.y = y;
 
-// Age an existing call
-if (global.callage != -1) {
-  global.callage += 1;
-  if (global.callage > MAXCALLAGE) {
-    global.callage = -1;
-    }
-  }
-
 framenumber += 1;
 if (framenumber == 2) {
   hextopix(boardx,boardy);
