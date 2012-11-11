@@ -996,7 +996,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="776">
+  <constants number="777">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1772,7 +1772,8 @@
     <constant name="ANIANIMSTATE_WALK">1</constant>
     <constant name="ANIANIMSTATE_EAT">2</constant>
     <constant name="MAXANIMALAVGRANGE">8</constant>
-    <constant name="MAXCALLAGE">60</constant>
+    <constant name="MAXCALLAGE">240</constant>
+    <constant name="MAXCALLAGEDIV">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
