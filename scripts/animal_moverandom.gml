@@ -5,15 +5,17 @@ var dir, strength, bestdir, beststrength, dirtobeacon, dirtoherd, workx, worky;
 // New:
 // Depends on animal context
 for (dir = 0; dir<6; dir+=1) {
-  strength = irandom_range(0,19);
+  strength[dir] = irandom_range(0,19);
   }
 if (avgnearbyanimalpos(boardx, boardy, animaltype)) {
   workx = global.hexx;
   worky = global.hexy;
   dirtoherd = closestdir(boardx, boardy, workx, worky);
-  strength[dirtoherd] += herdstrength;
+  if (dirtoherd != -1) {
+    strength[dirtoherd] += herdstrength;
+    }
   }
-if (global.callage != -1) {
+if (global.a_callage != -1) {
   dirtobeacon = closestdir(boardx, boardy, global.a_callx, global.a_cally);
   if (dirtobeacon != -1) {
     strength[dirtobeacon] += callstrength * ((MAXCALLAGE - global.a_callage)/2);
@@ -28,5 +30,7 @@ for (dir = 0; dir<6; dir+=1) {
     }
   }
 
-animal_move(dir);
+if ((bestdir >= 0) and (bestdir <= 5)) {
+  animal_move(bestdir);
+  }
 
