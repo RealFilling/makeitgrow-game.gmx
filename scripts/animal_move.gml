@@ -10,6 +10,11 @@ desty = global.hexy;
 if (!okaytomoveto(destx, desty)) {
   return false;
   }
+if (global.a_isbig[animaltype]) {
+  if (!isspotadjtobiganimal(destx,desty,(facing+3) mod 6)) {
+    return false;
+    }
+  }
 boardx = destx;
 boardy = desty;
 hextopix(boardx, boardy);

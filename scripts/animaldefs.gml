@@ -16,6 +16,13 @@ global.a_sprite_eat[ANIMAL_CHICKEN] = spr_chicken;
 global.a_sprite_eat[ANIMAL_COW] = spr_cowadult_eat1_s;
 global.a_sprite_eat[ANIMAL_PIG] = spr_pig;
 
+// Is this animal "big?"
+// All animals in this system are one tile in size, but we can have animals
+//   that are "big," and thus try to avoid being next to another big animal.
+global.a_isbig[ANIMAL_CHICKEN] = false;
+global.a_isbig[ANIMAL_COW] = true;
+global.a_isbig[ANIMAL_PIG] = false;
+
 // How fast should this animal animate?
 // At 0, it animates one sprite frame per game frame, which is quite
 //   speedy.  Higher numbers animate more slowly.  This should be

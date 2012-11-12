@@ -5,11 +5,19 @@ animaltype = argument2;
 avgxtotal = 0;
 avgytotal = 0;
 count = 0;
+// While we're figuring this, let's also see if there's an adjacent
+//   big animal. 
+global.adjbiganimaldir = -1;
 for (a=0; a<global.animalcount; a+=1) {
+  thisanimal = global.animalinstances[a];
+  if (global.a_isbig[animaltype] and global.a_isbig[global.animallist[a]]) {
+    if (isonetileaway(thisx, thisy, thisanimal.boardx, thisanimal.boardy)) {
+      global.adjbiganimaldir = closestdir(thisx,thisy,thisanimal.boardx,thisanimal.boardy);
+      }
+    }
   if (animaltype != global.animallist[a]) {
     continue;
     }
-  thisanimal = global.animalinstances[a];
   distance = pythagorean(thisx,thisy,thisanimal.boardx,thisanimal.boardy);
   if (distance > MAXANIMALAVGRANGE) {
     continue;

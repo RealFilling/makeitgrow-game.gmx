@@ -3,6 +3,7 @@ var a;
 //   the normal field turn structure
 
 global.animalcount = 0;
+global.animallookup = ds_map_create();
 
 for (a=0; a<NUMANIMALTYPES; a+=1) {
   global.animalcounts[a] = 0;

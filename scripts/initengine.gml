@@ -28,6 +28,9 @@ global.q_exportstofile = false; // If true, pressing Q creates a text file expor
                                 // WARNING: Not complete!  Abandoned (at least temporarily)
                                 // Leave false unless you are trying to get it working.
 //
+global.skipanimalvalidation = true; // Disables the check to make sure all animals can
+                                    //   housed.
+//
 global.disablesound = true;
 
 // Debug logging:

@@ -540,6 +540,7 @@
       <script>scripts\hextwoadj.gml</script>
       <script>scripts\hexcomp.gml</script>
       <script>scripts\pixtohexmouse.gml</script>
+      <script>scripts\isonetileaway.gml</script>
     </scripts>
     <scripts name="hexclick">
       <script>scripts\hexclick_draw.gml</script>
@@ -888,9 +889,11 @@
       <scripts name="save">
         <script>scripts\dumpanimal.gml</script>
         <script>scripts\dumpnullanimal.gml</script>
-        <script>scripts\restoreanimal.gml</script>
       </scripts>
       <script>scripts\avgnearbyanimalpos.gml</script>
+      <script>scripts\isspotadjtobiganimal.gml</script>
+      <script>scripts\restoreanimal.gml</script>
+      <script>scripts\hashcoords.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
@@ -996,7 +999,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="777">
+  <constants number="778">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1774,6 +1777,7 @@
     <constant name="MAXANIMALAVGRANGE">8</constant>
     <constant name="MAXCALLAGE">240</constant>
     <constant name="MAXCALLAGEDIV">8</constant>
+    <constant name="BIGANIMALREPELSTRENGTH">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
