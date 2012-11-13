@@ -1,4 +1,4 @@
-var sx, sy, searchfor;
+var sx, sy, searchfor, foundanimal;
 sx = argument0;
 sy = argument1;
 searchfor = argument2;
@@ -60,6 +60,30 @@ switch(searchfor) {
     if (species == BLDG_FEED) {
       returnxy(sx,sy);
       return true; 
+      }
+    break;
+  case SEARCHFOR_CHICKEN:
+  case SEARCHFOR_CHICKENHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_CHICKEN) {
+      returnxy(sx,sy);
+      return true;
+      }
+    break;
+  case SEARCHFOR_COW:
+  case SEARCHFOR_COWHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_COW) {
+      returnxy(sx,sy);
+      return true;
+      }
+    break;
+  case SEARCHFOR_PIG:
+  case SEARCHFOR_PIGHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_PIG) {
+      returnxy(sx,sy);
+      return true;
       }
     break;
   default:

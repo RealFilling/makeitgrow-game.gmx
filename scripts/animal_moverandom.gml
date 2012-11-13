@@ -8,18 +8,15 @@ for (dir = 0; dir<6; dir+=1) {
   strength[dir] = irandom_range(0,19);
   }
 if (avgnearbyanimalpos(boardx, boardy, animaltype)) {
-  workx = global.hexx;
-  worky = global.hexy;
+  workx = global.returnx;
+  worky = global.returny;
   dirtoherd = closestdir(boardx, boardy, workx, worky);
   if (dirtoherd != -1) {
     strength[dirtoherd] += herdstrength;
     }
   }
-// If is a big animal, and are adjacent to another big animal, try to move away.
-// global.adjbiganimaldir is loaded by avgnearbyanimalpos()
-// Note: this means it only tries to repel from one animal, practically the
-//         highest numbered that matches the criteria
-if (global.adjbiganimaldir != -1) {
+
+if (isnexttobig(boardx,boardy,-1)) {
   for (a=2; a<5; a+=1) {
     strength[(global.adjbiganimaldir + a) mod 6] += BIGANIMALREPELSTRENGTH;
     }

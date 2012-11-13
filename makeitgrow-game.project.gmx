@@ -849,6 +849,8 @@
       <script>scripts\validateanimals.gml</script>
       <script>scripts\findanimal.gml</script>
       <script>scripts\searchspot.gml</script>
+      <script>scripts\animalsearchfortype.gml</script>
+      <script>scripts\herdsearchfortype.gml</script>
       <script>scripts\searchfrom.gml</script>
       <script>scripts\animal_move.gml</script>
       <script>scripts\okaytomoveto.gml</script>
@@ -891,9 +893,12 @@
         <script>scripts\dumpnullanimal.gml</script>
       </scripts>
       <script>scripts\avgnearbyanimalpos.gml</script>
+      <script>scripts\avgnearbyanimalpos_OBS.gml</script>
       <script>scripts\isspotadjtobiganimal.gml</script>
       <script>scripts\restoreanimal.gml</script>
+      <script>scripts\isnexttobig.gml</script>
       <script>scripts\hashcoords.gml</script>
+      <script>scripts\animaltosearchtype.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
@@ -999,7 +1004,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="778">
+  <constants number="784">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1687,6 +1692,12 @@
     <constant name="SEARCHFOR_ADJWATER">6</constant>
     <constant name="SEARCHFOR_ADJBUILDING">7</constant>
     <constant name="SEARCHFOR_ADJFEED">8</constant>
+    <constant name="SEARCHFOR_CHICKEN">9</constant>
+    <constant name="SEARCHFOR_COW">10</constant>
+    <constant name="SEARCHFOR_PIG">11</constant>
+    <constant name="SEARCHFOR_CHICKENHERD">12</constant>
+    <constant name="SEARCHFOR_COWHERD">13</constant>
+    <constant name="SEARCHFOR_PIGHERD">14</constant>
     <constant name="ANIMALNEED_SHELTER">0</constant>
     <constant name="ANIMALNEED_HUNGER">1</constant>
     <constant name="ANIMALNEED_THIRST">2</constant>
@@ -1774,7 +1785,7 @@
     <constant name="ANIANIMSTATE_IDLE">0</constant>
     <constant name="ANIANIMSTATE_WALK">1</constant>
     <constant name="ANIANIMSTATE_EAT">2</constant>
-    <constant name="MAXANIMALAVGRANGE">8</constant>
+    <constant name="MAXANIMALAVGRANGE">4</constant>
     <constant name="MAXCALLAGE">240</constant>
     <constant name="MAXCALLAGEDIV">8</constant>
     <constant name="BIGANIMALREPELSTRENGTH">10</constant>
