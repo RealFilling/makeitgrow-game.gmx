@@ -15,6 +15,8 @@ if (global.a_isbig[animaltype]) {
     return false;
     }
   }
+ds_map_delete(global.animallookup,hashcoords(boardx,boardy));
+ds_map_add(global.animallookup,hashcoords(destx,desty),self.id);
 boardx = destx;
 boardy = desty;
 hextopix(boardx, boardy);
