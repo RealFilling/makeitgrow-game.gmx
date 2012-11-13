@@ -7,8 +7,8 @@ for (dir=0; dir<6; dir+=1) {
     continue;
     }
   hexadj(thisx, thisy);
-  if (ds_map_exists(global.animallookup, hashcoords(thatx,thaty))) {
-    return ds_map_find_value(global.animallookup, hashcoords(thatx, thaty));
+  if (ds_map_exists(global.animallookup, hashcoords(global.hexx,global.hexy))) {
+    return ds_map_find_value(global.animallookup, hashcoords(global.hexy, global.hexy));
     }
   }
 return -1;
