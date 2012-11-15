@@ -16,12 +16,14 @@ else {
     return ""; // Still in pregen period.
     }
   gd_log("savegame(): Are logged in....");
-  gamestring = field_serialize();
   gd_log("savegame(): Logged in, after serialization, before gd_save()....");
-  if (global.demomode == true) {
+  if (global.demomode) {
+    // Since we're not saving to the server, we have to forge the text digits
+    //   it adds to the string.
     global.savestring = "0000"+field_serialize();
     }
   else {
+    gamestring = field_serialize(false);
     returnstring = gd_save(gamestring,global.hstime div global.ticksperhour);
     gd_log("savegame(): Logged in, after gd_save(), done.");
     }

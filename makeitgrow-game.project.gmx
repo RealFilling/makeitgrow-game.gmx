@@ -894,7 +894,7 @@
       </scripts>
       <script>scripts\avgnearbyanimalpos.gml</script>
       <script>scripts\avgnearbyanimalpos_OBS.gml</script>
-      <script>scripts\isspotadjtobiganimal.gml</script>
+      <script>scripts\isspotadjtobiganimal_OBS.gml</script>
       <script>scripts\restoreanimal.gml</script>
       <script>scripts\isnexttobig.gml</script>
       <script>scripts\hashcoords.gml</script>

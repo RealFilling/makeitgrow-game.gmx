@@ -1,4 +1,4 @@
-var a, dir, strength, bestdir, beststrength, dirtobeacon, dirtoherd, workx, worky;
+var a, dir, strength, bestdir, beststrength, dirtobeacon, dirtoherd, workx, worky, adjbiganimaldir;
 // Old:
 // animal_move(irandom_range(0,5));
 
@@ -16,9 +16,10 @@ if (avgnearbyanimalpos(boardx, boardy, animaltype)) {
     }
   }
 
-if (isnexttobig(boardx,boardy,-1)) {
+adjbiganimaldir = isnexttobig(boardx,boardy,-1);
+if (adjbiganimaldir != -1) {
   for (a=2; a<5; a+=1) {
-    strength[(global.adjbiganimaldir + a) mod 6] += BIGANIMALREPELSTRENGTH;
+    strength[(adjbiganimaldir + a) mod 6] += BIGANIMALREPELSTRENGTH;
     }
   }
 if (global.a_callage != -1) {

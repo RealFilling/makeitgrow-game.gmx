@@ -13,8 +13,7 @@ distance = argument3; // 1-4
 
 if (!animalsearchfortype(searchfor)) { // Animals typically search for other instances of themselves,
                                        //   and so need to ignore their own position, lest they find
-                                       //   themselves.  This will need to be expanded as more
-                                       //   animals are added.
+                                       //   themselves.
   if (searchspot(sx,sy,searchfor)) {
     return true; // location already set by searchspot()
     }

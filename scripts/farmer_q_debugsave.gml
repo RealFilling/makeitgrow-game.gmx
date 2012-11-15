@@ -4,7 +4,7 @@ if (global.q_exportstofile == true) {
   // NOTE:
   // The "0" below is due to Leandro's solution to server-provided hypertime.
   // We have to account for that now so loading doesn't break.
-  outstring = field_serialize();
+  outstring = field_serialize(true);
   stringtofile(filename,outstring);
   enqueueticker("Exported field to file "+filename+".");
   return 0;

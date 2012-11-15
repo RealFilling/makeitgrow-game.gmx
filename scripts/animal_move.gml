@@ -11,7 +11,7 @@ if (!okaytomoveto(destx, desty)) {
   return false;
   }
 if (global.a_isbig[animaltype]) {
-  if (!isspotadjtobiganimal(destx,desty,(facing+3) mod 6)) {
+  if (isnexttobig(destx,desty,(facing+3) mod 6) != -1) {
     return false;
     }
   }
