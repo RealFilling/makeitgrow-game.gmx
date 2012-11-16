@@ -9,7 +9,9 @@ global.disablemetrics = true; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
+global.disableautosave = false; // Turns off timed saving; use Q to save in this case
 global.nosave = true; // Disable saving entirely
+global.saveexport = true; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 global.weatherdebug = false; // Provide debugging information for weather system
@@ -32,11 +34,41 @@ global.skipanimalvalidation = true; // Disables the check to make sure all anima
                                     //   housed.
 //
 global.disablesound = true;
+global.disabletools = false;
+
+// ***************
+// IMPORTANT!
+// This is the magic flag to set if the game is running as a farm tour.
+// It will cause it to load the game from farmmap(), disable the tool menu and saving,
+//   and turn off precalc.
+global.farmtour = false;
+// ***************
 
 // Debug logging:
 global.debuglog = false; // Logging, currently unused
 global.debuglogfilename = "debuglog.txt";
 global.debugloghandle = noone // Replaced with handle to logfile
+
+//
+// This ends the flags section.
+//
+// The rest of this script is important setup stuff, and shouldn't
+//   be idly changed.
+//
+// For most of the above stuff, set all flags to false to setup for a
+//   production server.  Do that but also set global.farmtour to true
+//   for a demonstration.
+//
+
+if (global.farmtour) {
+  global.demomode = true;
+  global.nosave = true;
+  global.disabletools = true;
+  global.q_exportstofile = false;
+  global.tutorialskip = true;
+  global.skippreseed = true;
+  global.skipprecalc = true;
+  }
 
 randomize();
 

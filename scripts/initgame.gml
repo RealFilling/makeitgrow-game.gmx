@@ -30,11 +30,14 @@ starterinventory();
 // Initialize new player instructions
 inittutorial();
 
-if (!skipfield) {
+if (!skipfield and !global.farmtour) {
   // Generate a new field
   field_initmap();           // Prepare the map arrays
   field_generate();          // Generate a random map
   field_dryuntil(WATERDRYTARGET);       // Remove some water
+  }
+if (global.farmtour) {
+  farmmap();
   }
     
 // Starting weather type

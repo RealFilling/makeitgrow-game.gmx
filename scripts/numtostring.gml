@@ -5,7 +5,7 @@ if (worknum < 0) {
   show_error("numtostring() ERROR: negative argument "+string(worknum)+"!",true);
   }
 
-addtochecksum(worknum);
+//addtochecksum(worknum);
 buildstring = "";
 for (a=0;a<global.charspernum;a+=1) {
   buildstring += chr((worknum & global.sbitmask)+CHAROFFSET);

@@ -929,6 +929,9 @@
       <script>scripts\iscolorsearch.gml</script>
       <script>scripts\getbestadjhex.gml</script>
     </scripts>
+    <scripts name="farmmap">
+      <script>scripts\farmmap.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_hud</font>
