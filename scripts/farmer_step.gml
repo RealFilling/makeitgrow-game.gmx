@@ -42,7 +42,7 @@ if (moving == true) {
         //show_message("farmer_bulkmove calling from farmer_step()");
         farmer_cancelbulkmove();
         moving = false;
-        if ((nextseed != -1) ){// and (nextseedx == boardx) and (nextseedy == boardy)) {
+        if ((nextseed != TOOL_NOTOOL) ){// and (nextseedx == boardx) and (nextseedy == boardy)) {
           farmer_executeaction(nextseed);
           farmer_haltaction();
           }

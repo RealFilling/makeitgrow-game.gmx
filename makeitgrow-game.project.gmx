@@ -1007,7 +1007,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="784">
+  <constants number="785">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1561,6 +1561,7 @@
     <constant name="TOOL_ADDGRAYBUG">-20</constant>
     <constant name="TOOL_ADDBEE">-21</constant>
     <constant name="TOOL_CALLANIMALS">-22</constant>
+    <constant name="TOOL_NOTOOL">-23</constant>
     <constant name="BUTTONWIDTH">32</constant>
     <constant name="BUTTONHEIGHT">32</constant>
     <constant name="NUMBITSSAVE">4</constant>

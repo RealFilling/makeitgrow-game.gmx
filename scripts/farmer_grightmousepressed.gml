@@ -3,7 +3,7 @@ if ((global.menustate != MENUSTATE_NONE) or (global.gamestate != GSTATE_NORMAL))
   return 0;
   }
 
-nextseed = -1; // Cancel previous order
+nextseed = TOOL_NOTOOL; // Cancel previous order
 nextseedx = -1; // 'x and 'y not too useful currently
 nextseedy = -1; //
 //if (farmer_uiclick(mouse_x, mouse_y) == false) { // Obsolete
