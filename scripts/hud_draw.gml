@@ -59,7 +59,7 @@ if (global.plantgrowthdebug == true) {
   }
   
 if (global.currentseed == TOOL_QUERY) {
-  outputtext3 = "This space:";
+  outputtext3 = "("+string(obj_farmer.boardx)+","+string(obj_farmer.boardy)+") This space:";
   bx = obj_farmer.boardx; by = obj_farmer.boardy;
   thisplant = global.plants[bx,by];
   outputtext3 += " Species:" + string(getspecies(thisplant));

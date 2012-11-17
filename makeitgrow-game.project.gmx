@@ -326,10 +326,6 @@
         <script>scripts\field_preseed.gml</script>
         <script>scripts\makerandomplant.gml</script>
       </scripts>
-      <scripts name="coordinates">
-        <script>scripts\htoc.gml</script>
-        <script>scripts\ctoh.gml</script>
-      </scripts>
       <script>scripts\field_drawinfocard.gml</script>
       <script>scripts\addplantcheck.gml</script>
       <script>scripts\addbugcheck.gml</script>
@@ -401,7 +397,6 @@
       <script>scripts\script_promoteplant_OBS.gml</script>
       <script>scripts\soilhere.gml</script>
       <script>scripts\addmulch.gml</script>
-      <script>scripts\coordsinbounds.gml</script>
     </scripts>
     <scripts name="debug">
       <script>scripts\debug_createlog.gml</script>
@@ -541,6 +536,11 @@
       <script>scripts\hexcomp.gml</script>
       <script>scripts\pixtohexmouse.gml</script>
       <script>scripts\isonetileaway.gml</script>
+      <scripts name="coordinates">
+        <script>scripts\htoc.gml</script>
+        <script>scripts\ctoh.gml</script>
+        <script>scripts\coordsinbounds.gml</script>
+      </scripts>
     </scripts>
     <scripts name="hexclick">
       <script>scripts\hexclick_draw.gml</script>
