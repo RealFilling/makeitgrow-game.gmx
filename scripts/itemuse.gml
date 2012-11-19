@@ -1,5 +1,6 @@
 var item;
 item = argument0;
+enqueueticker("Using item "+global.itemtypename[item]+"...");
 switch (item) {
   case ITEM_ENERGYPILL:
     break;

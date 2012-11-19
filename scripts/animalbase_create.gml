@@ -7,6 +7,8 @@ movespeed = global.a_movespeed[animaltype];
 animdelay = global.a_animdelay[animaltype];
 watermax = global.a_watermax[animaltype];
 foodmax = global.a_foodmax[animaltype];
+colonsize = global.a_colonsize[animaltype];
+poopsize = global.a_poopsizep[animaltype];
 //
 animsprite_idle = global.a_sprite_idle[animaltype]; // No facing
 animsprite_walk = global.a_sprite_walk[animaltype]; // Six directions
@@ -21,6 +23,7 @@ ahealth = 100; // Not named "health" because Game Maker uses that variable, and 
                //   don't want it automatically doing things based on this thank you.
 waterfull = watermax;
 foodfull = foodmax;
+colonlevel = 0;
 //
 herdstrength = global.a_herdstrength[animaltype];
 callstrength = global.a_callstrength[animaltype];

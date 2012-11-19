@@ -79,6 +79,9 @@ else if ((global.currentweather == WEATHER_DRIZZLE)) {
   // Find shelter
   seeksomething(SEARCHFOR_SHELTER);
   }
+else if ((colonlevel >= colonsize) and (animal_okaytopoop())) {
+  animal_poop();
+  }
 else {
   if (fiftyfifty() == 1) {
     animal_moverandom();

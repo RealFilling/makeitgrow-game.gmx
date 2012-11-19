@@ -189,11 +189,12 @@ else {
           }
         global.pmulch[composttype] -= 24;
         }
-      subtype = 0;
-      growth = 4; // Compost amounts are encoded in growth.
+      //subtype = 0;
+      //growth = 4; // Compost amounts are encoded in growth.
       hextopix(boardx,boardy);
       //instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
-      placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
+      placecompost(boardx,boardy,composttype,4);
+      //placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
       //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
       //global.currentseed = TOOL_MOVE;
       sound_play_respectdisable(snd_plop1);

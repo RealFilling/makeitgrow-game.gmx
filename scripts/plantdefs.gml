@@ -54,7 +54,9 @@ plantmineral[T_GREEN_TOP] = GREEN;
 plantmineral[T_GREEN_BOTTOM] = GREEN; 
 
 
+/*
 // deathmineral: the amount of mineral a dead plant is mulched for/returns to the soil
+// OBSOLETE: system now uses plantminneed
 globalvar deathmineral;
 deathmineral[P_EMPTY] = -1;
 deathmineral[P_REDX] = 60;
@@ -75,6 +77,7 @@ deathmineral[T_RED_TOP] = 20;
 deathmineral[T_RED_BOTTOM] = 20;
 deathmineral[T_GREEN_TOP] = 20;
 deathmineral[T_GREEN_BOTTOM] = 20; 
+*/
 
 // plantminneed: the number of minerals the plant needs to advance a growth stage, 
 //                 spread, or produce fruit
@@ -603,6 +606,56 @@ iswild[P_EGGPLANT] = false;
 iswild[P_PEPPER] = false;
 iswild[P_LETTUCE] = false;
 iswild[P_BLUELETTUCE] = false;
+
+// isweed
+// Is this plant considered valueless and to be uprooted when clicked on?
+globalvar isweed;
+isweed[P_EMPTY] = -1; // Should not happen
+isweed[P_ITCHGRASS] = true;
+isweed[P_STRAWBERRY] = false;
+isweed[P_BLUEBERRY] = false;
+isweed[P_CORNFLOWER] = true;
+isweed[P_CLIANTRO] = true;
+isweed[P_CLOVER] = true;
+isweed[P_DANDELION] = true;
+isweed[P_ONION] = false;
+isweed[P_MUSHROOM] = false;
+isweed[P_BLUEHEDGE] = true;
+isweed[P_GREENTOMATO] = false;
+isweed[P_HEDGE] = true;
+isweed[P_GRASS] = false;
+isweed[P_WEED] = true;
+isweed[P_TOMATO] = false;
+isweed[P_WATERMELON] = false;
+isweed[P_EGGPLANT] = false;
+isweed[P_PEPPER] = false;
+isweed[P_LETTUCE] = false;
+isweed[P_BLUELETTUCE] = false;
+
+// coorespitem
+// The inventory item corresponding to the harvest of this plant
+globalvar coorespitem;
+coorespitem[P_EMPTY] = -1; // Should not happen
+coorespitem[P_ITCHGRASS] = -9999;
+coorespitem[P_STRAWBERRY] = 3;
+coorespitem[P_BLUEBERRY] = 4;
+coorespitem[P_CORNFLOWER] = -9999;
+coorespitem[P_CLIANTRO] = 5;
+coorespitem[P_CLOVER] = -9999;
+coorespitem[P_DANDELION] = -9999;
+coorespitem[P_ONION] = 6;
+coorespitem[P_MUSHROOM] = 7;
+coorespitem[P_BLUEHEDGE] = -9999;
+coorespitem[P_GREENTOMATO] = 12;
+coorespitem[P_HEDGE] = -9999;
+coorespitem[P_GRASS] = -9999;
+coorespitem[P_WEED] = -9999;
+coorespitem[P_TOMATO] = 13;
+coorespitem[P_WATERMELON] = 14;
+coorespitem[P_EGGPLANT] = 8;
+coorespitem[P_PEPPER] = 9;
+coorespitem[P_LETTUCE] = 10;
+coorespitem[P_BLUELETTUCE] = 11;
 
 
 // plantseason

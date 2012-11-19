@@ -1,0 +1,2 @@
+global.recipecount = 0;
+

@@ -218,6 +218,7 @@
       <script>scripts\trytoplaceplant.gml</script>
       <script>scripts\trytoplaceplantnocrowd.gml</script>
       <script>scripts\getamtmulch.gml</script>
+      <script>scripts\addmulch.gml</script>
       <script>scripts\soiltiletodisp.gml</script>
       <script>scripts\figureplanttile.gml</script>
       <script>scripts\getstufffromplant.gml</script>
@@ -226,6 +227,7 @@
       <script>scripts\figureplantdrawdepth.gml</script>
       <script>scripts\plantadjacency.gml</script>
       <script>scripts\planthasmineral.gml</script>
+      <script>scripts\placecompost.gml</script>
       <script>scripts\placeplant.gml</script>
       <scripts name="spreadlogic">
         <script>scripts\spreadplant.gml</script>
@@ -372,6 +374,7 @@
       <script>scripts\farmer_okaytomove.gml</script>
       <script>scripts\farmer_checkdir.gml</script>
       <scripts name="toolactions">
+        <script>scripts\mulchplant.gml</script>
         <script>scripts\farmer_toolmove.gml</script>
         <script>scripts\farmer_toolhoe.gml</script>
         <script>scripts\farmer_toolraiseland.gml</script>
@@ -381,7 +384,6 @@
         <script>scripts\farmer_bulldozer.gml</script>
         <script>scripts\farmer_toolcallanimals.gml</script>
         <script>scripts\seedselector.gml</script>
-        <script>scripts\mulchplant.gml</script>
       </scripts>
       <script>scripts\farmer_energycheck.gml</script>
       <script>scripts\farmer_moneycheck.gml</script>
@@ -396,7 +398,6 @@
     <scripts name="script">
       <script>scripts\script_promoteplant_OBS.gml</script>
       <script>scripts\soilhere.gml</script>
-      <script>scripts\addmulch.gml</script>
     </scripts>
     <scripts name="debug">
       <script>scripts\debug_createlog.gml</script>
@@ -838,8 +839,15 @@
       <script>scripts\status_draw.gml</script>
     </scripts>
     <scripts name="items">
+      <script>scripts\inititems.gml</script>
       <script>scripts\itemdefs.gml</script>
+      <script>scripts\registeritemtype.gml</script>
       <script>scripts\itemuse.gml</script>
+      <scripts name="crafts">
+        <script>scripts\initcrafts.gml</script>
+        <script>scripts\craftdefs.gml</script>
+        <script>scripts\registerrecipe.gml</script>
+      </scripts>
     </scripts>
     <scripts name="animals">
       <script>scripts\animaldefs.gml</script>
@@ -887,6 +895,8 @@
         <script>scripts\animalbase_changeanimstate.gml</script>
         <script>scripts\animalturn.gml</script>
         <script>scripts\animalai.gml</script>
+        <script>scripts\animal_okaytopoop.gml</script>
+        <script>scripts\animal_poop.gml</script>
       </scripts>
       <scripts name="save">
         <script>scripts\dumpanimal.gml</script>

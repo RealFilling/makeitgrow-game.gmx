@@ -76,5 +76,15 @@ global.a_foodmax[ANIMAL_CHICKEN] = 35;
 global.a_foodmax[ANIMAL_COW] = 300;
 global.a_foodmax[ANIMAL_PIG] = 300;
 
+// How much poop can the animal accumulate before it has to go?
+// This value is measured in plant poopvalue units.
+global.a_colonsize[ANIMAL_CHICKEN] = 12;
+global.a_colonsize[ANIMAL_COW] = 36;
+global.a_colonsize[ANIMAL_PIG] = 24;
+
+// How many units worth of compost are left by a poop event?
+global.a_poopsize[ANIMAL_CHICKEN] = 1;
+global.a_poopsize[ANIMAL_COW] = 3;
+global.a_poopsize[ANIMAL_PIG] = 2;
 
 

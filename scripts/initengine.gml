@@ -78,7 +78,6 @@ plantdefs();
 bugdefs();
 //compostdefs(); // Not proven necessary yet
 seedselector();
-itemdefs();
 //itemnames();
 // Set up timekeeping variables
 //inittime();   // initgame()
@@ -89,7 +88,14 @@ animaldefs();
 soundframedefs();
 initsoundframe();
 timeconsts();
+//
+inititems();
+itemdefs();
+initcrafts();
+craftdefs();
+//
 tutorialdef();
+
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;
