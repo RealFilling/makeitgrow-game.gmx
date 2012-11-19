@@ -9,6 +9,7 @@ watermax = global.a_watermax[animaltype];
 foodmax = global.a_foodmax[animaltype];
 colonsize = global.a_colonsize[animaltype];
 poopsize = global.a_poopsize[animaltype];
+isbig = global.a_isbig[animaltype];
 //
 animsprite_idle = global.a_sprite_idle[animaltype]; // No facing
 animsprite_walk = global.a_sprite_walk[animaltype]; // Six directions

@@ -1,4 +1,4 @@
-var a, dir, strength, bestdir, beststrength, dirtobeacon, dirtoherd, workx, worky, adjbiganimaldir;
+var a, dir, strength, bestdir, beststrength, dirtobeacon, dirtoherd, workx, worky, adjbiganimaldir, bestsfound;
 // Old:
 // animal_move(irandom_range(0,5));
 
@@ -30,10 +30,18 @@ if (global.a_callage != -1) {
   }
 
 beststrength = -1;
+bestsfound = 0;
 for (dir = 0; dir<6; dir+=1) {
   if (strength[dir] > beststrength) {
     beststrength = strength[dir];
     bestdir = dir;
+    bestsfound = 0;
+    }
+  else if (strength[dir] == beststrength) {
+    bestsfound += 1;
+    if (irandom_range(1,bestsfound) == 1) {
+      bestdir = dir;
+      }
     }
   }
 
