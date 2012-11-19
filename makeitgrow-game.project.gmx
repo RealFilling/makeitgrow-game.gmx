@@ -182,6 +182,8 @@
         <sprite>sprites\spr_scarecrow</sprite>
         <sprite>sprites\spr_waterpump</sprite>
         <sprite>sprites\spr_fencepost</sprite>
+        <sprite>sprites\spr_fence_wire</sprite>
+        <sprite>sprites\spr_fence_wirenet</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
