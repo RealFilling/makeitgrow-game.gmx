@@ -19,16 +19,19 @@ switch (searchfor) {
       case FOUNDFOOD_BUGS:
         eatbugs(boardx, boardy);
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       case FOUNDFOOD_PLANT:
         // Nom nom nom
         specieseaten = getspecies(global.plants[boardx,boardy]);
         global.plants[boardx,boardy] = 0;
         foodfull += nutritionvalue[specieseaten];
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       case FOUNDFOOD_FEED:
         // Automatic success
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       default:
         show_error("ERROR in animal_act(): unrecognized found chicken feed:" + string(global.return1), false);
@@ -44,10 +47,12 @@ switch (searchfor) {
         // Nom nom nom
         global.plants[boardx,boardy] = 0;
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       case FOUNDFOOD_FEED:
         // Automatic success
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       default:
         show_error("ERROR in animal_act(): unrecognized found cow feed", false);
@@ -63,10 +68,12 @@ switch (searchfor) {
         // Nom nom nom
         global.plants[boardx,boardy] = 0;
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       case FOUNDFOOD_FEED:
         // Automatic success
         foodfull = foodmax;
+        animalbase_changeanimstate(ANIANIMSTATE_EAT);
         break;
       default:
         show_error("ERROR in animal_act(): unrecognized found pig feed", false);

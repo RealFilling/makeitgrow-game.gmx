@@ -9,6 +9,8 @@ if (global.animalcount >= indextoremove) {
   return false;
   }
 
+ds_map_delete(global.animallookup,hashcoords(instancetodel.boardx,instancetodel.boardy));
+  
 for (a = indextoremove; a < global.animalcount; a += 1) {
   global.animallist[a] = global.animallist[a+1];
   global.animalinstances[a] = global.animalinstances[a+1];

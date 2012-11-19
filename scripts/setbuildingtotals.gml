@@ -8,6 +8,7 @@ global.animalcapacities[ANIMAL_CHICKEN] = global.buildingtotals[BLDGO_COOP] * 4;
 global.animalcapacities[ANIMAL_COW] = global.buildingtotals[BLDGO_SMALLBARN];
 global.animalcapacities[ANIMAL_COW] += global.buildingtotals[BLDGO_BIGBARN] * 3;
 // No pig building yet
-
-validateanimals();
+if (!global.skipanimalvalidation) {
+  validateanimals();
+  }
 

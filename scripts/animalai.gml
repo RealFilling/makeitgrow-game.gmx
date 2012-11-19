@@ -3,7 +3,10 @@
 // 2. If hungry, look for food.
 // 3. If raining, look for shelter.
 // 4. If threatened, run away from threat.
-// 5. If none of the above, bumble around.  This should be most of the time.
+// 5. If none of the above, then there is no pressing need.  In that event,
+//      we move in a semi-random manner.  Priority is given first towards
+//      staying near other animals of the same type (herding), then towards
+//      staying near a home beacon (WIP), and beyond that random movement.
 
 if (global.currentweather == WEATHER_DROUGHT) {
   waterfull = max(waterfull-(waterdecrease+2),0);
@@ -75,6 +78,9 @@ else if (foodfull <= 30) {
 else if ((global.currentweather == WEATHER_DRIZZLE)) {
   // Find shelter
   seeksomething(SEARCHFOR_SHELTER);
+  }
+else if ((colonlevel >= colonsize) and (animal_okaytopoop())) {
+  animal_poop();
   }
 else {
   if (fiftyfifty() == 1) {

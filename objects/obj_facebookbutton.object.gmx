@@ -59,5 +59,8 @@
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
+  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>

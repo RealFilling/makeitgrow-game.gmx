@@ -1,3 +1,2 @@
-if (global.debug == true) {
-  file_text_close(global.logid)
-  }
+file_text_close(global.logid)
+

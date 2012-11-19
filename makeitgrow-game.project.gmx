@@ -69,8 +69,6 @@
       <sprite>sprites\spr_itemicons3</sprite>
       <sprite>sprites\spr_hexcursor</sprite>
       <sprite>sprites\spr_longbutton</sprite>
-      <sprite>sprites\spr_facebook</sprite>
-      <sprite>sprites\spr_twitter</sprite>
       <sprites name="itembuttons">
         <sprite>sprites\spr_plainbutton</sprite>
         <sprite>sprites\spr_plainbutton2</sprite>
@@ -187,13 +185,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
-    <sprite>sprites\spr_farmer</sprite>
-    <sprite>sprites\spr_farmerx</sprite>
     <sprite>sprites\spr_nothing</sprite>
-    <sprite>sprites\spr_testobj</sprite>
-    <sprite>sprites\spr_splash_OLD</sprite>
-    <sprite>sprites\spr_pixtitle</sprite>
-    <sprite>sprites\spr_splash</sprite>
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_white</sprite>
     <sprites name="Farmer">
@@ -201,6 +193,16 @@
       <sprite>sprites\spr_farmerplant1</sprite>
       <sprite>sprites\spr_farmerwalk1</sprite>
       <sprite>sprites\spr_farmerneutral1</sprite>
+    </sprites>
+    <sprites name="OBS">
+      <sprite>sprites\spr_splash</sprite>
+      <sprite>sprites\spr_pixtitle</sprite>
+      <sprite>sprites\spr_splash_OLD</sprite>
+      <sprite>sprites\spr_testobj</sprite>
+      <sprite>sprites\spr_farmerx</sprite>
+      <sprite>sprites\spr_farmer</sprite>
+      <sprite>sprites\spr_facebook</sprite>
+      <sprite>sprites\spr_twitter</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -220,6 +222,7 @@
       <script>scripts\trytoplaceplant.gml</script>
       <script>scripts\trytoplaceplantnocrowd.gml</script>
       <script>scripts\getamtmulch.gml</script>
+      <script>scripts\addmulch.gml</script>
       <script>scripts\soiltiletodisp.gml</script>
       <script>scripts\figureplanttile.gml</script>
       <script>scripts\getstufffromplant.gml</script>
@@ -228,6 +231,7 @@
       <script>scripts\figureplantdrawdepth.gml</script>
       <script>scripts\plantadjacency.gml</script>
       <script>scripts\planthasmineral.gml</script>
+      <script>scripts\placecompost.gml</script>
       <script>scripts\placeplant.gml</script>
       <scripts name="spreadlogic">
         <script>scripts\spreadplant.gml</script>
@@ -328,10 +332,6 @@
         <script>scripts\field_preseed.gml</script>
         <script>scripts\makerandomplant.gml</script>
       </scripts>
-      <scripts name="coordinates">
-        <script>scripts\htoc.gml</script>
-        <script>scripts\ctoh.gml</script>
-      </scripts>
       <script>scripts\field_drawinfocard.gml</script>
       <script>scripts\addplantcheck.gml</script>
       <script>scripts\addbugcheck.gml</script>
@@ -370,7 +370,7 @@
         <script>scripts\farmer_enter.gml</script>
         <script>scripts\farmer_d_debuggrowth.gml</script>
         <script>scripts\farmer_q_debugsave.gml</script>
-        <script>scripts\farmer_w_debugload.gml</script>
+        <script>scripts\farmer_w_debugload_UNUSED.gml</script>
         <script>scripts\farmer_e_debugsavecrap.gml</script>
         <script>scripts\farmer_r_debug_loadcrap.gml</script>
       </scripts>
@@ -378,6 +378,7 @@
       <script>scripts\farmer_okaytomove.gml</script>
       <script>scripts\farmer_checkdir.gml</script>
       <scripts name="toolactions">
+        <script>scripts\mulchplant.gml</script>
         <script>scripts\farmer_toolmove.gml</script>
         <script>scripts\farmer_toolhoe.gml</script>
         <script>scripts\farmer_toolraiseland.gml</script>
@@ -385,10 +386,11 @@
         <script>scripts\farmer_toolwater.gml</script>
         <script>scripts\farmer_toolbasket.gml</script>
         <script>scripts\farmer_bulldozer.gml</script>
+        <script>scripts\farmer_toolcallanimals.gml</script>
         <script>scripts\seedselector.gml</script>
-        <script>scripts\mulchplant.gml</script>
       </scripts>
       <script>scripts\farmer_energycheck.gml</script>
+      <script>scripts\farmer_moneycheck.gml</script>
       <script>scripts\farmer_selectmovetool.gml</script>
       <scripts name="animation">
         <script>scripts\farmer_animsprites.gml</script>
@@ -400,8 +402,6 @@
     <scripts name="script">
       <script>scripts\script_promoteplant_OBS.gml</script>
       <script>scripts\soilhere.gml</script>
-      <script>scripts\addmulch.gml</script>
-      <script>scripts\coordsinbounds.gml</script>
     </scripts>
     <scripts name="debug">
       <script>scripts\debug_createlog.gml</script>
@@ -409,14 +409,6 @@
       <script>scripts\debug_closelog.gml</script>
       <script>scripts\farmerx_create.gml</script>
       <script>scripts\farmerx_step.gml</script>
-      <script>scripts\farmer_Q.gml</script>
-      <script>scripts\farmer_w.gml</script>
-      <script>scripts\farmer_e.gml</script>
-      <script>scripts\farmer_r.gml</script>
-      <script>scripts\farmer_t.gml</script>
-      <script>scripts\farmer_y.gml</script>
-      <script>scripts\farmer_u.gml</script>
-      <script>scripts\farmer_i.gml</script>
       <script>scripts\farmer_4_OBS_serialize.gml</script>
       <script>scripts\farmer_5_OBS_deserialize.gml</script>
       <script>scripts\farmer_tree_q.gml</script>
@@ -444,6 +436,7 @@
       <script>scripts\debug_tutorial_s.gml</script>
       <script>scripts\debug_tutorial_a.gml</script>
       <script>scripts\debug_tutorial_d.gml</script>
+      <script>scripts\stringtofile.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\timeconsts.gml</script>
@@ -547,6 +540,12 @@
       <script>scripts\hextwoadj.gml</script>
       <script>scripts\hexcomp.gml</script>
       <script>scripts\pixtohexmouse.gml</script>
+      <script>scripts\isonetileaway.gml</script>
+      <scripts name="coordinates">
+        <script>scripts\htoc.gml</script>
+        <script>scripts\ctoh.gml</script>
+        <script>scripts\coordsinbounds.gml</script>
+      </scripts>
     </scripts>
     <scripts name="hexclick">
       <script>scripts\hexclick_draw.gml</script>
@@ -844,41 +843,27 @@
       <script>scripts\status_draw.gml</script>
     </scripts>
     <scripts name="items">
+      <script>scripts\inititems.gml</script>
       <script>scripts\itemdefs.gml</script>
+      <script>scripts\registeritemtype.gml</script>
       <script>scripts\itemuse.gml</script>
+      <scripts name="crafts">
+        <script>scripts\initcrafts.gml</script>
+        <script>scripts\craftdefs.gml</script>
+        <script>scripts\registerrecipe.gml</script>
+      </scripts>
     </scripts>
     <scripts name="animals">
-      <scripts name="Chicken">
-        <script>scripts\chicken_create.gml</script>
-        <script>scripts\chickenfoodlike.gml</script>
-      </scripts>
-      <scripts name="Cow">
-        <script>scripts\cow_create.gml</script>
-        <script>scripts\cowfoodlike.gml</script>
-      </scripts>
-      <scripts name="Animal Base">
-        <script>scripts\animalbase_create.gml</script>
-        <script>scripts\animalbase_step.gml</script>
-        <script>scripts\animalbase_destroy.gml</script>
-        <script>scripts\animalbase_mouseover.gml</script>
-        <script>scripts\animalbase_lclick.gml</script>
-        <script>scripts\animalbase_draw.gml</script>
-        <script>scripts\debug_animalbase_endstep.gml</script>
-      </scripts>
       <script>scripts\animaldefs.gml</script>
       <script>scripts\initanimals.gml</script>
       <script>scripts\addanimal.gml</script>
       <script>scripts\removeanimal.gml</script>
       <script>scripts\validateanimals.gml</script>
       <script>scripts\findanimal.gml</script>
-      <script>scripts\animalturn.gml</script>
       <script>scripts\searchspot.gml</script>
+      <script>scripts\animalsearchfortype.gml</script>
+      <script>scripts\herdsearchfortype.gml</script>
       <script>scripts\searchfrom.gml</script>
-      <scripts name="Pig">
-        <script>scripts\pigfoodlike.gml</script>
-        <script>scripts\pig_create.gml</script>
-      </scripts>
-      <script>scripts\animalai.gml</script>
       <script>scripts\animal_move.gml</script>
       <script>scripts\okaytomoveto.gml</script>
       <script>scripts\animal_moverandom.gml</script>
@@ -889,13 +874,45 @@
       <script>scripts\isanimalhere.gml</script>
       <script>scripts\isplayerhere.gml</script>
       <script>scripts\eatbugs.gml</script>
+      <script>scripts\clearanimals.gml</script>
       <script>scripts\allanimalturns.gml</script>
+      <scripts name="Chicken">
+        <script>scripts\chicken_create.gml</script>
+        <script>scripts\chickenfoodlike.gml</script>
+      </scripts>
+      <scripts name="Cow">
+        <script>scripts\cow_create.gml</script>
+        <script>scripts\cowfoodlike.gml</script>
+      </scripts>
+      <scripts name="Pig">
+        <script>scripts\pigfoodlike.gml</script>
+        <script>scripts\pig_create.gml</script>
+      </scripts>
+      <scripts name="Animal Base">
+        <script>scripts\animalbase_create.gml</script>
+        <script>scripts\animalbase_step_OBS.gml</script>
+        <script>scripts\animalbase_destroy.gml</script>
+        <script>scripts\animalbase_mouseover.gml</script>
+        <script>scripts\animalbase_lclick.gml</script>
+        <script>scripts\animalbase_draw.gml</script>
+        <script>scripts\debug_animalbase_endstep.gml</script>
+        <script>scripts\animalbase_changeanimstate.gml</script>
+        <script>scripts\animalturn.gml</script>
+        <script>scripts\animalai.gml</script>
+        <script>scripts\animal_okaytopoop.gml</script>
+        <script>scripts\animal_poop.gml</script>
+      </scripts>
       <scripts name="save">
         <script>scripts\dumpanimal.gml</script>
         <script>scripts\dumpnullanimal.gml</script>
-        <script>scripts\restoreanimal.gml</script>
       </scripts>
-      <script>scripts\clearanimals.gml</script>
+      <script>scripts\avgnearbyanimalpos.gml</script>
+      <script>scripts\avgnearbyanimalpos_OBS.gml</script>
+      <script>scripts\isspotadjtobiganimal_OBS.gml</script>
+      <script>scripts\restoreanimal.gml</script>
+      <script>scripts\isnexttobig.gml</script>
+      <script>scripts\hashcoords.gml</script>
+      <script>scripts\animaltosearchtype.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
@@ -925,6 +942,9 @@
       <script>scripts\getlowadjmineral.gml</script>
       <script>scripts\iscolorsearch.gml</script>
       <script>scripts\getbestadjhex.gml</script>
+    </scripts>
+    <scripts name="farmmap">
+      <script>scripts\farmmap.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -1001,7 +1021,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="769">
+  <constants number="785">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1105,6 +1125,7 @@
     <constant name="ENERGY_TREEPLANTCOST">100</constant>
     <constant name="ENERGY_UPROOTCOST">15</constant>
     <constant name="ENERGY_WATERCOST">25</constant>
+    <constant name="ENERGY_CALLCOST">50</constant>
     <constant name="ETILEHEIGHT">36</constant>
     <constant name="FARMERANIM_NEUTRAL">0</constant>
     <constant name="FARMERANIM_PLANTING">2</constant>
@@ -1531,7 +1552,7 @@
     <constant name="HIGHBITMASK">2147483647</constant>
     <constant name="OLD_HIGHBITMASK">4294967295</constant>
     <constant name="NUMBUGS">8</constant>
-    <constant name="NUMTOOLS">21</constant>
+    <constant name="NUMTOOLS">22</constant>
     <constant name="TOOL_WATERCAN">-1</constant>
     <constant name="TOOL_HOE">-2</constant>
     <constant name="TOOL_BASKET">-3</constant>
@@ -1553,6 +1574,8 @@
     <constant name="TOOL_ADDCYANBUG">-19</constant>
     <constant name="TOOL_ADDGRAYBUG">-20</constant>
     <constant name="TOOL_ADDBEE">-21</constant>
+    <constant name="TOOL_CALLANIMALS">-22</constant>
+    <constant name="TOOL_NOTOOL">-23</constant>
     <constant name="BUTTONWIDTH">32</constant>
     <constant name="BUTTONHEIGHT">32</constant>
     <constant name="NUMBITSSAVE">4</constant>
@@ -1687,6 +1710,12 @@
     <constant name="SEARCHFOR_ADJWATER">6</constant>
     <constant name="SEARCHFOR_ADJBUILDING">7</constant>
     <constant name="SEARCHFOR_ADJFEED">8</constant>
+    <constant name="SEARCHFOR_CHICKEN">9</constant>
+    <constant name="SEARCHFOR_COW">10</constant>
+    <constant name="SEARCHFOR_PIG">11</constant>
+    <constant name="SEARCHFOR_CHICKENHERD">12</constant>
+    <constant name="SEARCHFOR_COWHERD">13</constant>
+    <constant name="SEARCHFOR_PIGHERD">14</constant>
     <constant name="ANIMALNEED_SHELTER">0</constant>
     <constant name="ANIMALNEED_HUNGER">1</constant>
     <constant name="ANIMALNEED_THIRST">2</constant>
@@ -1771,6 +1800,13 @@
     <constant name="TUTBOXSTATETIMEMAX">10</constant>
     <constant name="PLACEBUGODDS">500</constant>
     <constant name="PLACEPLANTODDS">500</constant>
+    <constant name="ANIANIMSTATE_IDLE">0</constant>
+    <constant name="ANIANIMSTATE_WALK">1</constant>
+    <constant name="ANIANIMSTATE_EAT">2</constant>
+    <constant name="MAXANIMALAVGRANGE">4</constant>
+    <constant name="MAXCALLAGE">240</constant>
+    <constant name="MAXCALLAGEDIV">8</constant>
+    <constant name="BIGANIMALREPELSTRENGTH">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

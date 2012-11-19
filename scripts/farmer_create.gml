@@ -31,7 +31,7 @@ bmdestx = -1;
 bmdesty = -1;
 
 // Buffered seed placement
-nextseed = -1; // Later will be arrays
+nextseed = TOOL_NOTOOL; // Later will be arrays
 nextseedx = -1;
 nextseedy = -1;
 

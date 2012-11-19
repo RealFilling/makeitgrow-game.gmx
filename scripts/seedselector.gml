@@ -260,4 +260,6 @@ global.toolname[20] = "Add gray bugs";
 global.tooldesc[20] = "DEBUG: add some gray bugs to the world.";
 global.toolname[21] = "Add bees";
 global.tooldesc[21] = "DEBUG: add some bees to the world.";
+global.toolname[22] = "Call Animals";
+global.tooldesc[22] = "Attracts animals to your current position.";
 

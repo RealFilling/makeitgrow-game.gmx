@@ -9,4 +9,5 @@ for (a=0; a<NUMANIMALTYPES; a+=1) {
   global.animalcounts[a] = 0;
   }
 global.animalcount = 0;
-
+ds_map_destroy(global.animallookup);
+global.animallookup = ds_map_create();

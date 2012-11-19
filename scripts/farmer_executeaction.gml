@@ -1,7 +1,9 @@
 var thisplant, species, subtype, growth, mulchtype, mulchtoadd, satmulch, cenmulch, mulchadded;
 var composttype, mx, my, result, newanimal, actionconvert;
 
-// Note: gets boardx and boardy from farmer object!
+// Note: gets boardx and boardy from farmer object, so call from that context.
+// Also note: some of these code branches return out, so don't rely on code
+//              at the end of the script getting executed.
 
 action = argument0;
 
@@ -16,7 +18,7 @@ if (action == TOOL_MOVE) {
   return farmer_toolmove();
   }
 
-// If tutorial requires an item be used here, this is our means for detecting it.  
+// If tutorial requires an item be used at this place, this is our means for detecting it.  
 global.tuttoolusedx = boardx;
 global.tuttoolusedy = boardy;
 
@@ -46,6 +48,9 @@ if (action < 0) {
       return farmer_bulldozer(boardx,boardy);
       break;
     case TOOL_ADDCHICKEN:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_CHICKEN])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -59,6 +64,9 @@ if (action < 0) {
         }
       break;
     case TOOL_ADDCOW:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_COW])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -72,6 +80,9 @@ if (action < 0) {
         }
       break;
     case TOOL_ADDPIG:
+      if (!farmer_moneycheck(global.a_cost[ANIMAL_PIG])) {
+        return -1; // Not enough money
+        }
       global.parameter1 = boardx;
       global.parameter2 = boardy;
       global.parameter3 = boardx;
@@ -108,6 +119,9 @@ if (action < 0) {
     case TOOL_ADDBEE:
       addbugs(boardx, boardy, B_BEE, 8);
       break;
+    case TOOL_CALLANIMALS:
+      return farmer_toolcallanimals(boardx, boardy);
+      break;
     default:
       show_error("unrecognized tool in farmer_executeaction()!",false);
       return 0;
@@ -132,10 +146,9 @@ else {
         break;
         }
       species = global.itemnum[actionconvert];
-      if (global.money < seedcost[species]) {
+      if (!farmer_moneycheck(seedcost[species])) {
         return -1; // Not enough money
         }
-      global.money -= seedcost[species];
       farmer_setanim(FARMERANIM_PLANTING);
       //species = global.currentseed+1; // offset from seed items to plant species is 1
       subtype = 0;
@@ -176,11 +189,12 @@ else {
           }
         global.pmulch[composttype] -= 24;
         }
-      subtype = 0;
-      growth = 4; // Compost amounts are encoded in growth.
+      //subtype = 0;
+      //growth = 4; // Compost amounts are encoded in growth.
       hextopix(boardx,boardy);
       //instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
-      placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
+      placecompost(boardx,boardy,composttype,4);
+      //placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
       //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
       //global.currentseed = TOOL_MOVE;
       sound_play_respectdisable(snd_plop1);

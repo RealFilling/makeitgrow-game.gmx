@@ -32,7 +32,7 @@ if (global.demomode == false) {
   //addtoinvent(INVENTTYPE_TOOL,TOOL_MOISTUREVIEW,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_BULLDOZER,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCHICKEN,1);
-  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCOW,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCOW,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDPIG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDREDBUG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGREENBUG,1);
@@ -42,6 +42,7 @@ if (global.demomode == false) {
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCYANBUG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGRAYBUG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBEE,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_CALLANIMALS,1);
   
   // Starting buildings
   //addtoinvent(INVENTTYPE_BUILDING,BLDG_SMALLBARN,1);
@@ -61,6 +62,7 @@ if (global.demomode == false) {
 
   }
 else {
+  global.money += 990000; // Extra cash for demomode
   // Starting seeds
   addtoinvent(INVENTTYPE_SEED,P_REDX,30);
   addtoinvent(INVENTTYPE_SEED,P_REDPLUS,30);
@@ -97,14 +99,15 @@ else {
   addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCHICKEN,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCOW,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_ADDPIG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDREDBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGREENBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBLUEBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDORANGEBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDYELLOWBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCYANBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGRAYBUG,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBEE,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDREDBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGREENBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBLUEBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDORANGEBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDYELLOWBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDCYANBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGRAYBUG,1);
+  //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBEE,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_CALLANIMALS,1);
   
   // Starting buildings
   addtoinvent(INVENTTYPE_BUILDING,BLDG_SMALLBARN,1);

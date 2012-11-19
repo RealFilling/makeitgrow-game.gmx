@@ -27,17 +27,17 @@ if (global.nosave == false) {
       loadgame(loadstring);
       }
     else {
-      initgame()
+      initgame(false);
       }
     }
   else {
     global.loggedin = 0;
-    initgame();
+    initgame(false);
     }
   }
 else {
   global.loggedin = 0;
-  initgame();
+  initgame(false);
   }
 global.gamestate = GSTATE_INIT;
 

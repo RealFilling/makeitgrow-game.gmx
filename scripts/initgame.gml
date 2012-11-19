@@ -1,3 +1,6 @@
+var skipfield;
+skipfield = argument0;
+
 // Set up timekeeping variables
 inittime();
 // Needs to come after inittime()
@@ -27,10 +30,15 @@ starterinventory();
 // Initialize new player instructions
 inittutorial();
 
-// Generate a new field
-field_initmap();           // Prepare the map arrays
-field_generate();          // Generate a random map
-field_dryuntil(WATERDRYTARGET);       // Remove some water
+if (!skipfield and !global.farmtour) {
+  // Generate a new field
+  field_initmap();           // Prepare the map arrays
+  field_generate();          // Generate a random map
+  field_dryuntil(WATERDRYTARGET);       // Remove some water
+  }
+if (global.farmtour) {
+  farmmap();
+  }
     
 // Starting weather type
 global.currentweather = WEATHER_CLEAR;

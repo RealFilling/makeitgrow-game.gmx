@@ -2,14 +2,16 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.13";
+global.version = "0.14";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
-global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
+global.disableautosave = true; // Turns off timed saving; use Q to save in this case
 global.nosave = true; // Disable saving entirely
+global.saveexport = false; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 global.weatherdebug = false; // Provide debugging information for weather system
@@ -19,11 +21,54 @@ global.skipprecalc = false; // Don't run very fast for two months at start
 global.poisonflag = false; // For isolating a single instance of a problem
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
-global.tutorialskip = false; // Skip all tutorial cards.
+global.tutorialskip = true; // Skip all tutorial cards.
 global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
                                  //   of field creation, this gets us out of it.
 //
+global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
+                                //   field portion of the game state.
+                                // WARNING: Not complete!  Abandoned (at least temporarily)
+                                // Leave false unless you are trying to get it working.
+//
+global.skipanimalvalidation = true; // Disables the check to make sure all animals can
+                                    //   housed.
+//
 global.disablesound = true;
+global.disabletools = false;
+
+// ***************
+// IMPORTANT!
+// This is the magic flag to set if the game is running as a farm tour.
+// It will cause it to load the game from farmmap(), disable the tool menu and saving,
+//   and turn off precalc.
+global.farmtour = false;
+// ***************
+
+// Debug logging:
+global.debuglog = false; // Logging, currently unused
+global.debuglogfilename = "debuglog.txt";
+global.debugloghandle = noone // Replaced with handle to logfile
+
+//
+// This ends the flags section.
+//
+// The rest of this script is important setup stuff, and shouldn't
+//   be idly changed.
+//
+// For most of the above stuff, set all flags to false to setup for a
+//   production server.  Do that but also set global.farmtour to true
+//   for a demonstration.
+//
+
+if (global.farmtour) {
+  global.demomode = true;
+  global.nosave = true;
+  global.disabletools = true;
+  global.q_exportstofile = false;
+  global.tutorialskip = true;
+  global.skippreseed = true;
+  global.skipprecalc = true;
+  }
 
 randomize();
 
@@ -33,7 +78,6 @@ plantdefs();
 bugdefs();
 //compostdefs(); // Not proven necessary yet
 seedselector();
-itemdefs();
 //itemnames();
 // Set up timekeeping variables
 //inittime();   // initgame()
@@ -44,7 +88,14 @@ animaldefs();
 soundframedefs();
 initsoundframe();
 timeconsts();
+//
+inititems();
+itemdefs();
+initcrafts();
+craftdefs();
+//
 tutorialdef();
+
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;
@@ -52,8 +103,8 @@ bs_width = BUTTONWIDTH/sprite_get_width(spr_plainbutton2);
 bs_height = BUTTONHEIGHT/sprite_get_height(spr_plainbutton2);
 
 // Initialize debug log
-if (global.debug == true) {
-  debug_createlog()
+if (global.debuglog == true) {
+  global.debugloghandle = debug_createlog(global.debuglogfilename);
   }
   
 // For use in serialization
@@ -148,6 +199,13 @@ global.iostate = IOSTATE_NEUTRAL;
 
 // For stopping menus from instantly closing and mismoving
 global.ignoreclick = false;
+
+// Animal calling support
+//   This should eventually be moved into initgame() and loadgame()!
+global.a_callx = -1;
+global.a_cally = -1;
+global.a_callage = -1;
+
 
 // Now we should be ready for initgame() or the game load code to set up game-specific data,
 //   then to return to field_create() to set up the game board.

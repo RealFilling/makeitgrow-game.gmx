@@ -1,10 +1,8 @@
-// Object activation
-//instance_activate_all();
-//instance_deactivate_region(view_xview[0],view_yview[0],view_wview[0],view_hview[0],false,true)
+var moveaction;
+
 instance_activate_object(fieldid);
 obj_field.x = x;
 obj_field.y = y;
-//instance_activate_object(hudid)
 
 framenumber += 1;
 if (framenumber == 2) {
@@ -14,7 +12,6 @@ if (framenumber == 2) {
   //seedbutton_createarray();
   }
 
-var moveaction;
 moveaction = false;
 // Movement
 if (moving == true) {
@@ -45,7 +42,7 @@ if (moving == true) {
         //show_message("farmer_bulkmove calling from farmer_step()");
         farmer_cancelbulkmove();
         moving = false;
-        if ((nextseed != -1) ){// and (nextseedx == boardx) and (nextseedy == boardy)) {
+        if ((nextseed != TOOL_NOTOOL) ){// and (nextseedx == boardx) and (nextseedy == boardy)) {
           farmer_executeaction(nextseed);
           farmer_haltaction();
           }

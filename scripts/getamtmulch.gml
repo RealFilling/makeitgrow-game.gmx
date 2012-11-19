@@ -10,38 +10,8 @@ if (!planthasmineral(species)) {
   }
 else {
   global.minreturn = mineraltype; // minreturn is the kind of mineral returned
-  return deathmineral[species];
+  // Note: divided by 2 to make up for minerals extracted from the system and converted
+  //         to next type.
+  return (plantminneed[species]*(harvest + 1)) div 2;
   }
-  
-/*
-switch (species) {
-  case 0:
-    // No plant
-    return 0;
-    break;
-  case 1:
-    global.minreturn = RED;
-    return 2+harvest;
-    break;
-  case 2:
-    global.minreturn = RED;
-    return 2+harvest;
-    break;
-  case 3:
-    global.minreturn = BLUE;
-    return 2+harvest;
-    break;
-  case 4:
-    global.minreturn = BLUE;
-    return 2+harvest;
-    break;
-  case 5:
-    global.minreturn = GREEN;
-    return 2+harvest;
-    break;
-  case 6:
-    global.minreturn = GREEN;
-    return 2+harvest;
-    break;
-  }
-*/
+

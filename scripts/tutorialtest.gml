@@ -11,6 +11,7 @@ if (global.tutorialdebug) {
   show_message("tutorialtest(): global.tuttiley is "+string(global.tuttiley));
   show_message("tutorialtest(): obj.tutorialcard.tilex is "+string(obj_tutorialcard.tilex));
   show_message("tutorialtest(): obj.tutorialcard.tiley is "+string(obj_tutorialcard.tiley));
+  show_message("tutorialtest(): obj.tutorialcard.ttt_click_buttontowatch is "+string(obj_tutorialcard.ttt_click_buttontowatch));
   }
   
 

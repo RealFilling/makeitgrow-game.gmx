@@ -16,5 +16,5 @@ for (a=global.charspernum;a>0;a-=1) {
                ,false);
     }
   }
-addtochecksum(buildnum);
+//addtochecksum(buildnum);
 return buildnum;

@@ -1,4 +1,4 @@
-var sx, sy, searchfor;
+var sx, sy, searchfor, foundanimal;
 sx = argument0;
 sy = argument1;
 searchfor = argument2;
@@ -9,7 +9,7 @@ switch(searchfor) {
       returnxy(sx,sy);
       return true;
       }
-    else if (searchfrom(sx,sy,1,SEARCHFOR_ADJWATER)) {
+    else if (searchfrom(sx,sy,SEARCHFOR_ADJWATER,1)) {
       returnxy(sx,sy);
       return true;
       }
@@ -34,7 +34,7 @@ switch(searchfor) {
       }
     break;
   case SEARCHFOR_SHELTER:
-    if (searchfrom(sx,sy,1,SEARCHFOR_ADJBUILDING)) {
+    if (searchfrom(sx,sy,SEARCHFOR_ADJBUILDING,1)) {
       returnxy(sx,sy);
       return true;
       }
@@ -62,8 +62,32 @@ switch(searchfor) {
       return true; 
       }
     break;
+  case SEARCHFOR_CHICKEN:
+  case SEARCHFOR_CHICKENHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_CHICKEN) {
+      returnxy(sx,sy);
+      return true;
+      }
+    break;
+  case SEARCHFOR_COW:
+  case SEARCHFOR_COWHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_COW) {
+      returnxy(sx,sy);
+      return true;
+      }
+    break;
+  case SEARCHFOR_PIG:
+  case SEARCHFOR_PIGHERD:
+    foundanimal = ds_map_find_value(global.animallookup,hashcoords(sx,sy));
+    if (foundanimal == ANIMAL_PIG) {
+      returnxy(sx,sy);
+      return true;
+      }
+    break;
   default:
-    show_error("searchfrom(): unrecognized search type!", false);
+    show_error("searchspot(): unrecognized search type!", false);
     return false;
   }
 

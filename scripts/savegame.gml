@@ -1,9 +1,17 @@
-var gamestring, loginstatus;
+var gamestring, loginstatus, outfile, savestring;
 
 //loginstatus = gd_get_user_status();
 gd_log("savegame() called....");
 
-if (global.nosave) {
+if (global.saveexport) {
+  savestring = "0000"+field_serialize(false);
+  outfile = file_text_open_write("export.txt");
+  file_text_write_string(outfile,savestring);
+  file_text_close(outfile);
+  enqueueticker("Exported game to export.txt in game directory.");
+  return "";
+  }
+else if (global.nosave) {
   return "";
   }
 
@@ -16,12 +24,14 @@ else {
     return ""; // Still in pregen period.
     }
   gd_log("savegame(): Are logged in....");
-  gamestring = field_serialize();
   gd_log("savegame(): Logged in, after serialization, before gd_save()....");
-  if (global.demomode == true) {
-    global.savestring = "0000"+field_serialize();
+  if (global.demomode) {
+    // Since we're not saving to the server, we have to forge the text digits
+    //   it adds to the string.
+    global.savestring = "0000"+field_serialize(false);
     }
   else {
+    gamestring = field_serialize(false);
     returnstring = gd_save(gamestring,global.hstime div global.ticksperhour);
     gd_log("savegame(): Logged in, after gd_save(), done.");
     }
