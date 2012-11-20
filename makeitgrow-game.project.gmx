@@ -182,7 +182,12 @@
         <sprite>sprites\spr_fencepost</sprite>
         <sprite>sprites\spr_fence_wire</sprite>
         <sprite>sprites\spr_fence_wirenet</sprite>
+        <sprite>sprites\spr_coop_s</sprite>
+        <sprite>sprites\spr_coop_m</sprite>
+        <sprite>sprites\spr_coop_l</sprite>
+        <sprite>sprites\spr_greenhouse_concept</sprite>
       </sprites>
+      <sprite>sprites\spr_woodfence</sprite>
     </sprites>
     <sprite>sprites\pfplaceholder</sprite>
     <sprite>sprites\spr_nothing</sprite>
