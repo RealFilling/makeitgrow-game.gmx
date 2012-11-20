@@ -50,6 +50,7 @@
       <sprite>sprites\spr_chickenadult_eat1</sprite>
       <sprite>sprites\spr_chickenadult_idle1</sprite>
       <sprite>sprites\spr_chickenadult_walk1</sprite>
+      <sprite>sprites\spr_chickenadult_walkfull</sprite>
       <sprite>sprites\spr_chickenbaby_idle1</sprite>
       <sprite>sprites\spr_chickenbaby_idle2</sprite>
       <sprite>sprites\spr_chickenbaby_walk1</sprite>
@@ -59,6 +60,12 @@
       <sprite>sprites\spr_chickenyoung_eat1</sprite>
       <sprite>sprites\spr_chickenyoung_idle1</sprite>
       <sprite>sprites\spr_chickenyoung_walk1</sprite>
+      <sprites name="_work">
+        <sprite>sprites\chickenwalk_southwest</sprite>
+        <sprite>sprites\chickenwalk_southeast</sprite>
+        <sprite>sprites\chickenwalk_northeast</sprite>
+        <sprite>sprites\chickenwalk_northwest</sprite>
+      </sprites>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_hexclick</sprite>

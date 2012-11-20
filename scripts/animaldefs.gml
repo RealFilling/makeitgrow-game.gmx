@@ -4,16 +4,16 @@ global.animalname[ANIMAL_COW] = "Cow";
 global.animalname[ANIMAL_PIG] = "Pig"
 
 // Sprite sets to use for animal
-global.a_sprite_idle[ANIMAL_CHICKEN] = spr_chicken;
-global.a_sprite_idle[ANIMAL_COW] = spr_cowadult_idle1_s;
+global.a_sprite_idle[ANIMAL_CHICKEN] = spr_chickenadult_idle1;
+global.a_sprite_idle[ANIMAL_COW] = spr_cowadult_idle1;
 global.a_sprite_idle[ANIMAL_PIG] = spr_pig;
 //
-global.a_sprite_walk[ANIMAL_CHICKEN] = spr_chicken;
-global.a_sprite_walk[ANIMAL_COW] = spr_cowadult_walk1_s;
+global.a_sprite_walk[ANIMAL_CHICKEN] = spr_chickenadult_walkfull;
+global.a_sprite_walk[ANIMAL_COW] = spr_cowadult_walk1;
 global.a_sprite_walk[ANIMAL_PIG] = spr_pig;
 //
-global.a_sprite_eat[ANIMAL_CHICKEN] = spr_chicken;
-global.a_sprite_eat[ANIMAL_COW] = spr_cowadult_eat1_s;
+global.a_sprite_eat[ANIMAL_CHICKEN] = spr_chickenadult_eat1;
+global.a_sprite_eat[ANIMAL_COW] = spr_cowadult_eat1;
 global.a_sprite_eat[ANIMAL_PIG] = spr_pig;
 
 // Is this animal "big?"

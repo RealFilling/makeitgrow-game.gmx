@@ -42,6 +42,7 @@ isplayer = false;
 moving = false;
 facing = 0;
 moveprogress = 0;
+mirrored = false; // UNUSED as of yet, maybe later
 animal_resetmovedelay();
 global.animalcounts[animaltype] += 1;
 
