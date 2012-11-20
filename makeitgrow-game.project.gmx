@@ -178,6 +178,10 @@
         <sprite>sprites\spr_p_hedge</sprite>
         <sprite>sprites\spr_p_sunflowers</sprite>
         <sprite>sprites\spr_p_empty</sprite>
+        <sprite>sprites\spr_p_oak</sprite>
+        <sprite>sprites\spr_p_apricot</sprite>
+        <sprite>sprites\spr_p_peach</sprite>
+        <sprite>sprites\spr_p_apple</sprite>
       </sprites>
       <sprites name="buildings">
         <sprite>sprites\spr_smallbarn</sprite>
