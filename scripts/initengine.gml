@@ -15,6 +15,7 @@ global.saveexport = false; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 global.weatherdebug = false; // Provide debugging information for weather system
+global.skipgen = true; // Don't create random terrain or water.
 // 
 global.skippreseed = false; // Don't put random thing on the field at the start
 global.skipprecalc = false; // Don't run very fast for two months at start

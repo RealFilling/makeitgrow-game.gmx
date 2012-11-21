@@ -25,7 +25,7 @@
           <name>gd_save</name>
           <externalName>gd_save</externalName>
           <kind>11</kind>
-          <id>1</id>
+          <id>14</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>2</argCount>
@@ -38,7 +38,7 @@
           <name>gd_load</name>
           <externalName>gd_load</externalName>
           <kind>11</kind>
-          <id>3</id>
+          <id>15</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>0</argCount>
@@ -48,7 +48,7 @@
           <name>gd_get_user_status</name>
           <externalName>gd_get_user_status</externalName>
           <kind>11</kind>
-          <id>5</id>
+          <id>16</id>
           <help></help>
           <returnType>2</returnType>
           <argCount>0</argCount>
@@ -58,7 +58,7 @@
           <name>gd_log</name>
           <externalName>gd_log</externalName>
           <kind>11</kind>
-          <id>7</id>
+          <id>17</id>
           <help></help>
           <returnType>2</returnType>
           <argCount>1</argCount>
@@ -70,7 +70,7 @@
           <name>gd_get_tutorial_step</name>
           <externalName>gd_get_tutorial_step</externalName>
           <kind>11</kind>
-          <id>9</id>
+          <id>18</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>1</argCount>
@@ -82,7 +82,7 @@
           <name>gd_save_tutorial_status</name>
           <externalName>gd_save_tutorial_status</externalName>
           <kind>11</kind>
-          <id>11</id>
+          <id>19</id>
           <help></help>
           <returnType>1</returnType>
           <argCount>1</argCount>
@@ -94,7 +94,7 @@
           <name>gd_mixpanel_register</name>
           <externalName>gd_mixpanel_register</externalName>
           <kind>11</kind>
-          <id>13</id>
+          <id>20</id>
           <help></help>
           <returnType>2</returnType>
           <argCount>2</argCount>
