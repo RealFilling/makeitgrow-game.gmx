@@ -9,6 +9,13 @@ buildingnames[BLDGO_FENCE] = "Fencepost";
 buildingnames[BLDGO_SCARECROW] = "Scarecrow";
 buildingnames[BLDGO_PIPEPUMP] = "Water Pump";
 buildingnames[BLDGO_COOP] = "Chicken Coop";
+buildingnames[BLDGO_FENCEGATECLOSED] = "Fence Gate";
+buildingnames[BLDGO_SMALLCOOP] = "Small Coop";
+buildingnames[BLDGO_MEDCOOP] = "Medium Coop";
+buildingnames[BLDGO_BIGCOOP] = "Large Coop";
+buildingnames[BLDG_WOODFENCE] = "Wooden Fence";
+buildingnames[BLDG_WIREFENCE] = "Wire Fence";
+buildingnames[BLDG_FENCEGATEOPEN] = "Fence Gate (open)";
 
 // Sprites for buildings
 globalvar buildingsprites;
@@ -17,12 +24,17 @@ buildingsprites[BLDGO_BIGBARN] = spr_bigbarn;
 buildingsprites[BLDGO_FEED] = spr_feedtrough;
 buildingsprites[BLDGO_PIPE] = spr_scarecrow; // Shouldn't appear
 buildingsprites[BLDGO_GREENHOUSE] = spr_scarecrow; // Shouldn't appear
-buildingsprites[BLDGO_FENCE] = spr_fencepost;
+buildingsprites[BLDGO_FENCE] = spr_fence_wirenet;
 buildingsprites[BLDGO_SCARECROW] = spr_scarecrow;
 buildingsprites[BLDGO_PIPEPUMP] = spr_waterpump;
 buildingsprites[BLDGO_COOP] = spr_smallcoop;
-
-
+buildingsprites[BLDGO_FENCEGATECLOSED] = spr_fence_wirenet;
+buildingsprites[BLDGO_SMALLCOOP] = spr_coop_s;
+buildingsprites[BLDGO_MEDCOOP] = spr_coop_m;
+buildingsprites[BLDGO_BIGCOOP] = spr_coop_l;
+buildingsprites[BLDG_WOODFENCE] = spr_woodfence;
+buildingsprites[BLDG_WIREFENCE] = spr_fence_wire;
+buildingsprites[BLDG_FENCEGATEOPEN] = spr_nothing;
 
 // Descriptions
 globalvar buildingdescs;
@@ -35,6 +47,13 @@ buildingdescs[BLDGO_FENCE] = "Useful for keeping animals where you want them.";
 buildingdescs[BLDGO_SCARECROW] = "May scare away bird pests.";
 buildingdescs[BLDGO_PIPEPUMP] = "Build this next to a lake.";
 buildingdescs[BLDGO_COOP] = "Can house up to four chickens.";
+buildingdescs[BLDGO_FENCEGATECLOSED] = "Can be opened or closed to limit animal movement.";
+buildingdescs[BLDGO_SMALLCOOP] = "Houses a couple of chickens.";
+buildingdescs[BLDGO_MEDCOOP] = "Houses several chickens.";
+buildingdescs[BLDGO_BIGCOOP] = "Houses many chickens.";
+buildingdescs[BLDG_WOODFENCE] = "Wooden fences.";
+buildingdescs[BLDG_WIREFENCE] = "Wire fences.";
+buildingdescs[BLDG_FENCEGATEOPEN] = "An opened gate.  (Shouldn't be here....)";
 
 // Names for buildings, blah blah
 globalvar buildingsizes;
@@ -47,6 +66,13 @@ buildingsizes[BLDGO_FENCE] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_SCARECROW] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_PIPEPUMP] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_COOP] = BLDGSIZE_SMALL;
+buildingsizes[BLDGO_FENCEGATECLOSED] = BLDGSIZE_SMALL;
+buildingsizes[BLDGO_SMALLCOOP] = BLDGSIZE_SMALLCOOP;
+buildingsizes[BLDGO_MEDCOOP] = BLDGSIZE_MEDCOOP;
+buildingsizes[BLDGO_BIGCOOP] = BLDGSIZE_BIGCOOP;
+buildingsizes[BLDG_WOODFENCE] = BLDGSIZE_SMALL;
+buildingsizes[BLDG_WIREFENCE] = BLDGSIZE_SMALL;
+buildingsizes[BLDG_FENCEGATEOPEN] = BLDGSIZE_SMALL;
 
 // Sizes
 globalvar buildingsizedirsm;
@@ -104,7 +130,7 @@ buildingsizedirsexl[35] = 4;
 buildingsizedirsexl[36] = 4;
 buildingsizedirsexl[37] = 4;
 buildingsizedirsexl[38] = 1;
-
+//
 
 
 
