@@ -139,6 +139,7 @@
       <sprite>sprites\spr_composttiles</sprite>
       <sprite>sprites\spr_soilmonotiles</sprite>
       <sprite>sprites\spr_tilledtiles2</sprite>
+      <sprite>sprites\spr_hexedges</sprite>
       <sprite>sprites\spr_tilledmonotiles</sprite>
       <sprite>sprites\spr_debugplaceholder</sprite>
       <sprite>sprites\spr_fruittiles</sprite>
@@ -929,7 +930,6 @@
       <script>scripts\isnexttobig.gml</script>
       <script>scripts\hashcoords.gml</script>
       <script>scripts\animaltosearchtype.gml</script>
-      <script>scripts\script574.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>
