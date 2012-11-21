@@ -929,6 +929,7 @@
       <script>scripts\isnexttobig.gml</script>
       <script>scripts\hashcoords.gml</script>
       <script>scripts\animaltosearchtype.gml</script>
+      <script>scripts\script574.gml</script>
     </scripts>
     <scripts name="tutorial">
       <script>scripts\tutorialdef.gml</script>

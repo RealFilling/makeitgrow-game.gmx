@@ -27,7 +27,7 @@ global.a_isbig[ANIMAL_PIG] = false;
 // At 0, it animates one sprite frame per game frame, which is quite
 //   speedy.  Higher numbers animate more slowly.  This should be
 //   coordinated with global.a_movespeed, below.
-global.a_animdelay[ANIMAL_CHICKEN] = 0;
+global.a_animdelay[ANIMAL_CHICKEN] = 1;
 global.a_animdelay[ANIMAL_COW] = 2;
 global.a_animdelay[ANIMAL_PIG] = 1;
 
@@ -54,8 +54,8 @@ global.a_predator[ANIMAL_CHICKEN] = false;
 global.a_predator[ANIMAL_COW] = false;
 global.a_predator[ANIMAL_PIG] = false;
 
-// How frequently does this animal move? (larger is less often)
-global.a_movefreq[ANIMAL_CHICKEN] = 35;
+// How frequently does this animal move? (larger is more often)
+global.a_movefreq[ANIMAL_CHICKEN] = 25;
 global.a_movefreq[ANIMAL_COW] = 10;
 global.a_movefreq[ANIMAL_PIG] = 30;
 
