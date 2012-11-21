@@ -25,5 +25,6 @@
 // Note: if you implement a new building size or shape, you'll have to define
 //         that as an array of extents in buildingdefs, and put a case for it
 //         in Scripts/multitile/buildings/placebuilding and
-//         Scripts/multitile/isblockedmulti
+//         Scripts/multitile/isblockedmulti and
+//         Scripts/multitile/destroymultitile
 

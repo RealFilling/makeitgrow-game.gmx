@@ -80,6 +80,48 @@ while (global.removalcounter > 0) {
           erasecell(sx,sy);
           }
         break;
+      case BLDGSIZE_SMALLCOOP:
+        thisx = tx;
+        thisy = ty;
+        a = 0;
+        do {
+          erasecell(thisx,thisy);
+          hexadj(thisx,thisy,buildingsizedirs_smallcoop[a]);
+          thisx = global.hexx;
+          thisy = global.hexy;
+          a += 1;
+          }
+        until (buildingsizedirs_smallcoop[a] == -1);
+        erasecell(thisx,thisy);
+        break;
+      case BLDGSIZE_MEDCOOP:
+        thisx = tx;
+        thisy = ty;
+        a = 0;
+        do {
+          erasecell(thisx,thisy);
+          hexadj(thisx,thisy,buildingsizedirs_medcoop[a]);
+          thisx = global.hexx;
+          thisy = global.hexy;
+          a += 1;
+          }
+        until (buildingsizedirs_medcoop[a] == -1);
+        erasecell(thisx,thisy);
+        break;
+      case BLDGSIZE_BIGCOOP:  
+        thisx = tx;
+        thisy = ty;
+        a = 0;
+        do {
+          erasecell(thisx,thisy);
+          hexadj(thisx,thisy,buildingsizedirs_bigcoop[a]);
+          thisx = global.hexx;
+          thisy = global.hexy;
+          a += 1;
+          }
+        until (buildingsizedirs_bigcoop[a] == -1);
+        erasecell(thisx,thisy);
+        break;
       }
     }
   else if ((thisspecies == T_RED_TOP) or (treespecies == T_GREEN_TOP)) {

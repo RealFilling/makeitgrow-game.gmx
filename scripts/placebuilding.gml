@@ -116,7 +116,7 @@ switch (size) {
     until (dir == -1);
     break;
   case BLDGSIZE_MEDCOOP:
-    if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
+    if (isblockedmulti(BLDGSIZE_MEDCOOP,tx,ty)) {
       return false;
       }
     global.plants[tx,ty] = makeplant(type,subtype,growth);
@@ -136,7 +136,7 @@ switch (size) {
     until (dir == -1);
     break;
   case BLDGSIZE_BIGCOOP:
-    if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
+    if (isblockedmulti(BLDGSIZE_BIGCOOP,tx,ty)) {
       return false;
       }
     global.plants[tx,ty] = makeplant(type,subtype,growth);

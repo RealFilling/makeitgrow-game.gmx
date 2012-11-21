@@ -13,9 +13,9 @@ buildingnames[BLDGO_FENCEGATECLOSED] = "Fence Gate";
 buildingnames[BLDGO_SMALLCOOP] = "Small Coop";
 buildingnames[BLDGO_MEDCOOP] = "Medium Coop";
 buildingnames[BLDGO_BIGCOOP] = "Large Coop";
-buildingnames[BLDG_WOODFENCE] = "Wooden Fence";
-buildingnames[BLDG_WIREFENCE] = "Wire Fence";
-buildingnames[BLDG_FENCEGATEOPEN] = "Fence Gate (open)";
+buildingnames[BLDGO_WOODFENCE] = "Wooden Fence";
+buildingnames[BLDGO_WIREFENCE] = "Wire Fence";
+buildingnames[BLDGO_FENCEGATEOPEN] = "Fence Gate (open)";
 
 // Sprites for buildings
 globalvar buildingsprites;
@@ -32,9 +32,9 @@ buildingsprites[BLDGO_FENCEGATECLOSED] = spr_fence_wirenet;
 buildingsprites[BLDGO_SMALLCOOP] = spr_coop_s;
 buildingsprites[BLDGO_MEDCOOP] = spr_coop_m;
 buildingsprites[BLDGO_BIGCOOP] = spr_coop_l;
-buildingsprites[BLDG_WOODFENCE] = spr_woodfence;
-buildingsprites[BLDG_WIREFENCE] = spr_fence_wire;
-buildingsprites[BLDG_FENCEGATEOPEN] = spr_nothing;
+buildingsprites[BLDGO_WOODFENCE] = spr_woodfence;
+buildingsprites[BLDGO_WIREFENCE] = spr_fence_wire;
+buildingsprites[BLDGO_FENCEGATEOPEN] = spr_nothing;
 
 // Descriptions
 globalvar buildingdescs;
@@ -51,9 +51,9 @@ buildingdescs[BLDGO_FENCEGATECLOSED] = "Can be opened or closed to limit animal 
 buildingdescs[BLDGO_SMALLCOOP] = "Houses a couple of chickens.";
 buildingdescs[BLDGO_MEDCOOP] = "Houses several chickens.";
 buildingdescs[BLDGO_BIGCOOP] = "Houses many chickens.";
-buildingdescs[BLDG_WOODFENCE] = "Wooden fences.";
-buildingdescs[BLDG_WIREFENCE] = "Wire fences.";
-buildingdescs[BLDG_FENCEGATEOPEN] = "An opened gate.  (Shouldn't be here....)";
+buildingdescs[BLDGO_WOODFENCE] = "Wooden fences.";
+buildingdescs[BLDGO_WIREFENCE] = "Wire fences.";
+buildingdescs[BLDGO_FENCEGATEOPEN] = "An opened gate.  (Shouldn't be here....)";
 
 // Names for buildings, blah blah
 globalvar buildingsizes;
@@ -70,9 +70,9 @@ buildingsizes[BLDGO_FENCEGATECLOSED] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_SMALLCOOP] = BLDGSIZE_SMALLCOOP;
 buildingsizes[BLDGO_MEDCOOP] = BLDGSIZE_MEDCOOP;
 buildingsizes[BLDGO_BIGCOOP] = BLDGSIZE_BIGCOOP;
-buildingsizes[BLDG_WOODFENCE] = BLDGSIZE_SMALL;
-buildingsizes[BLDG_WIREFENCE] = BLDGSIZE_SMALL;
-buildingsizes[BLDG_FENCEGATEOPEN] = BLDGSIZE_SMALL;
+buildingsizes[BLDGO_WOODFENCE] = BLDGSIZE_SMALL;
+buildingsizes[BLDGO_WIREFENCE] = BLDGSIZE_SMALL;
+buildingsizes[BLDGO_FENCEGATEOPEN] = BLDGSIZE_SMALL;
 
 // Sizes
 globalvar buildingsizedirsm;

@@ -6,7 +6,7 @@ global.version = "0.14";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
-global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
 global.disableautosave = true; // Turns off timed saving; use Q to save in this case
@@ -39,7 +39,7 @@ global.disabletools = false;
 // This is the magic flag to set if the game is running as a farm tour.
 // It will cause it to load the game but not check for users, disable the tool menu and saving,
 //   and turn off precalc.
-global.farmtour = true;
+global.farmtour = false;
 // ***************
 
 // Extra flags, malleable during run:
