@@ -20,7 +20,6 @@ switch (growth) {
     // Update count
     global.buildingcounts[buildingo] += 1;
     growth = BLDGGROWTH_BUILT;
-    break;
   case BLDGGROWTH_BUILT:    // Update count
     global.buildingcounts[buildingo] += 1;
     break;
@@ -31,6 +30,7 @@ switch (growth) {
   }
   
 // Per building actions
+// Eventually we could use this to count up maintainence costs....
 switch (buildingo) {
   case BLDGO_SMALLBARN:
     break;
@@ -44,12 +44,22 @@ switch (buildingo) {
   case BLDGO_GREENHOUSE:
     break;
   case BLDGO_FENCE:
+  case BLDGO_WOODFENCE:
+  case BLDGO_WIREFENCE:
+  case BLDGO_FENCEGATECLOSED:
+  case BLDGO_FENCEGATEOPEN:
     break;
   case BLDGO_SCARECROW:
     break;
   case BLDGO_PIPEPUMP:
     break;
   case BLDGO_COOP:
+    break;
+  case BLDGO_SMALLCOOP:
+    break;
+  case BLDGO_MEDCOOP:
+    break;
+  case BLDGO_BIGCOOP:
     break;
   default:
     show_message("Unrecognized building in buildingturn()!");

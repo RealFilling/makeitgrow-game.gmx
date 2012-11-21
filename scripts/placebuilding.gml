@@ -95,6 +95,66 @@ switch (size) {
       setgreenh(sx,sy,1);
       }
     break;
+  case BLDGSIZE_SMALLCOOP:
+    if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
+      return false;
+      }
+    global.plants[tx,ty] = makeplant(type,subtype,growth);
+    sx = tx;
+    sy = ty;
+    // now that we know they're all free, fill 'em up
+    diri = 0;
+    dir = buildingsizedirs_smallcoop[diri];
+    do {
+      hexadj(sx,sy, dir);
+      sx = global.hexx;
+      sy = global.hexy;
+      global.plants[sx,sy] = makeplant(makeshadow(dir),subtype,growth);
+      diri += 1;
+      dir = buildingsizedirs_smallcoop[diri];
+      }
+    until (dir == -1);
+    break;
+  case BLDGSIZE_MEDCOOP:
+    if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
+      return false;
+      }
+    global.plants[tx,ty] = makeplant(type,subtype,growth);
+    sx = tx;
+    sy = ty;
+    // now that we know they're all free, fill 'em up
+    diri = 0;
+    dir = buildingsizedirs_medcoop[diri];
+    do {
+      hexadj(sx,sy, dir);
+      sx = global.hexx;
+      sy = global.hexy;
+      global.plants[sx,sy] = makeplant(makeshadow(dir),subtype,growth);
+      diri += 1;
+      dir = buildingsizedirs_medcoop[diri];
+      }
+    until (dir == -1);
+    break;
+  case BLDGSIZE_BIGCOOP:
+    if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
+      return false;
+      }
+    global.plants[tx,ty] = makeplant(type,subtype,growth);
+    sx = tx;
+    sy = ty;
+    // now that we know they're all free, fill 'em up
+    diri = 0;
+    dir = buildingsizedirs_bigcoop[diri];
+    do {
+      hexadj(sx,sy, dir);
+      sx = global.hexx;
+      sy = global.hexy;
+      global.plants[sx,sy] = makeplant(makeshadow(dir),subtype,growth);
+      diri += 1;
+      dir = buildingsizedirs_bigcoop[diri];
+      }
+    until (dir == -1);
+    break;
   default:
     show_error("Unrecognized building size in placebuilding()!",false);
     return false;

@@ -43,7 +43,7 @@ for (by=by1; by<by2; by+=1) {
         make_color_rgb(128,128,thismoist*7),1);
       }
     else {
-      draw_sprite_ext(spr_hexedges,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
+      draw_sprite_ext(spr_tilledtiles2,soildisp+(thistill*8),pixx,pixy,1.0,1.0,0,c_white,1);
       }
     }
   // In order to have moving objects overlap appropriately with the field, we have to render

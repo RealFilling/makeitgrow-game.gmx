@@ -6,7 +6,7 @@ global.version = "0.14";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
-global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
+global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable
 global.disableautosave = true; // Turns off timed saving; use Q to save in this case
@@ -15,16 +15,13 @@ global.saveexport = false; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 global.weatherdebug = false; // Provide debugging information for weather system
-global.skipgen = true; // Don't create random terrain or water.
+global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
 // 
 global.skippreseed = false; // Don't put random thing on the field at the start
 global.skipprecalc = false; // Don't run very fast for two months at start
-global.poisonflag = false; // For isolating a single instance of a problem
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = true; // Skip all tutorial cards.
-global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
-                                 //   of field creation, this gets us out of it.
 //
 global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
                                 //   field portion of the game state.
@@ -40,10 +37,15 @@ global.disabletools = false;
 // ***************
 // IMPORTANT!
 // This is the magic flag to set if the game is running as a farm tour.
-// It will cause it to load the game from farmmap(), disable the tool menu and saving,
+// It will cause it to load the game but not check for users, disable the tool menu and saving,
 //   and turn off precalc.
-global.farmtour = false;
+global.farmtour = true;
 // ***************
+
+// Extra flags, malleable during run:
+global.poisonflag = false; // For isolating a single instance of a problem
+global.tutorialfailsafe = false; // If a tutorial step is bad because of the random nature
+                                 //   of field creation, this gets us out of it.
 
 // Debug logging:
 global.debuglog = false; // Logging, currently unused
@@ -64,6 +66,7 @@ global.debugloghandle = noone // Replaced with handle to logfile
 if (global.farmtour) {
   global.demomode = true;
   global.nosave = true;
+  global.disableautosave = true;
   global.disabletools = true;
   global.q_exportstofile = false;
   global.tutorialskip = true;

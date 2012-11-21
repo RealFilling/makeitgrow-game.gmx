@@ -131,6 +131,42 @@ buildingsizedirsexl[36] = 4;
 buildingsizedirsexl[37] = 4;
 buildingsizedirsexl[38] = 1;
 //
+globalvar buildingsizedirs_smallcoop;
+buildingsizedirs_smallcoop[0] = 4; // Small Coop; only two tiles in size.
+buildingsizedirs_smallcoop[1] = -1; // Small Coop; only two tiles in size.
+//
+globalvar buildingsizedirs_medcoop;
+buildingsizedirs_medcoop[0] = 4; // Medium Coop size
+buildingsizedirs_medcoop[1] = 4;
+buildingsizedirs_medcoop[2] = 5;
+buildingsizedirs_medcoop[3] = 1;
+buildingsizedirs_medcoop[4] = 1;
+buildingsizedirs_medcoop[5] = 1;
+buildingsizedirs_medcoop[6] = 5;
+buildingsizedirs_medcoop[7] = 4;
+buildingsizedirs_medcoop[8] = 4;
+buildingsizedirs_medcoop[9] = -1;
+//
+globalvar buildingsizedirs_bigcoop;
+buildingsizedirs_bigcoop[0] = 4; // Large Coop size
+buildingsizedirs_bigcoop[1] = 4;
+buildingsizedirs_bigcoop[2] = 5;
+buildingsizedirs_bigcoop[3] = 1;
+buildingsizedirs_bigcoop[4] = 1;
+buildingsizedirs_bigcoop[5] = 1;
+buildingsizedirs_bigcoop[6] = 1;
+buildingsizedirs_bigcoop[7] = 0;
+buildingsizedirs_bigcoop[8] = 4;
+buildingsizedirs_bigcoop[9] = 4;
+buildingsizedirs_bigcoop[10] = 4;
+buildingsizedirs_bigcoop[11] = 0;
+buildingsizedirs_bigcoop[12] = 1;
+buildingsizedirs_bigcoop[13] = 1;
+buildingsizedirs_bigcoop[14] = 1;
+buildingsizedirs_bigcoop[15] = 2;
+buildingsizedirs_bigcoop[16] = -1;
+//
+
 
 
 

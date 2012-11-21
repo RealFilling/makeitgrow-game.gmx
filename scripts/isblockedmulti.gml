@@ -37,6 +37,57 @@ switch(size) {
       }
     return false;
     break;
+  case BLDGSIZE_SMALLCOOP:
+    sx = checkx;
+    sy = checky;
+    diri = 0;
+    do {
+      hexadj(sx,sy, buildingsizedirs_smallcoop[diri]);
+      sx = global.hexx;
+      sy = global.hexy;
+      if (isblocked(sx,sy)) {
+        //show_message("isblockedmulti(): area found blocked");
+        return true;
+        }
+      diri += 1;
+      }
+    until (buildingsizedirs_smallcoop[diri] == -1);
+    return false;
+    break;
+  case BLDGSIZE_MEDCOOP:
+    sx = checkx;
+    sy = checky;
+    diri = 0;
+    do {
+      hexadj(sx,sy, buildingsizedirs_medcoop[diri]);
+      sx = global.hexx;
+      sy = global.hexy;
+      if (isblocked(sx,sy)) {
+        //show_message("isblockedmulti(): area found blocked");
+        return true;
+        }
+      diri += 1;
+      }
+    until (buildingsizedirs_medcoop[diri] == -1);
+    return false;
+    break;
+  case BLDGSIZE_BIGCOOP:
+    sx = checkx;
+    sy = checky;
+    diri = 0;
+    do {
+      hexadj(sx,sy, buildingsizedirs_bigcoop[diri]);
+      sx = global.hexx;
+      sy = global.hexy;
+      if (isblocked(sx,sy)) {
+        //show_message("isblockedmulti(): area found blocked");
+        return true;
+        }
+      diri += 1;
+      }
+    until (buildingsizedirs_bigcoop[diri] == -1);
+    return false;
+    break;
   default:
     show_error("unrecognized size in isblockedmulti()!",false);
     return false;

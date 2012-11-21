@@ -206,11 +206,36 @@ global.itemname[49] = "Water Pump"; global.itemtype[49] = SELECT_BUILDING;
 global.itemnum[49] = BLDG_SCARECROW; 
 global.itemdesc[49] = "Pushes water from a lake through pipes.";
 
-global.itemname[50] = "Chicken Coop"; global.itemtype[50] = SELECT_BUILDING;
-global.itemnum[50] = BLDG_SCARECROW; 
+// OBSOLETE
+//global.itemname[50] = "Chicken Coop"; global.itemtype[50] = SELECT_BUILDING;
+//global.itemnum[50] = BLDG_SCARECROW; 
+//global.itemdesc[50] = "Houses up to four animals.";
+
+global.itemname[50] = "Fence Gate"; global.itemtype[50] = SELECT_BUILDING;
+global.itemnum[50] = BLDG_FENCEGATECLOSED; 
 global.itemdesc[50] = "Houses up to four animals.";
 
-for (a=51;a<81;a+=1) {
+global.itemname[51] = "Small Coop"; global.itemtype[51] = SELECT_BUILDING;
+global.itemnum[51] = BLDG_SMALLCOOP; 
+global.itemdesc[51] = "Houses a couple of chickens.";
+
+global.itemname[52] = "Medium Coop"; global.itemtype[52] = SELECT_BUILDING;
+global.itemnum[52] = BLDG_MEDCOOP; 
+global.itemdesc[52] = "Houses several chickens, or larger birds.";
+
+global.itemname[53] = "Large Coop"; global.itemtype[53] = SELECT_BUILDING;
+global.itemnum[53] = BLDG_BIGCOOP; 
+global.itemdesc[53] = "Houses many birds.";
+
+global.itemname[54] = "Wooden Fence"; global.itemtype[54] = SELECT_BUILDING;
+global.itemnum[54] = BLDG_WOODFENCE; 
+global.itemdesc[54] = "A wooden fence.";
+
+global.itemname[55] = "Wire Fence"; global.itemtype[55] = SELECT_BUILDING;
+global.itemnum[55] = BLDG_WIREFENCE; 
+global.itemdesc[55] = "A wire fence.";
+
+for (a=56;a<81;a+=1) {
   global.itemname[a] = "FUTURE EXPANSION"; global.itemtype[a] = SELECT_BUILDING;
   global.itemnum[a] = P_EMPTY;
   global.itemdesc[a] = "FUTURE EXPANSION.";

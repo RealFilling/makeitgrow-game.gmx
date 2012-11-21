@@ -16,7 +16,19 @@ initengine();              // Overall initialization
 // If we're not, we should check if we're logged in, and load
 //   a game if we are.
 
-if (global.nosave == false) {
+if (global.farmtour == true) {
+  loadstring = gd_load();
+  gd_log("loading field for tour");
+  if (string_length(loadstring) != 0) {
+    loadgame(loadstring);
+    global.loggedin = 0;
+    }
+  else {
+    show_error("ERROR: Farm file not loaded!",true);
+    game_end();
+    }
+  }
+else if (global.nosave == false) {
   if (global.demomode == false) {
     // DEBUGGING (comment out for production):
     //gd_set_logged_in(LOGINSTATUS_IN); // Possible: LOGINSTATUS_IN, LOGINSTATUS_NOT
