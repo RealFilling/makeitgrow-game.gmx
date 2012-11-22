@@ -9,26 +9,28 @@ growth = argument4;
 buildingo = buildingidtoord(buildingcode);
 
 // Per state actions
-switch (growth) {
-  case BLDGGROWTH_CONSTRUCT1:
-    growth = BLDGGROWTH_CONSTRUCT2;
-    break;
-  case BLDGGROWTH_CONSTRUCT2:
-    growth = BLDGGROWTH_CONSTRUCT3;
-    break;
-  case BLDGGROWTH_CONSTRUCT3:
-    // Update count
-    global.buildingcounts[buildingo] += 1;
-    growth = BLDGGROWTH_BUILT;
-  case BLDGGROWTH_BUILT:    // Update count
-    global.buildingcounts[buildingo] += 1;
-    break;
-  case BLDGGROWTH_DAMAGE:
-    destroymultitile(bx,by);
-    return false;
-    break;
+if (!isfence(buildingcode)) {
+  switch (growth) {
+    case BLDGGROWTH_CONSTRUCT1:
+      growth = BLDGGROWTH_CONSTRUCT2;
+      break;
+    case BLDGGROWTH_CONSTRUCT2:
+      growth = BLDGGROWTH_CONSTRUCT3;
+      break;
+    case BLDGGROWTH_CONSTRUCT3:
+      // Update count
+      global.buildingcounts[buildingo] += 1;
+      growth = BLDGGROWTH_BUILT;
+    case BLDGGROWTH_BUILT:    // Update count
+      global.buildingcounts[buildingo] += 1;
+      break;
+    case BLDGGROWTH_DAMAGE:
+      destroymultitile(bx,by);
+      return false;
+      break;
+    }
   }
-  
+   
 // Per building actions
 // Eventually we could use this to count up maintainence costs....
 switch (buildingo) {
