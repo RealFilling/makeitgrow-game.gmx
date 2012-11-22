@@ -13,7 +13,7 @@ sy1 = global.hexy;
 if (istree(getspecies(global.plants[sx1,sy1]))) {
   return false;
   }
-hexadj(tx,ty,4);
+hexadj(tx,ty,0);
 sx2 = global.hexx;
 sy2 = global.hexy;
 if (istree(getspecies(global.plants[sx2,sy2]))) {

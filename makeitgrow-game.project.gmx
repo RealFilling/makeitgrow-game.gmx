@@ -182,7 +182,9 @@
         <sprite>sprites\spr_p_oak</sprite>
         <sprite>sprites\spr_p_apricot</sprite>
         <sprite>sprites\spr_p_peach</sprite>
+        <sprite>sprites\spr_peachtree_s</sprite>
         <sprite>sprites\spr_p_apple</sprite>
+        <sprite>sprites\spr_appletree_s</sprite>
       </sprites>
       <sprites name="buildings">
         <sprite>sprites\spr_smallbarn</sprite>

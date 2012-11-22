@@ -124,7 +124,7 @@ while (global.removalcounter > 0) {
         break;
       }
     }
-  else if ((thisspecies == T_RED_TOP) or (treespecies == T_GREEN_TOP)) {
+  else if ((thisspecies == T_RED_TOP) or (thisspecies == T_GREEN_TOP)) {
     hexadj(thisx, thisy, 4);
     addtorqueue(global.hexx, global.hexy);
     hexadj(thisx, thisy, 5);

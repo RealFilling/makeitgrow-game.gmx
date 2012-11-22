@@ -23,6 +23,11 @@ plantsprites[P_PEPPER] = spr_p_peppers;
 plantsprites[P_LETTUCE] = spr_p_lettuce;
 plantsprites[P_BLUELETTUCE] = spr_p_bluelettuce;
 
+globalvar treesprites;
+treesprites[T_RED_TOP - P_TREE_START] = spr_peachtree_s;
+treesprites[T_GREEN_TOP - P_TREE_START] = spr_peachtree_s;
+treesprites[T_RED_BOTTOM - P_TREE_START] = spr_appletree_s;
+treesprites[T_GREEN_BOTTOM - P_TREE_START] = spr_appletree_s;
 
 // plantmineral: the type of mineral the plant prefers.
 // red = 0, green = 1, blue = 2

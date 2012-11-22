@@ -115,14 +115,15 @@ for (by=by1; by<by2; by+=1) {
       draw_sprite_ext(plantsprites[thisspecies],tx,pixx,pixy,1.0,1.0,0,c_white,1);
       }
     else if (istree(thisspecies)) { // Tree
-      if ((thisspecies == T_RED_TOP) or (thisspecies == T_GREEN_TOP)) {
-        treeimg = thisgrowth+((thisspecies-T_RED_TOP)*5);
-        draw_sprite_ext(spr_treetilesup,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
-        }
-      else {
-        treeimg = thisgrowth+((thisspecies-T_RED_BOTTOM)*5);
-        draw_sprite_ext(spr_treetilesdown,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
-        }
+      draw_sprite_ext(treesprites[thisspecies-P_TREE_START],thisgrowth,pixx,pixy,1.0,1.0,0,c_white,1);
+      //if ((thisspecies == T_RED_TOP) or (thisspecies == T_GREEN_TOP)) {
+      //  treeimg = thisgrowth+((thisspecies-T_RED_TOP)*5);
+      //  draw_sprite_ext(spr_treetilesup,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
+      //  }
+      //else {
+      //  treeimg = thisgrowth+((thisspecies-T_RED_BOTTOM)*5);
+      //  draw_sprite_ext(spr_treetilesdown,treeimg,pixx,pixy,1.0,1.0,0,c_white,1);
+      //  }
       }
     else if (isbuilding(thisspecies)) { // Building
       // SPECIAL FENCE RENDERING GOES HERE
