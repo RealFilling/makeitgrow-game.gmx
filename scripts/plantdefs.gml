@@ -449,6 +449,10 @@ nonspread[P_WATERMELON] = true;
 nonspread[P_LETTUCE] = true;
 nonspread[P_MUSHROOM] = true;
 nonspread[P_BLUELETTUCE] = true;
+nonspread[T_RED_TOP] = true;
+nonspread[T_RED_BOTTOM] = true;
+nonspread[T_GREEN_TOP] = true;
+nonspread[T_GREEN_BOTTOM] = true;
 
 // harvestconsume
 // Some plants are removed from the board once harvested.  These plants.
@@ -462,6 +466,11 @@ harvestconsume[P_WATERMELON] = true;
 harvestconsume[P_LETTUCE] = true;
 harvestconsume[P_MUSHROOM] = true;
 harvestconsume[P_BLUELETTUCE] = true;
+harvestconsume[T_RED_TOP] = false;
+harvestconsume[T_RED_BOTTOM] = false;
+harvestconsume[T_GREEN_TOP] = false;
+harvestconsume[T_GREEN_BOTTOM] = false;
+
     
 // noharvest
 // These plants don't produce any useful harvest at all.
@@ -476,6 +485,10 @@ noharvest[P_CORNFLOWER] = true;
 noharvest[P_BLUEHEDGE] = true;
 noharvest[P_GRASS] = true;
 noharvest[P_WEED] = true;
+noharvest[T_RED_TOP] = false;
+noharvest[T_RED_BOTTOM] = false;
+noharvest[T_GREEN_TOP] = false;
+noharvest[T_GREEN_BOTTOM] = false;
     
 
 // plantniche
@@ -506,6 +519,10 @@ plantniche[P_EGGPLANT] = NICHE_NONE;
 plantniche[P_PEPPER] = NICHE_NONE;
 plantniche[P_LETTUCE] = NICHE_NONE;
 plantniche[P_BLUELETTUCE] = NICHE_NONE;
+plantniche[T_RED_TOP] = NICHE_NONE;
+plantniche[T_RED_BOTTOM] = NICHE_NONE;
+plantniche[T_GREEN_TOP] = NICHE_NONE;
+plantniche[T_GREEN_BOTTOM] = NICHE_NONE;
 
 // seedcost
 // The number of dollars it costs to place an entity of this time.
@@ -531,6 +548,10 @@ seedcost[P_EGGPLANT] = 4;
 seedcost[P_PEPPER] = 4;
 seedcost[P_LETTUCE] = 2;
 seedcost[P_BLUELETTUCE] = 3;
+seedcost[T_RED_TOP] = 300;
+seedcost[T_RED_BOTTOM] = 300;
+seedcost[T_GREEN_TOP] = 300;
+seedcost[T_GREEN_BOTTOM] = 300;
 
 // nutritionvalue
 // Affects how much food value an animal gets from this plant.
@@ -556,6 +577,10 @@ nutritionvalue[P_EGGPLANT] = 4;
 nutritionvalue[P_PEPPER] = 4;
 nutritionvalue[P_LETTUCE] = 4;
 nutritionvalue[P_BLUELETTUCE] = 4;
+nutritionvalue[T_RED_TOP] = 0;
+nutritionvalue[T_RED_BOTTOM] = 0;
+nutritionvalue[T_GREEN_TOP] = 0;
+nutritionvalue[T_GREEN_BOTTOM] = 0;
 
 // poopvalue
 // Affects how much progress towards pooping this plant ultimately produced when an animal eats it.
@@ -581,6 +606,10 @@ poopvalue[P_EGGPLANT] = 3;
 poopvalue[P_PEPPER] = 3;
 poopvalue[P_LETTUCE] = 3;
 poopvalue[P_BLUELETTUCE] = 3;
+poopvalue[T_RED_TOP] = 0;
+poopvalue[T_RED_BOTTOM] = 0;
+poopvalue[T_GREEN_TOP] = 0;
+poopvalue[T_GREEN_BOTTOM] = 0;
 
 // iswild
 // Does this plant occur naturally?  Can it encroach from the edges randomly?
@@ -606,6 +635,10 @@ iswild[P_EGGPLANT] = false;
 iswild[P_PEPPER] = false;
 iswild[P_LETTUCE] = false;
 iswild[P_BLUELETTUCE] = false;
+iswild[T_RED_TOP] = false;
+iswild[T_RED_BOTTOM] = false;
+iswild[T_GREEN_TOP] = false;
+iswild[T_GREEN_BOTTOM] = false;
 
 // isweed
 // Is this plant considered valueless and to be uprooted when clicked on?
@@ -631,6 +664,10 @@ isweed[P_EGGPLANT] = false;
 isweed[P_PEPPER] = false;
 isweed[P_LETTUCE] = false;
 isweed[P_BLUELETTUCE] = false;
+isweed[T_RED_TOP] = false;
+isweed[T_RED_BOTTOM] = false;
+isweed[T_GREEN_TOP] = false;
+isweed[T_GREEN_BOTTOM] = false;
 
 // coorespitem
 // The inventory item corresponding to the harvest of this plant
@@ -656,6 +693,10 @@ coorespitem[P_EGGPLANT] = 8;
 coorespitem[P_PEPPER] = 9;
 coorespitem[P_LETTUCE] = 10;
 coorespitem[P_BLUELETTUCE] = 11;
+coorespitem[T_RED_TOP] = -9999; // Harvest items not ready yet
+coorespitem[T_RED_BOTTOM] = -9999;
+coorespitem[T_GREEN_TOP] = -9999;
+coorespitem[T_GREEN_BOTTOM] = -9999;
 
 
 // plantseason

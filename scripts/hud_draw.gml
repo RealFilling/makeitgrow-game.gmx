@@ -13,18 +13,22 @@ draw_set_font(font_hud);
 processticker();
 
 draw_set_halign(fa_center);
-// Draw money bar
-draw_sprite(spr_moneybar,0,scrx+70,scry);
-drawshadowedtext(font_hud,c_white,string_commas(global.money),154,4,true);
-// Draw energy bar background
-draw_sprite(spr_energybkgd,0,scrx+10,scry+4);
-// Draw energy bar
 
-draw_sprite_ext(spr_energybar,0,scrx+30,scry+32,1.0,1.0,
-                0 - (max((1000-global.energy),0)/1000) * 140,
-                energycolor,1.0);
-// Draw top-left
-draw_sprite(spr_hudtopleft,0,scrx,scry);
+if (!global.farmtour) {
+  // Draw money bar
+  draw_sprite(spr_moneybar,0,scrx+70,scry);
+  drawshadowedtext(font_hud,c_white,string_commas(global.money),154,4,true);
+  // Draw energy bar background
+  draw_sprite(spr_energybkgd,0,scrx+10,scry+4);
+  // Draw energy bar
+  
+  draw_sprite_ext(spr_energybar,0,scrx+30,scry+32,1.0,1.0,
+                  0 - (max((1000-global.energy),0)/1000) * 140,
+                  energycolor,1.0);
+  // Draw top-left
+  draw_sprite(spr_hudtopleft,0,scrx,scry);
+  }
+
 // Draw weather icon
 draw_sprite(spr_weathericons,global.currentweather,scrx+view_wview[0]-57,scry+3);
 // Draw season icon

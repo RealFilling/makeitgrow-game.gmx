@@ -125,6 +125,9 @@ for (by=by1; by<by2; by+=1) {
         }
       }
     else if (isbuilding(thisspecies)) { // Building
+      // SPECIAL FENCE RENDERING GOES HERE
+      //if (isfence(thisspecies)) {
+      //  }
       if (thisgrowth < BLDGGROWTH_BUILT) {
         frame = 0;
         }

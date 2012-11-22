@@ -206,10 +206,11 @@ global.itemname[49] = "Water Pump"; global.itemtype[49] = SELECT_BUILDING;
 global.itemnum[49] = BLDG_SCARECROW; 
 global.itemdesc[49] = "Pushes water from a lake through pipes.";
 
-// OBSOLETE
+// OBSOLETE**
 global.itemname[50] = "Chicken Coop"; global.itemtype[50] = SELECT_BUILDING;
 global.itemnum[50] = BLDG_SCARECROW; 
 global.itemdesc[50] = "Houses up to four animals.";
+// **********
 
 global.itemname[51] = "Fence Gate"; global.itemtype[50] = SELECT_BUILDING;
 global.itemnum[51] = BLDG_FENCEGATECLOSED; 

@@ -1,4 +1,5 @@
-if (global.currentmenu != noone) {
+// Sanity check if there's already a menu open or on a tour
+if ((global.currentmenu != noone) or (global.farmtour)) {
   return false;
   }
 // Tutorial sanity check
@@ -8,7 +9,7 @@ if ((global.tutlock_menu != -1) and (global.tutlock_menu != UIBUTTON_TREES)) {
 if (global.tutlock_disablecancel == true) {
   return false;
   }
-global.parameter1 = MENUTYPE_TREES; // Menu type
+global.parameter1 = MENUTYPE_TREEINVENT; // Menu type
 global.parameter2 = "Trees"; // Menu name
 global.tutbuttonpressed = UIBUTTON_TREES;
 instance_create(0,0,obj_gridmenu);  // Objects position themselves

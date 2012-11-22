@@ -158,6 +158,21 @@ switch (global.menutype) {
       }
     global.menutip1 = "Choose a tool:";
     break;
+  case MENUTYPE_TREEINVENT:
+    global.parameter1 = spr_treeicons;
+    menuitems = global.numtrees;    
+    global.parameter4 = menuitems;
+    for (a=0;a<menuitems;a+=1) {
+      thistree = global.treeinvent[a];
+      global.parameter2 = thistree;
+      global.parameter3 = a;
+      global.parameter5 = global.itemname[thistree-TREESEEDOFFSET];
+      global.parameter6 = global.itemdesc[thistree-TREESEEDOFFSET];
+      global.parameter7 = global.iteminventamt[a]-1;
+      itemlist[a] = instance_create(x,y,obj_griditem);
+      }
+    global.menutip1 = "Choose a tree:";
+    break;
   case MENUTYPE_ITEMINVENT:
     global.parameter1 = spr_itemicons3;
     menuitems = global.numitems;

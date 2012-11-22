@@ -4,33 +4,18 @@ global.menuselection = argument0;
 global.currentseed = menuselectortocurrentseed(argument0);
 switch (global.menutype) {
   case MENUTYPE_SEEDS:
-    global.currentitemname = getseedname(global.currentseed);
-    break;
   case MENUTYPE_COMPOST:
-    global.currentitemname = getseedname(global.currentseed);
-    break;
   case MENUTYPE_TOOLS:
+  case MENUTYPE_BUILDINGS:
+  case MENUTYPE_SEEDINVENT:
+  case MENUTYPE_TREEINVENT:
+  case MENUTYPE_TOOLINVENT:
+  case MENUTYPE_BUILDINGINVENT:
     global.currentitemname = getseedname(global.currentseed);
     break;
   case MENUTYPE_TREES:
-    break;
-  case MENUTYPE_BUILDINGS:
-    global.currentitemname = getseedname(global.currentseed);
-    break;
   case MENUTYPE_SYSTEM:
-    break;
-  case MENUTYPE_SEEDINVENT:
-    global.currentitemname = getseedname(global.currentseed);
-    break;
-  case MENUTYPE_COMPOSTINVENT:
-    break; // Not used, arguably not needed because it does the same thing as the all-compost menu.
-  case MENUTYPE_TOOLINVENT:
-    global.currentitemname = getseedname(global.currentseed);
-    //show_message("selectmenuitem: menutype is "+string(global.menutype));
-    break;
-  case MENUTYPE_BUILDINGINVENT:
-    //show_message("selectmenuitem(): selected building #"+string(global.currentseed));
-    global.currentitemname = getseedname(global.currentseed);
+  case MENUTYPE_COMPOSTINVENT: // Not used, arguably not needed because it does the same thing as the all-compost menu.
     break;
   default:
     show_error("Unrecognized menu type in selectmenuitem()!",false);

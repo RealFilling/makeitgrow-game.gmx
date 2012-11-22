@@ -1,4 +1,5 @@
-if (global.currentmenu != noone) {
+// Sanity check if there's already a menu open or on a tour
+if ((global.currentmenu != noone) or (global.farmtour)) {
   return false;
   }
 // Tutorial sanity check

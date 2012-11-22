@@ -108,7 +108,11 @@ else {
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDGRAYBUG,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_ADDBEE,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_CALLANIMALS,1);
-  
+
+  // Starting trees
+  addtoinvent(INVENTTYPE_TREE,T_RED_BOTTOM,1);
+  addtoinvent(INVENTTYPE_TREE,T_GREEN_BOTTOM,1);
+    
   // Starting buildings
   addtoinvent(INVENTTYPE_BUILDING,BLDG_SMALLBARN,1);
   addtoinvent(INVENTTYPE_BUILDING,BLDG_BIGBARN,1);

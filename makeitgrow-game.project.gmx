@@ -804,6 +804,7 @@
         </scripts>
         <script>scripts\iswateradjacent.gml</script>
         <script>scripts\ispipetype.gml</script>
+        <script>scripts\isfence.gml</script>
       </scripts>
       <script>scripts\destroymultitile.gml</script>
       <script>scripts\erasecell.gml</script>
@@ -1038,7 +1039,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="804">
+  <constants number="805">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1541,6 +1542,7 @@
     <constant name="COMPOST_ALL">3</constant>
     <constant name="P_COMPOST_START">256</constant>
     <constant name="P_COMPOST_END">259</constant>
+    <constant name="TREESEEDOFFSET">189</constant>
     <constant name="P_TREE_START">224</constant>
     <constant name="T_RED_TOP">224</constant>
     <constant name="T_GREEN_TOP">225</constant>
