@@ -21,7 +21,7 @@ switch (global.menutype) {
   case MENUTYPE_COMPOSTINVENT:
     break; // Not used, arguably not needed because it does the same thing as the all-compost menu.
   case MENUTYPE_TREEINVENT:
-    show_message("menuselectortocurrentseed(): argument0 is "+string(argument0));
+    //show_message("menuselectortocurrentseed(): argument0 is "+string(argument0));
     return (argument0+P_TREE_START);
     break;
   case MENUTYPE_TOOLINVENT:

@@ -129,7 +129,7 @@ if (action < 0) {
     }
   }
 else {  
-  actionconvert = ptypetoitem(action);
+  actionconvert = ptypetoitem(action); // this function is in Scripts/inventory
   switch (global.itemtype[actionconvert]) {
     case SELECT_SEED:
       if (isplant(species)) { // If there's already a plant here
@@ -227,7 +227,19 @@ else {
           return -1;
           break;
           }
-      //Not implemented yet
+      //show_message("farmer_executeaction(): Tree action executing");
+      switch(actionconvert) {
+        case TREESEED_REDBOTTOM:
+          placetree_rdown(boardx,boardy,0,0);
+          break;
+        case TREESEED_GREENBOTTOM:
+          placetree_gdown(boardx,boardy,0,0);
+          break;
+        default:
+          show_message("Unrecognized tree in farmer_executeaction():"+string(action));          
+          show_message("actionconvert:"+string(actionconvert));          
+          break;
+        }
       break;
     case SELECT_BUILDING:
       if (!farmer_energycheck(ENERGY_BUILDINGCOST)) {

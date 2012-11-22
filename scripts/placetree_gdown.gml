@@ -13,7 +13,7 @@ sy1 = global.hexy;
 if (istree(getspecies(global.plants[sx1,sy1]))) {
   return false;
   }
-hexadj(tx,ty,0);
+hexadj(tx,ty,4);
 sx2 = global.hexx;
 sy2 = global.hexy;
 if (istree(getspecies(global.plants[sx2,sy2]))) {
@@ -21,5 +21,5 @@ if (istree(getspecies(global.plants[sx2,sy2]))) {
   }
 global.plants[tx,ty] = makeplant(T_GREEN_BOTTOM,subtype,growth);
 global.plants[sx1,sy1] = makeplant(P_SHADOWDOWNRIGHT,subtype,growth);
-global.plants[sx2,sy2] = makeplant(P_SHADOWDOWNLEFT,subtype,growth);
+global.plants[sx2,sy2] = makeplant(P_SHADOWLEFT,subtype,growth);
 

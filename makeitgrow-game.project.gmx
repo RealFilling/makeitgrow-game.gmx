@@ -1039,7 +1039,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="805">
+  <constants number="807">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">8</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1845,6 +1845,8 @@
     <constant name="MAXCALLAGE">240</constant>
     <constant name="MAXCALLAGEDIV">8</constant>
     <constant name="BIGANIMALREPELSTRENGTH">10</constant>
+    <constant name="TREESEED_REDBOTTOM">37</constant>
+    <constant name="TREESEED_GREENBOTTOM">38</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
