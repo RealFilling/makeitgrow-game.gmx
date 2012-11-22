@@ -392,6 +392,8 @@
         <script>scripts\farmer_w_debugload_UNUSED.gml</script>
         <script>scripts\farmer_e_debugsavecrap.gml</script>
         <script>scripts\farmer_r_debug_loadcrap.gml</script>
+        <script>scripts\farmer_demomode_d.gml</script>
+        <script>scripts\farmer_demomode_w.gml</script>
       </scripts>
       <script>scripts\farmer_haltaction.gml</script>
       <script>scripts\farmer_okaytomove.gml</script>
