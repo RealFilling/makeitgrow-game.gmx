@@ -200,6 +200,7 @@
         <sprite>sprites\spr_coop_m</sprite>
         <sprite>sprites\spr_coop_l</sprite>
         <sprite>sprites\spr_greenhouse_concept</sprite>
+        <sprite>sprites\spr_greenhouse2</sprite>
       </sprites>
       <sprite>sprites\spr_woodfence</sprite>
     </sprites>

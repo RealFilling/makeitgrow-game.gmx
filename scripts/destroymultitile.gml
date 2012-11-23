@@ -69,9 +69,35 @@ while (global.removalcounter > 0) {
         // To bulldoze the greenhouse, the core must be eliminated directly.
         // That means we know where the other greenhouse tiles must be in
         //   relation to the current tile.
+        //
+        // Outside
         erasecell(tx,ty);
-        sx = tx;
-        sy = ty;
+        thisx = tx;
+        thisy = ty;
+        a = 0;
+        do {
+          erasecell(thisx,thisy);
+          hexadj(thisx,thisy,buildingsizedirs_ghframe[a]);
+          thisx = global.hexx;
+          thisy = global.hexy;
+          a += 1;
+          }
+        until (buildingsizedirs_ghframe[a] == -1);
+        erasecell(thisx,thisy);
+        // Inside
+        thisx = tx;
+        thisy = ty;
+        a = 0;
+        do {
+          setgreenh(thisx,thisy,0);
+          hexadj(thisx,thisy,buildingsizedirs_ghinside[a]);
+          thisx = global.hexx;
+          thisy = global.hexy;
+          a += 1;
+          }
+        until (buildingsizedirs_ghinside[a] == -1);
+        setgreenh(thisx,thisy,0);
+        /*
         for (diri=0;diri<38;diri+=1) {
           dir = buildingsizedirsexl[diri];
           hexadj(sx,sy, dir);
@@ -79,6 +105,7 @@ while (global.removalcounter > 0) {
           sy = global.hexy;
           erasecell(sx,sy);
           }
+        */
         break;
       case BLDGSIZE_SMALLCOOP:
         thisx = tx;

@@ -171,9 +171,9 @@ for (by=by1; by<by2; by+=1) {
       draw_set_color(make_color_rgb(175,175,175));
       draw_line_width(pixx,pixy+thisheight-theight,pixx,pixy+thisheight-bheight,4);
       }
-    if (getgreenh(bx,by)) {
-      draw_sprite(spr_greenhouse,0,pixx,pixy);
-      }
+    //if (getgreenh(bx,by)) {
+    //  draw_sprite(spr_greenhouse,0,pixx,pixy);
+    //  }
     // Water
     if global.water[bx,by] != 0 {
       //thiswater = median(0,global.water[bx,by]-1,31);

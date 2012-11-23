@@ -23,7 +23,7 @@ buildingsprites[BLDGO_SMALLBARN] = spr_smallbarn;
 buildingsprites[BLDGO_BIGBARN] = spr_bigbarn;
 buildingsprites[BLDGO_FEED] = spr_feedtrough;
 buildingsprites[BLDGO_PIPE] = spr_scarecrow; // Shouldn't appear
-buildingsprites[BLDGO_GREENHOUSE] = spr_scarecrow; // Shouldn't appear
+buildingsprites[BLDGO_GREENHOUSE] = spr_greenhouse2;
 buildingsprites[BLDGO_FENCE] = spr_fence_wirenet;
 buildingsprites[BLDGO_SCARECROW] = spr_scarecrow;
 buildingsprites[BLDGO_PIPEPUMP] = spr_waterpump;
@@ -61,7 +61,7 @@ buildingsizes[BLDGO_SMALLBARN] = BLDGSIZE_MEDIUM;
 buildingsizes[BLDGO_BIGBARN] = BLDGSIZE_LARGE;
 buildingsizes[BLDGO_FEED] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_PIPE] = BLDGSIZE_SMALL;
-buildingsizes[BLDGO_GREENHOUSE] = BLDGSIZE_GREENHOUSE;//Special
+buildingsizes[BLDGO_GREENHOUSE] = BLDGSIZE_GREENHOUSE;
 buildingsizes[BLDGO_FENCE] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_SCARECROW] = BLDGSIZE_SMALL;
 buildingsizes[BLDGO_PIPEPUMP] = BLDGSIZE_SMALL;
@@ -165,6 +165,52 @@ buildingsizedirs_bigcoop[13] = 1;
 buildingsizedirs_bigcoop[14] = 1;
 buildingsizedirs_bigcoop[15] = 2;
 buildingsizedirs_bigcoop[16] = -1;
+//
+globalvar buildingsizedirs_ghframe;
+buildingsizedirs_ghframe[0] = 4; // Outside of a greenhouse
+buildingsizedirs_ghframe[1] = 4;
+buildingsizedirs_ghframe[2] = 5;
+buildingsizedirs_ghframe[3] = 4;
+buildingsizedirs_ghframe[4] = 5;
+buildingsizedirs_ghframe[5] = 0;
+buildingsizedirs_ghframe[6] = 1;
+buildingsizedirs_ghframe[7] = 0;
+buildingsizedirs_ghframe[8] = 1;
+buildingsizedirs_ghframe[9] = 0;
+buildingsizedirs_ghframe[10] = 1;
+buildingsizedirs_ghframe[11] = 0;
+buildingsizedirs_ghframe[12] = 1;
+buildingsizedirs_ghframe[13] = 2;
+buildingsizedirs_ghframe[14] = 1;
+buildingsizedirs_ghframe[15] = 2;
+buildingsizedirs_ghframe[16] = 1;
+buildingsizedirs_ghframe[17] = 3;
+buildingsizedirs_ghframe[18] = 4;
+buildingsizedirs_ghframe[19] = 3;
+buildingsizedirs_ghframe[20] = 4;
+buildingsizedirs_ghframe[21] = 3;
+buildingsizedirs_ghframe[22] = 4;
+buildingsizedirs_ghframe[23] = -1;
+//
+globalvar buildingsizedirs_ghinside;
+buildingsizedirs_ghinside[0] = 5; // Inside of a greenhouse
+buildingsizedirs_ghinside[1] = 0;
+buildingsizedirs_ghinside[2] = 1;
+buildingsizedirs_ghinside[3] = 0;
+buildingsizedirs_ghinside[4] = 1;
+buildingsizedirs_ghinside[5] = 0;
+buildingsizedirs_ghinside[6] = 4;
+buildingsizedirs_ghinside[7] = 5;
+buildingsizedirs_ghinside[8] = 3;
+buildingsizedirs_ghinside[9] = 3;
+buildingsizedirs_ghinside[10] = 5;
+buildingsizedirs_ghinside[11] = 3;
+buildingsizedirs_ghinside[12] = 4;
+buildingsizedirs_ghinside[13] = 2;
+buildingsizedirs_ghinside[14] = 3;
+buildingsizedirs_ghinside[15] = 5;
+buildingsizedirs_ghinside[16] = 4;
+buildingsizedirs_ghinside[17] = -1;
 //
 
 

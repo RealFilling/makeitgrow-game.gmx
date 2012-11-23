@@ -25,16 +25,36 @@ switch(size) {
     break;
   case BLDGSIZE_LARGE:
   case BLDGSIZE_GREENHOUSE:
+    // Outside
     sx = checkx;
     sy = checky;
-    for (diri=0;diri<8;diri+=1) {
-      hexadj(sx,sy, buildingsizedirsl[diri]);
+    diri = 0;
+    do {
+      hexadj(sx,sy, buildingsizedirs_ghframe[diri]);
       sx = global.hexx;
       sy = global.hexy;
       if (isblocked(sx,sy)) {
+        //show_message("isblockedmulti(): area found blocked");
         return true;
         }
+      diri += 1;
       }
+    until (buildingsizedirs_ghframe[diri] == -1);
+    // Inside
+    sx = checkx;
+    sy = checky;
+    diri = 0;
+    do {
+      hexadj(sx,sy, buildingsizedirs_ghinside[diri]);
+      sx = global.hexx;
+      sy = global.hexy;
+      if (isblocked(sx,sy)) {
+        //show_message("isblockedmulti(): area found blocked");
+        return true;
+        }
+      diri += 1;
+      }
+    until (buildingsizedirs_ghinside[diri] == -1);
     return false;
     break;
   case BLDGSIZE_SMALLCOOP:

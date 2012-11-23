@@ -81,19 +81,46 @@ switch (size) {
   case BLDGSIZE_GREENHOUSE:
     // This special building consists of a "core" in the upper-left corner and
     //   a number of spots flagged as greenhouse extents.
-    if (isblockedmulti(BLDGSIZE_LARGE,tx,ty)) {
+    if (isblockedmulti(BLDGSIZE_GREENHOUSE,tx,ty)) {
       return false;
       }
     global.plants[tx,ty] = makeplant(type,subtype,growth);
+    // First do the frame
     sx = tx;
     sy = ty;
-    for (diri=0;diri<38;diri+=1) {
-      dir = buildingsizedirsexl[diri];
+    diri = 0;
+    dir = buildingsizedirs_ghframe[diri];
+    do {
+      hexadj(sx,sy, dir);
+      sx = global.hexx;
+      sy = global.hexy;
+      global.plants[sx,sy] = makeplant(makeshadow(dir),subtype,growth);
+      diri += 1;
+      dir = buildingsizedirs_ghframe[diri];
+      }
+    until (dir == -1);
+    // Now do the interior
+    sx = tx;
+    sy = ty;
+    diri = 0;
+    dir = buildingsizedirs_ghinside[diri];
+    do {
       hexadj(sx,sy, dir);
       sx = global.hexx;
       sy = global.hexy;
       setgreenh(sx,sy,1);
+      diri += 1;
+      dir = buildingsizedirs_ghinside[diri];
       }
+    until (dir == -1);
+    //
+    //for (diri=0;diri<38;diri+=1) {
+    //  dir = buildingsizedirsexl[diri];
+    //  hexadj(sx,sy, dir);
+    //  sx = global.hexx;
+    //  sy = global.hexy;
+    //  setgreenh(sx,sy,1);
+    //  }
     break;
   case BLDGSIZE_SMALLCOOP:
     if (isblockedmulti(BLDGSIZE_SMALLCOOP,tx,ty)) {
