@@ -24,8 +24,8 @@ if (global.demomode == false) {
   addtoinvent(INVENTTYPE_TOOL,TOOL_HOE,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_WATERCAN,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_BASKET,1);
-  //addtoinvent(INVENTTYPE_TOOL,TOOL_RAISELAND,1);
-  //addtoinvent(INVENTTYPE_TOOL,TOOL_LOWERLAND,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_RAISELAND,1);
+  addtoinvent(INVENTTYPE_TOOL,TOOL_LOWERLAND,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_MOVE,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_QUERY,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_MINERALVIEW,1);
