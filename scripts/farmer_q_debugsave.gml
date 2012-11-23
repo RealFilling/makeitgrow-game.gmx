@@ -4,6 +4,7 @@ if (global.disableautosave) {
   // The "0" below is due to Leandro's solution to server-provided hypertime.
   // We have to account for that now so loading doesn't break.
   savegame();
+  enqueueticker("Saved to variable.");
   return 0;
   }
 else {

@@ -8,9 +8,9 @@ global.version = "0.14";
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
-global.savedebug = false; // With demomode, saves to variable
+global.savedebug = true; // With demomode, saves to variable; use L to load it.
 global.disableautosave = true; // Turns off timed saving; use Q to save in this case
-global.nosave = true; // Disable saving entirely
+global.nosave = false; // Disable saving entirely
 global.saveexport = false; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
@@ -18,7 +18,7 @@ global.weatherdebug = false; // Provide debugging information for weather system
 global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
 // 
 global.skippreseed = false; // Don't put random thing on the field at the start
-global.skipprecalc = false; // Don't run very fast for two months at start
+global.skipprecalc = true; // Don't run very fast for two months at start
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = true; // Skip all tutorial cards.

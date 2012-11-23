@@ -20,22 +20,26 @@ if ((global.loggedin == 0) and (global.demomode == false)){
   return ""; // Nowhere to save
   }
 else {
-  if ((global.year <= 0) and (global.month < 2)) {
+  if ((global.year <= 0) and (global.month < 2) and (!global.skipprecalc)) {
     return ""; // Still in pregen period.
     }
-  gd_log("savegame(): Are logged in....");
-  gd_log("savegame(): Logged in, after serialization, before gd_save()....");
+  if (global.loggedin != 0) {
+    gd_log("savegame(): Are logged in....");
+    }
+  gd_log("savegame(): After serialization, before gd_save()....");
   if (global.demomode) {
     // Since we're not saving to the server, we have to forge the text digits
     //   it adds to the string.
     global.savestring = "0000"+field_serialize(false);
+    gamestring = global.savestring;
+    enqueueticker("Saved to global.savestring.");
     }
   else {
     gamestring = field_serialize(false);
     returnstring = gd_save(gamestring,global.hstime div global.ticksperhour);
+    enqueueticker("Saved.");  
     gd_log("savegame(): Logged in, after gd_save(), done.");
     }
-  enqueueticker("Saved.");  
   return gamestring;
   }
 

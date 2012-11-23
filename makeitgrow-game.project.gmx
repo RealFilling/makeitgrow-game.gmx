@@ -390,7 +390,7 @@
         <script>scripts\farmer_enter.gml</script>
         <script>scripts\farmer_d_debuggrowth.gml</script>
         <script>scripts\farmer_q_debugsave.gml</script>
-        <script>scripts\farmer_w_debugload_UNUSED.gml</script>
+        <script>scripts\farmer_l_debugload.gml</script>
         <script>scripts\farmer_e_debugsavecrap.gml</script>
         <script>scripts\farmer_r_debug_loadcrap.gml</script>
         <script>scripts\farmer_demomode_d.gml</script>
@@ -459,6 +459,7 @@
       <script>scripts\debug_tutorial_a.gml</script>
       <script>scripts\debug_tutorial_d.gml</script>
       <script>scripts\stringtofile.gml</script>
+      <script>scripts\debug_returnvaluecheck.gml</script>
     </scripts>
     <scripts name="time">
       <script>scripts\timeconsts.gml</script>
