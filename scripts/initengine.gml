@@ -18,12 +18,12 @@ global.weatherdebug = false; // Provide debugging information for weather system
 global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
 // 
 global.skippreseed = false; // Don't put random thing on the field at the start
-global.skipprecalc = true; // Don't run very fast for two months at start
+global.skipprecalc = false; // Don't run very fast for two months at start
 //
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = true; // Skip all tutorial cards.
 //
-global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
+global.q_exportstofile = true; // If true, pressing Q creates a text file exporting the
                                 //   field portion of the game state.
                                 // WARNING: Not complete!  Abandoned (at least temporarily)
                                 // Leave false unless you are trying to get it working.
