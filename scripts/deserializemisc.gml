@@ -148,12 +148,13 @@ clearanimals(); // Get rid of what's already there, if anything.
 processstring = biteoffsubstring(processstring,global.charspernum);
 global.checkanimalcount = stringtonum(global.bittenchars);
 for (a=0;a<MAXANIMALS;a+=1) {
-  processstring = biteoffsubstring(processstring,global.charspernum*69);
+  processstring = biteoffsubstring(processstring,global.charspernum*73);
   animalstring = global.bittenchars;
   restoreanimal(animalstring);
   }
 if (global.savedebug == true) {
   gd_log("Load progress: Animals found: "+string(global.animalcount));
+  show_message("deserializemisc(): Load progress: Animals found: "+string(global.animalcount));
   }
 if (global.animalcount != global.checkanimalcount) {
   show_error("ERROR: Animals loaded doesn't match record!",false);

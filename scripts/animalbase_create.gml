@@ -16,19 +16,16 @@ animsprite_eat = global.a_sprite_eat[animaltype]; // No facing
 //
 boardx = global.parameter1;
 boardy = global.parameter2;
-homex = global.parameter3;
-homey = global.parameter4;
 image_speed = 0;
 ahealth = 100; // Not named "health" because Game Maker uses that variable, and we
                //   don't want it automatically doing things based on this thank you.
 waterfull = watermax;
 foodfull = foodmax;
+age = 0;
 colonlevel = 0;
 //
 herdstrength = global.a_herdstrength[animaltype];
 callstrength = global.a_callstrength[animaltype];
-
-age = 0;
 
 waterdecrease = 2;
 fooddecrease = 2;
@@ -42,7 +39,6 @@ isplayer = false;
 moving = false;
 facing = 0;
 moveprogress = 0;
-mirrored = false; // UNUSED as of yet, maybe later
 animal_resetmovedelay();
 global.animalcounts[animaltype] += 1;
 

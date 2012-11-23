@@ -8,7 +8,7 @@ global.version = "0.14";
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
-global.savedebug = true; // With demomode, saves to variable; use L to load it.
+global.savedebug = false; // With demomode, saves to variable; use L to load it.
 global.disableautosave = true; // Turns off timed saving; use Q to save in this case
 global.nosave = false; // Disable saving entirely
 global.saveexport = false; // Save out to a text file
@@ -100,6 +100,7 @@ craftdefs();
 //
 tutorialdef();
 
+global.animallookup = noone; // Failsafe in case animal collision hash doesn't exist when checked.
 
 //Game UI button size scaling
 globalvar bs_width, bs_height;

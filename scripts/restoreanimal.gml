@@ -43,13 +43,26 @@ thisanimal.exists = true;
 
 // Extract and assign animal variables.
 packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.predator = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.movefreq = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.movespeed = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.animdelay = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.watermax = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.foodmax = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.colonsize = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.poopsize = stringtonum(global.bittenchars);
+
+packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.boardx = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.boardy = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.homex = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.homey = stringtonum(global.bittenchars);
 
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.image_speed = stringtonum(global.bittenchars);
@@ -59,9 +72,14 @@ packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.waterfull = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.foodfull = stringtonum(global.bittenchars);
-
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.age = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.colonlevel = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.herdstrength = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.callstrength = stringtonum(global.bittenchars);
 
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.waterdecrease = stringtonum(global.bittenchars);
@@ -73,6 +91,8 @@ packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.panicked = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.sick = stringtonum(global.bittenchars);
+packedstring = biteoffsubstring(packedstring,global.charspernum);
+thisanimal.animdelaycount = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.animdelay = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
@@ -90,17 +110,7 @@ thisanimal.moveprogress = stringtonum(global.bittenchars);
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 thisanimal.movedelaytimer = stringtonum(global.bittenchars);
 
-// Defined in (animal).create
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.predator = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.movefreq = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.movespeed = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.animdelaymax = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.watermax = stringtonum(global.bittenchars);
-packedstring = biteoffsubstring(packedstring,global.charspernum);
-thisanimal.foodmax = stringtonum(global.bittenchars);
+// Remaining variables are expansion use, we don't need to decode.
 
+// Update animallookup
+ds_map_add(global.animallookup,hashcoords(thisanimal.boardx,thisanimal.boardy),thisanimal.id);
