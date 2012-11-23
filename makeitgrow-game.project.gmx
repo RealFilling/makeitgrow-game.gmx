@@ -1047,7 +1047,7 @@
   </rooms>
   <constants number="807">
     <constant name="MAJORVERSION">0</constant>
-    <constant name="MINORVERSION">8</constant>
+    <constant name="MINORVERSION">9</constant>
     <constant name="TILEWIDTH">48</constant>
     <constant name="TILEHEIGHT">48</constant>
     <constant name="ETILEHEIGHT">36</constant>

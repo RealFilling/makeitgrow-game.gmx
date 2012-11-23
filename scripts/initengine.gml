@@ -2,7 +2,7 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.14";
+global.version = "0.15";
 
 // Debugging support
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
