@@ -5,11 +5,13 @@ var cx1, cy1;
 global.version = "0.15";
 
 // Debugging support
+// All of these things should be false for production use.
+// For various debuging or internal uses, some might need to be true.
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable; use L to load it.
-global.disableautosave = true; // Turns off timed saving; use Q to save in this case
+global.disableautosave = false; // Turns off timed saving; use Q to save in this case
 global.nosave = false; // Disable saving entirely
 global.saveexport = false; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
@@ -23,10 +25,8 @@ global.skipprecalc = false; // Don't run very fast for two months at start
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = true; // Skip all tutorial cards.
 //
-global.q_exportstofile = true; // If true, pressing Q creates a text file exporting the
+global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
                                 //   field portion of the game state.
-                                // WARNING: Not complete!  Abandoned (at least temporarily)
-                                // Leave false unless you are trying to get it working.
 //
 global.skipanimalvalidation = true; // Disables the check to make sure all animals can
                                     //   housed.
