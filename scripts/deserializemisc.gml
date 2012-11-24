@@ -161,6 +161,10 @@ if (global.animalcount != global.checkanimalcount) {
   }
   
 processstring = biteoffsubstring(processstring,global.charspernum);
+//global.tutstepcount = stringtonum(global.bittenchars);
+global.tutstepcount = 9999; // For now, we're abandoning the tutorial on a load.
+
+processstring = biteoffsubstring(processstring,global.charspernum);
 global.hstime += stringtonum(global.bittenchars);
 
 for (a=0; a<3; a+=1) {

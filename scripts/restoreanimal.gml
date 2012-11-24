@@ -19,6 +19,8 @@ if (global.savedebug == true) {
 // Get type
 packedstring = biteoffsubstring(packedstring,global.charspernum);
 animaltype = stringtonum(global.bittenchars);
+global.parameter1 = 1; // This will ser boardx and boardy to basic legal values that
+global.parameter2 = 1; //   will be overwritten later.
 switch(animaltype) {
   case ANIMAL_CHICKEN:
     thisanimal = instance_create(obj_farmer.x,obj_farmer.y,obj_chicken);

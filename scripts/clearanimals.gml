@@ -1,7 +1,9 @@
 var a;
 for (a=0; a<global.animalcount; a+=1) {
-  with (global.animalinstances[a]) {
-    instance_destroy();
+  if (global.animalinstances[a] != noone) {
+    with (global.animalinstances[a]) {
+      instance_destroy();
+      }
     }
   global.animallist[a] = ANIMAL_NONE;
   }

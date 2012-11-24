@@ -338,6 +338,7 @@
         <script>scripts\reportchecksum.gml</script>
         <script>scripts\savegame.gml</script>
         <script>scripts\loadgame.gml</script>
+        <script>scripts\extraloadstuff.gml</script>
       </scripts>
       <scripts name="soil">
         <script>scripts\field_increasetill.gml</script>
@@ -929,11 +930,11 @@
       <scripts name="save">
         <script>scripts\dumpanimal.gml</script>
         <script>scripts\dumpnullanimal.gml</script>
+        <script>scripts\restoreanimal.gml</script>
       </scripts>
       <script>scripts\avgnearbyanimalpos.gml</script>
       <script>scripts\avgnearbyanimalpos_OBS.gml</script>
       <script>scripts\isspotadjtobiganimal_OBS.gml</script>
-      <script>scripts\restoreanimal.gml</script>
       <script>scripts\isnexttobig.gml</script>
       <script>scripts\hashcoords.gml</script>
       <script>scripts\animaltosearchtype.gml</script>

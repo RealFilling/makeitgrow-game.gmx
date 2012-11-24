@@ -16,6 +16,9 @@ initengine();              // Overall initialization
 // If we're not, we should check if we're logged in, and load
 //   a game if we are.
 
+global.gamestate = GSTATE_INIT;
+inittime();
+
 if (global.farmtour == true) {
   loadstring = gd_load();
   gd_log("loading field for tour");
@@ -27,6 +30,12 @@ if (global.farmtour == true) {
     show_error("ERROR: Farm file not loaded!",true);
     game_end();
     }
+  }
+else if (global.loadfromfile) {
+  loadfile = file_text_open_read("export.txt");
+  loadstring = file_text_read_string(loadfile);
+  file_text_close(loadfile);
+  loadgame(loadstring);
   }
 else if (global.nosave == false) {
   if (global.demomode == false) {
@@ -51,7 +60,6 @@ else {
   global.loggedin = 0;
   initgame(false);
   }
-global.gamestate = GSTATE_INIT;
 
 global.field = self.id;    // So other scripts can easily find the field
 

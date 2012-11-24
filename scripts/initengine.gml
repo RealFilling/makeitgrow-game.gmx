@@ -11,9 +11,9 @@ global.disablemetrics = true; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.debug = false; // Miscellaneous debugging
 global.savedebug = false; // With demomode, saves to variable; use L to load it.
-global.disableautosave = false; // Turns off timed saving; use Q to save in this case
+global.disableautosave = true; // Turns off timed saving; use Q to save in this case
 global.nosave = false; // Disable saving entirely
-global.saveexport = false; // Save out to a text file
+global.saveexport = true; // Save out to a text file
 global.shadowdebug = false; // Debugging multitile objects
 global.miscdebug = false; // I forget
 global.weatherdebug = false; // Provide debugging information for weather system
@@ -30,6 +30,9 @@ global.q_exportstofile = false; // If true, pressing Q creates a text file expor
 //
 global.skipanimalvalidation = true; // Disables the check to make sure all animals can
                                     //   housed.
+//
+global.loadfromfile = true; // When set to true, it'll try to load a previously saved game
+                            //   out of export.txt on startup.
 //
 global.disablesound = true;
 global.disabletools = false;

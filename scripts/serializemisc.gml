@@ -142,6 +142,9 @@ for (a=0; a<MAXANIMALS; a+=1) {
     }
   }
   
+// Tutorial progress
+buildstring += numtostring(global.tutstepcount);
+
 gd_log("serializing future expansion");
   
 buildstring += numtostring(global.hstime);
