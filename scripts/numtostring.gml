@@ -2,7 +2,12 @@ var buildstring, worknum, a;
 worknum = argument0;
 // Sanity check
 if (worknum < 0) {
-  show_error("numtostring() ERROR: negative argument "+string(worknum)+"!",true);
+  if (global.dontfixnegs) {
+    show_error("numtostring() ERROR: negative argument "+string(worknum)+"!",true);
+    }
+  else {
+    worknum = 0;
+    }
   }
 
 //addtochecksum(worknum);

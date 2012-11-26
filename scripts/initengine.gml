@@ -36,6 +36,11 @@ global.loadfromfile = true; // When set to true, it'll try to load a previously 
 //
 global.disablesound = true;
 global.disabletools = false;
+//
+global.dontfixnegs = false; // Saving negative numbers isn's supported by the serializer.
+                            //   We shouldn't really be saving any, but if we try it the
+                            //   game will silently substitute a 0 instead.  Set this to
+                            //   true, and instead the game will halt with an error.
 
 // ***************
 // IMPORTANT!
