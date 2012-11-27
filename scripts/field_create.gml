@@ -24,7 +24,7 @@ if (global.farmtour == true) {
   gd_log("loading field for tour: ");
   gd_log(loadstring);
   if (string_length(loadstring) != 0) {
-    gd_log("loading valid loadstring")
+    gd_log("loading valid loadstring");
     loadgame(loadstring);
     global.loggedin = 0;
     }
