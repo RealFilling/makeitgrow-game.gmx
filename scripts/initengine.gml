@@ -7,47 +7,44 @@ global.version = "0.15";
 // Debugging support
 // All of these things should be false for production use.
 // For various debuging or internal uses, some might need to be true.
+// *** Options
 global.disablemetrics = true; // Disables gd_mixpanel_register calls
-global.demomode = false; // Starts player out with everything, with savedebug saves to string variable
-global.debug = false; // Miscellaneous debugging
-global.savedebug = false; // With demomode, saves to variable; use L to load it.
-global.disableautosave = true; // Turns off timed saving; use Q to save in this case
-global.nosave = false; // Disable saving entirely
-global.saveexport = false; // Save out to a text file
-global.shadowdebug = false; // Debugging multitile objects
-global.miscdebug = false; // I forget
-global.weatherdebug = false; // Provide debugging information for weather system
-global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
-// 
-global.skippreseed = false; // Don't put random thing on the field at the start
-global.skipprecalc = false; // Don't run very fast for two months at start
-//
-global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
-global.tutorialskip = true; // Skip all tutorial cards.
-//
-global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
-                                //   field portion of the game state.
-//
+global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.skipanimalvalidation = true; // Disables the check to make sure all animals can
                                     //   housed.
-//
-global.loadfromfile = true; // When set to true, it'll try to load a previously saved game
-                            //   out of export.txt on startup.
-//
 global.disablesound = true;
 global.disabletools = false;
-//
+// *** Generation
+global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
+global.skippreseed = false; // Don't put random thing on the field at the start
+global.skipprecalc = false; // Don't run very fast for two months at start
+// *** Tutorial
+global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
+global.tutorialskip = true; // Skip all tutorial cards.
+// *** Saving
+global.nosave = false; // Disable saving entirely
+global.savedebug = false; // With demomode, saves to variable; use L to load it.
+global.disableautosave = true; // Turns off timed saving; use Q to save in this case
+global.saveexport = false; // Save out to a text file
+global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
+                                //   field portion of the game state.
+global.loadfromfile = false; // When set to true, it'll try to load a previously saved game
+                            //    out of export.txt on startup.  
 global.dontfixnegs = false; // Saving negative numbers isn's supported by the serializer.
                             //   We shouldn't really be saving any, but if we try it the
                             //   game will silently substitute a 0 instead.  Set this to
                             //   true, and instead the game will halt with an error.
-
+// *** Debugging
+global.debug = false; // Miscellaneous debugging
+global.shadowdebug = false; // Debugging multitile objects
+global.miscdebug = false; // I forget
+global.weatherdebug = false; // Provide debugging information for weather system
 // ***************
 // IMPORTANT!
 // This is the magic flag to set if the game is running as a farm tour.
 // It will cause it to load the game but not check for users, disable the tool menu and saving,
 //   and turn off precalc.
-global.farmtour = true;
+global.farmtour = false;
 // ***************
 
 // Extra flags, malleable during run:

@@ -752,6 +752,7 @@
       <script>scripts\text_addingabuilding.gml</script>
       <script>scripts\text_newplantspeciesscheme.gml</script>
       <script>scripts\text_tutorialflow.gml</script>
+      <script>scripts\text_animalwalkcycles.gml</script>
     </scripts>
     <scripts name="tiletype">
       <script>scripts\isshadow.gml</script>
