@@ -21,13 +21,16 @@ inittime();
 
 if (global.farmtour == true) {
   loadstring = gd_load();
-  gd_log("loading field for tour");
+  gd_log("loading field for tour: ");
+  gd_log(loadstring);
   if (string_length(loadstring) != 0) {
+    gd_log("loading valid loadstring")
     loadgame(loadstring);
     global.loggedin = 0;
     }
   else {
-    show_error("ERROR: Farm file not loaded!",true);
+    gd_log("loading failed: empty loadstring")
+    //show_error("ERROR: Farm file not loaded!",true);
     game_end();
     }
   }

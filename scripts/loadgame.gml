@@ -5,8 +5,9 @@ if (global.nosave) {
   return "";
   }
 
+gd_log("loadgame: calling extraloadstuff");
 extraloadstuff();
-    
+gd_log("loadgame: calling field deserialize");
 field_deserialize(loadstring,false);
 enqueueticker("Welcome back to MAKE IT GROW.  [Program version "+global.version+"]");
 
