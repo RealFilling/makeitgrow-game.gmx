@@ -22,18 +22,19 @@ global.skipprecalc = false; // Don't run very fast for two months at start
 global.tutorialdebug = false; // Tutorial card debugging, activates T key for spawning a card
 global.tutorialskip = true; // Skip all tutorial cards.
 // *** Saving
+global.saveexport = false; // Save out to a text file -- OVERRIDES nosave
 global.nosave = false; // Disable saving entirely
 global.savedebug = false; // With demomode, saves to variable; use L to load it.
 global.disableautosave = true; // Turns off timed saving; use Q to save in this case
-global.saveexport = false; // Save out to a text file
 global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
                                 //   field portion of the game state.
 global.loadfromfile = false; // When set to true, it'll try to load a previously saved game
-                            //    out of export.txt on startup.  
+                            //    out of export.txt on startup.
 global.dontfixnegs = false; // Saving negative numbers isn's supported by the serializer.
                             //   We shouldn't really be saving any, but if we try it the
                             //   game will silently substitute a 0 instead.  Set this to
                             //   true, and instead the game will halt with an error.
+                            // Be wary about setting this to true (11/27/2012)
 // *** Debugging
 global.debug = false; // Miscellaneous debugging
 global.shadowdebug = false; // Debugging multitile objects

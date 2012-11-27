@@ -3,7 +3,7 @@ var gamestring, loginstatus, outfile, savestring;
 //loginstatus = gd_get_user_status();
 gd_log("savegame() called....");
 
-if (global.saveexport) {
+if (global.saveexport) { // Note: overrides global.nosave!
   savestring = "0000"+field_serialize(false);
   outfile = file_text_open_write("export.txt");
   file_text_write_string(outfile,savestring);
