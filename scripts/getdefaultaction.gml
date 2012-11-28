@@ -1,4 +1,4 @@
-if (global.farmtour) {
+if (global.multitool) {
   return TOOL_MULTITOOL;
   }
 else {

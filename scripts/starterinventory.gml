@@ -1,3 +1,10 @@
+if (global.multitool) {
+  addtoinvent(INVENTTYPE_TOOL,TOOL_MULTITOOL,1);
+  }
+else {
+  addtoinvent(INVENTTYPE_TOOL,TOOL_MOVE,1);
+  }
+
 if (global.demomode == false) {
   // Starting seeds
   addtoinvent(INVENTTYPE_SEED,P_ITCHGRASS,30);
@@ -26,7 +33,6 @@ if (global.demomode == false) {
   addtoinvent(INVENTTYPE_TOOL,TOOL_BASKET,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_RAISELAND,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_LOWERLAND,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_MOVE,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_QUERY,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_MINERALVIEW,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_MOISTUREVIEW,1);
@@ -91,7 +97,6 @@ else {
   addtoinvent(INVENTTYPE_TOOL,TOOL_BASKET,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_RAISELAND,1);
   //addtoinvent(INVENTTYPE_TOOL,TOOL_LOWERLAND,1);
-  addtoinvent(INVENTTYPE_TOOL,TOOL_MOVE,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_QUERY,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_MINERALVIEW,1);
   addtoinvent(INVENTTYPE_TOOL,TOOL_MOISTUREVIEW,1);

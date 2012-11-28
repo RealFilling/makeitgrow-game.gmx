@@ -2,7 +2,7 @@ var cx1, cy1;
 // Game initialization
 
 // Program version
-global.version = "0.15";
+global.version = "0.16";
 
 // Debugging support
 // All of these things should be false for production use.
@@ -14,6 +14,7 @@ global.skipanimalvalidation = true; // Disables the check to make sure all anima
                                     //   housed.
 global.disablesound = true;
 global.disabletools = false;
+global.multitool = true; // Replaces the Move tool with a context-sensitive multitool; put in for farmmode.
 // *** Generation
 global.skipgen = false; // IF creating new field, then don't create random terrain or water. Note: leaves field inhospitable!
 global.skippreseed = false; // Don't put random thing on the field at the start
@@ -24,10 +25,10 @@ global.tutorialskip = true; // Skip all tutorial cards.
 // *** Saving
 global.saveexport = false; // Save out to a text file -- OVERRIDES nosave
 global.nosave = false; // Disable saving entirely
-global.savedebug = false; // With demomode, saves to variable; use L to load it.
-global.disableautosave = true; // Turns off timed saving; use Q to save in this case
+global.savedebug = false; // With demomode, saves to variable global.savestring; use L to load it.
+global.disableautosave = true; // Turns off timed saving; use Q to save in this case.
 global.q_exportstofile = false; // If true, pressing Q creates a text file exporting the
-                                //   field portion of the game state.
+                                //   field portion of the game state, instead of saving to a server.
 global.loadfromfile = false; // When set to true, it'll try to load a previously saved game
                             //    out of export.txt on startup.
 global.dontfixnegs = false; // Saving negative numbers isn's supported by the serializer.
@@ -37,9 +38,9 @@ global.dontfixnegs = false; // Saving negative numbers isn's supported by the se
                             // Be wary about setting this to true (11/27/2012)
 // *** Debugging
 global.debug = false; // Miscellaneous debugging
-global.shadowdebug = false; // Debugging multitile objects
+global.shadowdebug = false; // Debugging multitile objects; makes shadow extents visible.
 global.miscdebug = false; // I forget
-global.weatherdebug = false; // Provide debugging information for weather system
+global.weatherdebug = false; // Exports weather schedule to file
 // ***************
 // IMPORTANT!
 // This is the magic flag to set if the game is running as a farm tour.
@@ -70,7 +71,8 @@ global.debugloghandle = noone // Replaced with handle to logfile
 //
 
 if (global.farmtour) {
-  global.demomode = true;
+  global.multitool = true;
+  global.demomode = false;
   global.nosave = true;
   global.disableautosave = true;
   global.disabletools = true;
