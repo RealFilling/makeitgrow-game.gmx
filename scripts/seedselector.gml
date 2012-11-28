@@ -288,4 +288,6 @@ global.toolname[21] = "Add bees";
 global.tooldesc[21] = "DEBUG: add some bees to the world.";
 global.toolname[22] = "Call Animals";
 global.tooldesc[22] = "Attracts animals to your current position.";
+global.toolname[23] = "Multitool";
+global.tooldesc[23] = "Moves, waters and harvests as the situation demands.";
 

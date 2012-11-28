@@ -1,4 +1,4 @@
 rootbutton_step();
-if (ismovetoolactive()) {
+if (ismovetoolactive() or ismultitoolactive()) {
   instance_destroy();
   }

@@ -138,7 +138,7 @@ global.cornerbuttonmenutitle[4] = "Buildings";
 global.cornerbuttonmenutitle[5] = "Items";
 
 // Initial seed selection
-global.currentseed = TOOL_MOVE;
+global.currentseed = getdefaultaction();
 
 // Debugging
 global.plantgrowthdebug = false;

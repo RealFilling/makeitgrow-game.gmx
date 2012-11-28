@@ -411,10 +411,12 @@
         <script>scripts\farmer_bulldozer.gml</script>
         <script>scripts\farmer_toolcallanimals.gml</script>
         <script>scripts\seedselector.gml</script>
+        <script>scripts\farmer_toolmulti.gml</script>
       </scripts>
       <script>scripts\farmer_energycheck.gml</script>
       <script>scripts\farmer_moneycheck.gml</script>
       <script>scripts\farmer_selectmovetool.gml</script>
+      <script>scripts\farmer_selectdefaulttool.gml</script>
       <scripts name="animation">
         <script>scripts\farmer_animsprites.gml</script>
         <script>scripts\farmer_setanim.gml</script>
@@ -695,8 +697,10 @@
         </scripts>
         <script>scripts\selectmenuitem.gml</script>
         <script>scripts\menuselectortocurrentseed.gml</script>
+        <script>scripts\getdefaultaction.gml</script>
       </scripts>
       <script>scripts\ismovetoolactive.gml</script>
+      <script>scripts\ismultitoolactive.gml</script>
       <scripts name="hud">
         <script>scripts\hud_create.gml</script>
         <script>scripts\hud_draw.gml</script>
@@ -1047,7 +1051,7 @@
     <room>rooms\room_reportscreen</room>
     <room>rooms\room_titlescreen</room>
   </rooms>
-  <constants number="807">
+  <constants number="808">
     <constant name="MAJORVERSION">0</constant>
     <constant name="MINORVERSION">9</constant>
     <constant name="TILEWIDTH">48</constant>
@@ -1598,7 +1602,7 @@
     <constant name="HIGHBITMASK">2147483647</constant>
     <constant name="OLD_HIGHBITMASK">4294967295</constant>
     <constant name="NUMBUGS">8</constant>
-    <constant name="NUMTOOLS">22</constant>
+    <constant name="NUMTOOLS">23</constant>
     <constant name="TOOL_WATERCAN">-1</constant>
     <constant name="TOOL_HOE">-2</constant>
     <constant name="TOOL_BASKET">-3</constant>
@@ -1621,7 +1625,8 @@
     <constant name="TOOL_ADDGRAYBUG">-20</constant>
     <constant name="TOOL_ADDBEE">-21</constant>
     <constant name="TOOL_CALLANIMALS">-22</constant>
-    <constant name="TOOL_NOTOOL">-23</constant>
+    <constant name="TOOL_NOTOOL">-24</constant>
+    <constant name="TOOL_MULTITOOL">-23</constant>
     <constant name="BUTTONWIDTH">32</constant>
     <constant name="BUTTONHEIGHT">32</constant>
     <constant name="NUMBITSSAVE">4</constant>

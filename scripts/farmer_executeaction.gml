@@ -25,7 +25,6 @@ global.tuttoolusedy = boardy;
 if (action < 0) {
   switch (action) {
     case TOOL_WATERCAN:
-      farmer_setanim(FARMERANIM_WATERING);
       return farmer_toolwater(boardx,boardy,false);
       break;
     case TOOL_HOE:
@@ -47,6 +46,9 @@ if (action < 0) {
     case TOOL_BULLDOZER:
       return farmer_bulldozer(boardx,boardy);
       break;
+    case TOOL_MULTITOOL:
+      return farmer_toolmulti(boardx,boardy);
+    //
     case TOOL_ADDCHICKEN:
       if (!farmer_moneycheck(global.a_cost[ANIMAL_CHICKEN])) {
         return -1; // Not enough money
@@ -157,8 +159,6 @@ else {
       instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
       sound_play_respectdisable(snd_plant1);
       placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
-      //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
-      //global.currentseed = TOOL_MOVE;
       break;
     case SELECT_COMPOST:
       // Colored compost should consume 24 units.
@@ -189,37 +189,9 @@ else {
           }
         global.pmulch[composttype] -= 24;
         }
-      //subtype = 0;
-      //growth = 4; // Compost amounts are encoded in growth.
       hextopix(boardx,boardy);
-      //instance_create(global.hexx,global.hexy-(global.height[boardx,boardy]*HEIGHTPIX),obj_planteffect);
       placecompost(boardx,boardy,composttype,4);
-      //placeplant(boardx,boardy,makeplant(species,subtype,growth),false);
-      //global.plants[boardx,boardy] = makeplant(species,subtype,growth);
-      //global.currentseed = TOOL_MOVE;
       sound_play_respectdisable(snd_plop1);
-      //mulchtype = global.itemnum[action];    
-      ////mulchtype = global.currentseed-(NUMPLANTTYPES-1);//Assumes mulch is last in list
-      //mulchtoadd = min(irandom_range(10,30),global.pmulch[mulchtype]);
-      //if (mulchtoadd == 0) {
-      //  break;
-      //  }
-      //satmulch = mulchtoadd div 9;
-      //cenmulch = mulchtoadd - (satmulch * 8);
-      //mulchadded = addmulch(boardx,boardy,mulchtype,cenmulch);
-      // Place surrounding mulch
-      //for(my=-1;my<2;my+=1) {
-      //  for (mx=-1;mx<2;mx+=1) {
-      //    if ((mx == 0) and (my == 0)) {
-      //      continue;
-      //      }
-      //    if (!coordsinbounds(boardx+mx,boardy+my)) {
-      //      continue;
-      //      }
-      //    mulchadded += addmulch(boardx+mx,boardy+my,mulchtype,satmulch);
-      //    }
-      //  }
-      //global.pmulch[mulchtype] -= mulchadded;
       
       break;
     case SELECT_TREE:

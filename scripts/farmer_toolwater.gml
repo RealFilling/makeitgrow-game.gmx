@@ -2,6 +2,10 @@ var wx, wy, longrange, dir;
 wx = argument0;
 wy = argument1;
 longrange = argument2; //t/f
+if (!farmer_energycheck(ENERGY_WATERCOST)) {
+  return 0;
+  }
+farmer_setanim(FARMERANIM_WATERING);
 if (farmer_energycheck(ENERGY_WATERCOST)) {
   setmoist(wx,wy,31);
   }
