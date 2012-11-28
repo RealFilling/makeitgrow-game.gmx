@@ -8,7 +8,7 @@ global.version = "0.16";
 // All of these things should be false for production use.
 // For various debuging or internal uses, some might need to be true.
 // *** Options
-global.disablemetrics = true; // Disables gd_mixpanel_register calls
+global.disablemetrics = false; // Disables gd_mixpanel_register calls
 global.demomode = true; // Starts player out with everything, with savedebug saves to string variable
 global.skipanimalvalidation = true; // Disables the check to make sure all animals can
                                     //   housed.
@@ -46,7 +46,7 @@ global.weatherdebug = false; // Exports weather schedule to file
 // This is the magic flag to set if the game is running as a farm tour.
 // It will cause it to load the game but not check for users, disable the tool menu and saving,
 //   and turn off precalc.
-global.farmtour = false;
+global.farmtour = true;
 // ***************
 
 // Extra flags, malleable during run:
@@ -72,7 +72,7 @@ global.debugloghandle = noone // Replaced with handle to logfile
 
 if (global.farmtour) {
   global.multitool = true;
-  global.demomode = false;
+  global.demomode = true;
   global.nosave = true;
   global.disableautosave = true;
   global.disabletools = true;

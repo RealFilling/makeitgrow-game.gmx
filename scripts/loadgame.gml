@@ -1,7 +1,7 @@
 var loadstring;
 loadstring = argument0;
 
-if (global.nosave) {
+if (global.nosave && global.farmtour==false) {
   return "";
   }
 
